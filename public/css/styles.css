@@ -1,7 +1,7 @@
 /**
 Biến Toàn Cục:
 Font Chính: Nunito với dự phòng là sans-serif.
-Màu Chủ Đạo: #00AA55 (màu xanh lá).
+Màu Chủ Đạo: var(--menu-link) (màu xanh lá).
 Màu Phụ: #F4F6F6 (màu trắng sáng).
 Màu Nền:
 --background-1: #232323 (màu xám đen).
@@ -67,8 +67,8 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
 */
 :root {
     --primary-font-family: "Nunito", sans-serif;
-    --primary-color: #E19D2F;
-    --secondary-color: #010101;
+    --primary-color: rgb(217, 23, 23);
+    --secondary-color: #1b2ec2;
     --thirdary-color: #F4F6F6;
     --backgroung-1: #232323;
     --background-2: #232323;
@@ -78,8 +78,17 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
 
     --color-1: rgb(97, 97, 97, .8);
     --color-2: #F6F6F6;
+    --color-3: #d6d1d1;
     --min-height-menu-link: 64px;
     --box-shadow-gach-chan: 10px 0px 0 0 currentColor, 20px 0px 0 0 currentColor, 30px 0px 0 0 currentColor, 50px 0px 0 0 currentColor;
+
+    /* thiết lập màu cho menu link */
+    --menu-link: #F7BC2E;
+    --menu-link-bg: linear-gradient(45deg, #F7BC2E 0%, #ffc400 100%);
+    ;
+    /* thiết lập màu cho menu link contact */
+    --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
+
 }
 
 * {
@@ -181,6 +190,21 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
  phương tiện đảm bảo rằng bố cục thích ứng với các kích thước màn hình khác 
  nhau, và các animation mang lại trải nghiệm người dùng năng động và hấp dẫn.
 */
+@keyframes waving {
+
+    0%,
+    100% {
+        clip-path: polygon(0 74%, 0 54%, 14% 46%, 31% 43%, 50% 45%, 69% 47%, 86% 45%, 100% 49%, 100% 72%, 100% 100%, 1% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0 74%, 0 54%, 15% 60%, 36% 61%, 56% 55%, 69% 44%, 87% 41%, 100% 49%, 100% 72%, 100% 100%, 1% 100%);
+    }
+
+    /* 25% {
+        clip-path: polygon(0 74%, 0 54%, 12% 46%, 33% 40%, 51% 43%, 68% 54%, 86% 55%, 100% 49%, 100% 72%, 100% 100%, 1% 100%);
+    } */
+}
 
 /* slider revolution full man hinh và kéo qua được */
 #slider-revolution {
@@ -198,6 +222,8 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                 slider kích hoạt lượt kéo */
                 .owl-item.active {
                     .slider-background {
+                        .slider-info .slider-paragragh {}
+
                         .slider-info {
                             .slider-paragragh {
                                 transform: translateY(0);
@@ -210,6 +236,40 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 transform: translateY(0);
                                 opacity: 1;
                                 transition: all 0.6s;
+                                position: relative;
+                                cursor: pointer;
+
+                                .logo-text-waving {
+                                    border-bottom: 0.1rem solid white;
+                                    transition-delay: 0.5s;
+                                    transition: all 1.5s;
+                                }
+
+                                .logo-text-waving:hover {
+                                    color: var(--secondary-color);
+                                    border-color: var(--secondary-color);
+                                }
+
+                                .logo-text-waving:hover+.hide {
+                                    display: block;
+                                    cursor: pointer;
+                                }
+
+                                .hide {
+                                    display: none;
+                                    font-size: 0.3em;
+                                    background: var(--menu-link-bg);
+                                    color: var(--color-1);
+                                    border-radius: 15px;
+                                    transition: display 1s ease-in-out;
+                                    padding: 10px;
+                                    text-align: justify;
+                                    text-transform: none;
+                                    position: absolute;
+                                    width: 100%;
+                                    left: 35%;
+                                    top: 0;
+                                }
                             }
                         }
 
@@ -418,7 +478,7 @@ section#main-menu {
 
     /* Cài đặt màu nền, kích thước màn hình desktop và mobile */
     .container {
-        background: white;
+        background: var(--menu-link-bg);
 
         @media screen and (max-width: 1024px) {
             background-color: var(--background-2);
@@ -642,8 +702,8 @@ section.menu-container-desktop {
             font-size: 1.2rem;
             font-weight: 700;
             border-right-width: 1px;
-            border-right-style: solid;
-            border-right-color: var(--background-5);
+            /* border-right-style: solid;
+            border-right-color: var(--background-5); */
 
             /* cài đặt tắt mũi tên cho danh sách không có submenu */
             .menu-item.no-children .menu-link::after {
@@ -717,7 +777,7 @@ section.menu-container-desktop {
                         width: 100%;
                         transform: translateY(-100%);
                         opacity: 0;
-                        background-color: #00aa55;
+                        background: var(--menu-link-bg);
                         transition: all 0.2s ease-in-out;
                         pointer-events: none;
 
@@ -761,9 +821,9 @@ section.menu-container-desktop {
 
             /* Màu của menu-item cha khi active */
             .menu-item.active>a.menu-link {
-                color: var(--primary-color);
+                color: var(--thirdary-color);
                 /* Xanh lá cây */
-                background-color: #fff;
+                /* background-color: #fff; */
                 /* Nền trắng */
             }
 
@@ -771,7 +831,7 @@ section.menu-container-desktop {
             .menu-item .sub-menu .menu-item.active>a.menu-link {
                 color: #fff;
                 /* Màu chữ trắng */
-                background-color: var(--primary-color);
+                background: var(--menu-link-bg);
                 /* Nền xanh lá cây */
             }
 
@@ -779,7 +839,7 @@ section.menu-container-desktop {
             .menu-item .sub-menu .menu-item:hover>a.menu-link {
                 color: #fff;
                 /* Màu chữ trắng */
-                background-color: var(--primary-color);
+                background: var(--menu-link-bg);
                 /* Nền xanh lá cây */
             }
 
@@ -827,6 +887,10 @@ section.menu-container-desktop {
                 }
             }
         }
+    }
+
+    .menu-list-container-contact {
+        background: var(--menu-link-contact-bg);
     }
 }
 
@@ -977,14 +1041,14 @@ section.menu-container-mobile {
 
                 /* danh muc cap 1 */
                 ul.sub-menu.show {
-                    
+
                     display: flex;
                     list-style: none;
                     flex-direction: column;
                     gap: 20px;
                     transition: display 1s ease-in-out;
                     cursor: pointer;
-                    
+
                     li:nth-child(1) {
                         margin-top: 20px;
                     }
@@ -1687,7 +1751,7 @@ section#museum-video {
 
     .wave::after {
         content: "";
-        background: #00aa555c;
+        background: var(--menu-link)5c;
         width: 128px;
         height: 128px;
         border-radius: 50%;
