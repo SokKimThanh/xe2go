@@ -891,6 +891,9 @@ section.menu-container-desktop {
 
     .menu-list-container-contact {
         background: var(--menu-link-contact-bg);
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -1080,6 +1083,7 @@ section#six-box {
     .box-item {
         background-color: white;
         padding: 20px;
+        margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1196,6 +1200,9 @@ section#aga {
             color: var(--primary-color);
             text-decoration: none;
             text-transform: uppercase;
+            height: 150px;
+            width: 150px;
+
         }
 
         .box-link::after {
