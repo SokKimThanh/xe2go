@@ -25,15 +25,14 @@
             <div class="col-sm-4">
                 <div class="info-container">
                     <div class="info-logo">
-                        <img src="./public/images/theGov_light-og9y5lninfh2bm6oo0trrsxlsplpgvc6uornyvn85c.png"
-                            alt="">
+                        <img src="../images/xe2go_logo.webp"  alt="xe2go_logo.webp">
                     </div>
                     <p class="info-text">Trụ sở chính</p>
                     <ul class="info-list">
-                        <li><span class="bi bi-ladder"></span> 27 Division St, New York, USA</li>
-                        <li><span class="bi bi-telephone"></span> +1 123 456 7890</li>
-                        <li><span class="bi bi-clock"></span> <span>Open Hours of Government:</span>
-                            <span>Mon - Fri: 8.00 am. - 6.00pm.</span>
+                        <li><span class="bi bi-ladder"></span> 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương </li>
+                        <li><span class="bi bi-telephone"></span>Điện thoại: 0348.798.398 Hotline: 0886.883.886</li>
+                        <li><span class="bi bi-clock"></span> <span>Làm việc:</span>
+                            <span>T2 - T7. Thời gian: 08:00 - 17:00 giờ</span>
                         </li>
                     </ul>
                 </div>
@@ -41,20 +40,20 @@
             <div class="col-sm-8 service-request-map-copyright">
                 <div class="row">
                     <div class="service-request-map">
-                        <div class="col-sm-4 service-request">
-                            <h6>SERVICE REQUESTS</h6>
+                        <!-- <div class="col-sm-4 service-request"> -->
+                            <!-- <h6>SERVICE REQUESTS</h6>
                             <ul class="info-list">
                                 <li>311 Requests</li>
                                 <li>Request a Bulk Item Pickup</li>
                                 <li>Report a Parking Violation</li>
                                 <li>Report a Pothole</li>
                                 <li>Report a Streetlight Outage</li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-8 service-request">
-                            <h6>CITY MAP</h6>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d96721.42891247853!2d-73.968199!3d40.750044!3m2!1i1024!2i768!4f13.1!2m1!1snew%20york%2027%20division!5e0!3m2!1svi!2sus!4v1723093462781!5m2!1svi!2sus"
+                            </ul> -->
+                        <!-- </div> -->
+                        <div class="col-sm-12 service-request">
+                            <h6>Địa chỉ</h6>
+                             <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.858183289481!2d106.67015717592031!3d11.0113059891521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d19c56e48c3b%3A0xe1e74d0f616c0b5a!2zUXXhu5FjIExvbmcgQXV0byAtIENodXnDqm4gc-G7rWEgY2jhu69hIGLhuqNvIGTGsOG7oW5nIEF1ZGksIEJNVywgTWVyY2VkZXMsIExhbmRyb3ZlLCBGb3JkLCBMZXh1cywgQWN1cmEsIHV5IHTDrW4gY2jEg20gU8OzYyDDtCB0w7QgQsOsbmggRMawxqFuZw!5e1!3m2!1svi!2sus!4v1734609898536!5m2!1svi!2sus"
                                 width="500" height="180" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>

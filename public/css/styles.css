@@ -899,7 +899,8 @@ section.menu-container-desktop {
      */
     .menu-list-container-contact {
         position: relative;
-        height: 36px;
+        /* hỗ trợ chiều cao của tấm hình quốc long auto nó đi lên đi xuống */
+        height: 39px;
 
         .button-list {
             position: absolute;
@@ -1163,6 +1164,7 @@ section#aga {
 
     .box-item {
         margin: 1px;
+
         .box-item-header:hover .box-title {
             color: var(--primary-color);
             transition: color 0.3s ease-in-out;
@@ -1229,6 +1231,7 @@ section#aga {
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            min-height: 100px;
         }
 
         .box-link {
@@ -1239,9 +1242,7 @@ section#aga {
             color: var(--primary-color);
             text-decoration: none;
             text-transform: uppercase;
-            height: 150px;
-            width: 150px;
-
+            height: 110px;
         }
 
         .box-link::after {
@@ -1285,6 +1286,8 @@ section#vfo {
     .box-item {
         padding: 0;
         position: relative;
+        min-height: 500px;
+        margin: 8px 0;
 
         .box-overlay {
             position: absolute;
@@ -1627,16 +1630,17 @@ section#halini-slider {
         }
     }
 }
+
 /** Gallery */
-section#gallery{
-    .gallery-title
-    {
+section#gallery {
+    .gallery-title {
         font-size: 36px;
         color: #42B32F;
         text-align: left;
         font-weight: 500;
         margin-bottom: 30px;
     }
+
     /* .gallery-title:after {
         content: "";
         position: absolute;
@@ -1645,8 +1649,7 @@ section#gallery{
         height: 45px;
         border-bottom: 1px solid #5e5e5e;
     } */
-    .filter-button
-    {
+    .filter-button {
         font-size: 18px;
         border: 1px solid #42B32F;
         border-radius: 5px;
@@ -1655,8 +1658,8 @@ section#gallery{
         margin-bottom: 30px;
 
     }
-    .filter-button:hover
-    {
+
+    .filter-button:hover {
         font-size: 18px;
         border: 1px solid #42B32F;
         border-radius: 5px;
@@ -1665,19 +1668,17 @@ section#gallery{
         background-color: #42B32F;
 
     }
-    .btn-default:active .filter-button:active
-    {
+
+    .btn-default:active .filter-button:active {
         background-color: #42B32F;
         color: white;
     }
 
-    .port-image
-    {
+    .port-image {
         width: 100%;
     }
 
-    .gallery_product
-    {
+    .gallery_product {
         margin-bottom: 30px;
     }
 }
@@ -1685,7 +1686,7 @@ section#gallery{
 /** Sidebar 
 Made with Copilot
 */
-section#sidebar{
+section#sidebar {
     #sidebar {
         min-width: 250px;
         max-width: 250px;

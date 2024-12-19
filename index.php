@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<head>
+<!-- <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xe2Go</title>
@@ -18,7 +18,8 @@
 
     <link rel="stylesheet" href="./public/css/styles.css">
 
-</head>
+</head> -->
+<?php include("../xe2go/public/templates/link.php") ?>
 
 <body>
     <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
@@ -58,247 +59,7 @@ o	Tân tâm trong từng dịch vụ.
 •	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
 •	Nhấn xem bản đồ
  -->
-    <section id="main-menu">
-        <div class="container">
-            <div class="row menu-intro">
-                <div class="col-sm-2">
-                    <ul class="social-list">
-                        <li><a><i class="bi bi-twitter"></i></a></li>
-                        <li><a><i class="bi bi-facebook"></i></a></li>
-                        <li><a><i class="bi bi-linkedin"></i></a></li>
-                        <li><a><i class="bi bi-instagram"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-8">
-                    <div class="open-hour-text">
-                        <p>Chào mừng quý khách đến với hệ thống bảo dưỡng và sửa chữa ô tô xe2go</p>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <!-- <div class="search-container">
-                        <span class="search-icon"><i class="bi bi-search"></i></span>
-                        <div class="search-area">
-                            <form method="post">
-                                <input type="text" class="form-control search-input" placeholder="Tìm kiếm">
-                                <button type="button" class="btn btn-search"><i class="bi bi-search"></i></button>
-                            </form>
-                            <button type="button" class="btn btn-x"><i class="bi bi-x-circle"></i></button>
-                        </div>
-                    </div> -->
-                </div>
-            </div>
-            <section class="row menu-container-desktop">
-                <div class="col-sm-12 logo-link-image-container">
-                    <div class="row">
-                        <a class="col-sm-2 logo-link-image">
-                            <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo">
-                        </a>
-                        <div class="col-sm-7 menu-list-container">
-                            <ul class="menu-list">
-                                <li class="menu-item active">
-                                <a class="menu-link" href="../xe2go/index.html">Trang chủ</a>
-                            </li>
-                            <li class="menu-item active">
-                                <a class="menu-link" href="../xe2go/gallery.php">Thư viện ảnh</a>
-                            </li>
-                                <li class="menu-item">
-                                    <a class="menu-link">Danh mục sản phẩm</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 1</a>
-                                            <ul class="sub-menu">
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                                <li class="menu-item">
-                                                    <span class="overlay"></span>
-                                                    <a class="menu-link">Submenu 2</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a class="menu-link">Liên hệ</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="menu-list-container-contact">
-                    <div class="button-list">
-                        <img class="img-fluid" src="public/images/bannerQuocLong.png" alt="bannerQuocLong">
-                    </div>
-                </div>
-            </section>
-            <section class="row menu-container-mobile">
-                <div class="menu-bar-mobile">
-                    <div class="menu-bar-icon">
-                        <i class="bi bi-list"></i>
-                    </div>
-                    <div class="menu-bar-logo">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo">
-                    </div>
-                </div>
-                <div class="menu-overlay"></div>
-                <div class="menu-container-slider">
-                    <a class="logo-link-image">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo"></a>
-                    <div class="menu-list-container">
-                        <ul class="menu-list">
-                            <li class="menu-item active">
-                                <a class="menu-link">Home</a>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link">Danh mục sản phẩm</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 1</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                            <li class="menu-item">
-                                                <span class="overlay"></span>
-                                                <a class="menu-link">Submenu 2</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <a class="menu-link">Liên hệ</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
+    <?php include("../xe2go/public/templates/header.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
@@ -479,6 +240,98 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
+    <!-- Lĩnh vực hoạt động -->
+    <section id="vfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="./public/images/intro_services/service_baoduongxe_bg.webp"
+                            alt="service_baoduongxe_bg.webp">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Bảo dưỡng xe ô tô định kỳ.</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="public/images/service-bg-2.jpg" alt="">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Sửa chữa động cơ, hộp số, gầm xe.</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="public/images/service-bg-3.jpg" alt="">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Chăm sóc và làm đẹp xe (nội thất, ngoại thất).</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="public/images/service-bg-3.jpg" alt="">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Làm đồng sơn và sửa chữa xe tai nạn.</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="public/images/service-bg-3.jpg" alt="">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Phục hồi thước lái.</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="public/images/service-bg-3.jpg" alt="">
+                        <div class="box-overlay"></div>
+                        <div class="box-hide">
+                            <hr>
+                            <div class="box-text-hide">
+                                <h5 class="box-title">Nâng cấp và lắp ráp phụ tùng, linh kiện.</h5>
+                                <p class="box-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div class="row">
@@ -506,15 +359,15 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="col-sm-4">
                     <div class="info-container">
                         <div class="info-logo">
-                            <img src="./public/images/theGov_light-og9y5lninfh2bm6oo0trrsxlsplpgvc6uornyvn85c.png"
-                                alt="">
+                            <img class="img-fluid" src="public/images/xe2go_logo.webp" alt="xe2go_logo.webp">
                         </div>
                         <p class="info-text">Trụ sở chính</p>
                         <ul class="info-list">
-                            <li><span class="bi bi-ladder"></span> 27 Division St, New York, USA</li>
-                            <li><span class="bi bi-telephone"></span> +1 123 456 7890</li>
-                            <li><span class="bi bi-clock"></span> <span>Open Hours of Government:</span>
-                                <span>Mon - Fri: 8.00 am. - 6.00pm.</span>
+                            <li><span class="bi bi-ladder"></span> 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương
+                            </li>
+                            <li><span class="bi bi-telephone"></span>Điện thoại: 0348.798.398 Hotline: 0886.883.886</li>
+                            <li><span class="bi bi-clock"></span> <span>Làm việc:</span>
+                                <span>T2 - T7. Thời gian: 08:00 - 17:00 giờ</span>
                             </li>
                         </ul>
                     </div>
@@ -522,27 +375,27 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="col-sm-8 service-request-map-copyright">
                     <div class="row">
                         <div class="service-request-map">
-                            <div class="col-sm-4 service-request">
-                                <h6>SERVICE REQUESTS</h6>
+                            <!-- <div class="col-sm-4 service-request"> -->
+                            <!-- <h6>SERVICE REQUESTS</h6>
                                 <ul class="info-list">
                                     <li>311 Requests</li>
                                     <li>Request a Bulk Item Pickup</li>
                                     <li>Report a Parking Violation</li>
                                     <li>Report a Pothole</li>
                                     <li>Report a Streetlight Outage</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-8 service-request">
-                                <h6>CITY MAP</h6>
+                                </ul> -->
+                            <!-- </div> -->
+                            <div class="col-sm-12 service-request">
+                                <h6>Địa chỉ</h6>
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d96721.42891247853!2d-73.968199!3d40.750044!3m2!1i1024!2i768!4f13.1!2m1!1snew%20york%2027%20division!5e0!3m2!1svi!2sus!4v1723093462781!5m2!1svi!2sus"
-                                    width="500" height="180" style="border:0;" allowfullscreen="" loading="lazy"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.858183289481!2d106.67015717592031!3d11.0113059891521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d19c56e48c3b%3A0xe1e74d0f616c0b5a!2zUXXhu5FjIExvbmcgQXV0byAtIENodXnDqm4gc-G7rWEgY2jhu69hIGLhuqNvIGTGsOG7oW5nIEF1ZGksIEJNVywgTWVyY2VkZXMsIExhbmRyb3ZlLCBGb3JkLCBMZXh1cywgQWN1cmEsIHV5IHTDrW4gY2jEg20gU8OzYyDDtCB0w7QgQsOsbmggRMawxqFuZw!5e1!3m2!1svi!2sus!4v1734609898536!5m2!1svi!2sus"
+                                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="row copyright">
-                        <p>Copyright © 2024 theGov by WebGeniusLab. All Rights Reserved.</p>
+                        <p>Copyright © 2024 xe2go by TDC. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
