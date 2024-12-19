@@ -216,8 +216,9 @@ play();
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
 /**
- * Lập trình phân loại sự kiện
+ * Lập trình phân loại hình ảnh
  */
 const filters = document.querySelectorAll('.filter');
 const events = document.querySelectorAll('.event');
@@ -368,3 +369,4 @@ window.addEventListener('scroll', () => {
         }
     }
 }); 
+

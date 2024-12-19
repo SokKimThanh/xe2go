@@ -1628,9 +1628,9 @@ section#halini-slider {
     }
 }
 
-section#upcomming {
+section#gallery {
     .heading {
-        display: flex;
+        display: block;
         justify-content: space-between;
         align-items: center;
 
