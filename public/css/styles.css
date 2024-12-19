@@ -676,7 +676,7 @@ section.menu-container-desktop {
         padding: 10px;
         background-color: var(--background-1);
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
 
         .logo-link-image {
@@ -688,6 +688,7 @@ section.menu-container-desktop {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
 
         /* cấu hình kiểu dáng cho danh sách menu */
         ul.menu-list {
@@ -889,11 +890,19 @@ section.menu-container-desktop {
         }
     }
 
+    /* kết thúc menu-list-container 
+     * hỗ trợ hiển thị phong cách menu 
+     */
     .menu-list-container-contact {
-        background: var(--menu-link-contact-bg);
-        align-items: center;
-        display: flex;
-        justify-content: center;
+        position: relative;
+        height: 36px;
+
+        .button-list {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+        }
     }
 }
 
