@@ -161,10 +161,10 @@
                 </section>
             </div>
         </div>
-        </div>
+    </section>
 
+    <?php include("../xe2go/public/templates/footer.php") ?>
 
-        <?php include("../xe2go/public/templates/footer.php") ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
