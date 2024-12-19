@@ -1,0 +1,16 @@
+/* Hỗ trợ viết css cho trang gallery */
+#section-gallery {
+    padding-top: 200px;
+
+    #lightgallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0;
+        max-height: 650px;
+        overflow: auto;
+
+        .gallery_product {
+            margin: 0;
+        }
+    }
+}

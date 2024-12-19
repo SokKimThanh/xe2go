@@ -5,18 +5,9 @@
 
 <body>
     <?php include("../xe2go/public/templates/header.php") ?>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
     <!-- content -->
-    <div class="container">
+    <section id="section-gallery" class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
                 <section id="sidebar">
@@ -75,7 +66,7 @@
                     </nav>
                 </section>
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="padding-left:30px;">
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
                 <section id="gallery">
                     <div class="row">
                         <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -92,77 +83,77 @@
                         <div id="lightgallery">
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
                                 <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
                                 <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
                                 <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
                                 <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
                                 <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
                                 <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
                                 <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
                                 <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
                                 <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
                                 <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
                                 <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
                                 <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
                                 <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
                                 <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
                                 </a>
                             </div>
                             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
                                 <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
                                 </a>
                             </div>
                         </div>
@@ -170,10 +161,10 @@
                 </section>
             </div>
         </div>
-    </div>
+        </div>
 
 
-    <?php include("../xe2go/public/templates/footer.php") ?>
+        <?php include("../xe2go/public/templates/footer.php") ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
