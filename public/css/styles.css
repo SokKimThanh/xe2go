@@ -682,6 +682,7 @@ section.menu-container-desktop {
          * trên hình ảnh để click được
          */
         z-index: 1;
+
         .logo-link-image {
             display: block;
         }
@@ -1159,37 +1160,63 @@ Các mục có tiêu đề lớn hơn và các hiệu ứng hover cho tiêu đ�
 Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
-    .box-item:hover {
-        .box-title {
+
+    .box-item {
+        margin: 1px;
+        .box-item-header:hover .box-title {
             color: var(--primary-color);
             transition: color 0.3s ease-in-out;
         }
-    }
 
-    .box-item {
-        position: relative;
-
-        .box-mark {
-            position: absolute;
-            color: white;
-            font-size: 6rem;
-            font-weight: 700;
-            z-index: -1;
-            top: -70px;
-            left: -30px;
+        .box-item-header:hover .box-mark {
+            color: var(--color-1);
         }
 
-        .box-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 32px;
-
-            transition: color 0.3s ease-in-out;
+        .box-item-header:hover .box-title::after {
+            color: var(--color-2);
         }
 
-        .box-title::after {
-            position: absolute;
-            box-shadow: var(--box-shadow-gach-chan);
+        .box-item-header:hover .box-image {
+            display: none;
+        }
+
+        .box-item-header {
+            position: relative;
+
+            .box-mark {
+                position: absolute;
+                background: var(--menu-link-bg);
+                color: transparent;
+                font-size: 6rem;
+                font-weight: 700;
+                z-index: -1;
+                top: -31px;
+                left: 0;
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+                text-align: center;
+            }
+
+            .box-title::after {
+                position: absolute;
+                box-shadow: var(--box-shadow-gach-chan);
+            }
+
+            .box-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 32px;
+                /* margin-left làm dòng chữ tiêu đề đẩy ra xa dễ nhìn so với hình ảnh */
+                margin-left: 125px;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .box-image {
+                position: absolute;
+                bottom: calc(50% - 83px);
+                left: calc(50% - 234px);
+            }
         }
 
         .box-text {
@@ -1228,6 +1255,16 @@ section#aga {
             border: none;
             border-top: 5px solid var(--primary-color);
             width: 60px;
+        }
+
+        .background-fluid {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            border-radius: 15px;
+            padding: 16px;
+            margin-top: 15px;
+            background-color: var(--background-5);
         }
     }
 }
