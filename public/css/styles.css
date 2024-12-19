@@ -678,7 +678,10 @@ section.menu-container-desktop {
         display: flex;
         justify-content: space-between;
         align-items: center;
-
+        /* làm z-index để phần link nó trồi lên 
+         * trên hình ảnh để click được
+         */
+        z-index: 1;
         .logo-link-image {
             display: block;
         }
