@@ -1635,7 +1635,7 @@ section#halini-slider {
 section#gallery {
     .gallery-title {
         font-size: 36px;
-        color: #42B32F;
+        color: var(--secondary-color);
         text-align: left;
         font-weight: 500;
         margin-bottom: 30px;
@@ -1651,26 +1651,26 @@ section#gallery {
     } */
     .filter-button {
         font-size: 18px;
-        border: 1px solid #42B32F;
+        border: 1px solid var(--secondary-color);
         border-radius: 5px;
         text-align: center;
-        color: #42B32F;
+        color: var(--secondary-color);
         margin-bottom: 30px;
 
     }
 
     .filter-button:hover {
         font-size: 18px;
-        border: 1px solid #42B32F;
+        border: 1px solid var(--secondary-color);
         border-radius: 5px;
         text-align: center;
         color: #ffffff;
-        background-color: #42B32F;
+        background-color: var(--secondary-color);
 
     }
 
     .btn-default:active .filter-button:active {
-        background-color: #42B32F;
+        background-color: var(--secondary-color);
         color: white;
     }
 

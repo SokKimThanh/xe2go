@@ -120,16 +120,23 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
+    <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // Your custom options for a specific gallery
+        });
+    </script>
     <!-- section 6 hinh vuong-->
     <section id="six-box">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <span class="box-icon">
-                            <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
-                                alt="1Ford.webp">
-                        </span>
+                        <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery" data-caption="Caption #1">
+                            <span class="box-icon">
+                                <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
+                                    alt="1Ford.webp">
+                            </span>
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">

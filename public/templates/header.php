@@ -23,7 +23,7 @@
                     </a>
                     <div class="col-sm-7 menu-list-container">
                         <ul class="menu-list">
-                            <li class="menu-item active">
+                            <li class="menu-item">
                                 <a class="menu-link" href="../../index.php">Trang chủ</a>
                             </li>
                             <li class="menu-item">
@@ -63,7 +63,7 @@
                         </li>
                         <li class="menu-item">
                             <a class="menu-link">Danh mục sản phẩm</a>
-                            <ul class="sub-menu">
+                            <!-- <ul class="sub-menu">
                                 <li class="menu-item">
                                     <span class="overlay"></span>
                                     <a class="menu-link">Submenu 1</a>
@@ -138,7 +138,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ul> -->
                         </li>
                         <li class="menu-item">
                             <a class="menu-link">Liên hệ</a>

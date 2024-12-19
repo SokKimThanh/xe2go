@@ -9,160 +9,96 @@
     <!-- content -->
     <section id="section-gallery" class="container">
         <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-                <section id="sidebar">
-                    <!-- Sidebar  -->
-                    <nav id="sidebar">
-                        <div class="sidebar-header">
-                            <h3>Bootstrap Sidebar</h3>
-                        </div>
-
-                        <ul class="list-unstyled components">
-                            <p>Dummy Heading</p>
-                            <li class="active">
-                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                                <ul class="collapse list-unstyled" id="homeSubmenu">
-                                    <li>
-                                        <a href="#">Home 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Home 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Home 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">About</a>
-                            </li>
-                            <li>
-                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                                <ul class="collapse list-unstyled" id="pageSubmenu">
-                                    <li>
-                                        <a href="#">Page 1</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Page 2</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Page 3</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="#">Contact</a>
-                            </li>
-                        </ul>
-
-                        <ul class=" CTAs">
-                            <li>
-                                <a href="#" class="download">Liên hệ</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </section>
+            <div class="gallery">
+                <h1 class="gallery-title">Danh mục sản phẩm (Hình Ảnh)</h1>
             </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9">
-                <section id="gallery">
-                    <div class="row">
-                        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h1 class="gallery-title">Thư viện ảnh</h1>
-                        </div>
 
-                        <div>
-                            <button class="btn btn-default filter-button" data-filter="all">All</button>
-                            <button class="btn btn-default filter-button" data-filter="type1">Type1</button>
-                            <button class="btn btn-default filter-button" data-filter="type2">Type2</button>
-                            <button class="btn btn-default filter-button" data-filter="type3">Type3</button>
-                            <button class="btn btn-default filter-button" data-filter="type4">Type4</button>
-                        </div>
-                        <div id="lightgallery">
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                                <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                                <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                                <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                                <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                                <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                                <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                                <a href="./public/images/gallery/img-1.webp">
-                                    <img src="./public/images/gallery/img-1.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                                <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                                <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                                <a href="./public/images/gallery/img-2.webp">
-                                    <img src="./public/images/gallery/img-2.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                                <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
-                                <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                                <a href="./public/images/gallery/img-3.webp">
-                                    <img src="./public/images/gallery/img-3.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
-                                <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
-                                </a>
-                            </div>
-                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
-                                <a href="./public/images/gallery/img-4.webp">
-                                    <img src="./public/images/gallery/img-4.webp" class="img-fluid">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+            <div>
+                <button class="btn btn-default filter-button" data-filter="all">All</button>
+                <button class="btn btn-default filter-button" data-filter="type1">Type1</button>
+                <button class="btn btn-default filter-button" data-filter="type2">Type2</button>
+                <button class="btn btn-default filter-button" data-filter="type3">Type3</button>
+                <button class="btn btn-default filter-button" data-filter="type4">Type4</button>
+            </div>
+            <div id="lightgallery" class="max-w-xl mx-auto p-10">
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type1">
+                    <a href="./public/images/gallery/img-1.webp" data-fancybox="gallery-type1">
+                        <img src="./public/images/gallery/img-1.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type3">
+                    <a href="./public/images/gallery/img-3.webp" data-fancybox="gallery-type3">
+                        <img src="./public/images/gallery/img-3.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type2">
+                    <a href="./public/images/gallery/img-2.webp" data-fancybox="gallery-type2">
+                        <img src="./public/images/gallery/img-2.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type2">
+                    <a href="./public/images/gallery/img-2.webp" data-fancybox="gallery-type2">
+                        <img src="./public/images/gallery/img-2.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type1">
+                    <a href="./public/images/gallery/img-1.webp" data-fancybox="gallery-type1">
+                        <img src="./public/images/gallery/img-1.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type1">
+                    <a href="./public/images/gallery/img-1.webp" data-fancybox="gallery-type1">
+                        <img src="./public/images/gallery/img-1.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type1">
+                    <a href="./public/images/gallery/img-1.webp" data-fancybox="gallery-type1">
+                        <img src="./public/images/gallery/img-1.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type2">
+                    <a href="./public/images/gallery/img-2.webp" data-fancybox="gallery-type2">
+                        <img src="./public/images/gallery/img-2.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type3">
+                    <a href="./public/images/gallery/img-3.webp" data-fancybox="gallery-type3">
+                        <img src="./public/images/gallery/img-3.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type2">
+                    <a href="./public/images/gallery/img-2.webp" data-fancybox="gallery-type2">
+                        <img src="./public/images/gallery/img-2.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type3">
+                    <a href="./public/images/gallery/img-3.webp" data-fancybox="gallery-type3">
+                        <img src="./public/images/gallery/img-3.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type4">
+                    <a href="./public/images/gallery/img-4.webp" data-fancybox="gallery-type4">
+                        <img src="./public/images/gallery/img-4.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type3">
+                    <a href="./public/images/gallery/img-3.webp" data-fancybox="gallery-type3">
+                        <img src="./public/images/gallery/img-3.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type4">
+                    <a href="./public/images/gallery/img-4.webp" data-fancybox="gallery-type4">
+                        <img src="./public/images/gallery/img-4.webp" class="img-fluid">
+                    </a>
+                </div>
+                <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter type4">
+                    <a href="./public/images/gallery/img-4.webp" data-fancybox="gallery-type4">
+                        <img src="./public/images/gallery/img-4.webp" class="img-fluid">
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
     <?php include("../xe2go/public/templates/footer.php") ?>
 
 </body>
@@ -201,20 +137,25 @@
         }
         $(this).addClass("active");
 
-    });
-    // zoom on click
-    lightGallery(document.getElementById('lightgallery'), {
-        plugins: [lgZoom, lgThumbnail],
-        licenseKey: '0000-0000-000-0000',
-        speed: 500,
-        // ... other settings
+    }); 
+    
+    // su dung fancy box để xem gallery
+    Fancybox.bind("[data-fancybox]", {
+        // Custom options for all galleries
     });
 
-    // Sidebar script
-    $(document).ready(function() {
-        $('#sidebarCollapse').on('click', function() {
-            $('#sidebar').toggleClass('active');
-        });
+    Fancybox.bind('[data-fancybox="gallery-type1"]', {
+        // Custom options for the first gallery
+    });
+
+    Fancybox.bind('[data-fancybox="gallery-type2"]', {
+        // Custom options for the first gallery
+    });
+    Fancybox.bind('[data-fancybox="gallery-type3"]', {
+        // Custom options for the first gallery
+    });
+    Fancybox.bind('[data-fancybox="gallery-type4"]', {
+        // Custom options for the first gallery
     });
 </script>
 
