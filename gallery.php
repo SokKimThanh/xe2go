@@ -89,53 +89,82 @@
                             <button class="btn btn-default filter-button" data-filter="type3">Type3</button>
                             <button class="btn btn-default filter-button" data-filter="type4">Type4</button>
                         </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-                        </div>
-
-                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
-                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        <div id="lightgallery">
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                                <a href="./public/images/gallery/img-1.webp">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                                <a href="./public/images/gallery/img-3.webp">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                                <a href="./public/images/gallery/img-2.webp">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                                <a href="./public/images/gallery/img-2.webp">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                                <a href="./public/images/gallery/img-1.webp">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                                <a href="./public/images/gallery/img-1.webp">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                                <a href="./public/images/gallery/img-1.webp">
+                                    <img src="./public/images/gallery/img-1.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                                <a href="./public/images/gallery/img-2.webp">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                                <a href="./public/images/gallery/img-3.webp">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                                <a href="./public/images/gallery/img-2.webp">
+                                    <img src="./public/images/gallery/img-2.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                                <a href="./public/images/gallery/img-3.webp">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
+                                <a href="./public/images/gallery/img-4.webp">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                                <a href="./public/images/gallery/img-3.webp">
+                                    <img src="./public/images/gallery/img-3.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
+                                <a href="./public/images/gallery/img-4.webp">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
+                                <a href="./public/images/gallery/img-4.webp">
+                                    <img src="./public/images/gallery/img-4.webp" class="img-responsive">
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -153,17 +182,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="../public/js/owl.carousel.min.js"></script>
 <script src="../public/js/script.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/zoom/lg-zoom.umd.min.js"></script>
 <script type="text/javascript">
-    lightGallery(document.getElementById('lightgallery'), {
-        plugins: [lgZoom, lgThumbnail],
-        licenseKey: '0000-0000-000-0000',
-        speed: 500,
-        // ... other settings
-    });
-
     // Gallery script
     $(document).ready(function() {
 
@@ -187,6 +210,13 @@
         }
         $(this).addClass("active");
 
+    });
+    // zoom on click
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: '0000-0000-000-0000',
+        speed: 500,
+        // ... other settings
     });
 
     // Sidebar script
