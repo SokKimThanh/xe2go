@@ -5,11 +5,19 @@
 
 <body>
     <?php include("../xe2go/public/templates/header.php") ?>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- content -->
     <section id="gallery">
-        <section id="upcomming">
-            <div class="container">
+        <!-- <div class="container">
                 <div class="row">
                     <div class="heading">
                         <div>
@@ -94,8 +102,20 @@
                     </div>
                 </div>
 
-            </div>
-        </section>
+            </div> -->
+
+        <div id="lightgallery">
+            <?php
+            $directory = "../xe2go/public/images/gallery/";
+            $filecount = count(glob($directory . "*"));
+            for ($i = 1; $i <= $filecount; $i++) {
+            ?>
+                <a href="../xe2go/public/images/gallery/img-<?php echo $i ?>.png" data-lg-size="512-512">
+                    <img alt="img<?php echo $i ?>" src="../xe2go/public/images/gallery/img-<?php echo $i ?>.png" />
+                </a>
+            <?php
+            } ?>
+        </div>
     </section>
 
     <?php include("../xe2go/public/templates/footer.php") ?>
@@ -110,5 +130,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/zoom/lg-zoom.umd.min.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail],
+        licenseKey: '0000-0000-000-0000',
+        speed: 500,
+        // ... other settings
+    });
+</script>
 
 </html>

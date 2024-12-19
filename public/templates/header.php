@@ -28,105 +28,108 @@
             </div>
         </div>
         <section class="row menu-container-desktop">
-            <div class="col-sm-2 logo-link-image-container">
-                <a class="logo-link-image">
-                    <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo"></a>
-            </div>
-            <div class="col-sm-8 menu-list-container">
-                <ul class="menu-list">
-                    <li class="menu-item active">
-                        <a class="menu-link" href="../xe2go/index.html">Trang chủ</a>
-                    </li>
-                    <li class="menu-item active">
-                        <a class="menu-link" href="../xe2go/gallery.php">Thư viện ảnh</a>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link">Danh mục sản phẩm</a>
-                        <ul class="sub-menu">
+            <div class="col-sm-12 logo-link-image-container">
+                <div class="row">
+                    <a class="col-sm-2 logo-link-image">
+                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo">
+                    </a>
+                    <div class="col-sm-7 menu-list-container">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a class="menu-link" href="../xe2go/index.html">Trang chủ</a>
+                            </li>
+                            <li class="menu-item active">
+                                <a class="menu-link" href="../xe2go/gallery.php">Thư viện ảnh</a>
+                            </li>
                             <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
+                                <a class="menu-link">Danh mục sản phẩm</a>
                                 <ul class="sub-menu">
                                     <li class="menu-item">
                                         <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
+                                        <a class="menu-link">Submenu 1</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item">
                                         <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
+                                        <a class="menu-link">Submenu 1</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="menu-item">
                                         <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
+                                        <a class="menu-link">Submenu 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <span class="overlay"></span>
+                                        <a class="menu-link">Submenu 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <span class="overlay"></span>
+                                        <a class="menu-link">Submenu 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <span class="overlay"></span>
+                                        <a class="menu-link">Submenu 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <span class="overlay"></span>
+                                        <a class="menu-link">Submenu 1</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <span class="overlay"></span>
+                                        <a class="menu-link">Submenu 1</a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                            <li class="menu-item">
+                                                <span class="overlay"></span>
+                                                <a class="menu-link">Submenu 2</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </li>
                             <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                            </li>
-                            <li class="menu-item">
-                                <span class="overlay"></span>
-                                <a class="menu-link">Submenu 1</a>
-                                <ul class="sub-menu">
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                    <li class="menu-item">
-                                        <span class="overlay"></span>
-                                        <a class="menu-link">Submenu 2</a>
-                                    </li>
-                                </ul>
+                                <a class="menu-link">Liên hệ</a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="menu-item">
-                        <a class="menu-link">Liên hệ</a>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-2 menu-list-container-contact">
+            <div class="menu-list-container-contact">
                 <div class="button-list">
-                    <img class="img-fluid" src="public/images/QRCODE.webp" alt="QRCODE">
+                    <img class="img-fluid" src="public/images/bannerQuocLong.png" alt="bannerQuocLong">
                 </div>
             </div>
         </section>
