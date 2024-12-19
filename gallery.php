@@ -16,107 +16,133 @@
     <br>
     <br>
     <!-- content -->
-    <section id="gallery">
-        <!-- <div class="container">
-                <div class="row">
-                    <div class="heading">
-                        <div>
-                            <h1>Upcoming Events</h1>
-                            <hr>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                <section id="sidebar">
+                    <!-- Sidebar  -->
+                    <nav id="sidebar">
+                        <div class="sidebar-header">
+                            <h3>Bootstrap Sidebar</h3>
                         </div>
-                        <div>
-                            <span class="bi bi-trash"></span>
-                            <p>View All</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row filters-navigation">
-                    <div class="col-sm-8 filters">
-                        <span class="filter active" data-filter="all">Tất cả</span>
-                        <span class="filter" data-filter="conference">Hội Nghị</span>
-                        <span class="filter" data-filter="festivals">Festival</span>
-                        <span class="filter" data-filter="meeting">Meeting</span>
-                        <span class="filter" data-filter="workshop">Workshop</span>
-                    </div>
-                    <div class="col-sm-4 navigation">
-                        <button id="prev-btn" disabled><span class="bi bi-arrow-left"></span></button>
-                        <button id="next-btn"><span class="bi bi-arrow-right"></span></button>
-                    </div>
-                </div>
-                <div class="row events">
-                    <div class="col-sm-4 event conference">
-                        <div class="event-tag">Hội Nghị</div>
-                        <div class="event-info">
-                            <h2>Saturday at the Museum Series</h2>
-                            <p class="date">22 tháng 11, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event workshop">
-                        <div class="event-tag">Workshop</div>
-                        <div class="event-info">
-                            <h2>Saturday at the Museum Series</h2>
-                            <p class="date">22 tháng 11, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event meeting">
-                        <div class="event-tag">Meeting</div>
-                        <div class="event-info">
-                            <h2>Cultural Council Grant Meeting</h2>
-                            <p class="date">24 tháng 11, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event conference">
-                        <div class="event-tag">Hội Nghị</div>
-                        <div class="event-info">
-                            <h2>Smart City Council Meeting</h2>
-                            <p class="date">28 tháng 11, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event festivals">
-                        <div class="event-tag">Festival</div>
-                        <div class="event-info">
-                            <h2>Sports Games for Children</h2>
-                            <p class="date">30 tháng 11, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event festivals">
-                        <div class="event-tag">Festival</div>
-                        <div class="event-info">
-                            <h2>Smart City Chess Club Meeting</h2>
-                            <p class="date">12 tháng 12, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 event festivals">
-                        <div class="event-tag">Festival</div>
-                        <div class="event-info">
-                            <h2>Friendly Darts Tournament</h2>
-                            <p class="date">23 tháng 12, 2023</p>
-                            <p class="location">Trung tâm Thành phố, 27 Đường Division, Hoa Kỳ</p>
-                        </div>
-                    </div>
-                </div>
 
-            </div> -->
+                        <ul class="list-unstyled components">
+                            <p>Dummy Heading</p>
+                            <li class="active">
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                    <li>
+                                        <a href="#">Home 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu">
+                                    <li>
+                                        <a href="#">Page 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
 
-        <div id="lightgallery">
-            <?php
-            $directory = "../xe2go/public/images/gallery/";
-            $filecount = count(glob($directory . "*"));
-            for ($i = 1; $i <= $filecount; $i++) {
-            ?>
-                <a href="../xe2go/public/images/gallery/img-<?php echo $i ?>.png" data-lg-size="512-512">
-                    <img alt="img<?php echo $i ?>" src="../xe2go/public/images/gallery/img-<?php echo $i ?>.png" />
-                </a>
-            <?php
-            } ?>
+                        <ul class=" CTAs">
+                            <li>
+                                <a href="#" class="download">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9" style="padding-left:30px;">
+                <section id="gallery">
+                    <div class="row">
+                        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h1 class="gallery-title">Thư viện ảnh</h1>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-default filter-button" data-filter="all">All</button>
+                            <button class="btn btn-default filter-button" data-filter="type1">Type1</button>
+                            <button class="btn btn-default filter-button" data-filter="type2">Type2</button>
+                            <button class="btn btn-default filter-button" data-filter="type3">Type3</button>
+                            <button class="btn btn-default filter-button" data-filter="type4">Type4</button>
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type3">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type1">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type4">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+
+                        <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter type2">
+                            <img src="http://fakeimg.pl/365x365/" class="img-responsive">
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
-    </section>
+    </div>
+
 
     <?php include("../xe2go/public/templates/footer.php") ?>
 </body>
@@ -125,8 +151,8 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./public/js/owl.carousel.min.js"></script>
-<script src="./public/js/script.js"></script>
+<script src="../public/js/owl.carousel.min.js"></script>
+<script src="../public/js/script.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/zoom/lg-zoom.umd.min.js"></script>
@@ -136,6 +162,38 @@
         licenseKey: '0000-0000-000-0000',
         speed: 500,
         // ... other settings
+    });
+
+    // Gallery script
+    $(document).ready(function() {
+
+        $(".filter-button").click(function() {
+            var value = $(this).attr('data-filter');
+
+            if (value == "all") {
+                //$('.filter').removeClass('hidden');
+                $('.filter').show('1000');
+            } else {
+                //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+                //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+                $(".filter").not('.' + value).hide('3000');
+                $('.filter').filter('.' + value).show('3000');
+
+            }
+        });
+
+        if ($(".filter-button").removeClass("active")) {
+            $(this).removeClass("active");
+        }
+        $(this).addClass("active");
+
+    });
+
+    // Sidebar script
+    $(document).ready(function() {
+        $('#sidebarCollapse').on('click', function() {
+            $('#sidebar').toggleClass('active');
+        });
     });
 </script>
 

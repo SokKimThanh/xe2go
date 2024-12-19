@@ -41,6 +41,9 @@
                             <li class="menu-item active">
                                 <a class="menu-link" href="../xe2go/gallery.php">Thư viện ảnh</a>
                             </li>
+                            <li class="menu-item active">
+                                <a class="menu-link" href="../xe2go/testsidebar.php">sidebartest</a>
+                            </li>
                             <li class="menu-item">
                                 <a class="menu-link">Danh mục sản phẩm</a>
                                 <ul class="sub-menu">

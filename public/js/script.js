@@ -220,103 +220,93 @@ $('.stop').on('click', function () {
 /**
  * Lập trình phân loại hình ảnh
  */
-const filters = document.querySelectorAll('.filter');
-const events = document.querySelectorAll('.event');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-let currentStart = 0;
-const itemsPerPage = 3;
-let activeFilters = new Set(['all']);
-let filteredEvents = Array.from(events);
+// const filters = document.querySelectorAll('.filter');
+// const events = document.querySelectorAll('.event');
+// const prevBtn = document.getElementById('prev-btn');
+// const nextBtn = document.getElementById('next-btn');
+// let currentStart = 0;
+// const itemsPerPage = 3;
+// let activeFilters = new Set(['all']);
+// let filteredEvents = Array.from(events);
 
-function getVisibleEventsCount() {
-    return Array.from(events).filter(event => event.style.display === 'block').length;
-}
+// function getVisibleEventsCount() {
+//     return Array.from(events).filter(event => event.style.display === 'block').length;
+// }
 
-function showEvents() {
-    let visibleEvents = [];
-    activeFilters.forEach(filterType => {
-        if (filterType === 'all') {
-            visibleEvents = events;
-        } else {
-            visibleEvents = visibleEvents.concat(Array.from(events).filter(event => event.classList.contains(filterType)));
-        }
-    });
+// function showEvents() {
+//     let visibleEvents = [];
+//     activeFilters.forEach(filterType => {
+//         if (filterType === 'all') {
+//             visibleEvents = events;
+//         } else {
+//             visibleEvents = visibleEvents.concat(Array.from(events).filter(event => event.classList.contains(filterType)));
+//         }
+//     });
 
-    filteredEvents = visibleEvents;
+//     filteredEvents = visibleEvents;
 
-    let visibleCount = getVisibleEventsCount();
-    filteredEvents.forEach((event, index) => {
-        if (visibleCount < itemsPerPage && index >= currentStart && index < currentStart + itemsPerPage) {
-            event.style.display = 'block';
-            visibleCount++;
-        } else {
-            event.style.display = 'none';
-        }
-    });
+//     let visibleCount = getVisibleEventsCount();
+//     filteredEvents.forEach((event, index) => {
+//         if (visibleCount < itemsPerPage && index >= currentStart && index < currentStart + itemsPerPage) {
+//             event.style.display = 'block';
+//             visibleCount++;
+//         } else {
+//             event.style.display = 'none';
+//         }
+//     });
 
-    // Disable/Enable navigation buttons
-    prevBtn.disabled = currentStart === 0;
-    nextBtn.disabled = currentStart + itemsPerPage >= filteredEvents.length;
-}
+//     // Disable/Enable navigation buttons
+//     prevBtn.disabled = currentStart === 0;
+//     nextBtn.disabled = currentStart + itemsPerPage >= filteredEvents.length;
+// }
 
-showEvents();
+// showEvents();
 
-filters.forEach(filter => {
-    filter.addEventListener('click', function () {
-        const filterType = this.getAttribute('data-filter');
+// filters.forEach(filter => {
+//     filter.addEventListener('click', function () {
+//         const filterType = this.getAttribute('data-filter');
 
-        if (filterType === 'all') {
-            activeFilters.clear();
-            activeFilters.add('all');
-        } else {
-            activeFilters.delete('all');
-            if (activeFilters.has(filterType)) {
-                activeFilters.delete(filterType);
-            } else {
-                activeFilters.add(filterType);
-            }
-        }
+//         if (filterType === 'all') {
+//             activeFilters.clear();
+//             activeFilters.add('all');
+//         } else {
+//             activeFilters.delete('all');
+//             if (activeFilters.has(filterType)) {
+//                 activeFilters.delete(filterType);
+//             } else {
+//                 activeFilters.add(filterType);
+//             }
+//         }
 
-        // Reset navigation
-        currentStart = 0;
+//         // Reset navigation
+//         currentStart = 0;
 
-        // Show filtered events
-        showEvents();
+//         // Show filtered events
+//         showEvents();
 
-        // Remove active class from all filters
-        filters.forEach(filter => filter.classList.remove('active'));
-        // Add active class to the clicked filter
-        this.classList.add('active');
-    });
-});
+//         // Remove active class from all filters
+//         filters.forEach(filter => filter.classList.remove('active'));
+//         // Add active class to the clicked filter
+//         this.classList.add('active');
+//     });
+// });
 
-nextBtn.addEventListener('click', function () {
-    currentStart += itemsPerPage;
-    showEvents();
-});
-
-prevBtn.addEventListener('click', function () {
-    currentStart -= itemsPerPage;
-    showEvents();
-});
-
-Fancybox.bind("[data-fancybox='gallery']", {
-    Toolbar: {
-        display: [
-            { id: "counter", position: "center" },
-            "zoom",
-            "slideshow",
-            "fullscreen",
-            "download",
-            "thumbs",
-            "close",
-        ],
-    },
-    Thumbs: {
-        autoStart: false,
-    },
-});
+// Fancybox.bind("[data-fancybox='gallery']", {
+//     Toolbar: {
+//         display: [
+//             { id: "counter", position: "center" },
+//             "zoom",
+//             "slideshow",
+//             "fullscreen",
+//             "download",
+//             "thumbs",
+//             "close",
+//         ],
+//     },
+//     Thumbs: {
+//         autoStart: false,
+//     },
+// });
 
 const boxItems = document.querySelectorAll('.box-item');
 
@@ -369,4 +359,3 @@ window.addEventListener('scroll', () => {
         }
     }
 }); 
-
