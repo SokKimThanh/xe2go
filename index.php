@@ -90,10 +90,6 @@ o	Tân tâm trong từng dịch vụ.
                                 </div>
                             </h1>
                         </div>
-                        <!-- <div class="col-sm-4 slider-temperature">
-                            <p class="slider-text">26*c <span class="bi bi-sun-fill"></span></p>
-                            <p class="slider-text">14:12 <span class="text-uppercase">Local time</span></p>
-                        </div> -->
                         <div class="col-sm-12 slider-button-container">
                             <a class="slider-button" href="#">Liên hệ</a>
                         </div>
@@ -284,7 +280,7 @@ o	Tân tâm trong từng dịch vụ.
             <div class="row">
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/services/service_baoduongxe_bg.webp"
+                        <img class="box-image img-fluid" src="./public/images/services/service_baoduongxe_bg.webp"
                             alt="service_baoduongxe_bg.webp">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
@@ -299,7 +295,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="public/images/services/s_noithat_ngoaithat_vertical.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_suachuagamxe (2).webp" alt="">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -313,7 +309,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -327,7 +323,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -341,7 +337,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="public/images/services/s_suachua_gamxe.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_suachua_gamxe.webp" alt="">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -355,7 +351,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
