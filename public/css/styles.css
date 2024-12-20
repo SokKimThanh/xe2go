@@ -79,6 +79,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --color-1: rgb(97, 97, 97, .8);
     --color-2: #F6F6F6;
     --color-3: #d6d1d1;
+    --color-4: rgb(37, 37, 37);
     --min-height-menu-link: 64px;
     --box-shadow-gach-chan: 10px 0px 0 0 currentColor, 20px 0px 0 0 currentColor, 30px 0px 0 0 currentColor, 50px 0px 0 0 currentColor;
 
@@ -89,6 +90,12 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     /* thiết lập màu cho menu link contact */
     --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
     --primary-color-linear: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
+    --secondary-color-linear: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
+    --text-secondary: #223D80;
+}
+
+.text-secondary {
+    color: #214282 !important;
 }
 
 * {
@@ -1415,6 +1422,7 @@ Tiêu đề, văn bản và đường kẻ (hr) có các hiệu ứng chuyển �
 section#vfo {
     padding-top: 110px;
     padding-bottom: 140px;
+    margin-bottom: 100px;
 
     .box-item {
         padding: 0;
@@ -1618,27 +1626,43 @@ section#meet {
             text-transform: capitalize;
             font-size: 2rem;
             font-weight: 700;
-            margin-bottom: 32px;
+            color: var(--color-4);
         }
 
+
+        .box-content {
+            font-size: 1.7rem;
+            line-height: 2rem;
+        }
+
+        /* nút xem chi tiết pháp lý */
         .box-link {
             display: flex;
             height: 50px;
             width: 140px;
             border-radius: 32px;
-            background: black;
+            background: transparent;
+            border: 1px solid var(--primary-color);
             justify-content: center;
             align-items: center;
             text-decoration: none;
-            color: white;
+            color: var(--primary-color);
             text-transform: uppercase;
             font-weight: 700;
+            transition: background-color .2s ease-in-out;
+        }
+
+        .box-link:hover {
+            color: white;
+            background: var(--primary-color);
+            border: none;
+            transition: background-color .2s ease-in-out;
         }
 
         .box-image:nth-child(1) {
             transform: translateX(150px);
             transition: all 0.5s ease-in-out;
-
+            opacity: .5;
         }
 
         .box-image:nth-child(1).active {
@@ -1681,9 +1705,15 @@ section#halini-slider {
 
     .container {
         margin-top: -270px;
-        background-color: #1BAB58;
+        background: var(--menu-link-bg);
     }
-
+    .container-title{
+        text-align: center;
+        padding: 16px;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    }
     .owl-stage {
         display: flex;
         align-items: center;
@@ -1708,7 +1738,7 @@ section#halini-slider {
             justify-content: center;
 
             span {
-                background-color: white;
+                background-color: var(--background-2);
                 height: 4px;
                 width: 4px;
                 border-radius: 50%;
@@ -1718,13 +1748,13 @@ section#halini-slider {
         }
 
         .owl-dot.active {
-            border: 1px solid white;
+            border: 1px solid var(--background-2);
             padding: 5px;
         }
     }
 
     .box-slider {
-        padding: 80px;
+        padding: 32px 80px;
 
         @media screen and (max-width: 500px) {
             padding: 20px;
@@ -1733,21 +1763,23 @@ section#halini-slider {
         .box-item {
             height: 100% !important;
             padding: 8px;
+            /* giúp cho card trong slider bằng nhau hơn */
+            min-height: 300px;
 
             .box-author {
                 display: flex;
-                align-items: center;
+                align-items: start;
                 gap: 20px;
 
-                .author-image {
+                img.author-image {
                     height: 86px;
                     width: 86px;
-                    border-radius: 50%;
+                    /* border-radius: 50%; */
                     object-fit: cover;
                 }
 
                 .author-info {
-                    color: white;
+                    color: var(--color-4);
 
                     .author-name {
                         text-transform: capitalize;
@@ -1768,9 +1800,12 @@ section#halini-slider {
             }
 
             .box-content {
-                color: white;
-                font-size: 1rem;
+                color: var(--color-4);
+                font-size: 1.4rem;
+                line-height: 1.5rem;
                 font-weight: 400;
+                padding-top: 20px;
+                text-align: justify;
             }
         }
     }

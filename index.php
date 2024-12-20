@@ -366,8 +366,8 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
- <!-- section year people square successfull -->
- <section id="ypss">
+    <!-- Thành tựu đạt được -->
+    <section id="ypss">
         <div class="container">
             <div class="row">
                 <div class="col-sm-3 col-12">
@@ -392,6 +392,130 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="box-item">
                         <div class="box-number">99%</div>
                         <div class="box-title">Khách hàng hoàn thành</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giấy chứng nhận thành lập công ty -->
+    <section id="meet">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <h5 class="box-title">Cơ sở pháp lý</h5>
+                        <hr>
+                        <!-- nút xem chi tiết pháp lý -->
+                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
+                            <span>Xem chi tiết</span>
+                        </a>
+                        <div style="display: none;">
+                            <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
+                                <img src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                    </div>
+                </div>
+                <div class="col-sm-4 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="">
+                        <div class="box-image text-center ">
+                            <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
+                            <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- vì sao chọn chúng tôi? -->
+    <section id="halini-slider">
+        <div class="container">
+            <div class="row">
+                <h1 class="container-title">Vì sao chọn <b class="text-uppercase">xe2go</b>?</h1>
+                <div class="owl-carousel owl-theme box-slider">
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Kỹ thuật viên tay nghề cao</h5>
+                                <p class="author-description">XE2GO</p>
+                            </div>
+                        </div>
+                        <p class="box-content">Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp.
+                        </p>
+                    </div>
+
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Công nghệ hỗ trợ hiện đại</h5>
+                                <p class="author-description">XE2GO
+                                </p>
+                            </div>
+                        </div>
+                        <p class="box-content">Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa.
+                        </p>
+                    </div>
+
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Quy trình chuyên nghiệp
+                                </h5>
+                                <p class="author-description">XE2GO</p>
+                            </div>
+                        </div>
+                        <p class="box-content">Quy trình tại XE2GO được thiết kế để đảm bảo sự hoàn thiện & chính xác trong từng bước của quá trình sửa chữa & bảo dưỡng. Từ việc đánh giá & chẩn đoán tình trạng xe đến thực hiện các công việc.
+                        </p>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/baohanh.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Bảo hành lên tới 1 năm </h5>
+                                <p class="author-description">XE2GO</p>
+                            </div>
+                        </div>
+                        <p class="box-content">Chính sách Bảo hành của XE2GO đảm bảo cho quý khách sự hài lòng với dịch vụ của chúng tôi. Cam kết đảm bảo chất lượng & tính nghiệp vụ.
+                        </p>
+                    </div>
+
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/phutung.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Phụ tùng ô tô chính hãng</h5>
+                                <p class="author-description">XE2GO
+                                </p>
+                            </div>
+                        </div>
+                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe.
+
+
+                        </p>
+                    </div>
+
+                    <div class="box-item">
+                        <div class="box-author">
+                            <img class="author-image" src="./public/svg/giaca.svg" alt="">
+                            <div class="author-info">
+                                <h5 class="author-name">Giá cả đúng chất lượng
+                                </h5>
+                                <p class="author-description">XE2GO
+                                </p>
+                            </div>
+                        </div>
+                        <p class="box-content">Giá cả của chúng tôi được xác định dựa trên chất lượng dịch vụ và phụ tùng chính hãng. Bạn có thể yên tâm về giá thành hợp lý và đúng với chất lượng dịch vụ.
+                        </p>
                     </div>
                 </div>
             </div>

@@ -8,7 +8,6 @@
 
 
 <script>
-    
     /* 
         Gallery trang index
      */
@@ -16,11 +15,13 @@
     Fancybox.bind('[data-fancybox="gallery-xe-logo"]', {
         // Custom options for the xe-logo gallery
     });
-
-    // su dung fancy box để xem gallery
-    Fancybox.bind("[data-fancybox]", {
-        // Custom options for all galleries
+ 
+    Fancybox.bind('[data-fancybox="gallery-certificates"]', {
+         
+        zoom: true, // Bật chức năng zoom
     });
+
+
 
     Fancybox.bind('[data-fancybox="gallery-type1"]', {
         // Custom options for the type1 gallery
