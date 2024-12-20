@@ -366,7 +366,37 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-
+ <!-- section year people square successfull -->
+ <section id="ypss">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 col-12">
+                    <div class="box-item">
+                        <div class="box-number">30</div>
+                        <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                    <div class="box-item">
+                        <div class="box-number">15</div>
+                        <div class="box-title">Xe sửa chữa mỗi ngày</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                    <div class="box-item">
+                        <div class="box-number">98+</div>
+                        <div class="box-title">Dự án hoàn thành</div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-12">
+                    <div class="box-item">
+                        <div class="box-number">99%</div>
+                        <div class="box-title">Khách hàng hoàn thành</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <?php include("./public/templates/footer.php") ?>
     <?php include("./public/templates/script.php") ?>
 
