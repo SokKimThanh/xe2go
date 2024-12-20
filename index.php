@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xe2Go</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./public/css/owl.carousel.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
-
-    <link rel="stylesheet" href="./public/css/styles.css">
-
-</head> -->
 <?php include("../xe2go/public/templates/link.php") ?>
 
 <body>
@@ -120,72 +102,83 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <script>
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            // Your custom options for a specific gallery
-        });
-    </script>
+
     <!-- section 6 hinh vuong-->
     <section id="six-box">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery" data-caption="Caption #1">
-                            <span class="box-icon">
+                        <span class="box-icon">
+                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery">
                                 <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
                                     alt="1Ford.webp">
-                            </span>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-6">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
+                                alt="2BMW.webp">
                         </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
-                            alt="2BMW.webp">
+                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
+                                alt="3Hyundai.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
-                            alt="3Hyundai.webp">
+                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
+                                alt="4Audi.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
-                            alt="4Audi.webp">
+                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
+                                alt="5Toyota.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
-                            alt="5Toyota.webp">
-
+                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
+                                alt="6Mazda.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
-                            alt="6Mazda.webp">
+                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
+                                alt="7Honda.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
-                            alt="7Honda.webp">
+                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
+                                alt="8vinfast.webp">
+                        </a>
                     </div>
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
-                            alt="8vinfast.webp">
-                    </div>
-                </div>
-                <div class="col-sm-2 col-6">
-                    <div class="box-item">
-                        <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
-                            alt="9Mercedes.webp">
+                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery">
+                            <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
+                                alt="9Mercedes.webp">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -416,6 +409,13 @@ o	Tân tâm trong từng dịch vụ.
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="./public/js/owl.carousel.min.js"></script>
     <script src="./public/js/script.js"></script>
+
+    <script>
+        // su dung fancy box để xem gallery
+        Fancybox.bind('[data-fancybox="gallery"]', {
+            // Custom options for the type1 gallery
+        });
+    </script>
 </body>
 
 </html>

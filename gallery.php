@@ -145,17 +145,17 @@
     });
 
     Fancybox.bind('[data-fancybox="gallery-type1"]', {
-        // Custom options for the first gallery
+        // Custom options for the type1 gallery
     });
 
     Fancybox.bind('[data-fancybox="gallery-type2"]', {
-        // Custom options for the first gallery
+        // Custom options for the type2 gallery
     });
     Fancybox.bind('[data-fancybox="gallery-type3"]', {
-        // Custom options for the first gallery
+        // Custom options for the type3 gallery
     });
     Fancybox.bind('[data-fancybox="gallery-type4"]', {
-        // Custom options for the first gallery
+        // Custom options for the type4 gallery
     });
 </script>
 

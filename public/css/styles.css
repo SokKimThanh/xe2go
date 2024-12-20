@@ -1242,7 +1242,7 @@ section#aga {
             color: var(--primary-color);
             text-decoration: none;
             text-transform: uppercase;
-            height: 110px;
+            cursor: pointer;
         }
 
         .box-link::after {
