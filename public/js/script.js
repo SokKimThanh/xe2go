@@ -308,24 +308,31 @@ $('.stop').on('click', function () {
 //     },
 // });
 
+
+/* Lĩnh vực hoạt động */
 const boxItems = document.querySelectorAll('.box-item');
 
 boxItems.forEach(box => {
     const boxtitle = box.querySelector('.box-title');
     const boxtext = box.querySelector('.box-text');
     const boxoverlay = box.querySelector('.box-overlay');
+    const boxbg = box.querySelector('.background-fluid');
+
     const hr = box.querySelector('hr');
     box.addEventListener('mouseover', () => {
         boxtitle.classList.add('active');
         boxtext.classList.add('active');
         boxoverlay.classList.add('active');
         hr.classList.add('active');
+        boxbg.classList.add('active');
+
     });
     box.addEventListener('mouseleave', () => {
         boxtitle.classList.remove('active');
         boxtext.classList.remove('active');
         boxoverlay.classList.remove('active');
         hr.classList.remove('active');
+        boxbg.classList.remove('active');
     });
 });
 
@@ -334,8 +341,6 @@ const boxImages = sectionMeet.querySelectorAll('.box-image');
 
 // Tính toán vị trí offset từ đầu trang cho phần tử #meet
 const offsetTop = sectionMeet.offsetTop;
-
-
 // Thêm sự kiện lắng nghe khi cuộn trang
 window.addEventListener('scroll', () => {
     if (window.innerWidth > 500) {
@@ -358,4 +363,63 @@ window.addEventListener('scroll', () => {
             });
         }
     }
-}); 
+});
+
+/* Tạo hiệu ứng square cho giá trị, sứ mệnh, tầm nhìn */
+const section = document.querySelector('#aga');
+
+const circles = document.querySelectorAll('.circle');
+
+// Tính toán vị trí offset từ đầu trang cho phần tử #aga
+const sectionTop = section.offsetTop;
+
+window.addEventListener('scroll', () => {
+
+    if (scrollPosition > sectionTop) {
+        if (window.innerWidth > 500) {
+
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+
+            circles.forEach(circle => {
+                const offsetTop = circle.offsetTop;
+
+                if (scrollPosition > offsetTop) {
+                    circle.classList.add('circle-animation');
+                } else {
+                    circle.classList.remove('circle-animation');
+                }
+            });
+        }
+    }
+});
+/* Thêm hiệu ứng active chuyển động để người ta muốn click vào gallery
+Sứ mệnh, tầm nhìn, giá trị cốt lõi
+*/
+
+/* Mã nguồn trang gallery */
+
+// Gallery script
+$(document).ready(function () {
+
+    $(".filter-button").click(function () {
+        var value = $(this).attr('data-filter');
+
+        if (value == "all") {
+            //$('.filter').removeClass('hidden');
+            $('.filter').show('1000');
+        } else {
+            //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+            //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+            $(".filter").not('.' + value).hide('3000');
+            $('.filter').filter('.' + value).show('3000');
+
+        }
+    });
+
+    if ($(".filter-button").removeClass("active")) {
+        $(this).removeClass("active");
+    }
+    $(this).addClass("active");
+
+});

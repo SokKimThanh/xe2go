@@ -25,7 +25,7 @@
             <div class="col-sm-4">
                 <div class="info-container">
                     <div class="info-logo">
-                        <img src="../images/xe2go_logo.webp" alt="xe2go_logo.webp">
+                        <img class="img-fluid" src="../../public/images/xe2go_logo.webp" alt="xe2go_logo.webp">
                     </div>
                     <p class="info-text">Trụ sở chính</p>
                     <ul class="info-list">

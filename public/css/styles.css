@@ -88,7 +88,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     ;
     /* thiết lập màu cho menu link contact */
     --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
-
+    --primary-color-linear: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
 }
 
 * {
@@ -1095,7 +1095,7 @@ section#six-box {
 
     /* Tạo kiểu dáng cho box-item */
     .box-item {
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.678);
         padding: 20px;
         margin-bottom: 4rem;
         display: flex;
@@ -1126,9 +1126,13 @@ section#six-box {
     /* thay đổi màu khi hover box-item*/
     .box-item:hover {
         transform: translateY(-20px);
-        transition: transform 0.3s ease-in-out;
-        background-color: var(--primary-color);
+        background: var(--primary-color-linear);
         color: white;
+
+        -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        -moz-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        -o-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
 
         .box-icon {
             color: white;
@@ -1162,42 +1166,154 @@ Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
 
+    /* thuộc tính chính của box-item */
     .box-item {
         margin: 1px;
+    }
 
-        .box-item-header:hover .box-title {
-            color: var(--primary-color);
-            transition: color 0.3s ease-in-out;
-        }
-
-        .box-item-header:hover .box-mark {
-            color: var(--color-1);
-        }
-
-        .box-item-header:hover .box-title::after {
-            color: var(--color-2);
-        }
-
-        .box-item-header:hover .box-image {
-            display: none;
-        }
+    /* Tạo hiệu ứng của hình tròn */
+    .box-item {
 
         .box-item-header {
-            position: relative;
 
-            .box-mark {
-                position: absolute;
-                background: var(--menu-link-bg);
-                color: transparent;
-                font-size: 6rem;
-                font-weight: 700;
-                z-index: -1;
-                top: -31px;
-                left: 0;
+            /* start Hiệu ứng chuyển động của mục tiêu sứ mệnh giá trị cốt lõi */
+            .circle {
                 height: 150px;
                 width: 150px;
                 border-radius: 50%;
+                background: var(--menu-link-bg);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .circle::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 200%;
+                height: 200%;
+                background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                animation: ripple 2s infinite;
+                opacity: 0;
+            }
+
+            .circle-animation::before {
+                opacity: 1;
+            }
+
+            @keyframes ripple {
+                0% {
+                    width: 0;
+                    height: 0;
+                    opacity: 1;
+                }
+
+                100% {
+                    width: 200%;
+                    height: 200%;
+                    opacity: 0;
+                }
+            }
+
+            .circle-animation {
+                animation: fill 1s forwards;
+            }
+
+            @keyframes fill {
+                0% {
+                    background: radial-gradient(circle, #ff7f50, #ff6347);
+                }
+
+                100% {
+                    background: radial-gradient(circle, #ff6347, #ff4500);
+                }
+            }
+
+
+            /* end Hiệu ứng chuyển động của mục tiêu sứ mệnh giá trị cốt lõi */
+        }
+    }
+
+
+    /* Tạo hiệu ứng hover khi rê chuột vào xem 
+    để biết có nội dung chi tiết hình ảnh gallery 
+    */
+    .box-item:hover {
+        .box-item-header:hover {
+            .box-title {
+                color: var(--primary-color);
+                transition: color 0.3s ease-in-out;
+            }
+
+
+            .box-mark.circle {
+                background: transparent;
+            }
+
+            .box-mark {
+                color: var(--color-1);
+                transition: color 0.3s ease-in-out;
+            }
+
+            .box-image {
+                display: none;
+                transition: display 0.5s ease-in-out;
+            }
+
+            +.background-fluid {
+                transform: translateY(0);
+                transition: display 0.5s ease-in-out;
+
+
+                /* Nhấn tiêu đề xem thêm hình ảnh tiêu biểu */
+                .box-link {
+                    display: block;
+                    transform: translateX(0);
+                    background: rgba(0, 0, 0, 0.5);
+                    transition: display 0.5s ease-in-out;
+                    text-align: center;
+                }
+
+                .background-img {
+                    display: block;
+                    opacity: 1;
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+
+
+    }
+
+    /* thuộc tinh con của các thẻ bên trong box-item */
+    .box-item {
+
+        .box-item-header {
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+
+            /* không có màu lúc hiển thị để cho link bên trong hiển thị */
+            /* Quan trọng là fancy-box ở link này group cho nhiều hình */
+            color: var(--primary-color-linear);
+
+            .box-mark {
+                /* typoraphy */
+                color: transparent;
+                font-size: 6rem;
+                font-weight: 700;
                 text-align: center;
+
+                /* xác định vị trí hiển thị */
+                position: absolute;
+                top: -31px;
+                left: 0;
+
+                /* thứ tự xuất hiện */
+                z-index: -1;
             }
 
             .box-title::after {
@@ -1216,46 +1332,17 @@ section#aga {
 
             .box-image {
                 position: absolute;
-                bottom: calc(50% - 83px);
-                left: calc(50% - 234px);
+                bottom: calc(50% - 100px);
+                left: calc(50% - 232px);
+                transition: display 0.3s ease-in-out;
             }
-        }
 
-        .box-text {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5rem;
-            color: rgba(0, 0, 0, 0.7);
-            /* Giới hạn 3 dòng */
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            min-height: 100px;
-        }
-
-        .box-link {
-            display: flex;
-            margin-top: 20px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        .box-link::after {
-            content: '\F138';
-            font-family: 'bootstrap-icons';
-            margin-left: 8px;
-        }
-
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 5px solid var(--primary-color);
-            width: 60px;
+            hr {
+                margin: 20px 0;
+                border: none;
+                border-top: 5px solid var(--primary-color);
+                width: 60px;
+            }
         }
 
         .background-fluid {
@@ -1266,8 +1353,55 @@ section#aga {
             padding: 16px;
             margin-top: 15px;
             background-color: var(--background-5);
+            transform: translateY(-23px);
+
+            .box-text {
+                font-size: 1.5rem;
+                font-weight: 400;
+                line-height: 1.5rem;
+                color: rgba(0, 0, 0, 0.7);
+                /* Giới hạn 3 dòng */
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                min-height: 100px;
+            }
+
+            .box-link {
+                display: flex;
+                margin-top: 20px;
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: var(--color-2);
+                text-decoration: none;
+                text-transform: uppercase;
+                cursor: pointer;
+                transform: translateX(-20px);
+                display: none;
+            }
+
+            .box-link::after {
+                content: '\F138';
+                font-family: 'bootstrap-icons';
+                margin-left: 8px;
+            }
+
+            .background-img {
+                display: none;
+                position: absolute;
+                padding: 15px;
+                opacity: .1;
+                inset: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transition: all 0.3s ease-in-out;
+            }
         }
     }
+
+
 }
 
 /*  */
@@ -1336,6 +1470,12 @@ section#vfo {
                     margin-bottom: 32px;
                     transform: translateY(80px);
                     transition: transform 0.3s ease-in-out;
+                }
+
+                @media screen and (max-width: 500px) {
+                    .box-title {
+                        font-size: 1.5rem;
+                    }
                 }
 
                 .box-title.active {

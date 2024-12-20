@@ -100,63 +100,7 @@
         </div>
     </section>
     <?php include("../xe2go/public/templates/footer.php") ?>
-
+    <?php include("../xe2go/public/templates/script.php") ?>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="../public/js/owl.carousel.min.js"></script>
-<script src="../public/js/script.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/thumbnail/lg-thumbnail.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/plugins/zoom/lg-zoom.umd.min.js"></script>
-<script type="text/javascript">
-    // Gallery script
-    $(document).ready(function() {
-
-        $(".filter-button").click(function() {
-            var value = $(this).attr('data-filter');
-
-            if (value == "all") {
-                //$('.filter').removeClass('hidden');
-                $('.filter').show('1000');
-            } else {
-                //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-                //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-                $(".filter").not('.' + value).hide('3000');
-                $('.filter').filter('.' + value).show('3000');
-
-            }
-        });
-
-        if ($(".filter-button").removeClass("active")) {
-            $(this).removeClass("active");
-        }
-        $(this).addClass("active");
-
-    }); 
-    
-    // su dung fancy box để xem gallery
-    Fancybox.bind("[data-fancybox]", {
-        // Custom options for all galleries
-    });
-
-    Fancybox.bind('[data-fancybox="gallery-type1"]', {
-        // Custom options for the type1 gallery
-    });
-
-    Fancybox.bind('[data-fancybox="gallery-type2"]', {
-        // Custom options for the type2 gallery
-    });
-    Fancybox.bind('[data-fancybox="gallery-type3"]', {
-        // Custom options for the type3 gallery
-    });
-    Fancybox.bind('[data-fancybox="gallery-type4"]', {
-        // Custom options for the type4 gallery
-    });
-</script>
 
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<?php include("../xe2go/public/templates/link.php") ?>
+<?php include("./public/templates/link.php") ?>
 
 <body>
     <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
@@ -41,7 +41,7 @@ o	Tân tâm trong từng dịch vụ.
 •	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
 •	Nhấn xem bản đồ
  -->
-    <?php include("../xe2go/public/templates/header.php") ?>
+    <?php include("./public/templates/header.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
@@ -110,7 +110,7 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
                         <span class="box-icon">
-                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery">
+                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                                 <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
                                     alt="1Ford.webp">
                             </a>
@@ -119,7 +119,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
                                 alt="2BMW.webp">
                         </a>
@@ -127,7 +127,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
                                 alt="3Hyundai.webp">
                         </a>
@@ -135,7 +135,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
                                 alt="4Audi.webp">
                         </a>
@@ -143,7 +143,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
                                 alt="5Toyota.webp">
                         </a>
@@ -151,7 +151,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
                                 alt="6Mazda.webp">
                         </a>
@@ -159,7 +159,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
                                 alt="7Honda.webp">
                         </a>
@@ -167,7 +167,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
                                 alt="8vinfast.webp">
                         </a>
@@ -175,7 +175,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
-                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery">
+                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
                                 alt="9Mercedes.webp">
                         </a>
@@ -190,56 +190,94 @@ o	Tân tâm trong từng dịch vụ.
             <div class="row">
                 <div class="col-sm-4 col-12">
                     <div class="row box-item">
-                        <div class="col-sm-12 box-item-header">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
-                            <span class="box-mark">01</span>
+                            <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
-                        </div>
+                        </a>
                         <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp
-                                phần
+                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
                                 nâng cao chất lượng cuộc sống.</p>
-                            <a class="box-link">Xem thêm</a>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
+                        </div>
+                        <div style="display: none;">
+                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/61/1600x1200">
+                                <img src="https://lipsum.app/id/61/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
+                                <img src="https://lipsum.app/id/62/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/63/1600x1200">
+                                <img src="https://lipsum.app/id/63/120x80" />
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="row box-item">
-                        <div class="col-sm-12 box-item-header">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
-                            <span class="box-mark">02</span>
+                            <span class="box-mark circle" id="vision">02</span>
+
                             <h5 class="box-title">Tầm nhìn</h5>
-                        </div>
+                        </a>
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <a class="box-link">Xem thêm</a>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="v_vision_bg">
+                            <a href=""></a>
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
+                        </div>
+                        <div style="display: none;">
+                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/61/1600x1200">
+                                <img src="https://lipsum.app/id/61/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
+                                <img src="https://lipsum.app/id/62/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/63/1600x1200">
+                                <img src="https://lipsum.app/id/63/120x80" />
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="row box-item">
-                        <div class="col-sm-12 box-item-header">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_values_logo.webp" alt="">
-                            <span class="box-mark">03</span>
+                            <span class="box-mark circle" id="values">03</span>
                             <h5 class="box-title">Giá trị cốt lõi</h5>
-                        </div>
+                        </a>
                         <div class="col-sm-12 background-fluid">
                             <ul class="box-text">
                                 <li>Chất lượng là ưu tiên hàng đầu.</li>
                                 <li>Trách nhiệm với khách hàng và cộng đồng.</li>
                                 <li>Tận tâm trong từng dịch vụ.</li>
                             </ul>
-                            <a class="box-link">Xem thêm</a>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
+                        </div>
+                        <div style="display: none;">
+                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
+                                <img src="https://lipsum.app/id/61/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
+                                <img src="https://lipsum.app/id/62/120x80" />
+                            </a>
+                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/63/1600x1200">
+                                <img src="https://lipsum.app/id/63/120x80" />
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <!-- Lĩnh vực hoạt động -->
     <section id="vfo">
         <div class="container">
@@ -332,90 +370,10 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="stay-connected">
-                    <form action="" method="post">
-                        <div class="col-sm-3">
-                            <h2>Đặt lịch sửa xe</h2>
-                        </div>
-                        <div class="col-sm-3">
-                            <input class="form-control-plaintext" type="text" name="name"
-                                placeholder="Nhập tên của bạn">
-                        </div>
-                        <div class="col-sm-3">
-                            <input class="form-control-plaintext" type="email" name="email" placeholder="Nhập email">
-                        </div>
-                        <div class="col-sm-3">
-                            <button class="btn btn-light" type="submit">
-                                Đặt lịch
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="info-container">
-                        <div class="info-logo">
-                            <img class="img-fluid" src="public/images/xe2go_logo.webp" alt="xe2go_logo.webp">
-                        </div>
-                        <p class="info-text">Trụ sở chính</p>
-                        <ul class="info-list">
-                            <li><span class="bi bi-ladder"></span> 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương
-                            </li>
-                            <li><span class="bi bi-telephone"></span>Điện thoại: 0348.798.398 Hotline: 0886.883.886</li>
-                            <li><span class="bi bi-clock"></span> <span>Làm việc:</span>
-                                <span>T2 - T7. Thời gian: 08:00 - 17:00 giờ</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-8 service-request-map-copyright">
-                    <div class="row">
-                        <div class="service-request-map">
-                            <!-- <div class="col-sm-4 service-request"> -->
-                            <!-- <h6>SERVICE REQUESTS</h6>
-                                <ul class="info-list">
-                                    <li>311 Requests</li>
-                                    <li>Request a Bulk Item Pickup</li>
-                                    <li>Report a Parking Violation</li>
-                                    <li>Report a Pothole</li>
-                                    <li>Report a Streetlight Outage</li>
-                                </ul> -->
-                            <!-- </div> -->
-                            <div class="col-sm-12 service-request">
-                                <h6>Địa chỉ</h6>
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.858183289481!2d106.67015717592031!3d11.0113059891521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d19c56e48c3b%3A0xe1e74d0f616c0b5a!2zUXXhu5FjIExvbmcgQXV0byAtIENodXnDqm4gc-G7rWEgY2jhu69hIGLhuqNvIGTGsOG7oW5nIEF1ZGksIEJNVywgTWVyY2VkZXMsIExhbmRyb3ZlLCBGb3JkLCBMZXh1cywgQWN1cmEsIHV5IHTDrW4gY2jEg20gU8OzYyDDtCB0w7QgQsOsbmggRMawxqFuZw!5e1!3m2!1svi!2sus!4v1734609898536!5m2!1svi!2sus"
-                                    width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row copyright">
-                        <p>Copyright © 2024 xe2go by TDC. All Rights Reserved.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./public/js/owl.carousel.min.js"></script>
-    <script src="./public/js/script.js"></script>
+    <?php include("./public/templates/footer.php") ?>
+    <?php include("./public/templates/script.php") ?>
 
-    <script>
-        // su dung fancy box để xem gallery
-        Fancybox.bind('[data-fancybox="gallery"]', {
-            // Custom options for the type1 gallery
-        });
-    </script>
 </body>
 
 </html>
