@@ -14,13 +14,14 @@ Fancybox.bind('[data-fancybox]', {});
 
 
 
-Fancybox.bind('[data-fancybox="gallery-type1"]', {
+Fancybox.bind('[data-fancybox="gallery-Mercesbenz"]', {
     // Custom options for the type1 gallery
 });
 
-Fancybox.bind('[data-fancybox="gallery-type2"]', {
+Fancybox.bind('[data-fancybox="gallery-Audi"]', {
     // Custom options for the type2 gallery
 });
+
 Fancybox.bind('[data-fancybox="gallery-type3"]', {
     // Custom options for the type3 gallery
 });
