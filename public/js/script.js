@@ -1,23 +1,3 @@
-$('.mainSlider').owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: true,
-    navText: [
-        '<i class="bi bi-arrow-left" aria-hidden="true"></i>',
-        '<i class="bi bi-arrow-right" aria-hidden="true"></i>'
-    ],
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 1
-        }
-    }
-})
 
 /**
  * Tạo kiểu cho search-container (3 chỗ )
@@ -176,47 +156,6 @@ menuBarIcon.addEventListener('click', () => {
 });
 
 
-
-//
-/* section vfo */
-// 
-
-var owl = $('.box-slider');
-
-owl.owlCarousel({
-    loop: true,
-    auto: true,
-    margin: 30,
-    dots: true,
-    // auto play
-    utoplay: true,
-    autoplayTimeout: 5000,
-    autoplayHoverPause: true,
-
-    responsive: {
-        0: {
-            items: 1
-        },
-        600: {
-            items: 1
-        },
-        1000: {
-            items: 3
-        }
-    }
-})
-
-function play() {
-    $('.play').on('click', function () {
-        owl.trigger('play.owl.autoplay', [1000])
-    })
-}
-play();
-
-$('.stop').on('click', function () {
-    owl.trigger('stop.owl.autoplay')
-})
-
 /**
  * Lập trình phân loại hình ảnh
  */
@@ -291,27 +230,12 @@ $('.stop').on('click', function () {
 //     });
 // });
 
-// Fancybox.bind("[data-fancybox='gallery']", {
-//     Toolbar: {
-//         display: [
-//             { id: "counter", position: "center" },
-//             "zoom",
-//             "slideshow",
-//             "fullscreen",
-//             "download",
-//             "thumbs",
-//             "close",
-//         ],
-//     },
-//     Thumbs: {
-//         autoStart: false,
-//     },
-// });
 
 
 /* Lĩnh vực hoạt động */
+// 
 /* section vfo */
-/*  */
+//  
 const section_vfo = document.querySelector('#vfo');
 const boxItems = section_vfo.querySelectorAll('.box-item');
 
@@ -337,6 +261,10 @@ boxItems.forEach(box => {
     });
 });
 
+
+// 
+/* section meet */
+// 
 const sectionMeet = document.querySelector('#meet');
 const boxImages = sectionMeet.querySelectorAll('.box-image');
 
@@ -366,6 +294,14 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// 
+// 
+/* Thêm hiệu ứng active chuyển động để người ta muốn click vào gallery
+Sứ mệnh, tầm nhìn, giá trị cốt lõi
+*/
+// 
+// 
+
 /* Tạo hiệu ứng square cho giá trị, sứ mệnh, tầm nhìn */
 const section_aga = document.querySelector('#aga');
 
@@ -392,36 +328,6 @@ window.addEventListener('scroll', () => {
             });
         }
     }
-});
-/* Thêm hiệu ứng active chuyển động để người ta muốn click vào gallery
-Sứ mệnh, tầm nhìn, giá trị cốt lõi
-*/
-
-/* Mã nguồn trang gallery */
-
-// Gallery script
-$(document).ready(function () {
-
-    $(".filter-button").click(function () {
-        var value = $(this).attr('data-filter');
-
-        if (value == "all") {
-            //$('.filter').removeClass('hidden');
-            $('.filter').show('1000');
-        } else {
-            //            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
-            //            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
-            $(".filter").not('.' + value).hide('3000');
-            $('.filter').filter('.' + value).show('3000');
-
-        }
-    });
-
-    if ($(".filter-button").removeClass("active")) {
-        $(this).removeClass("active");
-    }
-    $(this).addClass("active");
-
 });
 
 /* section vi sao chonn chung toi */

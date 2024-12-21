@@ -1801,12 +1801,12 @@ section#halini-slider {
             transition: all 0.3s ease-in-out;
         }
 
-        .line-container.active .circle:nth-child(odd) {
+        .line-container.active .circle:nth-child(even) {
             transform: translateY(-20%);
             background: var(--text-secondary);
         }
-        
-        .line-container.active .circle:nth-child(even) {
+
+        .line-container.active .circle:nth-child(odd) {
             transform: translateY(20%);
             background: var(--text-secondary);
         }
@@ -1829,10 +1829,15 @@ section#halini-slider {
                 justify-content: space-around;
                 align-items: center;
                 font-weight: 500;
-                color: var(--thirdary-color);
+
                 text-align: center;
                 /* làm nó trồi lên trên đường kẻ */
                 z-index: 1;
+
+                a.gallery-link {
+                    text-decoration: none;
+                    color: var(--thirdary-color);
+                }
 
                 /* làm cho chữ xuống dòng như viết thư pháp */
                 p {
@@ -2413,7 +2418,7 @@ footer {
     color: white;
 
     .stay-connected {
-        background-color: var(--primary-color-linear);
+        background: var(--primary-color-linear);
         text-align: center;
         color: white;
         font-size: 1.2rem;

@@ -485,21 +485,29 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <div class="row">
                 <div class="container-title">
-                    <span>Vì sao chọn</span> <b class="text-uppercase">xe2go</b>?
+                    <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
                 </div>
                 <div class="container-answer-hiding">
                     <div class="line-container">
                         <div class="circle">
-                            <p>Quy trình chuyên nghiệp</p>
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-quytrinh">
+                                <p>Quy trình chuyên nghiệp</p>
+                            </a>
                         </div>
                         <div class="circle">
-                            <p>Dịch vụ trọn gói</p>
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-dichvu">
+                                <p>Dịch vụ trọn gói</p>
+                            </a>
                         </div>
                         <div class="circle">
-                            <p>Bảo hành chu đáo</p>
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-baohanh">
+                                <p>Bảo hành chu đáo</p>
+                            </a>
                         </div>
                         <div class="circle">
-                            <p>Tiến độ nhanh chóng</p>
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-tiendo">
+                                <p>Tiến độ nhanh chóng</p>
+                            </a>
                         </div>
                     </div>
                 </div>
