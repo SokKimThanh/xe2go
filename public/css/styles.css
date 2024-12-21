@@ -707,7 +707,7 @@ section.menu-container-desktop {
         position: relative;
 
         /* cấu hình kiểu dáng cho danh sách menu */
-        ul.menu-list {
+        .menu-list {
             list-style-type: none;
             display: flex;
             justify-content: space-evenly;
@@ -761,7 +761,7 @@ section.menu-container-desktop {
 
             /* Cài đặt mặc định cho thành phần submenu */
             /* Đảm bảo không tô màu các menu con khi không hover */
-            ul.sub-menu {
+            .sub-menu {
                 display: none;
 
                 /* Kiểu dáng menu cấp 1 */
@@ -803,24 +803,28 @@ section.menu-container-desktop {
                 }
             }
 
+            .menu-item:hover>.sub-menu,
+            .menu-item.active>.sub-menu {
+                display: flex;
+            }
 
             /* Kiểu dáng khi hover vào submenu */
-            li.menu-item ul.sub-menu {
+            .menu-item .sub-menu {
 
                 /* Màu khi hover vào sub-menu */
-                li.menu-item:hover>a.menu-link {
+                .menu-item:hover>a.menu-link {
                     color: white;
                 }
 
                 /* mặt nạ rớt xuống chậm khi rê vào sub menu active*/
-                li.menu-item:hover>.overlay {
+                .menu-item:hover>.overlay {
                     opacity: 1;
                     transform: translateY(0%);
                     transition: all 0.2s ease-in-out;
                 }
 
                 /* Xoay icon khi hover vào sub-menu */
-                li.menu-item:hover>a.menu-link::after {
+                .menu-item:hover>a.menu-link::after {
                     transform: rotate(-90deg);
                     transition: transform 0.2s ease-in-out;
                 }
@@ -871,7 +875,7 @@ section.menu-container-desktop {
             li.menu-item:hover {
 
                 /* danh muc cap 1 */
-                ul.sub-menu.show {
+                .sub-menu.show {
                     list-style-type: none;
                     position: absolute;
                     background-color: var(--background-4);
@@ -889,7 +893,7 @@ section.menu-container-desktop {
                 }
 
                 /* danh muc cap 2 */
-                ul.sub-menu.show .sub-menu.show {
+                .sub-menu.show .sub-menu.show {
                     position: absolute;
                     background-color: var(--background-4);
                     color: #010101;
@@ -998,7 +1002,7 @@ section.menu-container-mobile {
     .menu-list-container {
 
         /* cấu hình kiểu dáng cho danh sách menu */
-        ul.menu-list {
+        .menu-list {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -1038,7 +1042,7 @@ section.menu-container-mobile {
 
             /* Cài đặt mặc định cho thành phần submenu */
             /* Đảm bảo không tô màu các menu con khi không hover */
-            ul.sub-menu {
+            .sub-menu {
                 display: none;
                 transition: display 1s ease-in-out;
             }
@@ -1069,7 +1073,7 @@ section.menu-container-mobile {
             li.menu-item:hover {
 
                 /* danh muc cap 1 */
-                ul.sub-menu.show {
+                .sub-menu.show {
 
                     display: flex;
                     list-style: none;
@@ -1084,7 +1088,7 @@ section.menu-container-mobile {
                 }
 
                 /* danh muc cap 2 */
-                ul.sub-menu.show .sub-menu.show {
+                .sub-menu.show .sub-menu.show {
                     color: var(--primary-color);
                 }
             }
@@ -2023,7 +2027,7 @@ section#sidebar {
         background: #6d7fcc;
     }
 
-    #sidebar ul.components {
+    #sidebar .components {
         padding: 20px 0;
         border-bottom: 1px solid #47748b;
     }
@@ -2068,11 +2072,11 @@ section#sidebar {
         background: #6d7fcc;
     }
 
-    ul.CTAs {
+    .CTAs {
         padding: 20px;
     }
 
-    ul.CTAs a {
+    .CTAs a {
         text-align: center;
         font-size: 0.9em !important;
         display: block;

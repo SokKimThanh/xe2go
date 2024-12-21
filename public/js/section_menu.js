@@ -30,9 +30,17 @@ và mũi tên chỉ xuống (.menu-link::after) sẽ bị ẩn.
  * đều được thêm class active.
  */
 const menuItems = document.querySelectorAll('.menu-item');
-
+const currentUrl = window.location.pathname; // Lấy đường dẫn hiện tại
+alert(currentUrl);
 menuItems.forEach(item => {
+    
+    const link = item.querySelector('.menu-link'); // Lấy thẻ a
     const subMenu = item.querySelector('.sub-menu');
+
+    // So sánh URL và thêm lớp 'active'
+    if (link && link.getAttribute('href') === currentUrl) {
+        item.classList.add('active');
+    }
 
     if (!subMenu) {
         item.classList.add('no-children');
@@ -73,10 +81,23 @@ menuItems.forEach(item => {
         });
 
         item.addEventListener('mouseleave', () => {
-            if (subMenu) {
+            if (subMenu && !item.classList.contains('active')) {
                 subMenu.classList.remove('show');
             }
         });
+    }
+});
+/* 
+
+Menu mobile không được đồng bộ trạng thái 'active' như menu desktop.
+Cập nhật phần xử lý menu mobile bằng cách thêm cùng một logic kiểm tra URL vào các mục menu trong slider
+ */
+const mobileMenuItems = document.querySelectorAll('.menu-container-mobile .menu-item');
+
+mobileMenuItems.forEach(item => {
+    const link = item.querySelector('.menu-link');
+    if (link && link.getAttribute('href') === currentUrl) {
+        item.classList.add('active');
     }
 });
 

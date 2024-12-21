@@ -18,16 +18,16 @@
         <section class="row menu-container-desktop">
             <div class="col-sm-12 logo-link-image-container">
                 <div class="row">
-                    <a class="col-sm-2 logo-link-image" href="../../index.php">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo">
+                    <a class="col-sm-2 logo-link-image" href="/index.php">
+                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô">
                     </a>
                     <div class="col-sm-7 menu-list-container">
                         <ul class="menu-list">
                             <li class="menu-item">
-                                <a class="menu-link" href="../../index.php">Trang chủ</a>
+                                <a class="menu-link" href="/index.php">Trang chủ</a>
                             </li>
                             <li class="menu-item">
-                                <a class="menu-link" href="../../gallery.php">Danh mục sản phẩm</a>
+                                <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
                             </li>
                             <li class="menu-item">
                                 <a class="menu-link">Liên hệ</a>
@@ -36,26 +36,25 @@
                     </div>
                 </div>
             </div>
-            <!-- hỗ trợ chiều cao của tấm hình quốc long auto nó đi lên đi xuống -->
             <div class="menu-list-container-contact">
                 <div class="button-list">
-                    <img class="img-fluid" src="./public/images/bannerQuocLong (1).webp" alt="bannerQuocLong">
+                    <img class="img-fluid" src="./public/images/bannerQuocLong (1).webp" alt="Quảng cáo banner Quốc Long">
                 </div>
             </div>
         </section>
         <section class="row menu-container-mobile">
             <div class="menu-bar-mobile">
-                <div class="menu-bar-icon">
+                <div class="menu-bar-icon" aria-label="Menu icon - mở menu chính">
                     <i class="bi bi-list"></i>
                 </div>
                 <div class="menu-bar-logo">
-                    <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo">
+                    <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô">
                 </div>
             </div>
             <div class="menu-overlay"></div>
             <div class="menu-container-slider">
                 <a class="logo-link-image">
-                    <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="logo"></a>
+                    <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô"></a>
                 <div class="menu-list-container">
                     <ul class="menu-list">
                         <li class="menu-item active">
@@ -63,82 +62,6 @@
                         </li>
                         <li class="menu-item">
                             <a class="menu-link">Danh mục sản phẩm</a>
-                            <!-- <ul class="sub-menu">
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                </li>
-                                <li class="menu-item">
-                                    <span class="overlay"></span>
-                                    <a class="menu-link">Submenu 1</a>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <span class="overlay"></span>
-                                            <a class="menu-link">Submenu 2</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul> -->
                         </li>
                         <li class="menu-item">
                             <a class="menu-link">Liên hệ</a>

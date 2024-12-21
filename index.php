@@ -458,14 +458,14 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                         <div style="display: none;">
                             <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
-                                <img src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                                <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                        <img class="img-fluid box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
