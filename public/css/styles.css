@@ -67,7 +67,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
 */
 :root {
     --primary-font-family: "Nunito", sans-serif;
-    --primary-color: rgb(217, 23, 23);
+    --primary-color: #d91717;
     --secondary-color: #1b2ec2;
     --thirdary-color: #F4F6F6;
     --backgroung-1: #232323;
@@ -89,8 +89,8 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --menu-link-reverse: linear-gradient(45deg, #F7BC2E 0%, #ffd26a 100%);
     ;
     /* thiết lập màu cho menu link contact */
-    --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
-    --primary-color-linear: linear-gradient(45deg, #e61f1f 0%, #f51919 100%);
+    --menu-link-contact-bg: linear-gradient(45deg, #e61f47 0%, #d91717 100%);
+    --primary-color-linear: linear-gradient(45deg, #9c1313 0%, #f02222 100%);
     --secondary-color-linear: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
     --text-secondary: #223D80;
 
@@ -1107,6 +1107,8 @@ section#six-box {
 
     /* Tạo kiểu dáng cho box-item */
     .box-item {
+        /* look out: mới đầu nhìn nó cũng đẹp */
+        border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.678);
         padding: 20px;
         margin-bottom: 4rem;
@@ -1140,6 +1142,7 @@ section#six-box {
         transform: translateY(-20px);
         background: var(--primary-color-linear);
         color: white;
+
 
         -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
         -moz-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
@@ -1448,12 +1451,12 @@ section#vfo {
         }
 
         .box-overlay {
-            background-color: rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.5);
             transition: all 0.3s ease-in-out;
         }
 
         .box-overlay.active {
-            background-color: rgba(0, 0, 0, 0.5);
+            background-color: rgba(0, 0, 0, 0.8);
             transition: all 0.3s ease-in-out;
         }
 
@@ -1467,7 +1470,7 @@ section#vfo {
             hr {
                 margin: 20px 0;
                 border: none;
-                border-top: 5px solid var(--primary-color);
+                border-top: 5px solid red;
                 width: 60px;
                 transform: translateY(80px);
                 transition: transform 0.3s ease-in-out;
@@ -1481,11 +1484,11 @@ section#vfo {
                 overflow-y: hidden;
 
                 .box-title {
-                    text-transform: capitalize;
-                    color: white;
-                    font-size: 2rem;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    font-size: 1.6rem;
                     font-weight: 700;
-                    margin-bottom: 32px;
+                    margin-bottom: 60px;
                     transform: translateY(80px);
                     transition: transform 0.3s ease-in-out;
                 }
@@ -1501,17 +1504,18 @@ section#vfo {
                 }
 
                 .box-text {
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     font-weight: 400;
-                    line-height: 1.5rem;
+                    line-height: 1.8rem;
                     color: white;
-                    /* Giới hạn 3 dòng */
                     display: -webkit-box;
-                    -webkit-line-clamp: 4;
+                    -webkit-line-clamp: 6;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
-                    transform: translateY(130px);
+                    transform: translateY(190px);
                     transition: transform 0.3s ease-in-out;
+                    padding-right: 20px;
+                    text-align: justify;
                 }
 
                 .box-text.active {

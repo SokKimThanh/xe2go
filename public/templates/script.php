@@ -4,6 +4,7 @@
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="./public/js/owl.carousel.min.js"></script>
+<script src="./public/js/section_menu.js"></script>
 <script src="./public/js/script.js"></script>
 <script src="./public/js/section_owl.carousel.slider.js"></script>
 <script src="./public/js/section_fancybox.js"></script>

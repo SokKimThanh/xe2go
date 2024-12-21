@@ -39,7 +39,7 @@
             <!-- hỗ trợ chiều cao của tấm hình quốc long auto nó đi lên đi xuống -->
             <div class="menu-list-container-contact">
                 <div class="button-list">
-                    <img class="img-fluid" src="public/images/bannerQuocLong.png" alt="bannerQuocLong">
+                    <img class="img-fluid" src="./public/images/bannerQuocLong (1).webp" alt="bannerQuocLong">
                 </div>
             </div>
         </section>
