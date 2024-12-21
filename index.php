@@ -484,7 +484,25 @@ o	Tân tâm trong từng dịch vụ.
     <section id="halini-slider">
         <div class="container">
             <div class="row">
-                <h1 class="container-title">Vì sao chọn <b class="text-uppercase">xe2go</b>?</h1>
+                <div class="container-title">
+                    <span>Vì sao chọn</span> <b class="text-uppercase">xe2go</b>?
+                </div>
+                <div class="container-answer-hiding">
+                    <div class="line-container">
+                        <div class="circle">
+                            <p>Quy trình chuyên nghiệp</p>
+                        </div>
+                        <div class="circle">
+                            <p>Dịch vụ trọn gói</p>
+                        </div>
+                        <div class="circle">
+                            <p>Bảo hành chu đáo</p>
+                        </div>
+                        <div class="circle">
+                            <p>Tiến độ nhanh chóng</p>
+                        </div>
+                    </div>
+                </div>
                 <div class="owl-carousel owl-theme box-slider">
                     <div class="box-item">
                         <div class="box-author">

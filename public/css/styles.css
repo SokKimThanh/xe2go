@@ -86,12 +86,17 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     /* thiết lập màu cho menu link */
     --menu-link: #F7BC2E;
     --menu-link-bg: linear-gradient(45deg, #F7BC2E 0%, #ffc400 100%);
+    --menu-link-reverse: linear-gradient(45deg, #F7BC2E 0%, #ffd26a 100%);
     ;
     /* thiết lập màu cho menu link contact */
     --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
     --primary-color-linear: linear-gradient(45deg, #e61f1f 0%, #f51919 100%);
     --secondary-color-linear: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
     --text-secondary: #223D80;
+
+    /* thiet lap background*/
+    --background-warning: linear-gradient(45deg, #8f6608 0%, #ffc400 100%);
+    --background-secondary: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
 }
 
 .text-secondary {
@@ -1714,6 +1719,8 @@ section#meet {
     opacity: 0;
 }
 
+/* section halini-slider */
+/* vì sao chọn chúng tôi? */
 section#halini-slider {
     padding-bottom: 120px;
 
@@ -1730,8 +1737,111 @@ section#halini-slider {
         color: var(--text-secondary);
         background: var(--menu-link);
         text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        height: 5rem;
+        transition: all 0.3s ease-in-out;
     }
 
+    .container-title:hover {
+        height: 6rem;
+        color: var(--text-secondary);
+        background: var(--menu-link-reverse);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* kích hoạt click vào container title sẽ hiện ra đáp án */
+    /* tạo hiệu ứng cho đáp án */
+    .container-answer-hiding {
+        position: relative;
+        display: none;
+        transition: display 0.3s ease-in-out;
+    }
+
+    .container-answer-hiding.active {
+        display: block;
+        background: var(--menu-link-reverse);
+        padding-bottom: 15px;
+        transition: display 0.3s ease-in-out;
+    }
+
+    /* Soạn câu trả lời */
+    .container-answer-hiding {
+
+        /* thiết kế nội dung trong đáp án */
+        .line-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .line-container::before {
+            content: '';
+            height: 10px;
+            background: var(--background-warning);
+            width: 75%;
+            position: absolute;
+            top: 50%;
+            border-radius: 15px;
+            /* Đảm bảo line nằm phía dưới */
+            z-index: 0;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Soạn hiệu ứng sẵn sàng để 
+        click vào tiêu đề vì sao chọn chúng tôi
+         */
+        .line-container.active {
+            margin-top: 20px;
+            gap: 100px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .line-container.active .circle:nth-child(odd) {
+            transform: translateY(-20%);
+            background: var(--text-secondary);
+        }
+        
+        .line-container.active .circle:nth-child(even) {
+            transform: translateY(20%);
+            background: var(--text-secondary);
+        }
+
+        .line-container {
+            .circle:hover {
+                cursor: pointer;
+                /* background: var(--menu-link); */
+                border: var(--color-2) 1px solid;
+            }
+
+            /* display: none; */
+            .circle {
+                height: 180px;
+                width: 180px;
+                border-radius: 50%;
+                display: flex;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                justify-content: space-around;
+                align-items: center;
+                font-weight: 500;
+                color: var(--thirdary-color);
+                text-align: center;
+                /* làm nó trồi lên trên đường kẻ */
+                z-index: 1;
+
+                /* làm cho chữ xuống dòng như viết thư pháp */
+                p {
+                    text-wrap-mode: wrap;
+                    width: min-content;
+                }
+            }
+        }
+    }
 
     .owl-stage {
         display: flex;

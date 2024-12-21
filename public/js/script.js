@@ -310,7 +310,10 @@ $('.stop').on('click', function () {
 
 
 /* Lĩnh vực hoạt động */
-const boxItems = document.querySelectorAll('.box-item');
+/* section vfo */
+/*  */
+const section_vfo = document.querySelector('#vfo');
+const boxItems = section_vfo.querySelectorAll('.box-item');
 
 boxItems.forEach(box => {
     const boxtitle = box.querySelector('.box-title');
@@ -324,7 +327,6 @@ boxItems.forEach(box => {
         boxtext.classList.add('active');
         boxoverlay.classList.add('active');
         hr.classList.add('active');
-        boxbg.classList.add('active');
 
     });
     box.addEventListener('mouseleave', () => {
@@ -332,7 +334,6 @@ boxItems.forEach(box => {
         boxtext.classList.remove('active');
         boxoverlay.classList.remove('active');
         hr.classList.remove('active');
-        boxbg.classList.remove('active');
     });
 });
 
@@ -366,20 +367,19 @@ window.addEventListener('scroll', () => {
 });
 
 /* Tạo hiệu ứng square cho giá trị, sứ mệnh, tầm nhìn */
-const section = document.querySelector('#aga');
+const section_aga = document.querySelector('#aga');
 
 const circles = document.querySelectorAll('.circle');
 
 // Tính toán vị trí offset từ đầu trang cho phần tử #aga
-const sectionTop = section.offsetTop;
+const sectionTop = section_aga.offsetTop;
+
+const scrollPosition = window.scrollY + window.innerHeight;
 
 window.addEventListener('scroll', () => {
 
     if (scrollPosition > sectionTop) {
         if (window.innerWidth > 500) {
-
-            const scrollPosition = window.scrollY + window.innerHeight;
-
 
             circles.forEach(circle => {
                 const offsetTop = circle.offsetTop;
@@ -424,3 +424,19 @@ $(document).ready(function () {
 
 });
 
+/* section vi sao chonn chung toi */
+// Lắng nghe sự kiện click để thêm lớp active
+const section = document.querySelector('#halini-slider');
+const containerTitle = section.querySelector('.container-title');
+const containerAnswer = section.querySelector('.container-answer-hiding');
+const containerLine = section.querySelector('.line-container');
+
+containerTitle.addEventListener('click', () => {
+    // Hiển thị câu trả lời trước
+    containerAnswer.classList.toggle('active');
+
+    // Đợi câu trả lời mở xong rồi mới thêm hiệu ứng
+    setTimeout(() => {
+        containerLine.classList.toggle('active');
+    }, 0); // Delay để chờ hiệu ứng mở
+});
