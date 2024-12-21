@@ -9,3 +9,14 @@
 <script src="./public/js/section_owl.carousel.slider.js"></script>
 <script src="./public/js/section_fancybox.js"></script>
 <script src="./public/js/section_DM_SanPham.js"></script>
+<script>
+    function myMap() {
+        var mapProp = {
+            center: new google.maps.LatLng(51.508742, -0.120850),
+            zoom: 5,
+        };
+        var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+    }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>

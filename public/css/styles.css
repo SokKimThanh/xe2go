@@ -2006,6 +2006,35 @@ section#gallery {
     }
 }
 
+section#contactus{
+    .container{
+        padding: 15px 0 15px 0;
+        background-color: #e61f47;
+    }
+
+    .contactus-title {
+        font-size: 36px;
+        color: var(--secondary-color);
+        text-align: left;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .contactus-title:after {
+        content: "";
+        position: absolute;
+        width: 7.5%;
+        left: 7.5%;
+        height: 45px;
+        border-bottom: 3px solid #F3BA39;
+    }
+
+    ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+}
+
 /** Sidebar 
 Made with Copilot
 */

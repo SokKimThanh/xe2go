@@ -30,7 +30,7 @@
                                 <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
                             </li>
                             <li class="menu-item">
-                                <a class="menu-link">Liên hệ</a>
+                                <a class="menu-link" href="/contactus.php">Liên hệ</a>
                             </li>
                         </ul>
                     </div>
