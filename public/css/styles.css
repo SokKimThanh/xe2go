@@ -89,7 +89,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     ;
     /* thiết lập màu cho menu link contact */
     --menu-link-contact-bg: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
-    --primary-color-linear: linear-gradient(45deg, rgb(230, 31, 71) 0%, rgb(217, 23, 23) 100%);
+    --primary-color-linear: linear-gradient(45deg, #e61f1f 0%, #f51919 100%);
     --secondary-color-linear: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
     --text-secondary: #223D80;
 }
@@ -1554,7 +1554,7 @@ section#ypss {
 
     .container {
         margin-top: -170px;
-        background-image: url(../images/counters_bg.jpg);
+        background-image: url(../images/xe2go/counters_bg.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -1569,12 +1569,26 @@ section#ypss {
         align-items: center;
         gap: 20px;
 
+        /* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
         .box-number {
+            /* typography */
             font-size: 3rem;
             color: var(--primary-color);
             font-weight: 700;
-            background-color: rgba(255, 255, 255, .5);
+            /* color */
+            box-shadow: 4px 4px 4px 4px var(--background-3);
+            background-color: var(--background-3);
+            /* shape */
+            border-radius: 50%;
+            height: 40px;
+            width: max-content;
+            /* align arrange */
+            display: flex;
+            align-items: center;
+            text-align: center;
+            /* spacing */
             margin: 0;
+            padding: 0;
         }
 
         .box-title {
@@ -1713,104 +1727,108 @@ section#halini-slider {
         padding: 16px;
         font-weight: 700;
         font-size: 2rem;
+        color: var(--text-secondary);
+        background: var(--menu-link);
+        text-transform: uppercase;
     }
-}
 
-.owl-stage {
-    display: flex;
-    align-items: center;
-    min-height: 300px;
-}
 
-.owl-dots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    .owl-dot {
-
-        min-width: 24px;
-        min-height: 24px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background 0.3s ease-in-out;
+    .owl-stage {
         display: flex;
         align-items: center;
-        justify-content: center;
+        min-height: 300px;
+    }
 
-        span {
-            background-color: var(--background-2);
-            height: 4px;
-            width: 4px;
+    .owl-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        .owl-dot {
+
+            min-width: 24px;
+            min-height: 24px;
             border-radius: 50%;
             cursor: pointer;
             transition: background 0.3s ease-in-out;
-        }
-    }
-
-    .owl-dot.active {
-        border: 1px solid var(--background-2);
-        padding: 5px;
-    }
-}
-
-.box-slider {
-    padding: 32px 80px;
-
-    @media screen and (max-width: 500px) {
-        padding: 20px;
-    }
-
-    .box-item {
-        height: 100% !important;
-        padding: 8px;
-        /* giúp cho card trong slider bằng nhau hơn */
-        min-height: 300px;
-
-        .box-author {
             display: flex;
-            align-items: start;
-            gap: 20px;
+            align-items: center;
+            justify-content: center;
 
-            img.author-image {
-                height: 86px;
-                width: 86px;
-                /* border-radius: 50%; */
-                object-fit: cover;
-            }
-
-            .author-info {
-                color: var(--color-4);
-
-                .author-name {
-                    text-transform: capitalize;
-                    font-size: 1.2rem;
-                    font-weight: 700;
-                    padding: 0;
-                    margin: 0;
-                }
-
-                .author-description {
-                    text-transform: uppercase;
-                    font-size: 0.9rem;
-                    font-weight: 400;
-                    padding: 0;
-                    margin: 0;
-                }
+            span {
+                background-color: var(--text-secondary);
+                height: 4px;
+                width: 4px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background 0.3s ease-in-out;
             }
         }
 
-        .box-content {
-            color: var(--color-4);
-            font-size: 1.4rem;
-            line-height: 1.5rem;
-            font-weight: 400;
-            padding-top: 20px;
-            text-align: justify;
+        .owl-dot.active {
+            border: 1px solid var(--text-secondary);
+            padding: 5px;
         }
     }
-}
+
+    .box-slider {
+        padding: 32px 80px;
+
+        @media screen and (max-width: 500px) {
+            padding: 20px;
+        }
+
+        .box-item {
+            height: 100% !important;
+            padding: 8px;
+            /* giúp cho card trong slider bằng nhau hơn */
+            min-height: 300px;
+
+            .box-author {
+                display: flex;
+                /* Canh giữa tiêu đề so với hình ảnh logo của card box */
+                align-items: center;
+                gap: 20px;
+
+                img.author-image {
+                    height: 86px;
+                    width: 86px;
+                    /* border-radius: 50%; */
+                    object-fit: cover;
+                }
+
+                .author-info {
+                    color: var(--color-4);
+
+                    .author-name {
+                        text-transform: none;
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    .author-description {
+                        text-transform: uppercase;
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+
+            .box-content {
+                color: var(--color-4);
+                font-size: 1.4rem;
+                line-height: 1.5rem;
+                font-weight: 400;
+                padding-top: 20px;
+                text-align: justify;
+            }
+        }
+    }
 }
 
 /** Gallery */
@@ -2285,7 +2303,7 @@ footer {
     color: white;
 
     .stay-connected {
-        background-color: var(--primary-color);
+        background-color: var(--primary-color-linear);
         text-align: center;
         color: white;
         font-size: 1.2rem;

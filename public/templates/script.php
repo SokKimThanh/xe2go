@@ -15,11 +15,12 @@
     Fancybox.bind('[data-fancybox="gallery-xe-logo"]', {
         // Custom options for the xe-logo gallery
     });
- 
+
     Fancybox.bind('[data-fancybox="gallery-certificates"]', {
-         
         zoom: true, // Bật chức năng zoom
     });
+
+    Fancybox.bind('[data-fancybox]', {});
 
 
 

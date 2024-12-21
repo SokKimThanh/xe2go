@@ -372,32 +372,78 @@ o	Tân tâm trong từng dịch vụ.
             <div class="row">
                 <div class="col-sm-3 col-12">
                     <div class="box-item">
-                        <div class="box-number">30</div>
+                        <div class="box-number">
+                            <span data-target="30">0</span>
+                        </div>
                         <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
                     </div>
                 </div>
                 <div class="col-sm-3 col-12">
                     <div class="box-item">
-                        <div class="box-number">15</div>
+                        <div class="box-number">
+                            <span data-target="15">0</span>
+                        </div>
                         <div class="box-title">Xe sửa chữa mỗi ngày</div>
                     </div>
                 </div>
                 <div class="col-sm-3 col-12">
                     <div class="box-item">
-                        <div class="box-number">98+</div>
+                        <div class="box-number">
+                            <span data-target="98">0</span><span>+</span>
+                        </div>
                         <div class="box-title">Dự án hoàn thành</div>
                     </div>
                 </div>
                 <div class="col-sm-3 col-12">
                     <div class="box-item">
-                        <div class="box-number">99%</div>
-                        <div class="box-title">Khách hàng hoàn thành</div>
+                        <div class="box-number">
+                            <span data-target="99">0</span><span>%</span>
+                        </div>
+                        <div class="box-title">Khách hàng hài lòng</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script>
+        /* Xử lý đếm số thành tựu */
+        // Lấy tất cả các phần tử có class 'counter'
+        const counters = document.querySelectorAll('.box-number span[data-target]');
 
+        // Thiết lập hàm đếm số
+        const runCounter = (counter) => {
+            const target = +counter.getAttribute('data-target'); // Giá trị mục tiêu
+            const speed = 200; // Tốc độ đếm
+            const increment = target / speed;
+
+            let count = 0;
+
+            const updateCounter = () => {
+                if (count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.innerText = target; // Đảm bảo đạt giá trị chính xác
+                }
+            };
+
+            updateCounter();
+        };
+
+        // Kiểm tra phần tử có hiển thị trong khung nhìn không
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    observer.unobserve(entry.target); // Chỉ chạy một lần
+                }
+            });
+        });
+
+        // Áp dụng cho tất cả counter
+        counters.forEach(counter => observer.observe(counter));
+    </script>
     <!-- Giấy chứng nhận thành lập công ty -->
     <section id="meet">
         <div class="container">
