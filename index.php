@@ -274,7 +274,7 @@ o	Tân tâm trong từng dịch vụ.
         </div>
     </section>
 
-    <!-- Lĩnh vực hoạt động -->
+    <!-- Lĩnh vực hoạt động dịch vụ -->
     <section id="vfo">
         <div class="container">
             <div class="row">

@@ -31,9 +31,9 @@ và mũi tên chỉ xuống (.menu-link::after) sẽ bị ẩn.
  */
 const menuItems = document.querySelectorAll('.menu-item');
 const currentUrl = window.location.pathname; // Lấy đường dẫn hiện tại
-alert(currentUrl);
+
 menuItems.forEach(item => {
-    
+
     const link = item.querySelector('.menu-link'); // Lấy thẻ a
     const subMenu = item.querySelector('.sub-menu');
 
