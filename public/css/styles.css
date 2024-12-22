@@ -1110,8 +1110,18 @@ section#six-box {
     padding-top: 100px;
     padding-bottom: 120px;
 
+    @media screen and (max-width:1400px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width:500px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
     /* // */
-    /* slider logo xe */
+    /* slider container*/
     /* // */
     .container {
         .mobile {
@@ -1120,7 +1130,7 @@ section#six-box {
     }
 
     /* // */
-    /* slider logo xe */
+    /* slider container */
     /* // */
     @media screen and (max-width: 500px) {
         .container {
@@ -1134,7 +1144,7 @@ section#six-box {
         }
 
         /* // */
-        /* chỉnh lại layout của logo slider */
+        /* chỉnh lại layout của container */
         /* // */
         .container {
             .mobile {
@@ -1229,6 +1239,119 @@ Các mục có tiêu đề lớn hơn và các hiệu ứng hover cho tiêu đ�
 Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
+
+    /* // */
+    /* slider container: display-none mobile */
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider container: display-block mobile  */
+    /* // */
+    @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        /* // */
+        /* chỉnh lại layout của container */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+            }
+        }
+    }
+
+    /* // */
+    /* slider container desktop: box-image */
+    /* // */
+    .desktop {
+        .box-item {
+
+            /* // */
+            /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
+            /* // */
+            .box-image {
+                position: absolute;
+                transition: display 0.3s ease-in-out;
+                bottom: calc(50% - 100px);
+                left: calc(50% - 232px);
+
+                @media screen and (max-width: 1400px) {
+                    bottom: calc(50% - 80px);
+                    left: calc(50% - 170px);
+                }
+
+                @media screen and (max-width: 1000px) {
+                    bottom: calc(50% - 102px);
+                    left: calc(50% - 372px);
+                }
+            }
+        }
+    }
+
+    /* // */
+    /* slider container mobile: box-image */
+    /* // */
+    .mobile {
+
+        /* // */
+        /* slider container */
+        /* // */
+        .box-item {
+            .box-item-header {
+                transform: translateY(35px);
+
+                /* // */
+                /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
+                /* // */
+                .box-image {
+                    bottom: calc(50% - 96px);
+                    left: calc(50% - 223px);
+                    position: absolute;
+                    height: 200px;
+                    width: 200px;
+                }
+
+                .box-mark {
+                    top: 0;
+                }
+
+                .box-title {
+                    height: 130px;
+                    margin-left: 115px;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+
+            .background-fluid {
+                transform: translateY(46px);
+                padding: 36px;
+                height: 385px;
+
+                .box-text {
+                    -webkit-line-clamp: 8;
+                }
+            }
+        }
+    }
+
+
+
 
     /* thuộc tính chính của box-item */
     .box-item {
@@ -1394,26 +1517,6 @@ section#aga {
                 transition: color 0.3s ease-in-out;
             }
 
-            /* // */
-            /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
-            /* // */
-            .box-image {
-                position: absolute;
-                bottom: calc(50% - 100px);
-                left: calc(50% - 232px);
-                transition: display 0.3s ease-in-out;
-
-                @media screen and (max-width: 1000px) {
-                    bottom: calc(50% - 100px);
-                    left: calc(50% - 232px);
-                }
-
-                @media screen and (max-width: 500px) {
-                    bottom: calc(50% - 100px);
-                    left: calc(50% - 232px);
-                }
-            }
-
             hr {
                 margin: 20px 0;
                 border: none;
@@ -1443,6 +1546,18 @@ section#aga {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 min-height: 170px;
+
+                @media screen and (max-width: 1400px) {
+                    font-size: 1.3rem;
+                    -webkit-line-clamp: 6;
+                    min-height: 240px;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 1.3rem;
+                    -webkit-line-clamp: 6;
+                    min-height: 100px;
+                }
             }
 
             .box-link {
@@ -1647,6 +1762,14 @@ section#ypss {
         justify-content: center;
         align-items: center;
         gap: 20px;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            flex-direction: column;
+        }
 
         /* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
         .box-number {
@@ -2639,6 +2762,7 @@ footer {
 
             h2 {
                 margin: 0;
+                font-size: 1.5rem;
             }
 
             .form-control-plaintext::placeholder {

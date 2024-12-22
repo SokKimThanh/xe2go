@@ -248,12 +248,35 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
     <section id="aga">
         <div class="container">
-            <!-- <div class="row owl-carousel owl-theme vision-mission-values-slider"> -->
-            <div class="row">
+            <div style="display: none;">
+                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
+                    <img src="https://lipsum.app/id/62/120x80" />
+                </a>
+                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/63/1600x1200">
+                    <img src="https://lipsum.app/id/63/120x80" />
+                </a>
+            </div>
+            <div style="display: none;">
+                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
+                    <img src="https://lipsum.app/id/62/120x80" />
+                </a>
+                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/63/1600x1200">
+                    <img src="https://lipsum.app/id/63/120x80" />
+                </a>
+            </div>
+            <div style="display: none;">
+                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
+                    <img src="https://lipsum.app/id/62/120x80" />
+                </a>
+                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/63/1600x1200">
+                    <img src="https://lipsum.app/id/63/120x80" />
+                </a>
+            </div>
+            <div class="mobile row owl-carousel owl-theme vision-mission-values-slider">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/61/1600x1200">
-                            <img class="box-image" height="200" width="200" class="img-fluid"
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
+                            <img class="box-image img-fluid" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
                             <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
@@ -264,20 +287,13 @@ o	Tân tâm trong từng dịch vụ.
                             <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
-                        <div style="display: none;">
-                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
-                                <img src="https://lipsum.app/id/62/120x80" />
-                            </a>
-                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/63/1600x1200">
-                                <img src="https://lipsum.app/id/63/120x80" />
-                            </a>
-                        </div>
+
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/61/1600x1200">
-                            <img class="box-image" height="200" width="200" class="img-fluid"
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
+                            <img class="box-image img-fluid" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
                             <span class="box-mark circle" id="vision">02</span>
 
@@ -287,28 +303,18 @@ o	Tân tâm trong từng dịch vụ.
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
                             <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
-                            <a href=""></a>
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                        <div style="display: none;">
-                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
-                                <img src="https://lipsum.app/id/62/120x80" />
-                            </a>
-                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/63/1600x1200">
-                                <img src="https://lipsum.app/id/63/120x80" />
-                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
-                            <img class="box-image" height="200" width="200" class="img-fluid"
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
+                            <img class="box-image img-fluid" class="img-fluid"
                                 src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
                             <span class="box-mark circle" id="values">03</span>
                             <h5 class="box-title">Giá trị cốt lõi</h5>
                         </a>
-
                         <div class="col-sm-12 background-fluid">
                             <ul class="box-text">
                                 <li>Chất lượng là ưu tiên hàng đầu.</li>
@@ -318,13 +324,61 @@ o	Tân tâm trong từng dịch vụ.
                             <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
-                        <div style="display: none;">
-                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
-                                <img src="https://lipsum.app/id/62/120x80" />
-                            </a>
-                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/63/1600x1200">
-                                <img src="https://lipsum.app/id/63/120x80" />
-                            </a>
+                    </div>
+                </div>
+            </div>
+            <div class="desktop row">
+                <!-- <div class="row"> -->
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="row box-item">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
+                            <img class="box-image" height="200" width="200"
+                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
+                            <span class="box-mark circle" id="mission">01</span>
+                            <h5 class="box-title">Sứ mệnh</h5>
+                        </a>
+                        <div class="col-sm-12 background-fluid">
+                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
+                                nâng cao chất lượng cuộc sống.</p>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="row box-item">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
+                            <img class="box-image" height="200" width="200"
+                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
+                            <span class="box-mark circle" id="vision">02</span>
+
+                            <h5 class="box-title">Tầm nhìn</h5>
+                        </a>
+                        <div class="col-sm-12 background-fluid">
+                            <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
+                            </p>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="row box-item">
+                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
+                            <img class="box-image" height="200" width="200"
+                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
+                            <span class="box-mark circle" id="values">03</span>
+                            <h5 class="box-title">Giá trị cốt lõi</h5>
+                        </a>
+                        <div class="col-sm-12 background-fluid">
+                            <ul class="box-text">
+                                <li>Chất lượng là ưu tiên hàng đầu.</li>
+                                <li>Trách nhiệm với khách hàng và cộng đồng.</li>
+                                <li>Tận tâm trong từng dịch vụ.</li>
+                            </ul>
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
+                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
                 </div>
