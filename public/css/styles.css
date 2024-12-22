@@ -2084,10 +2084,38 @@ section#contactus{
         font-weight: 500;
     }
 
+    hr{
+        margin: 20px 0;
+        border: none;
+        border-top: 5px solid var(--primary-color);
+        width: 60px;
+    }
+
+    .icon-box{
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+
+    .icon-box-img svg{
+        fill: currentColor;
+        height: 100%;
+        transition: all .3s;
+        width: 100%;
+    }
+
+    .icon-box-text{
+        padding-left: 1em;
+        display: block;
+        flex: 1 1 0px;
+
+    }
+
+
     ul li {
-    list-style: none;
-    margin: 10px 0;
-}
+        list-style: none;
+        margin: 10px 0;
+    }
 }
 
 /** Sidebar 

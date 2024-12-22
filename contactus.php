@@ -34,7 +34,7 @@ Modified: 19:51 21/12/2024
                         <div class="icon-box">
                             <div class="icon-box-img" style="width:50px">
                                 <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                    <img src="./public/svg/lienhe.svg" alt="Liên hệ">
+                                    <img src="./public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
                                 </div>
                             </div>
                             <div class="icon-box-text">
