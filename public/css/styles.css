@@ -1775,8 +1775,11 @@ section#halini-slider {
         transition: display 0.3s ease-in-out;
     }
 
+
+
     /* Soạn câu trả lời */
     .container-answer-hiding {
+
 
         /* thiết kế nội dung trong đáp án */
         .line-container {
@@ -1818,6 +1821,53 @@ section#halini-slider {
             transform: translateY(20%);
             background: var(--text-secondary);
         }
+
+        .line-container.mobile {
+            display: none;
+        }
+
+        /* xử lý slider trên mobile */
+        @media screen and (max-width: 500px) {
+            .line-container.desktop {
+                display: none;
+            }
+
+            .line-container.mobile {
+                display: block;
+            }
+        }
+
+        /* Xử lý layout cho mục vì sao chọn chúng tôi trên mobile */
+        @media screen and (max-width: 500px) {
+
+            .line-container.mobile {
+                .circle {
+                    height: 300px;
+                    width: 97%;
+                    background: var(--text-secondary);
+                    border-radius: 15px;
+                    font-size: 1.3rem;
+
+                    /* auto chiều cao để click vào item hiển thị gallery */
+                    a {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            width: max-content;
+                        }
+                    }
+                }
+            }
+
+            .line-container::before {
+                display: none;
+            }
+        }
+
 
         .line-container {
             .circle:hover {
@@ -2006,8 +2056,8 @@ section#gallery {
     }
 }
 
-section#contactus{
-    .container{
+section#contactus {
+    .container {
         padding: 15px 0 15px 0;
         background-color: #e61f47;
     }
@@ -2030,9 +2080,9 @@ section#contactus{
     }
 
     ul li {
-    list-style: none;
-    margin: 10px 0;
-}
+        list-style: none;
+        margin: 10px 0;
+    }
 }
 
 /** Sidebar 

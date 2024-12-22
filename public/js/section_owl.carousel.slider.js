@@ -68,3 +68,35 @@ play();
 $('.stop').on('click', function () {
     owl.trigger('stop.owl.autoplay')
 })
+
+
+//
+/* section vi sao chon chung toi */
+// 
+const section_visaochonchungtoi = document.querySelector('#halini-slider');
+if (section_visaochonchungtoi) {
+
+    var section_mobile_line_container = section_visaochonchungtoi.querySelector(".mobile");
+
+    var owl = $(".line-item-slider");
+
+    owl.owlCarousel({
+        loop: true,
+        auto: true,
+        margin: 30,
+        dots: true,
+        // auto play
+        utoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            }
+        }
+    })
+}

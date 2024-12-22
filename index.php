@@ -488,29 +488,52 @@ o	Tân tâm trong từng dịch vụ.
                     <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
                 </div>
                 <div class="container-answer-hiding">
-                    <div class="line-container">
-                        <div class="circle">
+                    <div class="line-container row desktop">
+                        <div class="col-sm-3 circle">
                             <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-quytrinh">
                                 <p>Quy trình chuyên nghiệp</p>
                             </a>
                         </div>
-                        <div class="circle">
+                        <div class="col-sm-3 circle">
                             <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-dichvu">
                                 <p>Dịch vụ trọn gói</p>
                             </a>
                         </div>
-                        <div class="circle">
+                        <div class="col-sm-3 circle">
                             <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-baohanh">
                                 <p>Bảo hành chu đáo</p>
                             </a>
                         </div>
-                        <div class="circle">
+                        <div class="col-sm-3 circle">
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-tiendo">
+                                <p>Tiến độ nhanh chóng</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="line-container row mobile owl-carousel owl-theme line-item-slider">
+                        <div class="col-sm-3 circle">
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-quytrinh">
+                                <p>Quy trình chuyên nghiệp</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 circle">
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-dichvu">
+                                <p>Dịch vụ trọn gói</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 circle">
+                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-baohanh">
+                                <p>Bảo hành chu đáo</p>
+                            </a>
+                        </div>
+                        <div class="col-sm-3 circle">
                             <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-tiendo">
                                 <p>Tiến độ nhanh chóng</p>
                             </a>
                         </div>
                     </div>
                 </div>
+
                 <div class="owl-carousel owl-theme box-slider">
                     <div class="box-item">
                         <div class="box-author">
