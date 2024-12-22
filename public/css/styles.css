@@ -1775,8 +1775,11 @@ section#halini-slider {
         transition: display 0.3s ease-in-out;
     }
 
+
+
     /* Soạn câu trả lời */
     .container-answer-hiding {
+
 
         /* thiết kế nội dung trong đáp án */
         .line-container {
@@ -1818,6 +1821,53 @@ section#halini-slider {
             transform: translateY(20%);
             background: var(--text-secondary);
         }
+
+        .line-container.mobile {
+            display: none;
+        }
+
+        /* xử lý slider trên mobile */
+        @media screen and (max-width: 500px) {
+            .line-container.desktop {
+                display: none;
+            }
+
+            .line-container.mobile {
+                display: block;
+            }
+        }
+
+        /* Xử lý layout cho mục vì sao chọn chúng tôi trên mobile */
+        @media screen and (max-width: 500px) {
+
+            .line-container.mobile {
+                .circle {
+                    height: 300px;
+                    width: 97%;
+                    background: var(--text-secondary);
+                    border-radius: 15px;
+                    font-size: 1.3rem;
+
+                    /* auto chiều cao để click vào item hiển thị gallery */
+                    a {
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            width: max-content;
+                        }
+                    }
+                }
+            }
+
+            .line-container::before {
+                display: none;
+            }
+        }
+
 
         .line-container {
             .circle:hover {
@@ -2034,11 +2084,22 @@ section#contactus{
         font-weight: 500;
     }
 
-    hr{
-        margin: 20px 0;
-        border: none;
-        border-top: 5px solid var(--primary-color);
-        width: 60px;
+    ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+}
+
+/** Sidebar 
+Made with Copilot
+*/
+section#sidebar {
+    #sidebar {
+        min-width: 250px;
+        max-width: 250px;
+        background: #7386D5;
+        color: #fff;
+        transition: all 0.3s;
     }
 
     .icon-box{
