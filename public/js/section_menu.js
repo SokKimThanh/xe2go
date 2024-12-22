@@ -135,3 +135,38 @@ menuBarIcon.addEventListener('click', () => {
     // Hiển thị phần tử 'searchContainer' bằng cách đặt thuộc tính display thành 'block'
     searchContainer.style.display = 'block';
 });
+
+
+
+window.addEventListener('load', function () {
+    document.getElementById('main-menu').style.visibility = 'visible';
+});
+/* // */
+/* // Thực hiện hành động gắn menu vào top khi cuộn trang */
+/* // */
+
+const sectionMainMenu = document.querySelector('#main-menu');
+
+if (sectionMainMenu) {
+    const menuIntro = document.querySelector('.menu-intro');
+
+    // Tính toán vị trí offset từ đầu trang tới phần tử main menu
+    const offsetTop = sectionMainMenu.offsetTop;
+
+    // Thêm sự kiện lắng nghe khi cuộn trang
+    window.addEventListener('scroll', () => {
+        // Kiểm tra chính xác kích thước cửa sổ
+        if (window.innerWidth > 150) { // Đã sửa lỗi 'innnerWidth'
+            // Lấy vị trí hiện tại của cửa sổ cuộn
+            const scrollPosition = window.scrollY; // Sửa logic tính toán
+
+            // Kiểm tra nếu vị trí hiện tại lớn hơn vị trí offset của menu
+            if (scrollPosition > offsetTop) {
+                menuIntro?.classList.add('active'); // Thêm '?.' để tránh lỗi null
+            } else {
+                menuIntro?.classList.remove('active');
+            }
+        }
+    });
+}
+

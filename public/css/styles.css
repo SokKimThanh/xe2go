@@ -481,10 +481,46 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
+/* Đặt navbar ở trên đầu thiết bị */
+#main-menu {
+    position: fixed;
+    /* Giữ menu cố định khi cuộn trang */
+    top: 0;
+    /* Đặt menu ở trên cùng */
+    left: 0;
+    /* Bắt đầu từ mép trái */
+    width: 100%;
+    /* Chiều rộng 100% */
+    z-index: 1000;
+    /* Đặt z-index cao để menu hiển thị trên cùng */
+    background: transparent;
+    /* Giữ màu nền của menu */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* Đổ bóng nhẹ cho menu */
+}
+
+/* Đảm bảo tương thích với màn hình nhỏ hơn */
+@media screen and (max-width: 1024px) {
+    #main-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--background-2);
+        color: white;
+    }
+}
+
+/* Đảm bảo menu chỉ hiển thị sau khi trang được load xong */
+#main-menu {
+    visibility: hidden;
+}
+
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
-    position: absolute;
+    /* position: absolute; */
     z-index: 2;
     width: 100%;
 
@@ -518,11 +554,16 @@ section#main-menu {
         }
     }
 
+    .menu-intro.active {
+        display: none;
+        transition: all 0.5s ease-in-out;
+    }
+
     /* Tạo kiểu cho menu intro */
     .menu-intro {
         color: var(--color-1);
         background: var(--background-4);
-
+        transition: all 0.5s ease-in-out;
         .social-list {
             display: flex;
             gap: 20px;
@@ -2324,13 +2365,16 @@ section#gallery {
 }
 
 section#contactus {
-    * {
-        box-sizing: border-box;
+    padding: 150px 0;
+
+    @media screen and (max-width: 500px) {
+        padding-top: 0;
     }
 
     .container {
-        padding: 15px 15px 15px 0;
+        padding: 15px;
         background-color: white;
+        border-radius: var(--bs-border-radius);
     }
 
     a {
@@ -2340,14 +2384,31 @@ section#contactus {
         background-color: transparent;
     }
 
+    /* khung chứa thông tin liên lạc công ty */
     .col-inner {
-        padding-left: 1em;
+        padding: 5rem 5rem;
+        border: 1px solid var(--background-3);
+        margin: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        border-radius: calc(var(--bs-border-radius) / 2);
+
+        @media screen and (max-width: 500px) {
+            padding: 2rem;
+        }
     }
 
     .contactus-title {
-        font-size: 36px;
+        font-size: 1.8rem;
         color: var(--primary-color);
         text-align: left;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .contactus-description {
+        font-size: 1.3rem;
         font-weight: 500;
     }
 
@@ -2376,6 +2437,17 @@ section#contactus {
         display: block;
         flex: 1 1 0px;
 
+        h4 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
     }
 
 
