@@ -98,11 +98,10 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-
     <!-- section 6 hinh vuong-->
     <section id="six-box">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="desktop row justify-content-center">
                 <div class="col-sm-2 col-6">
                     <div class="box-item">
                         <span class="box-icon">
@@ -178,6 +177,82 @@ o	Tân tâm trong từng dịch vụ.
                     </div>
                 </div>
             </div>
+            <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <span class="box-icon">
+                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                                <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
+                                    alt="1Ford.webp">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
+                                alt="2BMW.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
+                                alt="3Hyundai.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
+                                alt="4Audi.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
+                                alt="5Toyota.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
+                                alt="6Mazda.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
+                                alt="7Honda.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
+                                alt="8vinfast.webp">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="box-item">
+                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
+                                alt="9Mercedes.webp">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
@@ -199,9 +274,6 @@ o	Tân tâm trong từng dịch vụ.
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                         <div style="display: none;">
-                            <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/61/1600x1200">
-                                <img src="https://lipsum.app/id/61/120x80" />
-                            </a>
                             <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
                                 <img src="https://lipsum.app/id/62/120x80" />
                             </a>
@@ -223,14 +295,11 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="v_vision_bg">
+                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
                             <a href=""></a>
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                         <div style="display: none;">
-                            <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/61/1600x1200">
-                                <img src="https://lipsum.app/id/61/120x80" />
-                            </a>
                             <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
                                 <img src="https://lipsum.app/id/62/120x80" />
                             </a>
@@ -244,10 +313,11 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="">
+                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
                             <span class="box-mark circle" id="values">03</span>
                             <h5 class="box-title">Giá trị cốt lõi</h5>
                         </a>
+
                         <div class="col-sm-12 background-fluid">
                             <ul class="box-text">
                                 <li>Chất lượng là ưu tiên hàng đầu.</li>
@@ -258,9 +328,6 @@ o	Tân tâm trong từng dịch vụ.
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                         <div style="display: none;">
-                            <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
-                                <img src="https://lipsum.app/id/61/120x80" />
-                            </a>
                             <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
                                 <img src="https://lipsum.app/id/62/120x80" />
                             </a>

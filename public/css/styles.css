@@ -1109,6 +1109,42 @@ Có hiệu ứng hover để thay đổi vị trí và màu nền của các m�
 section#six-box {
     padding-bottom: 120px;
 
+    /* // */
+    /* slider logo xe */
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider logo xe */
+    /* // */
+    @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        /* // */
+        /* chỉnh lại layout của logo slider */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+                position: absolute;
+                top: 95%;
+            }
+        }
+    }
+
+
     /* Tạo kiểu dáng cho box-item */
     .box-item {
         /* look out: mới đầu nhìn nó cũng đẹp */
@@ -1139,6 +1175,11 @@ section#six-box {
             margin-top: 8px;
             /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
         }
+
+        @media screen and (max-width: 500px) {
+            margin-top: 21px;
+            /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
+        }
     }
 
     /* thay đổi màu khi hover box-item*/
@@ -1148,10 +1189,10 @@ section#six-box {
         color: white;
 
 
-        -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        /* -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
         -moz-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
         -o-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
-        transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s; */
 
         .box-icon {
             color: white;

@@ -41,7 +41,7 @@ owl.owlCarousel({
     margin: 30,
     dots: true,
     // auto play
-    utoplay: true,
+    autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
 
@@ -86,7 +86,7 @@ if (section_visaochonchungtoi) {
         margin: 30,
         dots: true,
         // auto play
-        utoplay: true,
+        autoplay: true,
         autoplayTimeout: 5000,
         autoplayHoverPause: true,
 
@@ -100,3 +100,35 @@ if (section_visaochonchungtoi) {
         }
     })
 }
+
+
+
+
+//
+/* section sixbox slider logo xe*/
+// 
+
+var owl = $('.logo-xe-slider');
+
+owl.owlCarousel({
+    loop: true,
+    auto: true,
+    margin: 4,
+    dots: true,
+    // auto play
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+
+    responsive: {
+        0: {
+            items: 2
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 3
+        }
+    }
+})
