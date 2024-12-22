@@ -234,7 +234,7 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                 slider kích hoạt lượt kéo */
                 .owl-item.active {
                     .slider-background {
-                        .slider-info .slider-paragragh {}
+                        /* .slider-info .slider-paragragh {} */
 
                         .slider-info {
                             .slider-paragragh {
@@ -481,10 +481,46 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
+/* Đặt navbar ở trên đầu thiết bị */
+#main-menu {
+    position: fixed;
+    /* Giữ menu cố định khi cuộn trang */
+    top: 0;
+    /* Đặt menu ở trên cùng */
+    left: 0;
+    /* Bắt đầu từ mép trái */
+    width: 100%;
+    /* Chiều rộng 100% */
+    z-index: 1000;
+    /* Đặt z-index cao để menu hiển thị trên cùng */
+    background: transparent;
+    /* Giữ màu nền của menu */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    /* Đổ bóng nhẹ cho menu */
+}
+
+/* Đảm bảo tương thích với màn hình nhỏ hơn */
+@media screen and (max-width: 1024px) {
+    #main-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: var(--background-2);
+        color: white;
+    }
+}
+
+/* Đảm bảo menu chỉ hiển thị sau khi trang được load xong */
+#main-menu {
+    visibility: hidden;
+}
+
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
-    position: absolute;
+    /* position: absolute; */
     z-index: 2;
     width: 100%;
 
@@ -518,11 +554,30 @@ section#main-menu {
         }
     }
 
-    /* Tạo kiểu cho menu intro */
+    /* // Tạo kiểu cho menu intro */
+    /* Tạo trạng thái ẩn với opacity và max-height */
     .menu-intro {
         color: var(--color-1);
         background: var(--background-4);
+        opacity: 1;
+        /* Đặt trạng thái hiển thị */
+        max-height: 100px;
+        /* Đặt chiều cao tối đa ban đầu */
+        overflow: hidden;
+        /* Ngăn nội dung tràn ra ngoài */
+        transition: all 0.5s ease-in-out;
+    }
 
+    /* Khi active, giảm opacity và thu nhỏ chiều cao */
+    .menu-intro.active {
+        opacity: 0;
+        /* Làm mờ nội dung */
+        max-height: 0;
+        /* Thu nhỏ chiều cao về 0 */
+    }
+
+    /* Tạo kiểu cho các thẻ trong menu intro */
+    .menu-intro {
         .social-list {
             display: flex;
             gap: 20px;
@@ -1107,7 +1162,54 @@ linh hoạt.
 Có hiệu ứng hover để thay đổi vị trí và màu nền của các mục.
 */
 section#six-box {
+    padding-top: 100px;
     padding-bottom: 120px;
+
+    @media screen and (max-width:1400px) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    @media screen and (max-width:500px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    /* // */
+    /* slider container*/
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider container */
+    /* // */
+    @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        /* // */
+        /* chỉnh lại layout của container */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+                position: absolute;
+                top: 95%;
+            }
+        }
+    }
+
 
     /* Tạo kiểu dáng cho box-item */
     .box-item {
@@ -1134,9 +1236,17 @@ section#six-box {
         position: relative;
         z-index: 1;
 
+        /* canh chieu cao chuan cho cac logo */
+        max-height: 188px;
+
         /* ---------------------------- */
         @media screen and (max-width: 1024px) {
             margin-top: 8px;
+            /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
+        }
+
+        @media screen and (max-width: 500px) {
+            margin-top: 21px;
             /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
         }
     }
@@ -1148,10 +1258,10 @@ section#six-box {
         color: white;
 
 
-        -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        /* -webkit-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
         -moz-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
         -o-transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
-        transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s;
+        transition: transform 0.3s ease-in-out ease-in-out, background 0.3s ease 0.5s; */
 
         .box-icon {
             color: white;
@@ -1184,6 +1294,119 @@ Các mục có tiêu đề lớn hơn và các hiệu ứng hover cho tiêu đ�
 Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
+
+    /* // */
+    /* slider container: display-none mobile */
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider container: display-block mobile  */
+    /* // */
+    @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        /* // */
+        /* chỉnh lại layout của container */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+            }
+        }
+    }
+
+    /* // */
+    /* slider container desktop: box-image */
+    /* // */
+    .desktop {
+        .box-item {
+
+            /* // */
+            /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
+            /* // */
+            .box-image {
+                position: absolute;
+                transition: display 0.3s ease-in-out;
+                bottom: calc(50% - 100px);
+                left: calc(50% - 232px);
+
+                @media screen and (max-width: 1400px) {
+                    bottom: calc(50% - 80px);
+                    left: calc(50% - 170px);
+                }
+
+                @media screen and (max-width: 1000px) {
+                    bottom: calc(50% - 102px);
+                    left: calc(50% - 372px);
+                }
+            }
+        }
+    }
+
+    /* // */
+    /* slider container mobile: box-image */
+    /* // */
+    .mobile {
+
+        /* // */
+        /* slider container */
+        /* // */
+        .box-item {
+            .box-item-header {
+                transform: translateY(35px);
+
+                /* // */
+                /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
+                /* // */
+                .box-image {
+                    bottom: calc(50% - 96px);
+                    left: calc(50% - 223px);
+                    position: absolute;
+                    height: 200px;
+                    width: 200px;
+                }
+
+                .box-mark {
+                    top: 0;
+                }
+
+                .box-title {
+                    height: 130px;
+                    margin-left: 115px;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+            }
+
+            .background-fluid {
+                transform: translateY(46px);
+                padding: 36px;
+                height: 385px;
+
+                .box-text {
+                    -webkit-line-clamp: 8;
+                }
+            }
+        }
+    }
+
+
+
 
     /* thuộc tính chính của box-item */
     .box-item {
@@ -1349,13 +1572,6 @@ section#aga {
                 transition: color 0.3s ease-in-out;
             }
 
-            .box-image {
-                position: absolute;
-                bottom: calc(50% - 100px);
-                left: calc(50% - 232px);
-                transition: display 0.3s ease-in-out;
-            }
-
             hr {
                 margin: 20px 0;
                 border: none;
@@ -1385,6 +1601,18 @@ section#aga {
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 min-height: 170px;
+
+                @media screen and (max-width: 1400px) {
+                    font-size: 1.3rem;
+                    -webkit-line-clamp: 6;
+                    min-height: 240px;
+                }
+
+                @media screen and (max-width: 1000px) {
+                    font-size: 1.3rem;
+                    -webkit-line-clamp: 6;
+                    min-height: 100px;
+                }
             }
 
             .box-link {
@@ -1556,14 +1784,53 @@ section#vfo {
 }
 
 /*  */
-/* ypss section */
+/* ypss section thành tựu*/
 /* Phần "ypss":
 
 Mục tiêu để hiển thị các mục với số thứ tự và tiêu đề.
 Các mục có nền hình ảnh và bóng đổ. */
+
+
 section#ypss {
     background-color: white;
     padding: 80px 100px;
+
+    @media screen and (max-width: 1400px) {
+        padding: 54px 32px;
+    }
+
+    /* // */
+    /* slider container: display-none mobile */
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider container: display-block mobile  */
+    /* // */
+    @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
+
+            .desktop {
+                display: none;
+            }
+        }
+
+        /* // */
+        /* chỉnh lại layout của container */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+            }
+        }
+    }
 
     .container {
         margin-top: -170px;
@@ -1571,8 +1838,12 @@ section#ypss {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 80px 100px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 80px 100px;
+
+        @media screen and (max-width: 1400px) {
+            padding: 80px 60px;
+        }
     }
 
     .box-item {
@@ -1581,6 +1852,14 @@ section#ypss {
         justify-content: center;
         align-items: center;
         gap: 20px;
+
+        @media screen and (max-width: 1400px) {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+            flex-direction: column;
+        }
 
         /* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
         .box-number {
@@ -1611,10 +1890,53 @@ section#ypss {
             background-color: rgba(255, 255, 255, .5);
             margin: 0;
         }
-
-
     }
 
+    @media screen and (max-width: 500px) {
+        .container {
+            margin-top: -228px;
+            background-image: url(../images/xe2go/counters_bg.jpg);
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 80px 45px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+
+            .box-number {
+                font-size: 2rem;
+                color: var(--primary-color);
+                font-weight: 500;
+                box-shadow: 4px 4px 4px 4px var(--background-3);
+                background-color: var(--background-3);
+                border-radius: 50%;
+                height: 40px;
+                width: max-content;
+                display: flex;
+                text-align: center;
+                margin: 8px;
+                padding: 0;
+                min-width: 67px;
+                justify-content: center;
+            }
+
+            .box-title {
+                text-transform: uppercase;
+                font-size: 1.1rem;
+                font-weight: 700;
+                background-color: rgba(255, 255, 255, .5);
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
 
 }
 
@@ -2056,59 +2378,90 @@ section#gallery {
     }
 }
 
-section#contactus{
-    *{
-        box-sizing: border-box;
+section#contactus {
+    padding: 150px 0;
+
+    @media screen and (max-width: 500px) {
+        padding-top: 0;
     }
 
-    .container{
-        padding: 15px 15px 15px 0;
+    .container {
+        padding: 15px;
         background-color: white;
+        border-radius: var(--bs-border-radius);
     }
 
-    a{
+    a {
         text-decoration: none;
         touch-action: manipulation;
         color: var(--primary-color);
         background-color: transparent;
     }
 
-    .col-inner{
-        padding-left: 1em;
+    /* khung chứa thông tin liên lạc công ty */
+    .col-inner {
+        padding: 5rem 5rem;
+        border: 1px solid var(--background-3);
+        margin: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        border-radius: calc(var(--bs-border-radius) / 2);
+
+        @media screen and (max-width: 500px) {
+            padding: 2rem;
+        }
     }
 
     .contactus-title {
-        font-size: 36px;
+        font-size: 1.8rem;
         color: var(--primary-color);
         text-align: left;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .contactus-description {
+        font-size: 1.3rem;
         font-weight: 500;
     }
 
-    hr{
+    hr {
         margin: 20px 0;
         border: none;
         border-top: 5px solid var(--primary-color);
         width: 60px;
     }
 
-    .icon-box{
+    .icon-box {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
     }
 
-    .icon-box-img svg{
+    .icon-box-img svg {
         fill: currentColor;
         height: 100%;
         transition: all .3s;
         width: 100%;
     }
 
-    .icon-box-text{
+    .icon-box-text {
         padding-left: 1em;
         display: block;
         flex: 1 1 0px;
 
+        h4 {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+
+        p {
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
     }
 
 
@@ -2130,20 +2483,20 @@ section#sidebar {
         transition: all 0.3s;
     }
 
-    .icon-box{
+    .icon-box {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
     }
 
-    .icon-box-img svg{
+    .icon-box-img svg {
         fill: currentColor;
         height: 100%;
         transition: all .3s;
         width: 100%;
     }
 
-    .icon-box-text{
+    .icon-box-text {
         padding-left: 1em;
         display: block;
         flex: 1 1 0px;
@@ -2512,6 +2865,7 @@ footer {
 
             h2 {
                 margin: 0;
+                font-size: 1.5rem;
             }
 
             .form-control-plaintext::placeholder {
