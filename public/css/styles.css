@@ -1740,10 +1740,41 @@ section#ypss {
     background-color: white;
     padding: 80px 100px;
 
+    @media screen and (max-width: 1400px) {
+        padding: 54px 32px;
+    }
+
+    /* // */
+    /* slider container: display-none mobile */
+    /* // */
+    .container {
+        .mobile {
+            display: none;
+        }
+    }
+
+    /* // */
+    /* slider container: display-block mobile  */
+    /* // */
     @media screen and (max-width: 500px) {
+        .container {
+            .mobile {
+                display: block;
+            }
 
-        padding: 35px 11px;
+            .desktop {
+                display: none;
+            }
+        }
 
+        /* // */
+        /* chỉnh lại layout của container */
+        /* // */
+        .container {
+            .mobile {
+                display: block;
+            }
+        }
     }
 
     .container {
@@ -1752,8 +1783,12 @@ section#ypss {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 80px 100px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        padding: 80px 100px;
+
+        @media screen and (max-width: 1400px) {
+            padding: 80px 60px;
+        }
     }
 
     .box-item {
@@ -1763,7 +1798,7 @@ section#ypss {
         align-items: center;
         gap: 20px;
 
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1400px) {
             display: flex;
             justify-content: center;
             align-items: start;
@@ -2288,24 +2323,24 @@ section#gallery {
     }
 }
 
-section#contactus{
-    *{
+section#contactus {
+    * {
         box-sizing: border-box;
     }
 
-    .container{
+    .container {
         padding: 15px 15px 15px 0;
         background-color: white;
     }
 
-    a{
+    a {
         text-decoration: none;
         touch-action: manipulation;
         color: var(--primary-color);
         background-color: transparent;
     }
 
-    .col-inner{
+    .col-inner {
         padding-left: 1em;
     }
 
@@ -2316,27 +2351,27 @@ section#contactus{
         font-weight: 500;
     }
 
-    hr{
+    hr {
         margin: 20px 0;
         border: none;
         border-top: 5px solid var(--primary-color);
         width: 60px;
     }
 
-    .icon-box{
+    .icon-box {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
     }
 
-    .icon-box-img svg{
+    .icon-box-img svg {
         fill: currentColor;
         height: 100%;
         transition: all .3s;
         width: 100%;
     }
 
-    .icon-box-text{
+    .icon-box-text {
         padding-left: 1em;
         display: block;
         flex: 1 1 0px;
@@ -2362,20 +2397,20 @@ section#sidebar {
         transition: all 0.3s;
     }
 
-    .icon-box{
+    .icon-box {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
     }
 
-    .icon-box-img svg{
+    .icon-box-img svg {
         fill: currentColor;
         height: 100%;
         transition: all .3s;
         width: 100%;
     }
 
-    .icon-box-text{
+    .icon-box-text {
         padding-left: 1em;
         display: block;
         flex: 1 1 0px;

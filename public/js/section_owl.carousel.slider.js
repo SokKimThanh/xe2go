@@ -134,7 +134,7 @@ owl.owlCarousel({
 })
 
 //
-/* section sixbox slider logo xe*/
+/* section slider thành tựu đạt được*/
 // 
 
 var owl = $('.achivement-slider');
@@ -155,9 +155,6 @@ owl.owlCarousel({
         },
         600: {
             items: 1
-        },
-        1000: {
-            items: 4
         }
     }
 })

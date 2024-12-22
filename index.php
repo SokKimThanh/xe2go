@@ -481,8 +481,8 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Thành tựu đạt được -->
     <section id="ypss">
         <div class="container">
-            <div class="row owl-carousel owl-theme achivement-slider">
-                <div class="col-sm-12 col-12">
+            <div class="desktop row">
+                <div class="col-sm-3 col-md-3">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="30">0</span>
@@ -490,7 +490,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-12">
+                <div class="col-sm-3 col-md-3">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="15">0</span>
@@ -498,7 +498,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Xe sửa chữa mỗi ngày</div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-12">
+                <div class="col-sm-3 col-md-3">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="98">0</span><span>+</span>
@@ -506,13 +506,39 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Dự án hoàn thành</div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-12">
+                <div class="col-sm-3 col-md-3">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="99">0</span><span>%</span>
                         </div>
                         <div class="box-title">Khách hàng hài lòng</div>
                     </div>
+                </div>
+            </div>
+            <div class="mobile owl-carousel owl-theme achivement-slider">
+                <div class="box-item">
+                    <div class="box-number">
+                        <span data-target="30">0</span>
+                    </div>
+                    <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-number">
+                        <span data-target="15">0</span>
+                    </div>
+                    <div class="box-title">Xe sửa chữa mỗi ngày</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-number">
+                        <span data-target="98">0</span><span>+</span>
+                    </div>
+                    <div class="box-title">Dự án hoàn thành</div>
+                </div>
+                <div class="box-item">
+                    <div class="box-number">
+                        <span data-target="99">0</span><span>%</span>
+                    </div>
+                    <div class="box-title">Khách hàng hài lòng</div>
                 </div>
             </div>
         </div>
