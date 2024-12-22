@@ -57,14 +57,14 @@
                     <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô"></a>
                 <div class="menu-list-container">
                     <ul class="menu-list">
-                        <li class="menu-item active">
-                            <a class="menu-link">Home</a>
+                        <li class="menu-item">
+                            <a class="menu-link" href="/index.php">Trang chủ</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link">Danh mục sản phẩm</a>
+                            <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-link">Liên hệ</a>
+                            <a class="menu-link" href="/contactus.php">Liên hệ</a>
                         </li>
                     </ul>
                 </div>

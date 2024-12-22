@@ -132,3 +132,61 @@ owl.owlCarousel({
         }
     }
 })
+
+//
+/* section sixbox slider logo xe*/
+// 
+
+var owl = $('.achivement-slider');
+
+owl.owlCarousel({
+    loop: true,
+    auto: true,
+    margin: 4,
+    dots: true,
+    // auto play
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 4
+        }
+    }
+})
+
+//
+/* section sixbox slider logo xe*/
+// 
+
+var owl = $('.vision-mission-values-slider');
+
+owl.owlCarousel({
+    loop: true,
+    auto: true,
+    margin: 4,
+    dots: true,
+    // auto play
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+
+    responsive: {
+        0: {
+            items: 1
+        },
+        600: {
+            items: 1
+        },
+        1000: {
+            items: 3
+        }
+    }
+})

@@ -102,7 +102,7 @@ o	Tân tâm trong từng dịch vụ.
     <section id="six-box">
         <div class="container">
             <div class="desktop row justify-content-center">
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <span class="box-icon">
                             <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
@@ -112,7 +112,7 @@ o	Tân tâm trong từng dịch vụ.
                         </span>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
@@ -120,7 +120,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
@@ -128,7 +128,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
@@ -136,7 +136,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
@@ -144,7 +144,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
@@ -152,7 +152,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
@@ -160,7 +160,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
@@ -168,7 +168,7 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                     </div>
                 </div>
-                <div class="col-sm-2 col-6">
+                <div class="col-sm-4 col-md-4 col-lg-2">
                     <div class="box-item">
                         <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
                             <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
@@ -178,79 +178,69 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
             </div>
             <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <span class="box-icon">
-                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                                <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
-                                    alt="1Ford.webp">
-                            </a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
-                                alt="2BMW.webp">
+                <div class="box-item">
+                    <span class="box-icon">
+                        <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                            <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
+                                alt="1Ford.webp">
                         </a>
-                    </div>
+                    </span>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
-                                alt="3Hyundai.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
+                            alt="2BMW.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
-                                alt="4Audi.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
+                            alt="3Hyundai.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
-                                alt="5Toyota.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
+                            alt="4Audi.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
-                                alt="6Mazda.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
+                            alt="5Toyota.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
-                                alt="7Honda.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
+                            alt="6Mazda.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
-                                alt="8vinfast.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
+                            alt="7Honda.webp">
+                    </a>
                 </div>
-                <div class="col-sm-12">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
-                                alt="9Mercedes.webp">
-                        </a>
-                    </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
+                            alt="8vinfast.webp">
+                    </a>
+                </div>
+
+                <div class="box-item">
+                    <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
+                        <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
+                            alt="9Mercedes.webp">
+                    </a>
                 </div>
             </div>
         </div>
@@ -258,8 +248,9 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
     <section id="aga">
         <div class="container">
+            <!-- <div class="row owl-carousel owl-theme vision-mission-values-slider"> -->
             <div class="row">
-                <div class="col-sm-4 col-12">
+                <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
@@ -283,7 +274,7 @@ o	Tân tâm trong từng dịch vụ.
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-12">
+                <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
@@ -309,7 +300,7 @@ o	Tân tâm trong từng dịch vụ.
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4 col-12">
+                <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/61/1600x1200">
                             <img class="box-image" height="200" width="200" class="img-fluid"
@@ -436,8 +427,8 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Thành tựu đạt được -->
     <section id="ypss">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-12">
+            <div class="row owl-carousel owl-theme achivement-slider">
+                <div class="col-sm-12 col-12">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="30">0</span>
@@ -445,7 +436,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-12">
+                <div class="col-sm-12 col-12">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="15">0</span>
@@ -453,7 +444,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Xe sửa chữa mỗi ngày</div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-12">
+                <div class="col-sm-12 col-12">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="98">0</span><span>+</span>
@@ -461,7 +452,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="box-title">Dự án hoàn thành</div>
                     </div>
                 </div>
-                <div class="col-sm-3 col-12">
+                <div class="col-sm-12 col-12">
                     <div class="box-item">
                         <div class="box-number">
                             <span data-target="99">0</span><span>%</span>
