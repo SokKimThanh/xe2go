@@ -554,16 +554,30 @@ section#main-menu {
         }
     }
 
-    .menu-intro.active {
-        display: none;
-        transition: all 0.5s ease-in-out;
-    }
-
-    /* Tạo kiểu cho menu intro */
+    /* // Tạo kiểu cho menu intro */
+    /* Tạo trạng thái ẩn với opacity và max-height */
     .menu-intro {
         color: var(--color-1);
         background: var(--background-4);
+        opacity: 1;
+        /* Đặt trạng thái hiển thị */
+        max-height: 100px;
+        /* Đặt chiều cao tối đa ban đầu */
+        overflow: hidden;
+        /* Ngăn nội dung tràn ra ngoài */
         transition: all 0.5s ease-in-out;
+    }
+
+    /* Khi active, giảm opacity và thu nhỏ chiều cao */
+    .menu-intro.active {
+        opacity: 0;
+        /* Làm mờ nội dung */
+        max-height: 0;
+        /* Thu nhỏ chiều cao về 0 */
+    }
+
+    /* Tạo kiểu cho các thẻ trong menu intro */
+    .menu-intro {
         .social-list {
             display: flex;
             gap: 20px;
