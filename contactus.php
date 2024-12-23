@@ -5,10 +5,10 @@ Modified: 19:51 21/12/2024
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../xe2go/public/templates/link.php") ?>
+<?php include("../xe2go/public/templates/path-css.php") ?>
 
 <body>
-    <?php include("../xe2go/public/templates/header.php") ?>
+    <?php include("../xe2go/public/templates/main-menu.php") ?>
 
 
     <!-- #region -->
@@ -85,7 +85,7 @@ Modified: 19:51 21/12/2024
     </section>
     <!-- #endregion -->
     <?php include("../xe2go/public/templates/footer.php") ?>
-    <?php include("../xe2go/public/templates/script.php") ?>
+    <?php include("../xe2go/public/templates/path-js.php") ?>
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="vi">
 
-<?php include("./public/templates/link.php") ?>
+<?php include("./public/templates/path-css.php") ?>
 
 <body>
     <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
@@ -41,7 +41,7 @@ o	Tân tâm trong từng dịch vụ.
 •	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
 •	Nhấn xem bản đồ
  -->
-    <?php include("./public/templates/header.php") ?>
+    <?php include("./public/templates/main-menu.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
@@ -755,7 +755,7 @@ o	Tân tâm trong từng dịch vụ.
         </div>
     </section>
     <?php include("./public/templates/footer.php") ?>
-    <?php include("./public/templates/script.php") ?>
+    <?php include("./public/templates/path-js.php") ?>
 
 </body>
 
