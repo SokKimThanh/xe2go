@@ -245,11 +245,17 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                             }
 
                             .slider-title {
+                                text-transform: none;
                                 transform: translateY(0);
                                 opacity: 1;
                                 transition: all 0.6s;
                                 position: relative;
                                 cursor: pointer;
+
+                                @media screen and (max-width: 1366px) {
+                                    font-size: 3.5rem;
+                                    transition: all 0.3s;
+                                }
 
                                 .logo-text-waving {
                                     border-bottom: 0.1rem solid white;
@@ -259,7 +265,8 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 
                                 .logo-text-waving:hover {
                                     color: var(--secondary-color);
-                                    border-color: var(--secondary-color);
+                                    text-shadow: -1px 1px 0 #f8f1f1, 1px 1px 0 #e0d9d9, 1px -1px 0 #f8f4f4, -1px -1px 0 #f6f3f3;
+                                    transition: all 0.3s ease-in-out;
                                 }
 
                                 .logo-text-waving:hover+.hide {
@@ -467,9 +474,16 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
             top: 81%;
             left: calc(15% - 10px);
 
+
+
             /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
             @media screen and (max-width: 1024px) {
                 left: 21px;
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1366px */
+            @media screen and (max-width: 1366px) {
+                left: calc(10% - 30px);
             }
 
             /* vị trí khác đi khi màn hình nhỏ hơn 500px */
@@ -973,6 +987,10 @@ section.menu-container-desktop {
         /* hỗ trợ chiều cao của tấm hình quốc long auto nó đi lên đi xuống */
         height: 39px;
 
+        @media screen and (max-width: 1366px) {
+            height: 22px;
+        }
+
         .button-list {
             position: absolute;
             bottom: 0;
@@ -1210,7 +1228,6 @@ section#six-box {
         }
     }
 
-
     /* Tạo kiểu dáng cho box-item */
     .box-item {
         /* look out: mới đầu nhìn nó cũng đẹp */
@@ -1244,6 +1261,16 @@ section#six-box {
             margin-top: 8px;
             /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
         }
+
+        @media screen and (max-width: 1366px) {
+            padding: 0;
+            gap: 0;
+            min-height: 150px;
+            margin-top: -40px;
+            max-height: 150px;
+            width: 150px;
+        }
+
 
         @media screen and (max-width: 500px) {
             margin-top: 21px;
@@ -1346,6 +1373,11 @@ section#aga {
                 @media screen and (max-width: 1400px) {
                     bottom: calc(50% - 80px);
                     left: calc(50% - 170px);
+                }
+
+                @media screen and (max-width: 1366px) {
+                    bottom: calc(50% - 100px);
+                    left: calc(50% - 200px);
                 }
 
                 @media screen and (max-width: 1000px) {
@@ -1570,6 +1602,10 @@ section#aga {
                 /* margin-left làm dòng chữ tiêu đề đẩy ra xa dễ nhìn so với hình ảnh */
                 margin-left: 125px;
                 transition: color 0.3s ease-in-out;
+
+                @media screen and (max-width: 1366px) {
+                    font-size: 2rem;
+                }
             }
 
             hr {

@@ -22,7 +22,7 @@
                     <a class="col-sm-2 logo-link-image" href="/index.php">
                         <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô">
                     </a>
-                    <div class="col-sm-7 menu-list-container">
+                    <div class="col-sm-6 menu-list-container">
                         <ul class="menu-list">
                             <li class="menu-item">
                                 <a class="menu-link" href="/index.php">Trang chủ</a>
