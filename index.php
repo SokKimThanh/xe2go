@@ -1,3 +1,16 @@
+<?php
+// Nhúng file class
+include './public/class/FolderGallery.php';
+
+// Khởi tạo các đối tượng gallery
+$gallery1 = new FolderGallery('images/cars/bmw', 'BMW');
+$gallery2 = new FolderGallery('images/cars/audi', 'Audi');
+$gallery3 = new FolderGallery('images/services/consulting', 'Consulting');
+
+// // Hiển thị gallery
+// $gallery1->renderGallery();
+// $gallery2->renderGallery();
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
