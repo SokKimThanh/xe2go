@@ -1,15 +1,6 @@
 <?php
 // Nhúng file class
 include './public/class/FolderGallery.php';
-
-// Khởi tạo các đối tượng gallery
-$gallery1 = new FolderGallery('images/cars/bmw', 'BMW');
-$gallery2 = new FolderGallery('images/cars/audi', 'Audi');
-$gallery3 = new FolderGallery('images/services/consulting', 'Consulting');
-
-// // Hiển thị gallery
-// $gallery1->renderGallery();
-// $gallery2->renderGallery();
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -114,147 +105,31 @@ o	Tân tâm trong từng dịch vụ.
     <!-- section 6 hinh vuong-->
     <section id="six-box">
         <div class="container">
+            <?php
+            $galleryMap = [
+                'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_gallery/hangxe_logo/ford',
+                'logo_hangxe/2BMW-removebg-preview.webp' => 'trang_gallery/hangxe_logo/bmw',
+                'logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_gallery/hangxe_logo/hyundai',
+                'logo_hangxe/4Audi-removebg-preview.webp' => 'trang_gallery/hangxe_logo/audi',
+                'logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_gallery/hangxe_logo/toyota',
+                'logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_gallery/hangxe_logo/mazda',
+                'logo_hangxe/7Honda-removebg-preview.webp' => 'trang_gallery/hangxe_logo/honda',
+                'logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_gallery/hangxe_logo/vinfast',
+                'logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_gallery/hangxe_logo/mercedes',
+                // Thêm các cặp (thumbnail => folder) tại đây
+            ];
+            ?>
             <div class="desktop row justify-content-center">
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <span class="box-icon">
-                            <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                                <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
-                                    alt="1Ford.webp">
-                            </a>
-                        </span>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
-                                alt="2BMW.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
-                                alt="3Hyundai.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
-                                alt="4Audi.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
-                                alt="5Toyota.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
-                                alt="6Mazda.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
-                                alt="7Honda.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
-                                alt="8vinfast.webp">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-md-4 col-lg-2">
-                    <div class="box-item">
-                        <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
-                                alt="9Mercedes.webp">
-                        </a>
-                    </div>
-                </div>
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGallery();
+                ?>
             </div>
             <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
-                <div class="box-item">
-                    <span class="box-icon">
-                        <a href="public/images/logo_hangxe/1Ford-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                            <img class="img-fluid" src="public/images/logo_hangxe/1Ford-removebg-preview.webp"
-                                alt="1Ford.webp">
-                        </a>
-                    </span>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/2BMW-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/2BMW-removebg-preview.webp"
-                            alt="2BMW.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/3Hyundai-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/3Hyundai-removebg-preview.webp"
-                            alt="3Hyundai.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/4Audi-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/4Audi-removebg-preview.webp"
-                            alt="4Audi.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/5Toyota-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/5Toyota-removebg-preview.webp"
-                            alt="5Toyota.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/6Mazda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/6Mazda-removebg-preview.webp"
-                            alt="6Mazda.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/7Honda-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/7Honda-removebg-preview.webp"
-                            alt="7Honda.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/8vinfast-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/8vinfast-removebg-preview.webp"
-                            alt="8vinfast.webp">
-                    </a>
-                </div>
-
-                <div class="box-item">
-                    <a href="public/images/logo_hangxe/9Mercedes-removebg-preview.webp" data-fancybox="gallery-xe-logo">
-                        <img class="img-fluid" src="public/images/logo_hangxe/9Mercedes-Benz-removebg-preview.webp"
-                            alt="9Mercedes.webp">
-                    </a>
-                </div>
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGallery();
+                ?>
             </div>
         </div>
     </section>
