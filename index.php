@@ -70,7 +70,7 @@ o	Tân tâm trong từng dịch vụ.
                             </h1>
                         </div>
                         <div class="col-sm-12 slider-button-container">
-                            <a class="slider-button" href="#">Liên hệ</a>
+                            <a class="slider-button" href="/contactus.php">Liên hệ</a>
                         </div>
                     </div>
                 </div>

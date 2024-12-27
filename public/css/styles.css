@@ -135,13 +135,13 @@ html {
 /* Responsive Font Size */
 @media screen and (max-width: 1366px) {
     html {
-        font-size: 12px;
+        font-size: 14px;
     }
 }
 
 @media screen and (max-width: 500px) {
     html {
-        font-size: 10px;
+        font-size: 14px;
     }
 }
 
@@ -283,12 +283,12 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 cursor: pointer;
 
                                 @media screen and (max-width: 1366px) {
-                                    font-size: 3.5rem;
+                                    font-size: 3rem;
                                     transition: all 0.3s;
                                 }
 
                                 @media screen and (max-width: 500px) {
-                                    font-size: 2.9rem;
+                                    font-size: 2.5rem;
                                     transition: all 0.3s;
                                 }
 
@@ -491,6 +491,35 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
             display: flex;
             /* khoang trong giua 2 mui ten */
             gap: 10px;
+            /* vị trí khác đi khi màn hình lớn hơn 1024px */
+            top: 81%;
+            left: calc(15% + 8px);
+
+
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1440px */
+            @media screen and (max-width: 1440px) {
+                top: 81%;
+                left: calc(15% - 156px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1366px */
+            @media screen and (max-width: 1366px) {
+                top: 74%;
+                left: calc(10% - 30px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
+            @media screen and (max-width: 1024px) {
+                top: 83%;
+                left: calc(6% - 30px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 500px */
+            @media screen and (max-width: 500px) {
+                top: 87%;
+                left: 21px;
+            }
 
             .owl-prev,
             .owl-next {
@@ -504,28 +533,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                     align-items: center;
                     justify-content: center;
                 }
-            }
-
-            /* vị trí khác đi khi màn hình lớn hơn 1024px */
-            top: 81%;
-            left: calc(15% - 10px);
-
-
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
-            @media screen and (max-width: 1024px) {
-                left: 21px;
-            }
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 1366px */
-            @media screen and (max-width: 1366px) {
-                left: calc(10% - 30px);
-            }
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 500px */
-            @media screen and (max-width: 500px) {
-                top: 91%;
-                left: 21px;
             }
         }
     }
