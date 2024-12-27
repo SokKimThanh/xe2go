@@ -136,7 +136,7 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
     <section id="aga">
         <div class="container">
-            <div style="display: none;">
+            <div class="hidden">
                 <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
                     <img src="https://lipsum.app/id/62/120x80" />
                 </a>
@@ -144,7 +144,7 @@ o	Tân tâm trong từng dịch vụ.
                     <img src="https://lipsum.app/id/63/120x80" />
                 </a>
             </div>
-            <div style="display: none;">
+            <div class="hidden">
                 <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
                     <img src="https://lipsum.app/id/62/120x80" />
                 </a>
@@ -152,7 +152,7 @@ o	Tân tâm trong từng dịch vụ.
                     <img src="https://lipsum.app/id/63/120x80" />
                 </a>
             </div>
-            <div style="display: none;">
+            <div class="hidden">
                 <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
                     <img src="https://lipsum.app/id/62/120x80" />
                 </a>
@@ -175,7 +175,6 @@ o	Tân tâm trong từng dịch vụ.
                             <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
-
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-12 col-lg-4">
@@ -482,7 +481,7 @@ o	Tân tâm trong từng dịch vụ.
                         <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
                             <span>Xem chi tiết</span>
                         </a>
-                        <div style="display: none;">
+                        <div class="hidden">
                             <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
                                 <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
                             </a>

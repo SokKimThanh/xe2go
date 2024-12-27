@@ -38,21 +38,19 @@
                 </div>
             </div>
             <div class="col-sm-8 service-request-map-copyright">
-                <div class="row">
-                    <div class="service-request-map">
-                        <div class="col-sm-4 box-qr-container">
-                            <h6>Liên kết</h6>
-                            <div class="box-qr">
-                                <img class="rounded img-fluid" src="../../public/images/xe2go/xe2go_QR.webp" alt="xe2go_QR">
-                            </div>
+                <div class="row service-request-map">
+                    <div class="col-sm-4 box-qr-container">
+                        <h6>Liên kết</h6>
+                        <div class="box-qr">
+                            <img class="rounded img-fluid" src="../../public/images/xe2go/xe2go_QR.webp" alt="xe2go_QR">
                         </div>
-                        <div class="col-sm-8 service-request">
-                            <h6>Địa chỉ</h6>
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.858183289481!2d106.67015717592031!3d11.0113059891521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d19c56e48c3b%3A0xe1e74d0f616c0b5a!2zUXXhu5FjIExvbmcgQXV0byAtIENodXnDqm4gc-G7rWEgY2jhu69hIGLhuqNvIGTGsOG7oW5nIEF1ZGksIEJNVywgTWVyY2VkZXMsIExhbmRyb3ZlLCBGb3JkLCBMZXh1cywgQWN1cmEsIHV5IHTDrW4gY2jEg20gU8OzYyDDtCB0w7QgQsOsbmggRMawxqFuZw!5e1!3m2!1svi!2sus!4v1734609898536!5m2!1svi!2sus"
-                                width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-                                referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
+                    </div>
+                    <div class="col-sm-8 service-request">
+                        <h6>Địa chỉ</h6>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4864.858183289481!2d106.67015717592031!3d11.0113059891521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d19c56e48c3b%3A0xe1e74d0f616c0b5a!2zUXXhu5FjIExvbmcgQXV0byAtIENodXnDqm4gc-G7rWEgY2jhu69hIGLhuqNvIGTGsOG7oW5nIEF1ZGksIEJNVywgTWVyY2VkZXMsIExhbmRyb3ZlLCBGb3JkLCBMZXh1cywgQWN1cmEsIHV5IHTDrW4gY2jEg20gU8OzYyDDtCB0w7QgQsOsbmggRMawxqFuZw!5e1!3m2!1svi!2sus!4v1734609898536!5m2!1svi!2sus"
+                            width="auto" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="row copyright">
