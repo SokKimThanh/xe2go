@@ -107,8 +107,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
 }
 
 .hidden {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
 .text-secondary {
@@ -972,8 +971,8 @@ section.menu-container-desktop {
         background: var(--secondary-color-linear2);
         box-shadow: 4px 4px 4px 0px #7375001c;
         border: 2px solid #ffff;
-        border-radius: 30px;
-        padding: 0.6em 1.2em;
+        border-radius: 5px;
+        padding: 0.2em 1.2em;
     }
 
     /* Màu của sub-menu-item khi active */
@@ -1294,6 +1293,23 @@ section#six-box {
                 top: 95%;
             }
         }
+    }
+
+    /* odd: lẻ, even: chẵn */
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        left: 90px;
+        bottom: 20px;
+    }
+
+    .owl-item.active:nth-child(odd) {
+        width: 0 !important;
+    }
+
+    .box-container {
+        display: flex;
+        justify-content: center;
     }
 
     /* Tạo kiểu dáng cho box-item */

@@ -101,9 +101,6 @@ if (section_visaochonchungtoi) {
     })
 }
 
-
-
-
 //
 /* section sixbox slider logo xe*/
 // 
@@ -111,25 +108,18 @@ if (section_visaochonchungtoi) {
 var owl = $('.logo-xe-slider');
 
 owl.owlCarousel({
-    loop: true,
-    auto: true,
-    margin: 4,
+    loop: true,/* Tạo cloned nhưng bị diệt bởi css. true/false gì cũng điều hướng quay lại phần tử đầu tiên */
+    rewind: true,/* kích hoạt khi loop là false: cho phép quay lại vi trí đầu tiên */
+    rewindNav: true,/* Tự quay về vị trí đầu tiên khi về cuối */
+    margin: 0,
     dots: true,
-    // auto play
+    // auto play 
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
 
     responsive: {
-        0: {
-            items: 2
-        },
-        425: {
-            items: 2
-        },
-        1000: {
-            items: 6
-        }
+        0: { items: 2, nav: false }
     }
 })
 

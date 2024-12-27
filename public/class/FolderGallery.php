@@ -68,7 +68,7 @@ class FolderGallery
     }
 
     // Render gallery từ ánh xạ
-    public function renderMappedGallery()
+    public function renderMappedGallery($viewMode = 'desktop')
     {
         foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
             $thumbnail = htmlspecialchars($thumbnailPath);
@@ -76,16 +76,33 @@ class FolderGallery
 
             $images = $this->getImages($folder);
 
+            // Xác định nhóm Fancybox dựa trên chế độ hiển thị
+            $fancyboxGroup = ($viewMode === 'desktop') ? 'gallery-desktop-' : 'gallery-mobile-';
+            $fancyboxGroup .= htmlspecialchars(basename($folderPath));
+
             // Render thumbnail với href đến hình ảnh đầu tiên
             $logo_hangxe = 'public/images/' . htmlspecialchars($thumbnail);
-            echo '<div class="col-sm-4 col-md-4 col-lg-2">';
+            echo '<div class="col-sm-4 col-md-4 col-lg-2 box-container">';
             echo '    <div class="box-item">';
             echo '        <span class="box-icon">';
-            echo '            <a href="' . $logo_hangxe . '" data-fancybox="gallery-' . htmlspecialchars(basename($folderPath)) . '">';
-            echo '                <img class="img-fluid" src="' . $logo_hangxe . '" alt="' . htmlspecialchars(basename($thumbnail)) . '">';
+            echo '            <a data-fancybox="' . $fancyboxGroup . '" href="' . $logo_hangxe . '">';
+            echo '                <img class="img-fluid" src="' . $logo_hangxe . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
             echo '            </a>';
             echo '        </span>';
             echo '    </div>';
+            echo '</div>';
+
+            // Render hidden gallery images 
+            echo '<div class="hidden">';
+            foreach ($images as $image) {
+                $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
+                if ($relativeImagePath != $logo_hangxe) {
+                    // Kiểm tra trùng lặp với thumbnail
+                    echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
+                    echo '      <img src="' . htmlspecialchars($relativeImagePath) . '" />';
+                    echo ' </a>';
+                }
+            }
             echo '</div>';
         }
     }

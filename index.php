@@ -122,13 +122,13 @@ o	Tân tâm trong từng dịch vụ.
             <div class="desktop row justify-content-center">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery();
+                $gallery->renderMappedGallery('desktop');
                 ?>
             </div>
             <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery();
+                $gallery->renderMappedGallery('mobile');
                 ?>
             </div>
         </div>
