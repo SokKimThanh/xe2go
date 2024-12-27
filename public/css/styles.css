@@ -2936,6 +2936,7 @@ footer {
             flex-direction: row;
             align-items: start;
             height: 100%;
+
             .box-qr-container {
                 .box-qr {
                     background: var(--background-4);
@@ -2953,6 +2954,10 @@ footer {
 
             .service-request {
                 height: 100%;
+
+                @media screen and (max-width: 500px) {
+                    height: auto;
+                }
 
                 iframe {
                     width: 100%;
