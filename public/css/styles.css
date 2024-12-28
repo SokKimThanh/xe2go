@@ -92,11 +92,22 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --menu-link-contact-bg: linear-gradient(45deg, #e61f47 0%, #d91717 100%);
     --primary-color-linear: linear-gradient(45deg, #9c1313 0%, #f02222 100%);
     --secondary-color-linear: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
+    --secondary-color-linear2: linear-gradient(180deg, #1941c3 0%, #002475 100%);
     --text-secondary: #223D80;
 
     /* thiet lap background*/
     --background-warning: linear-gradient(45deg, #8f6608 0%, #ffc400 100%);
     --background-secondary: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
+
+    /* Thiết lập font-size chuẩn Toàn Cục */
+    --font-size-base: 16px;
+
+    /* Thêm màu hover menu link */
+    --hover-color: #fff;
+}
+
+.hidden {
+    display: none;
 }
 
 .text-secondary {
@@ -116,8 +127,26 @@ body {
     width: 100%;
 }
 
+html {
+    font-size: var(--font-size-base);
+}
+
+/* Responsive Font Size */
+@media screen and (max-width: 1366px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}
+
 body {
-    font-size: 14px;
+    /* mặc định theo font-size-base là 1rem */
+    font-size: 1rem;
     font-family: var(--primary-font-family);
     background-color: var(--thirdary-color);
     /* mặc định màu cho body, section màu khác thì đổi ở section */
@@ -245,11 +274,22 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                             }
 
                             .slider-title {
+                                text-transform: none;
                                 transform: translateY(0);
                                 opacity: 1;
                                 transition: all 0.6s;
                                 position: relative;
                                 cursor: pointer;
+
+                                @media screen and (max-width: 1366px) {
+                                    font-size: 3rem;
+                                    transition: all 0.3s;
+                                }
+
+                                @media screen and (max-width: 500px) {
+                                    font-size: 2.5rem;
+                                    transition: all 0.3s;
+                                }
 
                                 .logo-text-waving {
                                     border-bottom: 0.1rem solid white;
@@ -259,7 +299,9 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 
                                 .logo-text-waving:hover {
                                     color: var(--secondary-color);
-                                    border-color: var(--secondary-color);
+                                    border: none;
+                                    text-shadow: -1px 1px 0 #f8f1f1, 1px 1px 0 #e0d9d9, 1px -1px 0 #f8f4f4, -1px -1px 0 #f6f3f3;
+                                    transition: all 0.3s ease-in-out;
                                 }
 
                                 .logo-text-waving:hover+.hide {
@@ -331,7 +373,7 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                         @media screen and (max-width: 1024px) {
                             margin: 0;
                             max-width: 100%;
-                            padding: 20px;
+                            padding: 1.5rem;
                         }
 
                         .slider-container {
@@ -448,6 +490,35 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
             display: flex;
             /* khoang trong giua 2 mui ten */
             gap: 10px;
+            /* vị trí khác đi khi màn hình lớn hơn 1024px */
+            top: 81%;
+            left: calc(15% + 8px);
+
+
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1440px */
+            @media screen and (max-width: 1440px) {
+                top: 81%;
+                left: calc(15% - 156px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1366px */
+            @media screen and (max-width: 1366px) {
+                top: 74%;
+                left: calc(10% - 30px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
+            @media screen and (max-width: 1024px) {
+                top: 83%;
+                left: calc(6% - 30px);
+            }
+
+            /* vị trí khác đi khi màn hình nhỏ hơn 500px */
+            @media screen and (max-width: 500px) {
+                top: 87%;
+                left: 21px;
+            }
 
             .owl-prev,
             .owl-next {
@@ -461,21 +532,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                     align-items: center;
                     justify-content: center;
                 }
-            }
-
-            /* vị trí khác đi khi màn hình lớn hơn 1024px */
-            top: 81%;
-            left: calc(15% - 10px);
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
-            @media screen and (max-width: 1024px) {
-                left: 21px;
-            }
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 500px */
-            @media screen and (max-width: 500px) {
-                top: 91%;
-                left: 21px;
             }
         }
     }
@@ -727,20 +783,20 @@ khu vực menu, bao gồm logo và các mục menu.
 Danh sách menu và các item:
 
 .menu-list-container chứa các item trong menu, được căn giữa.
-.menu-list là một danh sách không thứ tự (ul) chứa các mục menu (li.menu-item).
+.menu-list là một danh sách không thứ tự (ul) chứa các mục menu (.menu-item).
 .menu-link là các liên kết trong các mục menu, có hiệu ứng chuyển đổi màu sắc 
 khi hover và khi được click.
 .menu-item.no-children .menu-link::after: ẩn mũi tên chỉ xuống nếu item không 
 có submenu.
 Hiệu ứng hover:
 
-Khi hover vào li.menu-item, các liên kết (.menu-link) thay đổi màu sắc.
+Khi hover vào .menu-item, các liên kết (.menu-link) thay đổi màu sắc.
 Khi hover vào một mục có submenu, submenu (.sub-menu) được hiển thị với hiệu ứng chuyển động từ từ.
 Active State: Màu sắc của các mục menu thay đổi khi mục đó ở trạng thái "active".
 */
 section.menu-container-desktop {
     .logo-link-image-container {
-        padding: 10px;
+        padding: 0.6em;
         background-color: var(--background-1);
         display: flex;
         justify-content: space-between;
@@ -752,6 +808,8 @@ section.menu-container-desktop {
 
         .logo-link-image {
             display: block;
+            padding-top: 0.6em;
+            margin-left: 0.6em;
         }
     }
 
@@ -760,210 +818,219 @@ section.menu-container-desktop {
         align-items: center;
         justify-content: center;
         position: relative;
+        flex-direction: column;
+    }
 
-        /* cấu hình kiểu dáng cho danh sách menu */
-        .menu-list {
-            list-style-type: none;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            font-size: 1.2rem;
-            font-weight: 700;
-            border-right-width: 1px;
-            /* border-right-style: solid;
-            border-right-color: var(--background-5); */
+    .menu-list-container .china-title {
+        /* Cài đặt chữ trung quốc */
+        font-size: 1.3rem;
+        letter-spacing: 1rem;
+        font-weight: 600;
+        color: var(--text-secondary);
+        cursor: context-menu;
 
-            /* cài đặt tắt mũi tên cho danh sách không có submenu */
-            .menu-item.no-children .menu-link::after {
-                display: none;
-            }
-
-            /* Cài đặt mặc định cho menu */
-            li.menu-item {
-                position: relative;
-                cursor: pointer;
-                height: 100%;
-                display: flex;
-                align-items: center;
-
-                /* Chiều cao của item cao quá so với màn hình của laptop nên chỉnh lại cho phù hợp */
-                @media screen and (min-width: 1440px) {
-                    min-height: var(--min-height-menu-link);
-                }
-
-                /* Màu mặc định cho các liên kết */
-                a.menu-link {
-                    position: relative;
-                    display: flex;
-                    text-decoration: none;
-                    color: var(--secondary-color);
-                    transition: all 0.3s ease-in-out;
-                    width: 100%;
-                }
-
-                a.menu-link::after {
-                    display: flex;
-                    bottom: calc(50% - 14px);
-                    padding-left: 10px;
-                    content: '\F22C';
-                    font-family: 'bootstrap-icons';
-                }
-            }
-
-            /* Cài đặt mặc định cho thành phần submenu */
-            /* Đảm bảo không tô màu các menu con khi không hover */
-            .sub-menu {
-                display: none;
-
-                /* Kiểu dáng menu cấp 1 */
-                li.menu-item {
-                    position: relative;
-                    width: 100%;
-                    height: 100%;
-
-                    /* Màu mặc định cho các liên kết trong menu con */
-                    a.menu-link {
-                        color: var(--secondary-color);
-                        justify-content: space-between;
-                        padding: 10px 20px;
-                        align-items: center;
-
-                        /* Chiều cao của item cao quá so với màn hình của laptop nên chỉnh lại cho phù hợp */
-                        @media screen and (min-width: 1440px) {
-                            min-height: var(--min-height-menu-link);
-                        }
-
-                    }
-
-                    /* 
-                    -- Kiểu dáng mặc định cho mặt nạ 
-                    -- Mặt nạ chưa rơi từ trên xuống 
-                    */
-                    .overlay {
-                        position: absolute;
-                        height: 100%;
-                        width: 100%;
-                        transform: translateY(-100%);
-                        opacity: 0;
-                        background: var(--menu-link-bg);
-                        transition: all 0.2s ease-in-out;
-                        pointer-events: none;
-
-                        /* Ngăn không cho overlay chặn sự kiện chuột */
-                    }
-                }
-            }
-
-            .menu-item:hover>.sub-menu,
-            .menu-item.active>.sub-menu {
-                display: flex;
-            }
-
-            /* Kiểu dáng khi hover vào submenu */
-            .menu-item .sub-menu {
-
-                /* Màu khi hover vào sub-menu */
-                .menu-item:hover>a.menu-link {
-                    color: white;
-                }
-
-                /* mặt nạ rớt xuống chậm khi rê vào sub menu active*/
-                .menu-item:hover>.overlay {
-                    opacity: 1;
-                    transform: translateY(0%);
-                    transition: all 0.2s ease-in-out;
-                }
-
-                /* Xoay icon khi hover vào sub-menu */
-                .menu-item:hover>a.menu-link::after {
-                    transform: rotate(-90deg);
-                    transition: transform 0.2s ease-in-out;
-                }
-            }
-
-            /* ------------------------------------------------- */
-            /* EVENTS SUB-MENU */
-            /* Chỉ áp dụng màu mặc định khi hover vào menu-item */
-            /*  */
-            /* ------------------------------------------------- */
-            /* Mặc định màu chữ của menu-item cha và sub-menu */
-            .menu-item>a.menu-link {
-                color: var(--secondary-color);
-            }
-
-            /* Màu của menu-item cha khi active */
-            .menu-item.active>a.menu-link {
-                color: var(--thirdary-color);
-                /* Xanh lá cây */
-                /* background-color: #fff; */
-                /* Nền trắng */
-            }
-
-            /* Màu của sub-menu-item khi active */
-            .menu-item .sub-menu .menu-item.active>a.menu-link {
-                color: #fff;
-                /* Màu chữ trắng */
-                background: var(--menu-link-bg);
-                /* Nền xanh lá cây */
-            }
-
-            /* Màu nền và chữ khi hover vào sub-menu-item */
-            .menu-item .sub-menu .menu-item:hover>a.menu-link {
-                color: #fff;
-                /* Màu chữ trắng */
-                background: var(--menu-link-bg);
-                /* Nền xanh lá cây */
-            }
-
-            /* Màu nền và chữ mặc định của sub-menu-item */
-            .menu-item .sub-menu .menu-item>a.menu-link {
-                color: var(--secondary-color);
-                background-color: transparent;
-            }
-
-
-            /* Chỉ khi nào hover vào menu thì mới thực thi */
-            li.menu-item:hover {
-
-                /* danh muc cap 1 */
-                .sub-menu.show {
-                    list-style-type: none;
-                    position: absolute;
-                    background-color: var(--background-4);
-                    color: #010101;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0;
-                    top: 100%;
-                    left: 0%;
-                    width: 300px;
-                    font-size: 1rem;
-                    font-weight: 500;
-                    transform: translateY(0);
-                    translate: all 0.3s ease-in-out;
-                }
-
-                /* danh muc cap 2 */
-                .sub-menu.show .sub-menu.show {
-                    position: absolute;
-                    background-color: var(--background-4);
-                    color: #010101;
-                    display: flex;
-                    flex-direction: column;
-                    padding: 0;
-                    top: 0%;
-                    left: 100%;
-                    z-index: 3;
-                    transition: background-color 0.5s linear;
-                    overflow: hidden;
-                }
-            }
+        @media screen and (max-width: 1366px) {
+            margin: 0.5em 0 0 0;
         }
     }
+
+    .menu-list-container .menu-list {
+        /* cấu hình kiểu dáng cho danh sách menu */
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-right-width: 1px;
+    }
+
+    .menu-list-container .menu-list .menu-item.no-children .menu-link::after {
+        /* cài đặt tắt mũi tên cho danh sách không có submenu */
+        display: none;
+    }
+
+    .menu-list-container .menu-list .menu-item {
+        /* Cài đặt mặc định cho menu */
+        position: relative;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .menu-list-container .menu-list .menu-item {
+            /* Chiều cao của item cao quá so với màn hình của laptop nên chỉnh lại cho phù hợp */
+            min-height: var(--min-height-menu-link);
+        }
+    }
+
+    .menu-list-container .menu-list .menu-link {
+        position: relative;
+        display: flex;
+        text-decoration: none;
+        /* Màu mặc định cho các liên kết */
+        color: var(--secondary-color);
+        width: 100%;
+        /* chuyển thành chữ in hoa cho tất cả item */
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .menu-list-container .menu-list .menu-link:hover {
+        /* Màu khi hover vào menu-link */
+        color: var(--hover-color) !important;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .menu-list-container .menu-list .menu-link::after {
+        display: flex;
+        bottom: calc(50% - 14px);
+        padding-left: 10px;
+        content: '\F22C';
+        font-family: 'bootstrap-icons';
+    }
+
+    .menu-list-container .menu-list .sub-menu {
+        /* Cài đặt mặc định cho thành phần submenu */
+        /* Đảm bảo không tô màu các menu con khi không hover */
+        display: none;
+    }
+
+    .menu-list-container .menu-list .sub-menu .menu-item {
+        /* Kiểu dáng menu cấp 1 */
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .menu-list-container .menu-list .sub-menu .menu-link {
+        /* Màu mặc định cho các liên kết trong menu con */
+        color: var(--secondary-color);
+        justify-content: space-between;
+        padding: 10px 20px;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1440px) {
+        .menu-list-container .menu-list .sub-menu .menu-link {
+            /* Chiều cao của item cao quá so với màn hình của laptop nên chỉnh lại cho phù hợp */
+            min-height: var(--min-height-menu-link);
+        }
+    }
+
+    .menu-list-container .menu-list .sub-menu .overlay {
+        /* Kiểu dáng mặc định cho mặt nạ */
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateY(-100%);
+        opacity: 0;
+        background: var(--menu-link-bg);
+        transition: all 0.2s ease-in-out;
+        /* Ngăn không cho overlay chặn sự kiện chuột */
+        pointer-events: none;
+    }
+
+    .menu-list-container .menu-list .menu-item:hover>.sub-menu,
+    .menu-list-container .menu-list .menu-item.active>.sub-menu {
+        display: flex;
+    }
+
+    .menu-list-container .menu-list .menu-item .sub-menu .menu-item:hover>.menu-link {
+        /* Màu khi hover vào sub-menu */
+        color: white;
+    }
+
+    .menu-list-container .menu-list .menu-item .sub-menu .menu-item:hover>.overlay {
+        /* mặt nạ rớt xuống chậm khi rê vào sub menu active */
+        opacity: 1;
+        transform: translateY(0%);
+        transition: all 0.2s ease-in-out;
+    }
+
+    .menu-list-container .menu-list .menu-item .sub-menu .menu-item:hover>.menu-link::after {
+        /* Xoay icon khi hover vào sub-menu */
+        transform: rotate(-90deg);
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Mặc định màu chữ của menu-item cha và sub-menu */
+    .menu-list-container .menu-list .menu-item>.menu-link {
+        color: var(--secondary-color);
+    }
+
+    /* Màu của menu-item cha khi active */
+    .menu-list-container .menu-list .menu-item.active>.menu-link {
+        color: var(--thirdary-color);
+        background: var(--secondary-color-linear2);
+        box-shadow: 4px 4px 4px 0px #7375001c;
+        border: 2px solid #ffff;
+        border-radius: 5px;
+        padding: 0.2em 1.2em;
+    }
+
+    /* Màu của sub-menu-item khi active */
+    .menu-list-container .menu-list .sub-menu .menu-item.active>.menu-link {
+        color: #fff;
+        /* Màu chữ trắng */
+        background: var(--menu-link-bg);
+        /* Nền xanh lá cây */
+    }
+
+    /* Màu nền và chữ khi hover vào sub-menu-item */
+    .menu-list-container .menu-list .sub-menu .menu-item:hover>.menu-link {
+        color: #fff;
+        /* Màu chữ trắng */
+        background: var(--menu-link-bg);
+        /* Nền xanh lá cây */
+    }
+
+    /* Màu nền và chữ mặc định của sub-menu-item */
+    .menu-list-container .menu-list .sub-menu .menu-item>.menu-link {
+        color: var(--secondary-color);
+        background-color: transparent;
+    }
+
+    /* Chỉ khi nào hover vào menu thì mới thực thi */
+    .menu-list-container .menu-item:hover .sub-menu.show {
+        /* danh muc cap 1 */
+        list-style-type: none;
+        position: absolute;
+        background-color: var(--background-4);
+        color: #010101;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        top: 100%;
+        left: 0%;
+        width: 300px;
+        font-size: 1rem;
+        font-weight: 500;
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .menu-list-container .menu-item:hover .sub-menu.show .sub-menu.show {
+        /* danh muc cap 2 */
+        position: absolute;
+        background-color: var(--background-4);
+        color: #010101;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        top: 0%;
+        left: 100%;
+        z-index: 3;
+        transition: background-color 0.5s linear;
+        overflow: hidden;
+    }
+
 
     /* kết thúc menu-list-container 
      * hỗ trợ hiển thị phong cách menu 
@@ -973,14 +1040,34 @@ section.menu-container-desktop {
         /* hỗ trợ chiều cao của tấm hình quốc long auto nó đi lên đi xuống */
         height: 39px;
 
+        @media screen and (max-width: 1366px) {
+            height: 22px;
+        }
+
         .button-list {
             position: absolute;
             bottom: 0;
             right: 0;
             left: 0;
+
+            img.desktop {
+                @media screen and (max-width: 1366px) {
+                    display: none;
+                }
+            }
+
+            img.laptop {
+                display: none;
+
+                @media screen and (max-width: 1366px) {
+                    display: block;
+                }
+            }
         }
     }
 }
+
+
 
 /*  */
 /* MOBILE MENU SECTION */
@@ -1069,26 +1156,24 @@ section.menu-container-mobile {
             font-size: 1rem;
             font-weight: 600;
 
+
             /* cài đặt tắt mũi tên cho danh sách không có submenu */
             .menu-item.no-children .menu-link::after {
                 display: none;
             }
 
             /* Cài đặt mặc định cho menu */
-            li.menu-item {
+            .menu-item {
                 width: 100%;
 
-                /* Chiều cao của item cao quá so với màn hình của laptop nên chỉnh lại cho phù hợp */
-                @media screen and (min-width: 1440px) {}
-
                 /* Màu mặc định cho các liên kết */
-                a.menu-link {
+                .menu-link {
                     text-decoration: none;
                     display: flex;
                     justify-content: space-between;
                 }
 
-                a.menu-link::after {
+                .menu-link::after {
                     content: '\F22C';
                     font-family: 'bootstrap-icons';
                     transform: rotate(-90deg);
@@ -1109,23 +1194,23 @@ section.menu-container-mobile {
             /*  */
             /* ------------------------------------------------- */
             /* Mặc định màu chữ của menu-item cha và sub-menu */
-            .menu-item>a.menu-link {
+            .menu-item>.menu-link {
                 color: white
             }
 
             /* Màu của menu-item cha khi active */
-            .menu-item.active>a.menu-link {
+            .menu-item.active>.menu-link {
                 color: var(--primary-color);
             }
 
             /* Màu của sub-menu-item khi active */
-            .menu-item .sub-menu .menu-item.active>a.menu-link {
+            .menu-item .sub-menu .menu-item.active>.menu-link {
                 color: var(--primary-color);
             }
 
 
             /* Chỉ khi nào hover vào menu thì mới thực thi */
-            li.menu-item:hover {
+            .menu-item:hover {
 
                 /* danh muc cap 1 */
                 .sub-menu.show {
@@ -1210,13 +1295,29 @@ section#six-box {
         }
     }
 
+    /* odd: lẻ, even: chẵn */
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        left: 90px;
+        bottom: 20px;
+    }
+
+    .owl-item.active:nth-child(odd) {
+        width: 0 !important;
+    }
+
+    .box-container {
+        display: flex;
+        justify-content: center;
+    }
 
     /* Tạo kiểu dáng cho box-item */
     .box-item {
         /* look out: mới đầu nhìn nó cũng đẹp */
         border-radius: 4px;
         background-color: rgba(255, 255, 255, 0.678);
-        padding: 20px;
+        padding: 1.5rem;
         margin-bottom: 4rem;
         display: flex;
         flex-direction: column;
@@ -1244,6 +1345,16 @@ section#six-box {
             margin-top: 8px;
             /* cho nó về lại như cũ để hiện thị 2 item 1 hàng */
         }
+
+        @media screen and (max-width: 1366px) {
+            padding: 0;
+            gap: 0;
+            min-height: 150px;
+            margin-top: -40px;
+            max-height: 150px;
+            width: 150px;
+        }
+
 
         @media screen and (max-width: 500px) {
             margin-top: 21px;
@@ -1346,6 +1457,11 @@ section#aga {
                 @media screen and (max-width: 1400px) {
                     bottom: calc(50% - 80px);
                     left: calc(50% - 170px);
+                }
+
+                @media screen and (max-width: 1366px) {
+                    bottom: calc(50% - 100px);
+                    left: calc(50% - 200px);
                 }
 
                 @media screen and (max-width: 1000px) {
@@ -1570,6 +1686,10 @@ section#aga {
                 /* margin-left làm dòng chữ tiêu đề đẩy ra xa dễ nhìn so với hình ảnh */
                 margin-left: 125px;
                 transition: color 0.3s ease-in-out;
+
+                @media screen and (max-width: 1366px) {
+                    font-size: 2rem;
+                }
             }
 
             hr {
@@ -1758,7 +1878,7 @@ section#vfo {
             .box-button {
                 margin: 20px 0;
                 color: white;
-                padding: 20px;
+                padding: 1.5rem;
                 text-decoration: none;
                 text-transform: uppercase;
                 border-radius: 50%;
@@ -2023,6 +2143,11 @@ section#meet {
         .box-image:nth-child(2) {
             transform: translateY(-250px);
             transition: all 0.5s ease-in-out;
+
+            @media screen and (max-width: 768px) {
+                transform: translateY(0);
+                margin-top: 20px;
+            }
         }
 
         .box-image:nth-child(2).active {
@@ -2030,6 +2155,7 @@ section#meet {
             transition: all 0.5s ease-in-out;
             transition-delay: 1.4s;
         }
+
 
         /* lập trình ở đây cho nó tắt luôn css để nó không văng ra khoảng trắng */
         @media screen and (max-width: 1024px) {
@@ -2271,7 +2397,7 @@ section#halini-slider {
         padding: 32px 80px;
 
         @media screen and (max-width: 500px) {
-            padding: 20px;
+            padding: 1.5rem;
         }
 
         .box-item {
@@ -2396,10 +2522,15 @@ section#section-gallery {
 }
 
 section#contactus {
-    padding: 150px 0;
+    padding: 15em 0;
 
     @media screen and (max-width: 500px) {
-        padding-top: 0;
+        padding-top: 80px;
+        padding-bottom: 90px;
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 7em 0;
     }
 
     .container {
@@ -2427,6 +2558,12 @@ section#contactus {
 
         @media screen and (max-width: 500px) {
             padding: 2rem;
+            flex-direction: column;
+        }
+
+        @media screen and (max-width: 768px) {
+            padding: 1rem;
+            margin: 0;
         }
     }
 
@@ -2487,158 +2624,6 @@ section#contactus {
         margin: 10px 0;
     }
 }
-
-/** Sidebar 
-Made with Copilot
-*/
-section#sidebar {
-    #sidebar {
-        min-width: 250px;
-        max-width: 250px;
-        background: #7386D5;
-        color: #fff;
-        transition: all 0.3s;
-    }
-
-    .icon-box {
-        display: flex;
-        flex-flow: row wrap;
-        width: 100%;
-    }
-
-    .icon-box-img svg {
-        fill: currentColor;
-        height: 100%;
-        transition: all .3s;
-        width: 100%;
-    }
-
-    .icon-box-text {
-        padding-left: 1em;
-        display: block;
-        flex: 1 1 0px;
-
-    }
-
-    ul li {
-        list-style: none;
-        margin: 10px 0;
-    }
-}
-
-
-
-/* section#gallery {
-    .heading {
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 5px solid var(--primary-color);
-            width: 60px;
-        }
-    }
-
-    padding-bottom: 120px;
-
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .filters {
-        text-align: start;
-        margin-bottom: 20px;
-    }
-
-    .filter {
-        text-transform: uppercase;
-        display: inline-block;
-        margin: 0 10px;
-        padding: 10px 20px;
-        cursor: pointer;
-        color: rgba(0, 0, 0, 0.5);
-        font-weight: 700;
-    }
-
-    .filter.active,
-    .filter:hover {
-        color: var(--primary-color);
-    }
-
-    .events {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-
-    }
-
-    .event:hover {
-        background-color: #01010194;
-        transition: background 0.3s ease-in-out;
-        color: white;
-
-        .event-info {
-
-            .date,
-            .location {
-                color: white;
-            }
-        }
-    }
-
-    .event {
-        background-color: #fff;
-        margin: 10px;
-        padding: 20px;
-        width: 300px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        display: none;
-        /** Initially hide all events
-        transition: background 0.3s ease-in-out;
-    }
-
-    .event-tag {
-        background-color: var(--primary-color);
-        color: #fff;
-        padding: 5px 10px;
-        border-radius: 5px;
-        display: inline-block;
-        margin-bottom: 10px;
-    }
-
-    .event-info h2 {
-        margin: 10px 0;
-    }
-
-    .event-info .date,
-    .event-info .location {
-        color: #777;
-    }
-
-    .navigation {
-        text-align: end;
-        margin-top: 20px;
-    }
-
-    button {
-        padding: 10px 20px;
-        border: none;
-        background-color: #28a745;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 0 5px;
-    }
-
-    button:disabled {
-        background-color: #ccc;
-        cursor: not-allowed;
-    }
-} */
 
 /*  */
 /* Section partner */
@@ -2899,24 +2884,34 @@ footer {
 
             .btn-light {
                 border-radius: 25px;
-                font-size: 1rem;
+                font-size: 1.3rem;
                 font-weight: 600;
                 text-transform: uppercase;
-                width: 200px;
+                width: 80%;
                 height: 50px;
+                margin: 0 0.2em;
+
+                @media screen and(max-width: 768px) {
+                    width: 10em;
+                    margin: 1em;
+                }
             }
         }
     }
 
     .info-container {
         background-color: #232323;
-        padding: 80px;
+        padding: 4em;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+        @media screen and (max-width: 768px) {
+            padding: 2rem;
+        }
+
         @media screen and (max-width: 500px) {
-            padding: 20px;
+            padding: 1.5rem;
         }
 
         .info-text {
@@ -2945,27 +2940,35 @@ footer {
                 color: white;
             }
         }
+
+        .info-logo {
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
     }
 
+    /* Cài đặt khung thông tin bản đồ */
     .service-request-map-copyright {
         /* padding: 100px; */
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding-left: 40px;
+        padding: 0 40px;
 
         @media (max-width: 500px) {
             .service-request-map {
                 flex-direction: column !important;
             }
         }
+    }
 
+    .service-request-map-copyright {
         .service-request-map {
-
-            padding-top: 40px;
             display: flex;
             flex-direction: row;
             align-items: start;
+            height: 100%;
 
             .box-qr-container {
                 .box-qr {
@@ -2979,13 +2982,19 @@ footer {
             h6 {
                 font-size: 1.1rem;
                 font-weight: 700;
-                margin-bottom: 40px;
+                margin: 15px 0;
             }
 
             .service-request {
+                height: 100%;
+
+                @media screen and (max-width: 500px) {
+                    height: auto;
+                }
 
                 iframe {
                     width: 100%;
+                    height: 86%;
                 }
 
                 .info-list {
@@ -3011,6 +3020,11 @@ footer {
             font-size: 1rem;
             color: rgba(255, 255, 255, 0.5);
             font-weight: 400;
+            text-align: center;
+
+            @media screen and (max-width: 500px) {
+                background-color: #232323;
+            }
         }
     }
 }
