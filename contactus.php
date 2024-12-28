@@ -21,7 +21,7 @@ Modified: 19:51 21/12/2024
                     </h2>
                     <hr>
                     <p class="contactus-description">Hãy liên lạc với các chuyên gia của XE2GO để nhận dịch vụ chất lượng!</p>
-                    <!-- Liên hệ -->
+                    <!-- Liên hệ Kỹ thuật -->
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
@@ -29,11 +29,28 @@ Modified: 19:51 21/12/2024
                             </div>
                         </div>
                         <div class="icon-box-text">
-                            <h4>HOTLINE & ZALO</h4>
+                            <h4>HOTLINE KỸ THUẬT</h4>
                             <p>
                                 <a href="tel:0348798398">0348.798.398</a>
                                 -
                                 <a href="https://zalo.me/3437214821843033113" target="_blank" rel="noopener">Liên hệ Zalo</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Liên hệ Dịch vụ -->
+                    <div class="icon-box">
+                        <div class="icon-box-img" style="width:50px">
+                            <div class="icon-inner" style="color:rgb(4, 37, 42);">
+                                <img src="./public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="icon-box-text">
+                            <h4>HOTLINE DỊCH VỤ</h4>
+                            <p>
+                                <a href="tel:0348798398">0567.998.998</a>
+                                -
+                                <a href="#" target="_blank" rel="noopener">Liên hệ Zalo</a>
                             </p>
                         </div>
                     </div>

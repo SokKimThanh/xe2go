@@ -41,7 +41,7 @@ $letter = 65;
                         // Check true if sub folders existed
                         $flg = true;
                     ?>
-                        <div>
+                        <div class="gallery-subtitle">
                             <button class="btn btn-default filter-button" data-filter="all">Tất cả</button>
                             <?php
                             foreach ($subDirectories as $subDirectory) {

@@ -2454,6 +2454,9 @@ section#halini-slider {
 
 /** Gallery */
 section#section-gallery {
+    @media screen and (max-width: 500px) {
+        margin-bottom: 0;
+    }
     /* cách lề trên cùng và dưới cùng của trang thành nội dung riêng biệt */
     padding-top: 150px;
     padding-bottom: 100px;
@@ -2471,13 +2474,15 @@ section#section-gallery {
         /* ghi đè css gallery_product ở trang chủ style.css */
         .gallery_product {
             margin: 0;
-            padding: 16px;
+            padding: 0px 16px 16px 0;
             text-align: center;
         }
     }
 
     .gallery-box{
         margin-top: 75px;
+        padding-left: 0;
+        margin-left: 0;
     }
 
     .gallery-title {
