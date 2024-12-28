@@ -107,15 +107,15 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <?php
             $galleryMap = [
-                'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_gallery/hangxe_logo/ford',
-                'logo_hangxe/2BMW-removebg-preview.webp' => 'trang_gallery/hangxe_logo/bmw',
-                'logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_gallery/hangxe_logo/hyundai',
-                'logo_hangxe/4Audi-removebg-preview.webp' => 'trang_gallery/hangxe_logo/audi',
-                'logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_gallery/hangxe_logo/toyota',
-                'logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_gallery/hangxe_logo/mazda',
-                'logo_hangxe/7Honda-removebg-preview.webp' => 'trang_gallery/hangxe_logo/honda',
-                'logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_gallery/hangxe_logo/vinfast',
-                'logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_gallery/hangxe_logo/mercedes',
+                'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_chu/hangxe_logo/ford',
+                'logo_hangxe/2BMW-removebg-preview.webp' => 'trang_chu/hangxe_logo/bmw',
+                'logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_chu/hangxe_logo/hyundai',
+                'logo_hangxe/4Audi-removebg-preview.webp' => 'trang_chu/hangxe_logo/audi',
+                'logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_chu/hangxe_logo/toyota',
+                'logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_chu/hangxe_logo/mazda',
+                'logo_hangxe/7Honda-removebg-preview.webp' => 'trang_chu/hangxe_logo/honda',
+                'logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_chu/hangxe_logo/vinfast',
+                'logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/hangxe_logo/mercedes',
                 // Thêm các cặp (thumbnail => folder) tại đây
             ];
             ?>
