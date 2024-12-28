@@ -28,7 +28,7 @@
                                 <a class="menu-link" href="/index.php">Trang chủ</a>
                             </li>
                             <li class="menu-item">
-                                <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
+                                <a class="menu-link" href="/gallery.php">Sản Phẩm và Dịch Vụ</a>
                             </li>
                             <li class="menu-item">
                                 <a class="menu-link" href="/contactus.php">Liên hệ</a>
