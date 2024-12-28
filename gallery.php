@@ -34,7 +34,7 @@ $letter = 65;
                     // Check for sub folders
                     $galDirectory = $mainDirectory . '\\' . $galDirectory;
                     $filesAndDirs = scandir($galDirectory);
-                    $subDirectories = array_filter($filesAndDirs, callback: function ($item) use ($galDirectory) {
+                    $subDirectories = array_filter($filesAndDirs, function ($item) use ($galDirectory) {
                         return is_dir($galDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
                     });
                     // Create nav and filter for sub folders
