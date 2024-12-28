@@ -2,6 +2,7 @@
 <html lang="en">
 
 <?php include("../xe2go/public/templates/path-css.php");
+$countGal = 1;
 $count = 0;
 $letter = 65;
 ?>
@@ -26,7 +27,7 @@ $letter = 65;
             $flg = false;
         ?>
             <div class="row">
-                <div class="gallery-box">
+                <div class="gallery-box" id="gallery<?php echo $countGal++;?>">
                     <!-- Box header -->
                     <h1 class="gallery-title"><?php echo explode('_', $galDirectory)[1]; ?></h1>
                     <?php
