@@ -27,7 +27,7 @@ $letter = 65;
             $flg = false;
         ?>
             <div class="row">
-                <div class="gallery-box" id="gallery<?php echo $countGal++;?>">
+                <div class="gallery-box" id="gallery<?php echo $countGal++; ?>">
                     <!-- Box header -->
                     <h1 class="gallery-title"><?php echo explode('_', $galDirectory)[1]; ?></h1>
                     <?php
@@ -76,7 +76,7 @@ $letter = 65;
                                     //echo $pictureFolderPath . "\\" . $file . "<br>";
                         ?>
                                     <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter <?php echo chr($letter) . $count; ?>">
-                                        <a href="<?php echo $filePath; ?>" data-fancybox="gallery-Audi">
+                                        <a href="<?php echo $filePath; ?>" data-fancybox="gallery-<?php echo chr($letter) . $count; ?>">
                                             <img src="<?php echo $filePath; ?>" class="img-fluid">
                                         </a>
                                     </div>
@@ -99,7 +99,7 @@ $letter = 65;
                                 //echo $pictureFolderPath . "\\" . $file . "<br>";
                                 ?>
                                 <div class="gallery_product col-sm-4 col-md-3 col-lg-4">
-                                    <a href="<?php echo $filePath; ?>" data-fancybox="gallery-Audi">
+                                    <a href="<?php echo $filePath; ?>" data-fancybox="gallery-00">
                                         <img src="<?php echo $filePath; ?>" class="img-fluid">
                                     </a>
                                 </div>
