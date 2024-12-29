@@ -5,7 +5,7 @@ include './public/class/FolderGallery.php';
 <!DOCTYPE html>
 <html lang="vi">
 
-<?php include("./public/templates/path-css.php") ?>
+<?php include("./public/path-templates/path-css.php") ?>
 
 <body>
     <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
@@ -45,7 +45,7 @@ o	Tân tâm trong từng dịch vụ.
 •	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
 •	Nhấn xem bản đồ
  -->
-    <?php include("./public/templates/main-menu.php") ?>
+    <?php include("./public/path-templates/path-menu.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
@@ -469,7 +469,31 @@ o	Tân tâm trong từng dịch vụ.
         // Áp dụng cho tất cả counter
         counters.forEach(counter => observer.observe(counter));
     </script>
-    <!-- Giấy chứng nhận thành lập công ty -->
+
+    <!-- Liên kết bảo hiểm -->
+    <section id="partner">
+        <div class="container">
+            <div class="container-title">
+                <div class="title">Liên kết bảo hiểm</div>
+            </div>
+            <div class="row list">
+                <div class="col-sm-3 item">
+                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/tasco_insurance.webp" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-3 item">
+                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/pg_insurance.svg" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-3 item">
+                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/pvi_insurance.png" alt="" loading="lazy">
+                </div>
+                <div class="col-sm-3 item">
+                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/mic_insurance.png" alt="" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giấy chứng nhận thành lập công ty , cơ sở pháp lý-->
     <section id="meet">
         <div class="container">
             <div class="row">
@@ -641,8 +665,8 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <?php include("./public/templates/footer.php") ?>
-    <?php include("./public/templates/path-js.php") ?>
+    <?php include("./public/path-templates/path-footer.php") ?>
+    <?php include("./public/path-templates/path-js.php") ?>
 
 </body>
 

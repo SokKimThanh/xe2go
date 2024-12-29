@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../xe2go/public/templates/path-css.php");
+<?php include("../xe2go/public/path-templates/path-css.php");
 $countGal = 1;
 $count = 0;
 $letter = 65;
 ?>
 
 <body>
-    <?php include("../xe2go/public/templates/main-menu.php") ?>
+    <?php include("../xe2go/public/path-templates/path-menu.php") ?>
 
     <!-- content -->
     <section id="section-gallery" class="container">
@@ -119,8 +119,8 @@ $letter = 65;
 
 
     </section>
-    <?php include("../xe2go/public/templates/footer.php") ?>
-    <?php include("../xe2go/public/templates/path-js.php") ?>
+    <?php include("../xe2go/public/path-templates/path-footer.php") ?>
+    <?php include("../xe2go/public/path-templates/path-js.php") ?>
 </body>
 
 </html>

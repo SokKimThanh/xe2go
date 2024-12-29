@@ -2671,16 +2671,80 @@ section#contactus {
 } */
 section#partner {
     padding: 120px 0;
+    background-color: var(--background-4);
+
+    .container {
+        position: relative;
+        height: 300px;
+    }
+
+    /* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
+    .container-title {
+        /* Điều khiển không gian cho các vật thể bên trong */
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: context-menu;
+        width: 100%;
+        border-radius: 40px;
+        position: absolute;
+        left: 0;
+        z-index: 1;
+
+        /* thiết kế chữ mạnh mẽ và rõ ràng */
+        .title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 5rem;
+            background: var(--menu-link);
+            font-weight: 700;
+            font-size: 2rem;
+            color: var(--color-2);
+            text-transform: uppercase;
+            width: 50%;
+            border-radius: 2.5rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .title:hover {
+            color: var(--text-secondary);
+            background: var(--menu-link-reverse);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
 
     .list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
+        background: white;
+        height: 16rem;
+        margin: 0;
+        border: 1px solid var(--menu-link);
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 0 16px;
+
+        @media screen and (max-width: 1366px) {
+            height: 19rem;
+        }
 
         .item {
             transform: perspective(1000px) rotateX(0deg);
             transition: all 0.3s ease-in-out;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .logo {
+                width: 250px;
+            }
         }
 
         .item:hover {
