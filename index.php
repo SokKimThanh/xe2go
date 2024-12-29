@@ -125,11 +125,13 @@ o	Tân tâm trong từng dịch vụ.
                 $gallery->renderMappedGallery('desktop');
                 ?>
             </div>
-            <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
-                <?php
-                $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery('mobile');
-                ?>
+            <div class="mobile row justify-content-center">
+                <div class="owl-carousel owl-theme logo-xe-slider">
+                    <?php
+                    $gallery = new FolderGallery($galleryMap);
+                    $gallery->renderMappedGallery('mobile');
+                    ?>
+                </div>
             </div>
         </div>
     </section>

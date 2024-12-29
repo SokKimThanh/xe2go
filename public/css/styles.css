@@ -603,11 +603,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
-/* Đảm bảo menu chỉ hiển thị sau khi trang được load xong */
-#main-menu {
-    visibility: hidden;
-}
-
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
