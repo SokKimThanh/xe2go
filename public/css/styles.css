@@ -606,7 +606,7 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
-    /* position: absolute; */
+    position: absolute;
     z-index: 2;
     width: 100%;
 
