@@ -107,6 +107,32 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --hover-color: #fff;
 }
 
+/* // */
+/* // Cài đặt responsive */
+/* // */
+@media screen and (max-width: 1920px) {
+    section {
+        .mobile {
+            display: none;
+        }
+    }
+}
+
+/* // */
+/* slider container */
+/* // */
+@media screen and (max-width: 500px) {
+    section {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+}
+
 .btn-light-linear {
     background: var(--background-light-linear);
 }
@@ -1255,6 +1281,10 @@ Các mục (.box-item) có nền trắng, đệm 20px, và các kiểu dáng kh�
 linh hoạt.
 Có hiệu ứng hover để thay đổi vị trí và màu nền của các mục.
 */
+/* // */
+/* slider container*/
+/* // */
+
 section#six-box {
     padding-top: 100px;
     padding-bottom: 120px;
@@ -1267,42 +1297,15 @@ section#six-box {
     @media screen and (max-width:500px) {
         padding-top: 100px;
         padding-bottom: 100px;
-    }
 
-    /* // */
-    /* slider container*/
-    /* // */
-    .container {
-        .mobile {
-            display: none;
-        }
-    }
-
-    /* // */
-    /* slider container */
-    /* // */
-    @media screen and (max-width: 500px) {
         .container {
             .mobile {
-                display: block;
-            }
-
-            .desktop {
-                display: none;
-            }
-        }
-
-        /* // */
-        /* chỉnh lại layout của container */
-        /* // */
-        .container {
-            .mobile {
-                display: block;
                 position: absolute;
                 top: 95%;
             }
         }
     }
+
 
     /* odd: lẻ, even: chẵn */
     .owl-item {
@@ -2672,10 +2675,25 @@ section#contactus {
 section#partner {
     padding: 120px 0;
     background-color: var(--background-4);
+}
 
+section#partner {
     .container {
         position: relative;
         height: 300px;
+    }
+
+    .owl-stage-outer {
+        height: 200px;
+    }
+
+    /* odd: lẻ, even: chẵn */
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 90px;
+        bottom: -80px;
     }
 
     /* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
@@ -2689,10 +2707,12 @@ section#partner {
         width: 100%;
         border-radius: 40px;
         position: absolute;
-        left: 0;
+        /* Tiêu đề nằm trên nội dung */
         z-index: 1;
+    }
 
-        /* thiết kế chữ mạnh mẽ và rõ ràng */
+    /* thiết kế chữ mạnh mẽ và rõ ràng */
+    .container-title {
         .title {
             display: flex;
             align-items: center;
@@ -2706,6 +2726,11 @@ section#partner {
             width: 50%;
             border-radius: 2.5rem;
             transition: all 0.3s ease-in-out;
+
+            @media screen and(max-width: 500px) {
+                width: 80% !important;
+                font-size: 1.5rem !important;
+            }
         }
 
         .title:hover {
@@ -2714,26 +2739,38 @@ section#partner {
             transition: all 0.3s ease-in-out;
         }
     }
+}
 
+section#partner {
 
+    /* Danh sách liên kết bảo hiểm */
     .list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         background: white;
-        height: 16rem;
         margin: 0;
         border: 1px solid var(--menu-link);
         position: absolute;
         width: 100%;
         bottom: 0;
         padding: 0 16px;
+        /* Nội dung nằm dưới tiêu đề */
+        z-index: 0;
+        border-radius: 40px;
+
+        @media screen and (max-width: 1920px) {
+            height: 16rem;
+        }
 
         @media screen and (max-width: 1366px) {
             height: 19rem;
         }
+    }
 
+    /* Item liên kết bảo hiểm */
+    .list {
         .item {
             transform: perspective(1000px) rotateX(0deg);
             transition: all 0.3s ease-in-out;

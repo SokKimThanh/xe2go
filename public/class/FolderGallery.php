@@ -80,23 +80,58 @@ class FolderGallery
             $fancyboxGroup = ($viewMode === 'desktop') ? 'gallery-desktop-' : 'gallery-mobile-';
             $fancyboxGroup .= htmlspecialchars(basename($folderPath));
 
-            // Render thumbnail với href đến hình ảnh đầu tiên
-            $logo_hangxe = 'public/images/' . htmlspecialchars($thumbnail);
+            // Render thumbnail với href đến hình ảnh đầu tiên (odd)
+            $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
             echo '<div class="col-sm-4 col-md-4 col-lg-2 box-container">';
             echo '    <div class="box-item">';
             echo '        <span class="box-icon">';
-            echo '            <a data-fancybox="' . $fancyboxGroup . '" href="' . $logo_hangxe . '">';
-            echo '                <img loading="lazy" class="img-fluid" src="' . $logo_hangxe . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
+            echo '            <a data-fancybox="' . $fancyboxGroup . '" href="' . $thumbnail_path . '">';
+            echo '                <img loading="lazy" class="img-fluid" src="' . $thumbnail_path . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
             echo '            </a>';
             echo '        </span>';
             echo '    </div>';
+            echo '</div>';
+
+            // Render hidden gallery images (even)
+            echo '<div class="hidden">';
+            foreach ($images as $image) {
+                $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
+                if ($relativeImagePath != $thumbnail_path) {
+                    // Kiểm tra trùng lặp với thumbnail
+                    echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
+                    echo '      <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
+                    echo ' </a>';
+                }
+            }
+            echo '</div>';
+        }
+    }
+    /* lien ket bao hiem */
+    public function renderMappedGalleryInsurance($viewMode = 'desktop')
+    {
+        foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
+            $thumbnail = htmlspecialchars($thumbnailPath);
+            $folder = htmlspecialchars($folderPath);
+
+            $images = $this->getImages($folder);
+
+            // Xác định nhóm Fancybox dựa trên chế độ hiển thị
+            $fancyboxGroup = ($viewMode === 'desktop') ? 'gallery-desktop-' : 'gallery-mobile-';
+            $fancyboxGroup .= htmlspecialchars(basename($folderPath));
+
+            // Render thumbnail với href đến hình ảnh đầu tiên
+            $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
+            echo '<div class="col-sm-3 item">';
+            echo '  <a data-fancybox="' . $fancyboxGroup . '" href="' . $thumbnail_path . '">';
+            echo '      <img loading="lazy" class="img-fluid logo" src="' . $thumbnail_path . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
+            echo '  </a>';
             echo '</div>';
 
             // Render hidden gallery images 
             echo '<div class="hidden">';
             foreach ($images as $image) {
                 $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
-                if ($relativeImagePath != $logo_hangxe) {
+                if ($relativeImagePath != $thumbnail_path) {
                     // Kiểm tra trùng lặp với thumbnail
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
                     echo '      <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';

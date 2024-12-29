@@ -107,15 +107,15 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <?php
             $galleryMap = [
-                'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_chu/hangxe_logo/ford',
-                'logo_hangxe/2BMW-removebg-preview.webp' => 'trang_chu/hangxe_logo/bmw',
-                'logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_chu/hangxe_logo/hyundai',
-                'logo_hangxe/4Audi-removebg-preview.webp' => 'trang_chu/hangxe_logo/audi',
-                'logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_chu/hangxe_logo/toyota',
-                'logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_chu/hangxe_logo/mazda',
-                'logo_hangxe/7Honda-removebg-preview.webp' => 'trang_chu/hangxe_logo/honda',
-                'logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_chu/hangxe_logo/vinfast',
-                'logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/hangxe_logo/mercedes',
+                'trang_chu/logo_hangxe/1Ford-removebg-preview.webp' => 'trang_chu/hangxe_logo/ford',
+                'trang_chu/logo_hangxe/2BMW-removebg-preview.webp' => 'trang_chu/hangxe_logo/bmw',
+                'trang_chu/logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_chu/hangxe_logo/hyundai',
+                'trang_chu/logo_hangxe/4Audi-removebg-preview.webp' => 'trang_chu/hangxe_logo/audi',
+                'trang_chu/logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_chu/hangxe_logo/toyota',
+                'trang_chu/logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_chu/hangxe_logo/mazda',
+                'trang_chu/logo_hangxe/7Honda-removebg-preview.webp' => 'trang_chu/hangxe_logo/honda',
+                'trang_chu/logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_chu/hangxe_logo/vinfast',
+                'trang_chu/logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/hangxe_logo/mercedes',
                 // Thêm các cặp (thumbnail => folder) tại đây
             ];
             ?>
@@ -476,18 +476,28 @@ o	Tân tâm trong từng dịch vụ.
             <div class="container-title">
                 <div class="title">Liên kết bảo hiểm</div>
             </div>
-            <div class="row list">
-                <div class="col-sm-3 item">
-                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/tasco_insurance.webp" alt="" loading="lazy">
+            <?php
+            $galleryMap = [
+                'trang_chu/partners_thumbnails/tasco_insurance.webp' => 'trang_chu/partners_insurances/tasco',
+                'trang_chu/partners_thumbnails/pg_insurance.svg' => 'trang_chu/partners_insurances/pg',
+                'trang_chu/partners_thumbnails/pvi_insurance.png' => 'trang_chu/partners_insurances/pvi',
+                'trang_chu/partners_thumbnails/mic_insurance.png' => 'trang_chu/partners_insurances/mic',
+            ];
+            ?>
+            <div class="desktop">
+                <div class="row list">
+                    <?php
+                    $gallery = new FolderGallery($galleryMap);
+                    $gallery->renderMappedGalleryInsurance('desktop');
+                    ?>
                 </div>
-                <div class="col-sm-3 item">
-                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/pg_insurance.svg" alt="" loading="lazy">
-                </div>
-                <div class="col-sm-3 item">
-                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/pvi_insurance.png" alt="" loading="lazy">
-                </div>
-                <div class="col-sm-3 item">
-                    <img class="img-fluid logo" src="./public/images/trang_chu/partners/mic_insurance.png" alt="" loading="lazy">
+            </div>
+            <div class="mobile">
+                <div class="row list owl-carousel owl-theme insurances-slider">
+                    <?php
+                    $gallery = new FolderGallery($galleryMap);
+                    $gallery->renderMappedGalleryInsurance('mobile');
+                    ?>
                 </div>
             </div>
         </div>
