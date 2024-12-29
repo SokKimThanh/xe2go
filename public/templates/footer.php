@@ -29,10 +29,14 @@
                     </div>
                     <p class="info-text">Trụ sở chính</p>
                     <ul class="info-list">
-                        <li><span class="bi bi-ladder"></span> 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương </li>
-                        <li><span class="bi bi-telephone"></span>Điện thoại: 0348.798.398 Hotline: 0886.883.886</li>
-                        <li><span class="bi bi-clock"></span> <span>Làm việc:</span>
-                            <span>T2 - T7. Thời gian: 08:00 - 17:00 giờ</span>
+                        <li><span class="bi bi-geo-alt"></span> 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương </li>
+                        <li><span class="bi bi-phone"></span> <span>HotLine Kỹ thuật</span>: <a href="tel:+0348798398">0348.798.398</a> <br>(Liên hệ Zalo)</li>
+                        <li><span class="bi bi-phone"></span> <span>HotLine Dịch vụ</span>: <a href="tel:+0567998998">0567.998.998</a> <br>(Liên hệ Zalo)</li>
+
+                        <li><span class="bi bi-envelope"></span><span> Email:</span> <span> <a href="mailto:xe2govn@gmail.com">xe2govn@gmail.com</a></span>
+                        <li><span class="bi bi-calendar-week"></span><span> Ngày làm việc:</span> <span> T2 - T7.</span>
+                        </li>
+                        <li><span class="bi bi-clock"></span><span> Thời gian:</span> <span>08:00 - 17:00</span>
                         </li>
                     </ul>
                 </div>

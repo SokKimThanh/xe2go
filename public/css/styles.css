@@ -1954,8 +1954,8 @@ section#ypss {
 
     .container {
         margin-top: -170px;
-        background-image: url(../images/xe2go/counters_bg.jpg);
-        background-size: cover;
+        background-image: url(../images/xe2go/counters_bg.png);
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -2009,6 +2009,26 @@ section#ypss {
             font-weight: 700;
             background-color: rgba(255, 255, 255, .5);
             margin: 0;
+        }
+
+        @media screen and (max-width:1366px) {
+
+            /* Thiết kế nội dung thành tựu rõ ràng dễ đọc và gây ấn tượng */
+            .box-title {
+                text-transform: uppercase;
+                font-size: 1.5rem;
+                font-weight: 700;
+                background-color: rgba(255, 255, 255, 0.6);
+                margin: 0;
+                padding: 4px;
+                border-radius: 4px;
+                color: var(--text-secondary);
+                text-shadow: 5px 5px 6px #00000066;
+                height: 68px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         }
     }
 
@@ -2258,16 +2278,23 @@ section#halini-slider {
             margin-top: 20px;
             gap: 100px;
             transition: all 0.3s ease-in-out;
+            background: url('../images/ford_bg.webp');
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
         }
 
         .line-container.active .circle:nth-child(even) {
             transform: translateY(-20%);
-            background: var(--text-secondary);
+            background: var(--secondary-color-linear2);
         }
 
         .line-container.active .circle:nth-child(odd) {
             transform: translateY(20%);
-            background: var(--text-secondary);
+            background: var(--secondary-color-linear2);
         }
 
         .line-container.mobile {
@@ -2457,6 +2484,7 @@ section#section-gallery {
     @media screen and (max-width: 500px) {
         margin-bottom: 0;
     }
+
     /* cách lề trên cùng và dưới cùng của trang thành nội dung riêng biệt */
     padding-top: 150px;
     padding-bottom: 100px;
@@ -2479,7 +2507,7 @@ section#section-gallery {
         }
     }
 
-    .gallery-box{
+    .gallery-box {
         margin-top: 75px;
         padding-left: 0;
         margin-left: 0;
