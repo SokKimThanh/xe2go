@@ -2998,12 +2998,18 @@ footer {
         flex-direction: column;
         padding: 0 40px;
 
-        @media (max-width: 500px) {
-            .service-request-map {
+        @media screen and (max-width: 500px) {
+            padding: 0 30px;
+        }
+
+        .service-request-map {
+            @media (max-width: 1024px) {
                 flex-direction: column !important;
             }
         }
+
     }
+
 
     .service-request-map-copyright {
         .service-request-map {
@@ -3031,6 +3037,14 @@ footer {
                 height: 100%;
 
                 @media screen and (max-width: 500px) {
+                    height: auto;
+                }
+
+                @media screen and (max-width: 768px) {
+                    height: auto;
+                }
+
+                @media screen and (max-width: 1024px) {
                     height: auto;
                 }
 
