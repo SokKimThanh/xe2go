@@ -169,7 +169,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
                                 nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_mission_bg.webp" alt="v_mission_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/mission/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_vision_bg.webp" alt="Tầm nhìn">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/vision/v_vision_bg.webp" alt="Tầm nhìn">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -205,7 +205,7 @@ o	Tân tâm trong từng dịch vụ.
                                 <li>Trách nhiệm với khách hàng và cộng đồng.</li>
                                 <li>Tận tâm trong từng dịch vụ.</li>
                             </ul>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_values_bg.webp" alt="v_values_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/values/v_values_bg.webp" alt="v_values_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -224,7 +224,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
                                 nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_mission_bg.webp" alt="v_mission_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/mission/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
 
@@ -242,7 +242,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_vision_bg.webp" alt="Tầm nhìn">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/vision/v_vision_bg.webp" alt="Tầm nhìn">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -261,7 +261,7 @@ o	Tân tâm trong từng dịch vụ.
                                 <li>Trách nhiệm với khách hàng và cộng đồng.</li>
                                 <li>Tận tâm trong từng dịch vụ.</li>
                             </ul>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_values_bg.webp" alt="v_values_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/values/v_values_bg.webp" alt="v_values_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -475,7 +475,7 @@ o	Tân tâm trong từng dịch vụ.
             </div>
             <?php
             $galleryMap = [
-                'trang_chu/partners_thumbnails/tasco_insurance.webp' => 'trang_chu/partners_insurances/tasco',
+                'trang_chu/partners_thumbnails/tasco_insurance(1).webp' => 'trang_chu/partners_insurances/tasco',
                 'trang_chu/partners_thumbnails/pg_insurance.svg' => 'trang_chu/partners_insurances/pg',
                 'trang_chu/partners_thumbnails/pvi_insurance.png' => 'trang_chu/partners_insurances/pvi',
                 'trang_chu/partners_thumbnails/mic_insurance.png' => 'trang_chu/partners_insurances/mic',
