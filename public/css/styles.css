@@ -1961,7 +1961,7 @@ section#ypss {
 
     .container {
         margin-top: -170px;
-        background-image: url(../images/xe2go/counters_bg.png);
+        background-image: url(../images/trang_chu/xe2go/counters_bg.png);
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -2281,7 +2281,7 @@ section#halini-slider {
             margin-top: 20px;
             gap: 100px;
             transition: all 0.3s ease-in-out;
-            background: url('../images/ford_bg.webp');
+            background: url('../images/trang_chu/xe2go/ford_bg.webp');
             background-position: center;
             /* Center the image */
             background-repeat: no-repeat;
@@ -2788,8 +2788,7 @@ section#partner {
 }
 
 section#museum-video {
-    background: url('../images/section-bg-1.jpg') no-repeat center center;
-
+    background: url('../images/trang_chu/xe2go/section-bg-1.jpg') no-repeat center center;
     background-size: cover;
     padding: 180px 0;
     text-align: center;

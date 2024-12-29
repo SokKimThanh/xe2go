@@ -25,7 +25,7 @@
             <div class="col-sm-4">
                 <div class="info-container">
                     <div class="info-logo">
-                        <img class="img-fluid" src="../../public/images/xe2go_logo.webp" alt="xe2go_logo.webp" loading="lazy">
+                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="xe2go_logo.webp" loading="lazy">
                     </div>
                     <p class="info-text">Trụ sở chính</p>
                     <ul class="info-list">
@@ -46,7 +46,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 box-qr-container">
                         <h6>Liên kết</h6>
                         <div class="box-qr">
-                            <img class="rounded img-fluid" src="../../public/images/xe2go/xe2go_QR.webp" alt="xe2go_QR" loading="lazy">
+                            <img class="rounded img-fluid" src="./public/images/trang_chu/xe2go/xe2go_QR.webp" alt="xe2go_QR" loading="lazy">
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 service-request">

@@ -50,7 +50,7 @@ o	Tân tâm trong từng dịch vụ.
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
 
-            <div class="slider-background" style="background-image: url('public/images/mercedes_bg.webp')">
+            <div class="slider-background" style="background-image: url('public/images/trang_chu/xe2go/mercedes_bg.webp')">
                 <div class="container slider-spacing">
                     <div class="row slider-container">
                         <div class="col-sm-8 slider-info">
@@ -75,7 +75,7 @@ o	Tân tâm trong từng dịch vụ.
                     </div>
                 </div>
             </div>
-            <div class="slider-background" style="background-image: url('public/images/mercedes_bg3.webp')">
+            <div class="slider-background" style="background-image: url('public/images/trang_chu/xe2go/mercedes_bg3.webp')">
                 <div class="container slider-spacing">
                     <div class="row slider-container">
                         <div class="col-sm-8 slider-info">
@@ -107,15 +107,15 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <?php
             $galleryMap = [
-                'trang_chu/logo_hangxe/1Ford-removebg-preview.webp' => 'trang_chu/hangxe_logo/ford',
-                'trang_chu/logo_hangxe/2BMW-removebg-preview.webp' => 'trang_chu/hangxe_logo/bmw',
-                'trang_chu/logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_chu/hangxe_logo/hyundai',
-                'trang_chu/logo_hangxe/4Audi-removebg-preview.webp' => 'trang_chu/hangxe_logo/audi',
-                'trang_chu/logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_chu/hangxe_logo/toyota',
-                'trang_chu/logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_chu/hangxe_logo/mazda',
-                'trang_chu/logo_hangxe/7Honda-removebg-preview.webp' => 'trang_chu/hangxe_logo/honda',
-                'trang_chu/logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_chu/hangxe_logo/vinfast',
-                'trang_chu/logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/hangxe_logo/mercedes',
+                'trang_chu/cars_thumb/1Ford-removebg-preview.webp' => 'trang_chu/cars_logo/ford',
+                'trang_chu/cars_thumb/2BMW-removebg-preview.webp' => 'trang_chu/cars_logo/bmw',
+                'trang_chu/cars_thumb/3Hyundai-removebg-preview.webp' => 'trang_chu/cars_logo/hyundai',
+                'trang_chu/cars_thumb/4Audi-removebg-preview.webp' => 'trang_chu/cars_logo/audi',
+                'trang_chu/cars_thumb/5Toyota-removebg-preview.webp' => 'trang_chu/cars_logo/toyota',
+                'trang_chu/cars_thumb/6Mazda-removebg-preview.webp' => 'trang_chu/cars_logo/mazda',
+                'trang_chu/cars_thumb/7Honda-removebg-preview.webp' => 'trang_chu/cars_logo/honda',
+                'trang_chu/cars_thumb/8vinfast-removebg-preview.webp' => 'trang_chu/cars_logo/vinfast',
+                'trang_chu/cars_thumb/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/cars_logo/mercedes',
                 // Thêm các cặp (thumbnail => folder) tại đây
             ];
             ?>
@@ -138,43 +138,38 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
     <section id="aga">
         <div class="container">
-            <div class="hidden">
-                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
+            <?php
+            $galleryMap = [
+                'trang_chu/mvv/v_mission_logo.webp' => 'trang_chu/mvv/mission',
+                'trang_chu/mvv/v_values_logo.webp' => 'trang_chu/mvv/values',
+                'trang_chu/mvv/v_vision_logo.webp' => 'trang_chu/mvv/vision',
+            ];
+            ?>
+            <div class="desktop">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryMVV('desktop');
+                ?>
             </div>
-            <div class="hidden">
-                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
-            </div>
-            <div class="hidden">
-                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
+            <div class="mobile">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryMVV('mobile');
+                ?>
             </div>
             <div class="mobile row owl-carousel owl-theme vision-mission-values-slider">
                 <div class="col-sm-12 col-md-12 col-lg-4">
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
                             <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="" loading="lazy">
+                                src="./public/images/trang_chu/mvv/v_mission_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
                         </a>
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
                                 nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -183,7 +178,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
                             <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="" loading="lazy">
+                                src="./public/images/trang_chu/mvv/v_vision_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="vision">02</span>
 
                             <h5 class="box-title">Tầm nhìn</h5>
@@ -191,7 +186,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_vision_bg.webp" alt="Tầm nhìn">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -200,7 +195,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
                             <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
+                                src="./public/images/trang_chu/mvv/v_values_logo.webp" alt="Giá trị cốt lõi">
                             <span class="box-mark circle" id="values">03</span>
                             <h5 class="box-title">Giá trị cốt lõi</h5>
                         </a>
@@ -210,7 +205,7 @@ o	Tân tâm trong từng dịch vụ.
                                 <li>Trách nhiệm với khách hàng và cộng đồng.</li>
                                 <li>Tận tâm trong từng dịch vụ.</li>
                             </ul>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_values_bg.webp" alt="v_values_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -222,14 +217,14 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
                             <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="" loading="lazy">
+                                src="public/images/trang_chu/mvv/v_mission_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
                         </a>
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
                                 nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_mission_bg.webp" alt="v_mission_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
 
@@ -239,7 +234,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
                             <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="" loading="lazy">
+                                src="public/images/trang_chu/mvv/v_vision_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="vision">02</span>
 
                             <h5 class="box-title">Tầm nhìn</h5>
@@ -247,7 +242,7 @@ o	Tân tâm trong từng dịch vụ.
                         <div class="col-sm-12 background-fluid">
                             <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
                             </p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_vision_bg.webp" alt="Tầm nhìn">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -256,7 +251,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
                             <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
+                                src="public/images/trang_chu/mvv/v_values_logo.webp" alt="Giá trị cốt lõi">
                             <span class="box-mark circle" id="values">03</span>
                             <h5 class="box-title">Giá trị cốt lõi</h5>
                         </a>
@@ -266,7 +261,7 @@ o	Tân tâm trong từng dịch vụ.
                                 <li>Trách nhiệm với khách hàng và cộng đồng.</li>
                                 <li>Tận tâm trong từng dịch vụ.</li>
                             </ul>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
+                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/v_values_bg.webp" alt="v_values_bg">
                             <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
                         </div>
                     </div>
@@ -281,7 +276,7 @@ o	Tân tâm trong từng dịch vụ.
             <div class="row">
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="./public/images/services/service_baoduongxe_bg.webp"
+                        <img class="box-image img-fluid" src="./public/images/trang_chu/services/service_baoduongxe_bg.webp"
                             alt="service_baoduongxe_bg.webp">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
@@ -296,7 +291,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachuagamxe (2).webp" alt="" loading="lazy">
+                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_suachuagamxe (2).webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -310,7 +305,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="" loading="lazy">
+                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_noithat_ngoaithat (2).webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -324,7 +319,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="" loading="lazy">
+                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_lamdongson_cuuhotainan.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -338,7 +333,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachua_gamxe.webp" alt="" loading="lazy">
+                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_suachua_gamxe.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -352,7 +347,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="" loading="lazy">
+                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_nang-cap_linhkien_phutung.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -514,24 +509,24 @@ o	Tân tâm trong từng dịch vụ.
                         <h5 class="box-title">Cơ sở pháp lý</h5>
                         <hr>
                         <!-- nút xem chi tiết pháp lý -->
-                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
+                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
                             <span>Xem chi tiết</span>
                         </a>
                         <div class="hidden">
-                            <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
-                                <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
+                            <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
+                                <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
+                        <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="" loading="lazy">
+                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="" loading="lazy">
                         <div class="box-image text-center ">
                             <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
                             <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
@@ -607,7 +602,6 @@ o	Tân tâm trong từng dịch vụ.
                         <p class="box-content">Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp.
                         </p>
                     </div>
-
                     <div class="box-item">
                         <div class="box-author">
                             <img class="author-image" src="./public/svg/congnghehotro.svg" alt="" loading="lazy">
@@ -620,7 +614,6 @@ o	Tân tâm trong từng dịch vụ.
                         <p class="box-content">Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa.
                         </p>
                     </div>
-
                     <div class="box-item">
                         <div class="box-author">
                             <img class="author-image" src="./public/svg/quytrinh.svg" alt="" loading="lazy">
@@ -654,10 +647,7 @@ o	Tân tâm trong từng dịch vụ.
                                 </p>
                             </div>
                         </div>
-                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe.
-
-
-                        </p>
+                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe. </p>
                     </div>
 
                     <div class="box-item">

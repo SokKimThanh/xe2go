@@ -19,7 +19,7 @@
              <div class="col-sm-12 logo-link-image-container">
                  <div class="row">
                      <a class="col-sm-2 logo-link-image" href="/index.php">
-                         <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
+                         <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                      </a>
                      <div class="col-sm-6 menu-list-container">
                          <ul class="menu-list">
@@ -42,8 +42,8 @@
              </div>
              <div class="menu-list-container-contact">
                  <div class="button-list">
-                     <img class="img-fluid desktop" src="../../public/images/bannerQuocLong (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
-                     <img class="img-fluid laptop" src="../../public/images/bannerQuocLong1366 (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
+                     <img class="img-fluid desktop" src="../../public/images/trang_chu/xe2go/bannerQuocLong (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
+                     <img class="img-fluid laptop" src="../../public/images/trang_chu/xe2go/bannerQuocLong1366 (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
                  </div>
              </div>
          </section>
@@ -53,13 +53,13 @@
                      <i class="bi bi-list"></i>
                  </div>
                  <div class="menu-bar-logo">
-                     <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
+                     <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                  </div>
              </div>
              <div class="menu-overlay"></div>
              <div class="menu-container-slider">
                  <a class="logo-link-image">
-                     <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy"></a>
+                     <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy"></a>
                  <div class="menu-list-container">
                      <ul class="menu-list">
                          <li class="menu-item">
