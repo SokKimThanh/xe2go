@@ -86,7 +86,7 @@ class FolderGallery
             echo '    <div class="box-item">';
             echo '        <span class="box-icon">';
             echo '            <a data-fancybox="' . $fancyboxGroup . '" href="' . $logo_hangxe . '">';
-            echo '                <img class="img-fluid" src="' . $logo_hangxe . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
+            echo '                <img loading="lazy" class="img-fluid" src="' . $logo_hangxe . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
             echo '            </a>';
             echo '        </span>';
             echo '    </div>';
@@ -99,7 +99,7 @@ class FolderGallery
                 if ($relativeImagePath != $logo_hangxe) {
                     // Kiểm tra trùng lặp với thumbnail
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
-                    echo '      <img src="' . htmlspecialchars($relativeImagePath) . '" />';
+                    echo '      <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
                     echo ' </a>';
                 }
             }

@@ -98,12 +98,17 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     /* thiet lap background*/
     --background-warning: linear-gradient(45deg, #8f6608 0%, #ffc400 100%);
     --background-secondary: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
+    --background-light-linear: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(203, 203, 203, 1) 100%);
 
     /* Thiết lập font-size chuẩn Toàn Cục */
     --font-size-base: 16px;
 
     /* Thêm màu hover menu link */
     --hover-color: #fff;
+}
+
+.btn-light-linear {
+    background: var(--background-light-linear);
 }
 
 .hidden {
@@ -464,8 +469,12 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 justify-content: center;
                                 align-items: center;
                                 cursor: pointer;
-
                                 transition: background-color 0.3s, color 0.3s;
+
+                                @media screen and(max-width: 500px) {
+                                    height: 61px;
+                                    font-size: 1.1rem;
+                                }
                             }
 
                             .slider-button:hover {
@@ -1041,7 +1050,7 @@ section.menu-container-desktop {
         height: 39px;
 
         @media screen and (max-width: 1366px) {
-            height: 22px;
+            height: 35px;
         }
 
         .button-list {
@@ -2035,10 +2044,6 @@ section#ypss {
     @media screen and (max-width: 500px) {
         .container {
             margin-top: -228px;
-            background-image: url(../images/xe2go/counters_bg.jpg);
-            background-size: auto;
-            background-position: center;
-            background-repeat: no-repeat;
             padding: 80px 45px;
             box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         }
@@ -2920,7 +2925,7 @@ footer {
                 font-size: 1.3rem;
                 font-weight: 600;
                 text-transform: uppercase;
-                width: 80%;
+                width: 100%;
                 height: 50px;
                 margin: 0 0.2em;
 
@@ -2977,6 +2982,10 @@ footer {
         .info-logo {
             @media screen and (max-width: 768px) {
                 text-align: center;
+
+                img {
+                    height: 150px;
+                }
             }
         }
     }

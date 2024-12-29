@@ -165,7 +165,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
                             <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
+                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
                         </a>
@@ -181,7 +181,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
                             <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
+                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="vision">02</span>
 
                             <h5 class="box-title">Tầm nhìn</h5>
@@ -220,7 +220,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
                             <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
+                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="mission">01</span>
                             <h5 class="box-title">Sứ mệnh</h5>
                         </a>
@@ -237,7 +237,7 @@ o	Tân tâm trong từng dịch vụ.
                     <div class="row box-item">
                         <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
                             <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
+                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="" loading="lazy">
                             <span class="box-mark circle" id="vision">02</span>
 
                             <h5 class="box-title">Tầm nhìn</h5>
@@ -294,7 +294,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachuagamxe (2).webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_suachuagamxe (2).webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -308,7 +308,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -322,7 +322,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -336,7 +336,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachua_gamxe.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_suachua_gamxe.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -350,7 +350,7 @@ o	Tân tâm trong từng dịch vụ.
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="">
+                        <img class="box-image img-fluid" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="" loading="lazy">
                         <div class="box-overlay"></div>
                         <div class="box-hide">
                             <hr>
@@ -483,19 +483,19 @@ o	Tân tâm trong từng dịch vụ.
                         </a>
                         <div class="hidden">
                             <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
-                                <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                                <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                        <img class="img-fluid box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="">
+                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="" loading="lazy">
                         <div class="box-image text-center ">
                             <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
                             <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
@@ -562,7 +562,7 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="owl-carousel owl-theme box-slider">
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="">
+                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Kỹ thuật viên tay nghề cao</h5>
                                 <p class="author-description">XE2GO</p>
@@ -574,7 +574,7 @@ o	Tân tâm trong từng dịch vụ.
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="">
+                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Công nghệ hỗ trợ hiện đại</h5>
                                 <p class="author-description">XE2GO
@@ -587,7 +587,7 @@ o	Tân tâm trong từng dịch vụ.
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="">
+                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Quy trình chuyên nghiệp
                                 </h5>
@@ -599,7 +599,7 @@ o	Tân tâm trong từng dịch vụ.
                     </div>
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/baohanh.svg" alt="">
+                            <img class="author-image" src="./public/svg/baohanh.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Bảo hành lên tới 1 năm </h5>
                                 <p class="author-description">XE2GO</p>
@@ -611,7 +611,7 @@ o	Tân tâm trong từng dịch vụ.
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/phutung.svg" alt="">
+                            <img class="author-image" src="./public/svg/phutung.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Phụ tùng ô tô chính hãng</h5>
                                 <p class="author-description">XE2GO
@@ -626,7 +626,7 @@ o	Tân tâm trong từng dịch vụ.
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/giaca.svg" alt="">
+                            <img class="author-image" src="./public/svg/giaca.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Giá cả đúng chất lượng
                                 </h5>

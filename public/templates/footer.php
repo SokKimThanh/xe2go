@@ -13,8 +13,8 @@
                     <div class="col-sm-3">
                         <input class="form-control-plaintext" type="email" name="email" placeholder="Nhập email">
                     </div>
-                    <div class="col-sm-3">
-                        <button class="btn btn-light" type="submit">
+                    <div class="col-sm-3 pt-3">
+                        <button class="btn btn-light btn-light-linear" type="submit">
                             Đặt lịch
                         </button>
                     </div>
@@ -25,7 +25,7 @@
             <div class="col-sm-4">
                 <div class="info-container">
                     <div class="info-logo">
-                        <img class="img-fluid" src="../../public/images/xe2go_logo.webp" alt="xe2go_logo.webp">
+                        <img class="img-fluid" src="../../public/images/xe2go_logo.webp" alt="xe2go_logo.webp" loading="lazy">
                     </div>
                     <p class="info-text">Trụ sở chính</p>
                     <ul class="info-list">
@@ -46,7 +46,7 @@
                     <div class="col-12 col-sm-12 col-md-12 col-lg-4 box-qr-container">
                         <h6>Liên kết</h6>
                         <div class="box-qr">
-                            <img class="rounded img-fluid" src="../../public/images/xe2go/xe2go_QR.webp" alt="xe2go_QR">
+                            <img class="rounded img-fluid" src="../../public/images/xe2go/xe2go_QR.webp" alt="xe2go_QR" loading="lazy">
                         </div>
                     </div>
                     <div class="col-12 col-sm-12 col-md-12 col-lg-8 service-request">

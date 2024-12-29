@@ -77,7 +77,7 @@ $letter = 65;
                         ?>
                                     <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter <?php echo chr($letter) . $count; ?>">
                                         <a href="<?php echo $filePath; ?>" data-fancybox="gallery-<?php echo chr($letter) . $count; ?>">
-                                            <img src="<?php echo $filePath; ?>" class="img-fluid">
+                                            <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
                                         </a>
                                     </div>
                                 <?php
@@ -100,7 +100,7 @@ $letter = 65;
                                 ?>
                                 <div class="gallery_product col-sm-4 col-md-3 col-lg-4">
                                     <a href="<?php echo $filePath; ?>" data-fancybox="gallery-00">
-                                        <img src="<?php echo $filePath; ?>" class="img-fluid">
+                                        <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
                                     </a>
                                 </div>
                         <?php
