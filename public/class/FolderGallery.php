@@ -66,7 +66,74 @@ class FolderGallery
             return strpos(basename($image), 'thumb') === false; // Bỏ qua thumbnail
         });
     }
+    /* Sứ mệnh, tầm nhìn, giá trị cốt lõi */
+    public function renderMappedGalleryMVV($viewMode = 'desktop')
+    {
+        $records = [
+            [
+                'id' => 'mission',
+                'title' => 'Sứ mệnh',
+                'description' => 'Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất.',
+                'bgImage' => 'mission/v_mission_bg.webp',
+                'stt' => '01'
+            ],
+            [
+                'id' => 'vision',
+                'title' => 'Tầm nhìn',
+                'description' => 'Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.',
+                'bgImage' => 'vision/v_vision_bg.webp',
+                'stt' => '02'
+            ],
+            [
+                'id' => 'values',
+                'title' => 'Giá trị cốt lõi',
+                'description' => 'Chất lượng là ưu tiên hàng đầu.',
+                'bgImage' => 'values/v_values_bg.webp',
+                'stt' => '03'
+            ]
+        ];
 
+        foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
+            $thumbnail = htmlspecialchars($thumbnailPath);
+            $folder = htmlspecialchars($folderPath);
+
+            $images = $this->getImages($folder);
+            $record = array_shift($records);
+
+            $fancyboxGroup = $viewMode === 'desktop' ? 'gallery-desktop-' : 'gallery-mobile-';
+            $fancyboxGroup .= htmlspecialchars(basename($folderPath));
+
+            $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
+
+            echo '<div class="col-sm-12 col-md-12 col-lg-4">';
+            echo '  <div class="row box-item">';
+            echo '      <a class="col-sm-12 box-item-header" data-fancybox="' . $fancyboxGroup . '">';
+            echo '          <img class="box-image img-fluid" src="' . $thumbnail_path . '" alt="" loading="lazy">';
+            echo '          <span class="box-mark circle" id="' . $record['id'] . '">' . $record['stt'] . '</span>';
+            echo '          <h5 class="box-title">' . $record['title'] . '</h5>';
+            echo '      </a>';
+            echo '      <div class="col-sm-12 background-fluid">';
+            echo '          <p class="box-text">' . $record['description'] . '</p>';
+            echo '          <img class="img-fluid background-img" src="public/images/trang_chu/mvv_images/' . $record['bgImage'] . '" alt="">';
+            echo '          <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>';
+            echo '      </div>';
+            echo '  </div>';
+            echo '</div>';
+
+            // Render hidden gallery images 
+            echo '<div class="hidden">';
+            foreach ($images as $image) {
+                $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
+                if ($relativeImagePath != $thumbnail_path) {
+                    // Kiểm tra trùng lặp với thumbnail 
+                    echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
+                    echo ' <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
+                    echo ' </a>';
+                }
+            }
+            echo '</div>';
+        }
+    }
     // Render gallery từ ánh xạ
     /* Logo hãng xe */
     public function renderMappedGalleryCarsLogo($viewMode = 'desktop')
@@ -136,39 +203,16 @@ class FolderGallery
                     // Kiểm tra trùng lặp với thumbnail
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
                     echo '      <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
-                    echo ' </a>';
+                    echo '</a>';
                 }
             }
             echo '</div>';
         }
     }
-    /* Sứ mệnh, tầm nhìn, giá trị cốt lõi */
-    public function renderMappedGalleryMVV($viewMode = 'desktop')
+    // Hàm renderMappedGalleryServices để hiển thị các dịch vụ 
+    public function renderMappedGalleryServices($viewMode = 'desktop')
     {
-        $records = [
-            [
-                'id' => 'mission',
-                'title' => 'Sứ mệnh',
-                'description' => 'Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất.',
-                'bgImage' => 'mission/v_mission_bg.webp',
-                'stt' => '01'
-            ],
-            [
-                'id' => 'vision',
-                'title' => 'Tầm nhìn',
-                'description' => 'Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.',
-                'bgImage' => 'vision/v_vision_bg.webp',
-                'stt' => '02'
-            ],
-            [
-                'id' => 'values',
-                'title' => 'Giá trị cốt lõi',
-                'description' => 'Chất lượng là ưu tiên hàng đầu.',
-                'bgImage' => 'values/v_values_bg.webp',
-                'stt' => '03'
-            ]
-        ];
-
+        $records = [['id' => 'baoduong', 'title' => 'Bảo dưỡng xe ô tô định kỳ.', 'description' => 'Bảo dưỡng định kỳ giúp duy trì hiệu suất và tuổi thọ của xe. Các hạng mục bao gồm thay dầu động cơ, vệ sinh hệ thống làm mát, thay dầu phanh và kiểm tra các bộ phận quan trọng khác.', 'bgImage' => 'services_images/xebaoduong/service_baoduongxe_bg.webp', 'stt' => '01'], ['id' => 'suachua', 'title' => 'Sửa chữa động cơ, hộp số, gầm xe.', 'description' => 'Dịch vụ này bao gồm chẩn đoán và sửa chữa các vấn đề liên quan đến động cơ, hộp số và hệ thống gầm xe, đảm bảo xe hoạt động ổn định và an toàn.', 'bgImage' => 'services_images/xesuachua/service_suachuagamxe.webp', 'stt' => '02'], ['id' => 'chamsoc', 'title' => 'Chăm sóc và làm đẹp xe (nội thất, ngoại thất).', 'description' => 'Dịch vụ chăm sóc xe toàn diện bao gồm vệ sinh, bảo dưỡng và làm đẹp cả nội thất và ngoại thất, giúp xe luôn mới mẻ và tăng giá trị sử dụng.', 'bgImage' => 'services_images/xechamsoc/service_chamsocxe.webp', 'stt' => '03'], ['id' => 'dongson', 'title' => 'Làm đồng sơn và sửa chữa xe tai nạn.', 'description' => 'Dịch vụ đồng sơn ô tô giúp khôi phục hình dáng và màu sơn ban đầu của xe sau tai nạn, đảm bảo tính thẩm mỹ và an toàn khi sử dụng.', 'bgImage' => 'services_images/xedongson/service_dongsonxe.webp', 'stt' => '04'], ['id' => 'phuchoi', 'title' => 'Phục hồi thước lái.', 'description' => 'Phục hồi thước lái giúp khắc phục các vấn đề về hệ thống lái, đảm bảo xe vận hành chính xác và an toàn trên mọi hành trình.', 'bgImage' => 'services_images/xephuchoi/service_phuchoi.webp', 'stt' => '05'], ['id' => 'nangcap', 'title' => 'Nâng cấp và lắp ráp phụ tùng, linh kiện.', 'description' => 'Dịch vụ này cung cấp giải pháp thay thế hoặc nâng cấp các phụ tùng, linh kiện ô tô, đảm bảo xe luôn trong tình trạng tốt nhất và đáp ứng nhu cầu sử dụng của khách hàng.', 'bgImage' => 'services_images/xenangcap/service_nangcap.webp', 'stt' => '06']];
         foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
             $thumbnail = htmlspecialchars($thumbnailPath);
             $folder = htmlspecialchars($folderPath);
@@ -181,22 +225,25 @@ class FolderGallery
 
             $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
 
-            echo '<div class="col-sm-12 col-md-12 col-lg-4">';
-            echo '  <div class="row box-item">';
-            echo '      <a class="col-sm-12 box-item-header" data-fancybox="' . $fancyboxGroup . '">';
-            echo '          <img class="box-image img-fluid" src="' . $thumbnail_path . '" alt="" loading="lazy">';
-            echo '          <span class="box-mark circle" id="' . $record['id'] . '">' . $record['stt'] . '</span>';
-            echo '          <h5 class="box-title">' . $record['title'] . '</h5>';
-            echo '      </a>';
-            echo '      <div class="col-sm-12 background-fluid">';
-            echo '          <p class="box-text">' . $record['description'] . '</p>';
-            echo '          <img class="img-fluid background-img" src="public/images/trang_chu/mvv_images/' . $record['bgImage'] . '" alt="">';
-            echo '          <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>';
+            echo '<div class="col-sm-4 col-12">';
+            echo '  <div class="box-item">';
+            echo '      <img class="box-image img-fluid" src="' . $thumbnail_path . '" alt="">';
+            echo '      <div class="box-overlay"></div>';
+            echo '      <div class="box-hide">';
+            echo '          <hr>';
+            echo '          <div class="box-text-hide">';
+            echo '              <h5 class="box-title">' . $record['title'] . '</h5>';
+            echo '              <p class="box-text">' . $record['description'] . '</p>';
+            echo '          </div>';
+            echo '          <a class="box-button" data-fancybox="' . $fancyboxGroup . '" href="' . $thumbnail_path . '">';
+            echo '              <i class="bi bi-arrow-right"></i>';
+            echo '          </a>';
             echo '      </div>';
             echo '  </div>';
             echo '</div>';
 
             // Render hidden gallery images 
+            $images = $this->getImages($folder);
             echo '<div class="hidden">';
             foreach ($images as $image) {
                 $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
@@ -204,7 +251,7 @@ class FolderGallery
                     // Kiểm tra trùng lặp với thumbnail 
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
                     echo ' <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
-                    echo ' </a>';
+                    echo '</a>';
                 }
             }
             echo '</div>';

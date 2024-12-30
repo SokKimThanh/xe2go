@@ -160,92 +160,23 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Lĩnh vực hoạt động dịch vụ -->
     <section id="vfo">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="./public/images/trang_chu/services/service_baoduongxe_bg.webp"
-                            alt="service_baoduongxe_bg.webp">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Bảo dưỡng xe ô tô định kỳ.</h5>
-                                <p class="box-text">Bảo dưỡng định kỳ giúp duy trì hiệu suất và tuổi thọ của xe. Các hạng mục bao gồm thay dầu động cơ, vệ sinh hệ thống làm mát, thay dầu phanh và kiểm tra các bộ phận quan trọng khác.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_suachuagamxe (2).webp" alt="" loading="lazy">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Sửa chữa động cơ, hộp số, gầm xe.</h5>
-                                <p class="box-text"> Dịch vụ này bao gồm chẩn đoán và sửa chữa các vấn đề liên quan đến động cơ, hộp số và hệ thống gầm xe, đảm bảo xe hoạt động ổn định và an toàn.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_noithat_ngoaithat (2).webp" alt="" loading="lazy">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Chăm sóc và làm đẹp xe (nội thất, ngoại thất).</h5>
-                                <p class="box-text">Dịch vụ chăm sóc xe toàn diện bao gồm vệ sinh, bảo dưỡng và làm đẹp cả nội thất và ngoại thất, giúp xe luôn mới mẻ và tăng giá trị sử dụng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_lamdongson_cuuhotainan.webp" alt="" loading="lazy">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Làm đồng sơn và sửa chữa xe tai nạn.</h5>
-                                <p class="box-text">Dịch vụ đồng sơn ô tô giúp khôi phục hình dáng và màu sơn ban đầu của xe sau tai nạn, đảm bảo tính thẩm mỹ và an toàn khi sử dụng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_suachua_gamxe.webp" alt="" loading="lazy">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Phục hồi thước lái.</h5>
-                                <p class="box-text">Phục hồi thước lái giúp khắc phục các vấn đề về hệ thống lái, đảm bảo xe vận hành chính xác và an toàn trên mọi hành trình.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/trang_chu/services/s_nang-cap_linhkien_phutung.webp" alt="" loading="lazy">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Nâng cấp và lắp ráp phụ tùng, linh kiện.</h5>
-                                <p class="box-text">Dịch vụ này cung cấp giải pháp thay thế hoặc nâng cấp các phụ tùng, linh kiện ô tô, đảm bảo xe luôn trong tình trạng tốt nhất và đáp ứng nhu cầu sử dụng của khách hàng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
+            <?php
+            $galleryMap = [
+                'trang_chu/services_thumb/s_baoduong.webp' => 'trang_chu/services_images/xebaoduong',
+                'trang_chu/services_thumb/s_suachua.webp' => 'trang_chu/services_images/xesuachua',
+                'trang_chu/services_thumb/s_chamsoc.webp' => 'trang_chu/services_images/xechamsoc',
+                'trang_chu/services_thumb/s_dongson.webp' => 'trang_chu/services_images/xedongson',
+                'trang_chu/services_thumb/s_phuchoi.webp' => 'trang_chu/services_images/xephuchoi',
+                'trang_chu/services_thumb/s_nangcap.webp' => 'trang_chu/services_images/xenangcap'
+            ];
+            ?>
+            <div class="desktop row">
+                <?php $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryServices('desktop'); ?>
+            </div>
+            <div class="mobile row">
+                <?php $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryServices('mobile'); ?>
             </div>
         </div>
     </section>
