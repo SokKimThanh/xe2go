@@ -57,7 +57,11 @@
                      <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                  </div>
              </div>
-             <div class="menu-overlay"></div>
+             <div class="menu-overlay">
+                 <div class="menu-close-icon" aria-label="Close icon - đóng menu chính">
+                     <i class="bi bi-x"></i>
+                 </div>
+             </div>
              <div class="menu-container-slider">
                  <a class="logo-link-image">
                      <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy"></a>
