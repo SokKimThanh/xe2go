@@ -189,7 +189,7 @@ class FolderGallery
 
             // Render thumbnail với href đến hình ảnh đầu tiên
             $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
-            echo '<div class="col-sm-3 item">';
+            echo '<div class="col-xs-6 col-sm-6 col-md-3 item">';
             echo '  <a data-fancybox="' . $fancyboxGroup . '" href="' . $thumbnail_path . '">';
             echo '      <img loading="lazy" class="img-fluid logo" src="' . $thumbnail_path . '" alt="' . htmlspecialchars(basename($thumbnail)) . '" />';
             echo '  </a>';

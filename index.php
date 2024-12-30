@@ -306,11 +306,13 @@ o	Tân tâm trong từng dịch vụ.
                 ?>
 
             </div>
-            <div class="mobile row d-flex list owl-carousel owl-theme insurances-slider">
-                <?php
-                $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGalleryInsurance('mobile');
-                ?>
+            <div class="mobile">
+                <div class="row list">
+                    <?php
+                    $gallery = new FolderGallery($galleryMap);
+                    $gallery->renderMappedGalleryInsurance('mobile');
+                    ?>
+                </div>
             </div>
         </div>
     </section>
@@ -404,7 +406,6 @@ o	Tân tâm trong từng dịch vụ.
                         </div>
                     </div>
                 </div>
-
                 <div class="owl-carousel owl-theme box-slider">
                     <div class="box-item">
                         <div class="box-author">

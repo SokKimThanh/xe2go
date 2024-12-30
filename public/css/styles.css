@@ -107,23 +107,6 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --hover-color: #fff;
 }
 
-/* Cài đặt responsive */
-@media screen and (max-width: 1920px) {
-    .container .mobile {
-        display: none;
-    }
-}
-
-/* slider container */
-@media screen and (max-width: 500px) {
-    .container .mobile {
-        display: block;
-    }
-
-    .container .desktop {
-        display: none;
-    }
-}
 
 
 /* CSS cho image gallery */
@@ -1334,6 +1317,21 @@ section#six-box {
         }
     }
 
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
 
     /* odd: lẻ, even: chẵn */
     .owl-item {
@@ -1770,6 +1768,22 @@ section#vfo {
     padding-bottom: 140px;
     margin-bottom: 100px;
 
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
+
     .box-item {
         padding: 0;
         position: relative;
@@ -1978,6 +1992,10 @@ section#ypss .box-item {
         align-items: center;
         gap: 20px;
     }
+
+    section#ypss .owl-stage-outer {
+        min-height: 200px;
+    }
 }
 
 /* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
@@ -1995,16 +2013,6 @@ section#ypss .box-item .box-number {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-@media screen and (max-width: 500px) {
-    section#ypss .box-item .box-number {
-        font-size: 2rem;
-        font-weight: 500;
-        margin: 8px;
-        min-width: 67px;
-        justify-content: center;
-    }
 }
 
 /* Styling for box-title */
@@ -2034,8 +2042,16 @@ section#ypss .box-item .box-title {
 }
 
 @media screen and (max-width: 500px) {
+    section#ypss .box-item .box-number {
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 8px;
+        min-width: 67px;
+        justify-content: center;
+    }
+
     section#ypss .box-item .box-title {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         text-align: center;
     }
 }
@@ -2624,26 +2640,10 @@ section#contactus {
 /*  */
 
 /* Cài đặt responsive */
-@media screen and (max-width: 1920px) {
-    section#partner .mobile {
-        display: none;
-    }
-}
-
-/* slider container */
-@media screen and (max-width: 500px) {
-    section#partner .mobile {
-        display: block;
-    }
-
-    section#partner .desktop {
-        display: none;
-    }
-}
-
 section#partner {
     padding: 120px 0;
     background-color: var(--background-4);
+    min-height: 500px;
 }
 
 /* Container */
@@ -2651,20 +2651,25 @@ section#partner .container {
     display: flex;
     justify-content: center;
     position: relative;
+    color: #b30c0c66;
+
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
 }
 
-section#partner .owl-stage-outer {
-    height: 200px;
-}
-
-/* odd: lẻ, even: chẵn */
-section#partner .owl-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    left: 90px;
-    bottom: -80px;
-}
 
 /* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
 section#partner .container-title {
@@ -2713,13 +2718,16 @@ section#partner .list {
     border: 1px solid var(--menu-link);
     z-index: 0;
     border-radius: 40px;
+    padding: 4rem;
 
-    @media screen and (max-width: 1920px) {
-        height: 16rem;
-    }
 
-    @media screen and (max-width: 1366px) {
-        height: 19rem;
+    @media screen and (max-width: 500px) {
+        padding: 4rem 2rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 
@@ -2731,10 +2739,17 @@ section#partner .list .item {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media screen and (max-width: 500px) {
+        width: auto;
+        height: auto;
+        padding: 1rem;
+
+    }
 }
 
 section#partner .list .item .logo {
-    width: 250px;
+    width: min-content;
 }
 
 section#partner .list .item:hover {
