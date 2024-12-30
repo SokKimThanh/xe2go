@@ -68,7 +68,8 @@ class FolderGallery
     }
 
     // Render gallery từ ánh xạ
-    public function renderMappedGallery($viewMode = 'desktop')
+    /* Logo hãng xe */
+    public function renderMappedGalleryCarsLogo($viewMode = 'desktop')
     {
         foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
             $thumbnail = htmlspecialchars($thumbnailPath);
@@ -106,7 +107,7 @@ class FolderGallery
             echo '</div>';
         }
     }
-    /* lien ket bao hiem */
+    /* Liên kết bảo hiểm */
     public function renderMappedGalleryInsurance($viewMode = 'desktop')
     {
         foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
@@ -144,27 +145,65 @@ class FolderGallery
     /* Sứ mệnh, tầm nhìn, giá trị cốt lõi */
     public function renderMappedGalleryMVV($viewMode = 'desktop')
     {
+        $records = [
+            [
+                'id' => 'mission',
+                'title' => 'Sứ mệnh',
+                'description' => 'Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất.',
+                'bgImage' => 'mission/v_mission_bg.webp',
+                'stt' => '01'
+            ],
+            [
+                'id' => 'vision',
+                'title' => 'Tầm nhìn',
+                'description' => 'Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.',
+                'bgImage' => 'vision/v_vision_bg.webp',
+                'stt' => '02'
+            ],
+            [
+                'id' => 'values',
+                'title' => 'Giá trị cốt lõi',
+                'description' => 'Chất lượng là ưu tiên hàng đầu.',
+                'bgImage' => 'values/v_values_bg.webp',
+                'stt' => '03'
+            ]
+        ];
+
         foreach ($this->galleryMap as $thumbnailPath => $folderPath) {
             $thumbnail = htmlspecialchars($thumbnailPath);
             $folder = htmlspecialchars($folderPath);
 
             $images = $this->getImages($folder);
+            $record = array_shift($records);
 
-            // Xác định nhóm Fancybox dựa trên chế độ hiển thị
-            $fancyboxGroup = ($viewMode === 'desktop') ? 'gallery-desktop-' : 'gallery-mobile-';
+            $fancyboxGroup = $viewMode === 'desktop' ? 'gallery-desktop-' : 'gallery-mobile-';
             $fancyboxGroup .= htmlspecialchars(basename($folderPath));
 
-            // Render thumbnail với href đến hình ảnh đầu tiên
             $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
-            
+
+            echo '<div class="col-sm-12 col-md-12 col-lg-4">';
+            echo '  <div class="row box-item">';
+            echo '      <a class="col-sm-12 box-item-header" data-fancybox="' . $fancyboxGroup . '">';
+            echo '          <img class="box-image img-fluid" src="' . $thumbnail_path . '" alt="" loading="lazy">';
+            echo '          <span class="box-mark circle" id="' . $record['id'] . '">' . $record['stt'] . '</span>';
+            echo '          <h5 class="box-title">' . $record['title'] . '</h5>';
+            echo '      </a>';
+            echo '      <div class="col-sm-12 background-fluid">';
+            echo '          <p class="box-text">' . $record['description'] . '</p>';
+            echo '          <img class="img-fluid background-img" src="public/images/trang_chu/mvv_images/' . $record['bgImage'] . '" alt="">';
+            echo '          <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>';
+            echo '      </div>';
+            echo '  </div>';
+            echo '</div>';
+
             // Render hidden gallery images 
             echo '<div class="hidden">';
             foreach ($images as $image) {
                 $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
                 if ($relativeImagePath != $thumbnail_path) {
-                    // Kiểm tra trùng lặp với thumbnail
+                    // Kiểm tra trùng lặp với thumbnail 
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
-                    echo '      <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
+                    echo ' <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';
                     echo ' </a>';
                 }
             }

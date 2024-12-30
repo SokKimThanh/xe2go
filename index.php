@@ -49,7 +49,6 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
-
             <div class="slider-background" style="background-image: url('public/images/trang_chu/xe2go/mercedes_bg.webp')">
                 <div class="container slider-spacing">
                     <div class="row slider-container">
@@ -122,16 +121,14 @@ o	Tân tâm trong từng dịch vụ.
             <div class="desktop row justify-content-center">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery('desktop');
+                $gallery->renderMappedGalleryCarsLogo('desktop');
                 ?>
             </div>
-            <div class="mobile row justify-content-center">
-                <div class="owl-carousel owl-theme logo-xe-slider">
-                    <?php
-                    $gallery = new FolderGallery($galleryMap);
-                    $gallery->renderMappedGallery('mobile');
-                    ?>
-                </div>
+            <div class="mobile row justify-content-center owl-carousel owl-theme logo-xe-slider">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryCarsLogo('mobile');
+                ?>
             </div>
         </div>
     </section>
@@ -140,132 +137,22 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <?php
             $galleryMap = [
-                'trang_chu/mvv/v_mission_logo.webp' => 'trang_chu/mvv/mission',
-                'trang_chu/mvv/v_values_logo.webp' => 'trang_chu/mvv/values',
-                'trang_chu/mvv/v_vision_logo.webp' => 'trang_chu/mvv/vision',
+                'trang_chu/mvv_thumb/v_mission_logo.webp' => 'trang_chu/mvv_images/mission',
+                'trang_chu/mvv_thumb/v_vision_logo.webp' => 'trang_chu/mvv_images/vision',
+                'trang_chu/mvv_thumb/v_values_logo.webp' => 'trang_chu/mvv_images/values',
             ];
             ?>
-            <div class="desktop">
+            <div class="desktop row">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
                 $gallery->renderMappedGalleryMVV('desktop');
                 ?>
             </div>
-            <div class="mobile">
+            <div class="mobile row">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
                 $gallery->renderMappedGalleryMVV('mobile');
                 ?>
-            </div>
-            <div class="mobile row owl-carousel owl-theme vision-mission-values-slider">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="./public/images/trang_chu/mvv/v_mission_logo.webp" alt="" loading="lazy">
-                            <span class="box-mark circle" id="mission">01</span>
-                            <h5 class="box-title">Sứ mệnh</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
-                                nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/mission/v_mission_bg.webp" alt="v_mission_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="./public/images/trang_chu/mvv/v_vision_logo.webp" alt="" loading="lazy">
-                            <span class="box-mark circle" id="vision">02</span>
-
-                            <h5 class="box-title">Tầm nhìn</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
-                            </p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/vision/v_vision_bg.webp" alt="Tầm nhìn">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="./public/images/trang_chu/mvv/v_values_logo.webp" alt="Giá trị cốt lõi">
-                            <span class="box-mark circle" id="values">03</span>
-                            <h5 class="box-title">Giá trị cốt lõi</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <ul class="box-text">
-                                <li>Chất lượng là ưu tiên hàng đầu.</li>
-                                <li>Trách nhiệm với khách hàng và cộng đồng.</li>
-                                <li>Tận tâm trong từng dịch vụ.</li>
-                            </ul>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/values/v_values_bg.webp" alt="v_values_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="desktop row">
-                <!-- <div class="row"> -->
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/trang_chu/mvv/v_mission_logo.webp" alt="" loading="lazy">
-                            <span class="box-mark circle" id="mission">01</span>
-                            <h5 class="box-title">Sứ mệnh</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
-                                nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/mission/v_mission_bg.webp" alt="v_mission_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/trang_chu/mvv/v_vision_logo.webp" alt="" loading="lazy">
-                            <span class="box-mark circle" id="vision">02</span>
-
-                            <h5 class="box-title">Tầm nhìn</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
-                            </p>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/vision/v_vision_bg.webp" alt="Tầm nhìn">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/trang_chu/mvv/v_values_logo.webp" alt="Giá trị cốt lõi">
-                            <span class="box-mark circle" id="values">03</span>
-                            <h5 class="box-title">Giá trị cốt lõi</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <ul class="box-text">
-                                <li>Chất lượng là ưu tiên hàng đầu.</li>
-                                <li>Trách nhiệm với khách hàng và cộng đồng.</li>
-                                <li>Tận tâm trong từng dịch vụ.</li>
-                            </ul>
-                            <img class="img-fluid background-img" src="./public/images/trang_chu/mvv/values/v_values_bg.webp" alt="v_values_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -481,21 +368,18 @@ o	Tân tâm trong từng dịch vụ.
                 'trang_chu/partners_thumbnails/mic_insurance.png' => 'trang_chu/partners_insurances/mic',
             ];
             ?>
-            <div class="desktop">
-                <div class="row list">
-                    <?php
-                    $gallery = new FolderGallery($galleryMap);
-                    $gallery->renderMappedGalleryInsurance('desktop');
-                    ?>
-                </div>
+            <div class="desktop row list">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryInsurance('desktop');
+                ?>
+
             </div>
-            <div class="mobile">
-                <div class="row list owl-carousel owl-theme insurances-slider">
-                    <?php
-                    $gallery = new FolderGallery($galleryMap);
-                    $gallery->renderMappedGalleryInsurance('mobile');
-                    ?>
-                </div>
+            <div class="mobile row d-flex list owl-carousel owl-theme insurances-slider">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryInsurance('mobile');
+                ?>
             </div>
         </div>
     </section>
