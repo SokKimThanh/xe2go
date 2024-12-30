@@ -21,6 +21,8 @@
                      <a class="col-sm-2 logo-link-image" href="/index.php">
                          <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                      </a>
+                     <!-- <button id="mode-toggle">Chế độ Sáng/Tối</button> -->
+                   
                      <div class="col-sm-6 menu-list-container">
                          <ul class="menu-list">
                              <li class="menu-item">
