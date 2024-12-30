@@ -49,56 +49,41 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
-            <div class="slider-background" style="background-image: url('public/images/trang_chu/xe2go/mercedes_bg.webp')">
-                <div class="container slider-spacing">
-                    <div class="row slider-container">
-                        <div class="col-sm-8 slider-info">
-                            <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>
+            <?php
+            $sliders = [
+                [
+                    'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear.webp',
+                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
+                    'link' => '/contactus.php'
+                ],
+                [
+                    'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear2.webp',
+                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
+                    'link' => '/contactus.php'
+                ]
+            ];
 
-                            <h1 class="slider-title">
-                                <b class="logo-text-waving">XE2GO</b> Dẫn đầu trong lĩnh vực
-                                bảo dưỡng và sửa chữa ô tô
-                                chuyên nghiệp
-                                <div class="hide"><b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng,
-                                    sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả,
-                                    và
-                                    đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN
-                                        TÌNH”</b>,
-                                    XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.
-                                </div>
-                            </h1>
-                        </div>
-                        <div class="col-sm-12 slider-button-container">
-                            <a class="slider-button" href="/contactus.php">Liên hệ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-background" style="background-image: url('public/images/trang_chu/xe2go/mercedes_bg3.webp')">
-                <div class="container slider-spacing">
-                    <div class="row slider-container">
-                        <div class="col-sm-8 slider-info">
-                            <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>
-
-                            <h1 class="slider-title">
-                                <b class="logo-text-waving">XE2GO</b> Dẫn đầu trong lĩnh vực
-                                bảo dưỡng và sửa chữa ô tô
-                                chuyên nghiệp
-                                <div class="hide"><b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng,
-                                    sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả,
-                                    và
-                                    đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>"TẬN TÂM – TẬN TỤY – TẬN
-                                        TÌNH"</b>,
-                                    XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.
-                                </div>
-                            </h1>
-                        </div>
-                        <div class="col-sm-12 slider-button-container">
-                            <a class="slider-button" href="#">Liên hệ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            foreach ($sliders as $slider) {
+                echo '<div class="slider-background" style="background-image: url(' . $slider['image'] . ')">';
+                echo '    <div class="container slider-spacing">';
+                echo '        <div class="row slider-container">';
+                echo '            <div class="col-sm-8 slider-info">';
+                echo '                <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>';
+                echo '                <h1 class="slider-title">';
+                echo '                    <b class="logo-text-waving">XE2GO</b> ' . $slider['title'];
+                echo '                    <div class="hide">' . $slider['description'] . '</div>';
+                echo '                </h1>';
+                echo '            </div>';
+                echo '            <div class="col-sm-12 slider-button-container">';
+                echo '                <a class="slider-button" href="' . $slider['link'] . '">Liên hệ</a>';
+                echo '            </div>';
+                echo '        </div>';
+                echo '    </div>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </section>
     <!-- section 6 hinh vuong-->
