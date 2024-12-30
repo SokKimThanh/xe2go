@@ -99,7 +99,7 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     --background-warning: linear-gradient(45deg, #8f6608 0%, #ffc400 100%);
     --background-secondary: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
     --background-light-linear: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(203, 203, 203, 1) 100%);
-
+    --background-footer: #1A1A1A;
     /* Thiết lập font-size chuẩn Toàn Cục */
     --font-size-base: 16px;
 
@@ -444,6 +444,12 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 width: 100%;
                                 left: 35%;
                                 top: 0;
+
+                                @media screen and (max-width: 1024px) {
+                                    left: 154px;
+                                    width: 88%;
+                                    font-size: 1.6rem;
+                                }
                             }
                         }
 
@@ -588,7 +594,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
-    position: absolute;
     z-index: 2;
     width: 100%;
 
@@ -1089,7 +1094,7 @@ section.menu-container-mobile {
 
     .menu-bar-mobile {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -1103,6 +1108,24 @@ section.menu-container-mobile {
         font-size: 2.5rem;
         transform: translateY(0);
         transition: transform 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #1b2ec2;
+        position: relative;
+
+        i {
+            border-right: 2px solid #1b2ec2;
+            border-width: thin;
+            padding: 0 8px;
+        }
+
+        img {
+            position: absolute;
+            left: 64px;
+            top: 8px;
+        }
     }
 
     .menu-bar-icon:hover {
@@ -1115,7 +1138,13 @@ section.menu-container-mobile {
         display: flex;
         height: 64px;
         padding: 10px;
+        align-items: center;
     }
+
+    .menu-bar-logo img {
+        height: 64px;
+    }
+
 
     .menu-overlay {
         position: absolute;
@@ -1135,10 +1164,13 @@ section.menu-container-mobile {
         height: 100vh;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
-        background-color: black;
+        background-color: var(--background-footer);
         width: 80%;
         position: absolute;
         top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .menu-container-slider.active {
@@ -1146,11 +1178,19 @@ section.menu-container-mobile {
         transition: transform 0.3s ease-in-out;
         transition-delay: 0.5s;
         overflow-y: auto;
+
     }
 
     .logo-link-image {
-        display: block;
-        width: 256px;
+        display: flex;
+        margin: 16px 0 0 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 200px;
+        }
     }
 
     .menu-list-container {
@@ -1161,11 +1201,11 @@ section.menu-container-mobile {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
             list-style: none;
             width: 100%;
             padding: 0 0 0 20px;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 600;
 
 
@@ -2877,7 +2917,7 @@ section#publications {
 "info-container", "service-request-map-copyright", và "service-request-map", 
 mỗi phần có thiết lập riêng biệt tương ứng với nội dung và kiểu dáng mong muốn. */
 footer {
-    background-color: #1A1A1A;
+    background-color: var(--background-footer);
     padding: 120px 0 0 0;
     color: white;
 
