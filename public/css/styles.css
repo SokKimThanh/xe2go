@@ -543,6 +543,64 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
+/* Chế độ sáng */
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.light-mode .slider-background {
+    color: black;
+}
+
+body.light-mode .logo-text-waving {
+    border-bottom: 0.1rem solid black;
+}
+
+body.light-mode .hide {
+    background: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .slider-button {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+body.light-mode .slider-button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Chế độ tối */
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .slider-background {
+    color: white;
+}
+
+body.dark-mode .logo-text-waving {
+    border-bottom: 0.1rem solid white;
+}
+
+body.dark-mode .hide {
+    background: #333;
+    color: #ddd;
+}
+
+body.dark-mode .slider-button {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode .slider-button:hover {
+    background-color: white;
+    color: black;
+}
+
 /* Đặt navbar ở trên đầu thiết bị */
 #main-menu {
     position: fixed;
@@ -1923,7 +1981,7 @@ section#ypss {
 /* General container styling */
 section#ypss .container {
     margin-top: -170px;
-    background-image: url(../images/trang_chu/xe2go/counters_bg.png);
+    background-image: url(../images/trang_chu/xe2go/counters_bg.webp);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
