@@ -98,12 +98,52 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
     /* thiet lap background*/
     --background-warning: linear-gradient(45deg, #8f6608 0%, #ffc400 100%);
     --background-secondary: linear-gradient(45deg, #1b2ec2 0%, #001eff 100%);
-
+    --background-light-linear: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(203, 203, 203, 1) 100%);
+    --background-footer: #1A1A1A;
     /* Thiết lập font-size chuẩn Toàn Cục */
     --font-size-base: 16px;
 
     /* Thêm màu hover menu link */
     --hover-color: #fff;
+}
+
+
+
+/* CSS cho image gallery */
+.image-gallery {
+    display: none;
+    /* flex-wrap: wrap; */
+    /* Cho phép xuống hàng khi không đủ chỗ */
+    /* gap: 10px; */
+    /* Khoảng cách giữa các hình ảnh */
+}
+
+.image-gallery a {
+    flex: 1 0 21%;
+    /* Đặt chiều rộng của mỗi ảnh là 21%, bạn có thể điều chỉnh giá trị này để thay đổi số ảnh trên mỗi hàng */
+    max-width: 150px;
+    /* Giới hạn chiều rộng tối đa của mỗi ảnh */
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    /* Bo tròn góc hình ảnh, bạn có thể điều chỉnh giá trị này */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Hiệu ứng bóng đổ nhẹ */
+    transition: transform 0.3s ease;
+    /* Hiệu ứng khi hover vào hình ảnh */
+}
+
+.image-gallery img:hover {
+    transform: scale(1.05);
+    /* Phóng to hình ảnh khi hover */
+}
+
+.btn-light-linear {
+    background: var(--background-light-linear);
 }
 
 .hidden {
@@ -261,108 +301,52 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 
                 /* thiết lập hiệu ứng animation cho mỗi 
                 slider kích hoạt lượt kéo */
-                .owl-item.active {
-                    .slider-background {
-                        /* .slider-info .slider-paragragh {} */
-
-                        .slider-info {
-                            .slider-paragragh {
-                                transform: translateY(0);
-                                opacity: 1;
-                                transition: all 0.8s;
-                                transition-delay: 0.5s;
-                            }
-
-                            .slider-title {
-                                text-transform: none;
-                                transform: translateY(0);
-                                opacity: 1;
-                                transition: all 0.6s;
-                                position: relative;
-                                cursor: pointer;
-
-                                @media screen and (max-width: 1366px) {
-                                    font-size: 3rem;
-                                    transition: all 0.3s;
-                                }
-
-                                @media screen and (max-width: 500px) {
-                                    font-size: 2.5rem;
-                                    transition: all 0.3s;
-                                }
-
-                                .logo-text-waving {
-                                    border-bottom: 0.1rem solid white;
-                                    transition-delay: 0.5s;
-                                    transition: all 1.5s;
-                                }
-
-                                .logo-text-waving:hover {
-                                    color: var(--secondary-color);
-                                    border: none;
-                                    text-shadow: -1px 1px 0 #f8f1f1, 1px 1px 0 #e0d9d9, 1px -1px 0 #f8f4f4, -1px -1px 0 #f6f3f3;
-                                    transition: all 0.3s ease-in-out;
-                                }
-
-                                .logo-text-waving:hover+.hide {
-                                    display: block;
-                                    cursor: pointer;
-                                }
-
-                                .hide {
-                                    display: none;
-                                    font-size: 0.3em;
-                                    background: var(--menu-link-bg);
-                                    color: var(--color-1);
-                                    border-radius: 15px;
-                                    transition: display 1s ease-in-out;
-                                    padding: 10px;
-                                    text-align: justify;
-                                    text-transform: none;
-                                    position: absolute;
-                                    width: 100%;
-                                    left: 35%;
-                                    top: 0;
-                                }
-                            }
-                        }
-
-                        .slider-temperature {
-                            transform: translateY(0);
-                            opacity: 1;
-                            transition: all 0.8s;
-                            transition-delay: 1.5s;
-                        }
-
-                        .slider-button-container {
-                            transform: translateY(0);
-                            opacity: 1;
-                            transition: all 0.8s;
-                            transition-delay: 1s;
-                        }
-                    }
+                .owl-item.active .slider-background .slider-info .slider-paragragh,
+                .owl-item.active .slider-background .slider-info .slider-title,
+                .owl-item.active .slider-background .slider-temperature,
+                .owl-item.active .slider-background .slider-button-container {
+                    transform: translateY(0);
+                    opacity: 1;
                 }
 
-                /* Thiết lập phong cách background cho mỗi hình ảnh item */
+                .owl-item.active .slider-background .slider-info .slider-paragragh {
+                    transition: all 0.8s;
+                    transition-delay: 0.5s;
+                }
+
+                .owl-item.active .slider-background .slider-info .slider-title {
+                    text-transform: none;
+                    transition: all 0.6s;
+                    position: relative;
+                    cursor: pointer;
+                }
+
+                .owl-item.active .slider-background .slider-temperature {
+                    transition: all 0.8s;
+                    transition-delay: 1.5s;
+                }
+
+                .owl-item.active .slider-background .slider-button-container {
+                    transition: all 0.8s;
+                    transition-delay: 1s;
+                }
+
                 .owl-item {
                     height: 100%;
                     display: flex;
                     justify-content: center;
                     align-items: center;
-
                     background-origin: border-box;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
                     background-position: center;
 
-                    /* Thiết lập slider background cơ bản */
                     .slider-background {
                         height: 100%;
                         width: 100vw;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-
                         background-origin: border-box;
                         background-repeat: no-repeat;
                         background-attachment: fixed;
@@ -381,49 +365,77 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 width: 80%;
                             }
                         }
-                    }
 
-                    /* Thiết lập kiểu dáng cho 
-                    chữ và animation bên trong slider background */
-                    .slider-background {
+                        .slider-info .slider-paragragh {
+                            line-height: 29px;
+                            text-transform: capitalize;
+                            font-size: 1.3rem;
 
-                        /* Cài đặt kiểu dáng của đoạn văn và tiêu đề */
-                        .slider-info {
-
-                            /* Cài đặt kiểu dáng cho đoạn văn */
-                            .slider-paragragh {
-                                line-height: 29px;
-                                text-transform: capitalize;
-                                font-size: 1.3rem;
-
-                                @media screen and (max-width: 1024px) {
-                                    font-size: 1.1rem;
-                                }
-
-                                font-weight: 400;
-                                transform: translateY(-100px);
-                                opacity: 0;
-                                transition: transform 0.3s,
-                                opacity 0.4s;
+                            @media screen and (max-width: 1024px) {
+                                font-size: 1.1rem;
                             }
 
-                            /* Cài đặt kiểu dáng cho tiêu đề */
-                            .slider-title {
-                                text-transform: capitalize;
-                                font-size: 5rem;
-                                font-weight: 700;
-                                transform: translateY(-100px);
-                                opacity: 0;
-                                transition: transform 0.3s, opacity 0.4s;
+                            font-weight: 400;
+                            transform: translateY(-100px);
+                            opacity: 0;
+                            transition: transform 0.3s,
+                            opacity 0.4s;
+                        }
+
+                        .slider-info .slider-title {
+                            text-transform: capitalize;
+                            font-size: 5rem;
+                            font-weight: 700;
+                            transform: translateY(-100px);
+                            opacity: 0;
+                            transition: transform 0.3s, opacity 0.4s;
+
+                            @media screen and (max-width: 1024px) {
+                                font-size: 3rem;
+                                text-wrap: wrap;
+                            }
+
+                            .logo-text-waving {
+                                border-bottom: 0.1rem solid white;
+                                transition-delay: 0.5s;
+                                transition: all 1.5s;
+                            }
+
+                            .logo-text-waving:hover {
+                                color: var(--secondary-color);
+                                border: none;
+                                text-shadow: -1px 1px 0 #f8f1f1, 1px 1px 0 #e0d9d9, 1px -1px 0 #f8f4f4, -1px -1px 0 #f6f3f3;
+                                transition: all 0.3s ease-in-out;
+                            }
+
+                            .logo-text-waving:hover+.hide {
+                                display: block;
+                                cursor: pointer;
+                            }
+
+                            .hide {
+                                display: none;
+                                font-size: 0.3em;
+                                background: var(--menu-link-bg);
+                                color: var(--color-1);
+                                border-radius: 15px;
+                                transition: display 1s ease-in-out;
+                                padding: 10px;
+                                text-align: justify;
+                                text-transform: none;
+                                position: absolute;
+                                width: 100%;
+                                left: 35%;
+                                top: 0;
 
                                 @media screen and (max-width: 1024px) {
-                                    font-size: 3rem;
-                                    text-wrap: wrap;
+                                    left: 154px;
+                                    width: 88%;
+                                    font-size: 1.6rem;
                                 }
                             }
                         }
 
-                        /* Cài đặt kiểu dáng cho Thông tin nhiệt độ */
                         .slider-temperature {
                             display: flex;
                             justify-content: center;
@@ -444,7 +456,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                             }
                         }
 
-                        /* cài đặt kiểu dáng cho nút learn more */
                         .slider-button-container {
                             opacity: 0;
                             transform: translateY(-100px);
@@ -464,8 +475,12 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 justify-content: center;
                                 align-items: center;
                                 cursor: pointer;
-
                                 transition: background-color 0.3s, color 0.3s;
+
+                                @media screen and (max-width: 500px) {
+                                    height: 61px;
+                                    font-size: 1.1rem;
+                                }
                             }
 
                             .slider-button:hover {
@@ -474,7 +489,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
                                 transition: background-color 0.3s, color 0.3s;
                             }
                         }
-
                     }
                 }
             }
@@ -488,33 +502,25 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
             padding: 4px 8px;
             margin: 0 8px;
             display: flex;
-            /* khoang trong giua 2 mui ten */
             gap: 10px;
-            /* vị trí khác đi khi màn hình lớn hơn 1024px */
             top: 81%;
             left: calc(15% + 8px);
 
-
-
-            /* vị trí khác đi khi màn hình nhỏ hơn 1440px */
             @media screen and (max-width: 1440px) {
                 top: 81%;
                 left: calc(15% - 156px);
             }
 
-            /* vị trí khác đi khi màn hình nhỏ hơn 1366px */
             @media screen and (max-width: 1366px) {
                 top: 74%;
                 left: calc(10% - 30px);
             }
 
-            /* vị trí khác đi khi màn hình nhỏ hơn 1024px */
             @media screen and (max-width: 1024px) {
                 top: 83%;
                 left: calc(6% - 30px);
             }
 
-            /* vị trí khác đi khi màn hình nhỏ hơn 500px */
             @media screen and (max-width: 500px) {
                 top: 87%;
                 left: 21px;
@@ -568,15 +574,9 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
-/* Đảm bảo menu chỉ hiển thị sau khi trang được load xong */
-#main-menu {
-    visibility: hidden;
-}
-
 /* MAIN MENU DESKTOP*/
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
-    /* position: absolute; */
     z-index: 2;
     width: 100%;
 
@@ -1041,7 +1041,7 @@ section.menu-container-desktop {
         height: 39px;
 
         @media screen and (max-width: 1366px) {
-            height: 22px;
+            height: 35px;
         }
 
         .button-list {
@@ -1077,7 +1077,7 @@ section.menu-container-mobile {
 
     .menu-bar-mobile {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 
@@ -1091,6 +1091,24 @@ section.menu-container-mobile {
         font-size: 2.5rem;
         transform: translateY(0);
         transition: transform 0.3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        color: #1b2ec2;
+        position: relative;
+
+        i {
+            border-right: 2px solid #1b2ec2;
+            border-width: thin;
+            padding: 4px 8px;
+        }
+
+        img {
+            position: absolute;
+            left: 64px;
+            top: 8px;
+        }
     }
 
     .menu-bar-icon:hover {
@@ -1103,7 +1121,13 @@ section.menu-container-mobile {
         display: flex;
         height: 64px;
         padding: 10px;
+        align-items: center;
     }
+
+    .menu-bar-logo img {
+        height: 64px;
+    }
+
 
     .menu-overlay {
         position: absolute;
@@ -1112,6 +1136,17 @@ section.menu-container-mobile {
         height: 100vh;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
+
+        .menu-close-icon {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px;
+        }
+
+        .menu-close-icon i {
+            font-size: 2.5rem;
+            color: white;
+        }
     }
 
     .menu-overlay.active {
@@ -1123,10 +1158,13 @@ section.menu-container-mobile {
         height: 100vh;
         transform: translateX(-100%);
         transition: transform 0.3s ease-in-out;
-        background-color: black;
+        background-color: var(--background-footer);
         width: 80%;
         position: absolute;
         top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
     }
 
     .menu-container-slider.active {
@@ -1134,11 +1172,19 @@ section.menu-container-mobile {
         transition: transform 0.3s ease-in-out;
         transition-delay: 0.5s;
         overflow-y: auto;
+
     }
 
     .logo-link-image {
-        display: block;
-        width: 256px;
+        display: flex;
+        margin: 16px 0 0 0;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        img {
+            width: 200px;
+        }
     }
 
     .menu-list-container {
@@ -1149,11 +1195,11 @@ section.menu-container-mobile {
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
             list-style: none;
             width: 100%;
             padding: 0 0 0 20px;
-            font-size: 1rem;
+            font-size: 1.5rem;
             font-weight: 600;
 
 
@@ -1246,6 +1292,10 @@ Các mục (.box-item) có nền trắng, đệm 20px, và các kiểu dáng kh�
 linh hoạt.
 Có hiệu ứng hover để thay đổi vị trí và màu nền của các mục.
 */
+/* // */
+/* slider container*/
+/* // */
+
 section#six-box {
     padding-top: 100px;
     padding-bottom: 120px;
@@ -1258,40 +1308,28 @@ section#six-box {
     @media screen and (max-width:500px) {
         padding-top: 100px;
         padding-bottom: 100px;
-    }
 
-    /* // */
-    /* slider container*/
-    /* // */
-    .container {
-        .mobile {
-            display: none;
-        }
-    }
-
-    /* // */
-    /* slider container */
-    /* // */
-    @media screen and (max-width: 500px) {
         .container {
             .mobile {
-                display: block;
-            }
-
-            .desktop {
-                display: none;
-            }
-        }
-
-        /* // */
-        /* chỉnh lại layout của container */
-        /* // */
-        .container {
-            .mobile {
-                display: block;
                 position: absolute;
                 top: 95%;
             }
+        }
+    }
+
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
         }
     }
 
@@ -1406,369 +1444,315 @@ Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
 
-    /* // */
     /* slider container: display-none mobile */
-    /* // */
-    .container {
-        .mobile {
+    .container .mobile {
+        display: none;
+    }
+
+    /* slider container: display-block mobile */
+    @media screen and (max-width: 500px) {
+        .container .mobile {
+            display: block;
+        }
+
+        .container .desktop {
             display: none;
         }
-    }
 
-    /* // */
-    /* slider container: display-block mobile  */
-    /* // */
-    @media screen and (max-width: 500px) {
-        .container {
-            .mobile {
-                display: block;
-            }
-
-            .desktop {
-                display: none;
-            }
-        }
-
-        /* // */
         /* chỉnh lại layout của container */
-        /* // */
-        .container {
-            .mobile {
-                display: block;
-            }
+        .container .mobile {
+            display: block;
+        }
+    }
+}
+
+/* // */
+/* // Sứ mệnh tầm nhìn giá trị cốt lõi */
+/* // */
+section#aga {
+
+    /* Desktop Styles */
+    .desktop .box-item .box-image {
+        position: absolute;
+        transition: display 0.3s ease-in-out;
+        height: 200px;
+        bottom: calc(50% - 100px);
+        left: calc(50% - 232px);
+
+        /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
+        @media screen and (max-width: 1366px) {
+            left: calc(50% - 200px);
+        }
+
+        @media screen and (max-width: 768px) {
+            bottom: calc(50% - 102px);
+            left: calc(50% - 372px);
+        }
+
+
+    }
+
+    /* Mobile Styles */
+    .mobile .box-item .box-item-header {
+        transform: translateY(35px);
+    }
+
+    .mobile .box-item .box-image {
+
+        position: absolute;
+        height: 200px;
+        width: 200px;
+
+        @media screen and (max-width: 500px) {
+            bottom: calc(50% - 96px);
+            left: calc(50% - 226px);
         }
     }
 
-    /* // */
-    /* slider container desktop: box-image */
-    /* // */
-    .desktop {
-        .box-item {
-
-            /* // */
-            /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
-            /* // */
-            .box-image {
-                position: absolute;
-                transition: display 0.3s ease-in-out;
-                bottom: calc(50% - 100px);
-                left: calc(50% - 232px);
-
-                @media screen and (max-width: 1400px) {
-                    bottom: calc(50% - 80px);
-                    left: calc(50% - 170px);
-                }
-
-                @media screen and (max-width: 1366px) {
-                    bottom: calc(50% - 100px);
-                    left: calc(50% - 200px);
-                }
-
-                @media screen and (max-width: 1000px) {
-                    bottom: calc(50% - 102px);
-                    left: calc(50% - 372px);
-                }
-            }
-        }
+    .mobile .box-item .box-mark {
+        top: 0;
     }
 
-    /* // */
-    /* slider container mobile: box-image */
-    /* // */
-    .mobile {
+    .mobile .box-item .box-title {
+        height: 130px;
+        margin-left: 115px;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-        /* // */
-        /* slider container */
-        /* // */
-        .box-item {
-            .box-item-header {
-                transform: translateY(35px);
+    .mobile .box-item .background-fluid {
+        transform: translateY(46px);
+        padding: 36px;
+        height: 385px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 
-                /* // */
-                /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
-                /* // */
-                .box-image {
-                    bottom: calc(50% - 96px);
-                    left: calc(50% - 223px);
-                    position: absolute;
-                    height: 200px;
-                    width: 200px;
-                }
-
-                .box-mark {
-                    top: 0;
-                }
-
-                .box-title {
-                    height: 130px;
-                    margin-left: 115px;
-                    display: flex;
-                    align-items: start;
-                    flex-direction: column;
-                    justify-content: center;
-                }
-            }
-
-            .background-fluid {
-                transform: translateY(46px);
-                padding: 36px;
-                height: 385px;
-
-                .box-text {
-                    -webkit-line-clamp: 8;
-                }
-            }
-        }
+    .mobile .box-item .box-text {
+        -webkit-line-clamp: 8;
     }
 
 
+    /* odd: lẻ, even: chẵn */
+    .owl-item {
+        display: flex;
+        justify-content: center;
+        left: 200px;
+        bottom: 20px;
+    }
 
 
-    /* thuộc tính chính của box-item */
+    .owl-item.active:nth-child(odd) {
+        display: none;
+    }
+
+    /* Box-item Styles */
     .box-item {
         margin: 1px;
     }
 
-    /* Tạo hiệu ứng của hình tròn */
-    .box-item {
+    /* Circle Animation */
+    .box-item-header .circle {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: var(--menu-link-bg);
+        position: relative;
+        overflow: hidden;
 
-        .box-item-header {
+        /* Hiệu ứng chuyển động của mục tiêu sứ mệnh giá trị cốt lõi */
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            animation: ripple 2s infinite;
+            opacity: 0;
+        }
 
-            /* start Hiệu ứng chuyển động của mục tiêu sứ mệnh giá trị cốt lõi */
-            .circle {
-                height: 150px;
-                width: 150px;
-                border-radius: 50%;
-                background: var(--menu-link-bg);
-                position: relative;
-                overflow: hidden;
-            }
+        &.circle-animation::before {
+            opacity: 1;
+        }
 
-            .circle::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 200%;
-                height: 200%;
-                background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
-                transform: translate(-50%, -50%);
-                border-radius: 50%;
-                animation: ripple 2s infinite;
-                opacity: 0;
-            }
-
-            .circle-animation::before {
+        @keyframes ripple {
+            0% {
+                width: 0;
+                height: 0;
                 opacity: 1;
             }
 
-            @keyframes ripple {
-                0% {
-                    width: 0;
-                    height: 0;
-                    opacity: 1;
-                }
-
-                100% {
-                    width: 200%;
-                    height: 200%;
-                    opacity: 0;
-                }
-            }
-
-            .circle-animation {
-                animation: fill 1s forwards;
-            }
-
-            @keyframes fill {
-                0% {
-                    background: radial-gradient(circle, #ff7f50, #ff6347);
-                }
-
-                100% {
-                    background: radial-gradient(circle, #ff6347, #ff4500);
-                }
-            }
-
-
-            /* end Hiệu ứng chuyển động của mục tiêu sứ mệnh giá trị cốt lõi */
-        }
-    }
-
-
-    /* Tạo hiệu ứng hover khi rê chuột vào xem 
-    để biết có nội dung chi tiết hình ảnh gallery 
-    */
-    .box-item:hover {
-        .box-item-header:hover {
-            .box-title {
-                color: var(--primary-color);
-                transition: color 0.3s ease-in-out;
-            }
-
-
-            .box-mark.circle {
-                background: transparent;
-            }
-
-            .box-mark {
-                color: var(--color-1);
-                transition: color 0.3s ease-in-out;
-            }
-
-            .box-image {
-                display: none;
-                transition: display 0.5s ease-in-out;
-            }
-
-            +.background-fluid {
-                transform: translateY(0);
-                transition: display 0.5s ease-in-out;
-
-
-                /* Nhấn tiêu đề xem thêm hình ảnh tiêu biểu */
-                .box-link {
-                    display: block;
-                    transform: translateX(0);
-                    background: rgba(0, 0, 0, 0.5);
-                    transition: display 0.5s ease-in-out;
-                    text-align: center;
-                }
-
-                .background-img {
-                    display: block;
-                    opacity: 1;
-                    transition: all 0.3s ease-in-out;
-                }
+            100% {
+                width: 200%;
+                height: 200%;
+                opacity: 0;
             }
         }
 
-
-    }
-
-    /* thuộc tinh con của các thẻ bên trong box-item */
-    .box-item {
-
-        .box-item-header {
-            position: relative;
-            cursor: pointer;
-            text-decoration: none;
-
-            /* không có màu lúc hiển thị để cho link bên trong hiển thị */
-            /* Quan trọng là fancy-box ở link này group cho nhiều hình */
-            color: var(--primary-color-linear);
-
-            .box-mark {
-                /* typoraphy */
-                color: transparent;
-                font-size: 6rem;
-                font-weight: 700;
-                text-align: center;
-
-                /* xác định vị trí hiển thị */
-                position: absolute;
-                top: -31px;
-                left: 0;
-
-                /* thứ tự xuất hiện */
-                z-index: -1;
-            }
-
-            .box-title::after {
-                position: absolute;
-                box-shadow: var(--box-shadow-gach-chan);
-            }
-
-            .box-title {
-                font-size: 2.5rem;
-                font-weight: 700;
-                margin-bottom: 32px;
-                /* margin-left làm dòng chữ tiêu đề đẩy ra xa dễ nhìn so với hình ảnh */
-                margin-left: 125px;
-                transition: color 0.3s ease-in-out;
-
-                @media screen and (max-width: 1366px) {
-                    font-size: 2rem;
-                }
-            }
-
-            hr {
-                margin: 20px 0;
-                border: none;
-                border-top: 5px solid var(--primary-color);
-                width: 60px;
-            }
+        &.circle-animation {
+            animation: fill 1s forwards;
         }
 
-        .background-fluid {
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: 50% 50%;
-            border-radius: 15px;
-            padding: 16px;
-            margin-top: 15px;
-            background-color: var(--background-5);
-            transform: translateY(-10px);
-
-            .box-text {
-                font-size: 1.5rem;
-                font-weight: 400;
-                line-height: 2.5rem;
-                color: rgba(0, 0, 0, 0.7);
-                /* Giới hạn 5 dòng */
-                display: -webkit-box;
-                -webkit-line-clamp: 5;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                min-height: 170px;
-
-                @media screen and (max-width: 1400px) {
-                    font-size: 1.3rem;
-                    -webkit-line-clamp: 6;
-                    min-height: 240px;
-                }
-
-                @media screen and (max-width: 1000px) {
-                    font-size: 1.3rem;
-                    -webkit-line-clamp: 6;
-                    min-height: 100px;
-                }
+        @keyframes fill {
+            0% {
+                background: radial-gradient(circle, #ff7f50, #ff6347);
             }
 
-            .box-link {
-                display: flex;
-                margin-top: 20px;
-                font-size: 0.9rem;
-                font-weight: 700;
-                color: var(--color-2);
-                text-decoration: none;
-                text-transform: uppercase;
-                cursor: pointer;
-                display: none;
-            }
-
-            .box-link::after {
-                content: '\F138';
-                font-family: 'bootstrap-icons';
-                margin-left: 8px;
-            }
-
-            .background-img {
-                display: none;
-                position: absolute;
-                padding: 15px;
-                opacity: .1;
-                inset: 0;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                transition: all 0.3s ease-in-out;
+            100% {
+                background: radial-gradient(circle, #ff6347, #ff4500);
             }
         }
     }
 
+    /* Hover Effects */
+    .box-item:hover .box-item-header:hover .box-title {
+        color: var(--primary-color);
+        transition: color 0.3s ease-in-out;
+    }
 
+    .box-item:hover .box-item-header:hover .box-mark.circle {
+        background: transparent;
+    }
+
+    .box-item:hover .box-item-header:hover .box-mark {
+        color: var(--color-1);
+        transition: color 0.3s ease-in-out;
+    }
+
+    .box-item:hover .box-item-header:hover .box-image {
+        display: none;
+        transition: display 0.5s ease-in-out;
+    }
+
+    .box-item:hover .box-item-header:hover+.background-fluid {
+        transform: translateY(0);
+        transition: display 0.5s ease-in-out;
+    }
+
+    .box-item:hover .box-item-header:hover+.background-fluid .box-link {
+        display: block;
+        transform: translateX(0);
+        background: rgba(0, 0, 0, 0.5);
+        text-align: center;
+        color: var(--color-2);
+    }
+
+    .box-item:hover .box-item-header:hover+.background-fluid .background-img {
+        display: block;
+        opacity: 1;
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Nested Styles */
+    .box-item-header {
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--primary-color-linear);
+    }
+
+    .box-item-header .box-mark {
+        color: transparent;
+        font-size: 6rem;
+        font-weight: 700;
+        text-align: center;
+        position: absolute;
+        top: -31px;
+        left: 0;
+        z-index: -1;
+    }
+
+    .box-item-header .box-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 32px;
+        margin-left: 125px;
+        transition: color 0.3s ease-in-out;
+
+        @media screen and (max-width: 1366px) {
+            font-size: 2rem;
+        }
+    }
+
+    .box-item-header hr {
+        margin: 20px 0;
+        border: none;
+        border-top: 5px solid var(--primary-color);
+        width: 60px;
+    }
+
+    .background-fluid {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        border-radius: 15px;
+        padding: 16px;
+        margin-top: 15px;
+        background-color: var(--background-5);
+        transform: translateY(-10px);
+    }
+
+    .background-fluid .box-text {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 2.5rem;
+        color: rgba(0, 0, 0, 0.7);
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 170px;
+
+        @media screen and (max-width: 1400px) {
+            font-size: 1.3rem;
+            -webkit-line-clamp: 6;
+            min-height: 240px;
+        }
+
+        @media screen and (max-width: 1000px) {
+            font-size: 1.3rem;
+            -webkit-line-clamp: 6;
+            min-height: 100px;
+        }
+    }
+
+    .background-fluid .box-link {
+        display: flex;
+        margin-top: 20px;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: var(--background-2);
+    }
+
+    .background-fluid .box-link::after {
+        content: '\F138';
+        font-family: 'bootstrap-icons';
+        margin-left: 8px;
+    }
+
+    .background-fluid .background-img {
+        display: none;
+        position: absolute;
+        padding: 15px;
+        opacity: 0.1;
+        inset: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        transition: all 0.3s ease-in-out;
+    }
 }
+
 
 /*  */
 /* section vfo */
@@ -1783,6 +1767,22 @@ section#vfo {
     padding-top: 110px;
     padding-bottom: 140px;
     margin-bottom: 100px;
+
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
+        }
+
+        .desktop {
+            display: none;
+        }
+    }
 
     .box-item {
         padding: 0;
@@ -1910,7 +1910,7 @@ section#vfo {
 Mục tiêu để hiển thị các mục với số thứ tự và tiêu đề.
 Các mục có nền hình ảnh và bóng đổ. */
 
-
+/* General styling for section#ypss */
 section#ypss {
     background-color: white;
     padding: 80px 100px;
@@ -1918,146 +1918,142 @@ section#ypss {
     @media screen and (max-width: 1400px) {
         padding: 54px 32px;
     }
+}
+
+/* General container styling */
+section#ypss .container {
+    margin-top: -170px;
+    background-image: url(../images/trang_chu/xe2go/counters_bg.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 80px 100px;
 
     /* // */
-    /* slider container: display-none mobile */
-    /* // */
-    .container {
-        .mobile {
-            display: none;
-        }
-    }
-
-    /* // */
-    /* slider container: display-block mobile  */
+    /* chỉnh lại layout của container khi ở màn hình nhỏ*/
     /* // */
     @media screen and (max-width: 500px) {
-        .container {
-            .mobile {
-                display: block;
-            }
-
-            .desktop {
-                display: none;
-            }
-        }
-
-        /* // */
-        /* chỉnh lại layout của container */
-        /* // */
-        .container {
-            .mobile {
-                display: block;
-            }
-        }
-    }
-
-    .container {
-        margin-top: -170px;
-        background-image: url(../images/xe2go/counters_bg.jpg);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        display: block;
+        margin-top: -228px;
+        padding: 80px 45px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        padding: 80px 100px;
-
-        @media screen and (max-width: 1400px) {
-            padding: 80px 60px;
-        }
     }
 
-    .box-item {
+    @media screen and (max-width: 1400px) {
+        padding: 80px 60px;
+    }
+}
+
+/* // */
+/* slider container: display-none mobile */
+/* // */
+section#ypss .container .mobile {
+    display: none;
+}
+
+/* // */
+/* slider container: display-block mobile */
+/* // */
+@media screen and (max-width: 500px) {
+    section#ypss .container .mobile {
+        display: block;
+    }
+
+    section#ypss .container .desktop {
+        display: none;
+    }
+}
+
+/* Styling for box-item */
+section#ypss .box-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@media screen and (max-width: 1400px) {
+    section#ypss .box-item {
         display: flex;
-        flex-direction: row;
         justify-content: center;
+        align-items: start;
+        gap: 20px;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#ypss .box-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
         gap: 20px;
-
-        @media screen and (max-width: 1400px) {
-            display: flex;
-            justify-content: center;
-            align-items: start;
-            gap: 20px;
-            flex-direction: column;
-        }
-
-        /* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
-        .box-number {
-            /* typography */
-            font-size: 3rem;
-            color: var(--primary-color);
-            font-weight: 700;
-            /* color */
-            box-shadow: 4px 4px 4px 4px var(--background-3);
-            background-color: var(--background-3);
-            /* shape */
-            border-radius: 50%;
-            height: 40px;
-            width: max-content;
-            /* align arrange */
-            display: flex;
-            align-items: center;
-            text-align: center;
-            /* spacing */
-            margin: 0;
-            padding: 0;
-        }
-
-        .box-title {
-            text-transform: uppercase;
-            font-size: 1rem;
-            font-weight: 700;
-            background-color: rgba(255, 255, 255, .5);
-            margin: 0;
-        }
     }
 
-    @media screen and (max-width: 500px) {
-        .container {
-            margin-top: -228px;
-            background-image: url(../images/xe2go/counters_bg.jpg);
-            background-size: auto;
-            background-position: center;
-            background-repeat: no-repeat;
-            padding: 80px 45px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        }
+    section#ypss .owl-stage-outer {
+        min-height: 200px;
+    }
+}
 
-        .box-item {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
+/* Tạo shape để con số có chiều sâu hơn khi nhìn vào*/
+section#ypss .box-item .box-number {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    box-shadow: 4px 4px 4px 4px var(--background-3);
+    background-color: var(--background-3);
+    border-radius: 50%;
+    height: 40px;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
 
-            .box-number {
-                font-size: 2rem;
-                color: var(--primary-color);
-                font-weight: 500;
-                box-shadow: 4px 4px 4px 4px var(--background-3);
-                background-color: var(--background-3);
-                border-radius: 50%;
-                height: 40px;
-                width: max-content;
-                display: flex;
-                text-align: center;
-                margin: 8px;
-                padding: 0;
-                min-width: 67px;
-                justify-content: center;
-            }
+/* Styling for box-title */
+section#ypss .box-item .box-title {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgba(255, 255, 255, .5);
+    margin: 0;
+}
 
-            .box-title {
-                text-transform: uppercase;
-                font-size: 1.1rem;
-                font-weight: 700;
-                background-color: rgba(255, 255, 255, .5);
-                margin: 0;
-                text-align: center;
-            }
-        }
+@media screen and (max-width: 1366px) {
+
+    /* Thiết kế nội dung thành tựu rõ ràng dễ đọc và gây ấn tượng */
+    section#ypss .box-item .box-title {
+        font-size: 1.5rem;
+        padding: 4px;
+        border-radius: 4px;
+        color: var(--text-secondary);
+        text-shadow: 5px 5px 6px #00000066;
+        height: 68px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#ypss .box-item .box-number {
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 8px;
+        min-width: 67px;
+        justify-content: center;
     }
 
+    section#ypss .box-item .box-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 }
 
 /*  */
@@ -2258,16 +2254,23 @@ section#halini-slider {
             margin-top: 20px;
             gap: 100px;
             transition: all 0.3s ease-in-out;
+            background: url('../images/trang_chu/xe2go/ford_bg.webp');
+            background-position: center;
+            /* Center the image */
+            background-repeat: no-repeat;
+            /* Do not repeat the image */
+            background-size: cover;
+            /* Resize the background image to cover the entire container */
         }
 
         .line-container.active .circle:nth-child(even) {
             transform: translateY(-20%);
-            background: var(--text-secondary);
+            background: var(--secondary-color-linear2);
         }
 
         .line-container.active .circle:nth-child(odd) {
             transform: translateY(20%);
-            background: var(--text-secondary);
+            background: var(--secondary-color-linear2);
         }
 
         .line-container.mobile {
@@ -2457,6 +2460,7 @@ section#section-gallery {
     @media screen and (max-width: 500px) {
         margin-bottom: 0;
     }
+
     /* cách lề trên cùng và dưới cùng của trang thành nội dung riêng biệt */
     padding-top: 150px;
     padding-bottom: 100px;
@@ -2479,7 +2483,7 @@ section#section-gallery {
         }
     }
 
-    .gallery-box{
+    .gallery-box {
         margin-top: 75px;
         padding-left: 0;
         margin-left: 0;
@@ -2630,37 +2634,134 @@ section#contactus {
     }
 }
 
+
 /*  */
 /* Section partner */
 /*  */
-/* *{
-    border: 1px solid red;
-} */
+
+/* Cài đặt responsive */
 section#partner {
     padding: 120px 0;
+    background-color: var(--background-4);
+    min-height: 500px;
+}
 
-    .list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+/* Container */
+section#partner .container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #b30c0c66;
 
-        .item {
-            transform: perspective(1000px) rotateX(0deg);
-            transition: all 0.3s ease-in-out;
+    /* Cài đặt responsive */
+    .mobile {
+        display: none;
+    }
+
+    /* slider container */
+    @media screen and (max-width: 500px) {
+        .mobile {
+            display: block;
         }
 
-        .item:hover {
-            cursor: pointer;
-            transform: perspective(1000px) rotateX(360deg);
-            transition: all 0.3s ease-in-out;
+        .desktop {
+            display: none;
         }
     }
 }
 
-section#museum-video {
-    background: url('../images/section-bg-1.jpg') no-repeat center center;
 
+/* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
+section#partner .container-title {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: context-menu;
+    position: absolute;
+    top: -2rem;
+    width: -webkit-fill-available;
+    z-index: 1;
+    /* Tiêu đề nằm trên nội dung */
+}
+
+/* thiết kế chữ mạnh mẽ và rõ ràng */
+section#partner .container-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background: var(--menu-link);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-2);
+    text-transform: uppercase;
+    width: 50%;
+    border-radius: 2.5rem;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 500px) {
+        width: 80% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+section#partner .container-title .title:hover {
+    color: var(--text-secondary);
+    background: var(--menu-link-reverse);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Danh sách liên kết bảo hiểm */
+section#partner .list {
+    background: white;
+    border: 1px solid var(--menu-link);
+    z-index: 0;
+    border-radius: 40px;
+    padding: 4rem;
+
+
+    @media screen and (max-width: 500px) {
+        padding: 4rem 2rem;
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Item liên kết bảo hiểm */
+section#partner .list .item {
+    transform: perspective(1000px) rotateX(0deg);
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 500px) {
+        width: auto;
+        height: auto;
+        padding: 1rem;
+
+    }
+}
+
+section#partner .list .item .logo {
+    width: min-content;
+}
+
+section#partner .list .item:hover {
+    cursor: pointer;
+    transform: perspective(1000px) rotateX(360deg);
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+section#museum-video {
+    background: url('../images/trang_chu/xe2go/section-bg-1.jpg') no-repeat center center;
     background-size: cover;
     padding: 180px 0;
     text-align: center;
@@ -2842,7 +2943,7 @@ section#publications {
 "info-container", "service-request-map-copyright", và "service-request-map", 
 mỗi phần có thiết lập riêng biệt tương ứng với nội dung và kiểu dáng mong muốn. */
 footer {
-    background-color: #1A1A1A;
+    background-color: var(--background-footer);
     padding: 120px 0 0 0;
     color: white;
 
@@ -2892,7 +2993,7 @@ footer {
                 font-size: 1.3rem;
                 font-weight: 600;
                 text-transform: uppercase;
-                width: 80%;
+                width: 100%;
                 height: 50px;
                 margin: 0 0.2em;
 
@@ -2949,6 +3050,10 @@ footer {
         .info-logo {
             @media screen and (max-width: 768px) {
                 text-align: center;
+
+                img {
+                    height: 150px;
+                }
             }
         }
     }
@@ -2961,12 +3066,18 @@ footer {
         flex-direction: column;
         padding: 0 40px;
 
-        @media (max-width: 500px) {
-            .service-request-map {
+        @media screen and (max-width: 500px) {
+            padding: 0 30px;
+        }
+
+        .service-request-map {
+            @media (max-width: 1024px) {
                 flex-direction: column !important;
             }
         }
+
     }
+
 
     .service-request-map-copyright {
         .service-request-map {
@@ -2994,6 +3105,14 @@ footer {
                 height: 100%;
 
                 @media screen and (max-width: 500px) {
+                    height: auto;
+                }
+
+                @media screen and (max-width: 768px) {
+                    height: auto;
+                }
+
+                @media screen and (max-width: 1024px) {
                     height: auto;
                 }
 
@@ -3033,6 +3152,9 @@ footer {
         }
     }
 }
+
+
+
 
 /* * {
     border: 1px solid red;

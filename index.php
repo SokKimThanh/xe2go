@@ -5,7 +5,7 @@ include './public/class/FolderGallery.php';
 <!DOCTYPE html>
 <html lang="vi">
 
-<?php include("./public/templates/path-css.php") ?>
+<?php include("./public/path-templates/path-css.php") ?>
 
 <body>
     <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
@@ -45,61 +45,45 @@ o	Tân tâm trong từng dịch vụ.
 •	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
 •	Nhấn xem bản đồ
  -->
-    <?php include("./public/templates/main-menu.php") ?>
+    <?php include("./public/path-templates/path-menu.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
         <div class="owl-carousel owl-theme mainSlider">
+            <?php
+            $sliders = [
+                [
+                    'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear.webp',
+                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
+                    'link' => '/contactus.php'
+                ],
+                [
+                    'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear2.webp',
+                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
+                    'link' => '/contactus.php'
+                ]
+            ];
 
-            <div class="slider-background" style="background-image: url('public/images/mercedes_bg.webp')">
-                <div class="container slider-spacing">
-                    <div class="row slider-container">
-                        <div class="col-sm-8 slider-info">
-                            <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>
-
-                            <h1 class="slider-title">
-                                <b class="logo-text-waving">XE2GO</b> Dẫn đầu trong lĩnh vực
-                                bảo dưỡng và sửa chữa ô tô
-                                chuyên nghiệp
-                                <div class="hide"><b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng,
-                                    sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả,
-                                    và
-                                    đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN
-                                        TÌNH”</b>,
-                                    XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.
-                                </div>
-                            </h1>
-                        </div>
-                        <div class="col-sm-12 slider-button-container">
-                            <a class="slider-button" href="/contactus.php">Liên hệ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="slider-background" style="background-image: url('public/images/mercedes_bg3.webp')">
-                <div class="container slider-spacing">
-                    <div class="row slider-container">
-                        <div class="col-sm-8 slider-info">
-                            <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>
-
-                            <h1 class="slider-title">
-                                <b class="logo-text-waving">XE2GO</b> Dẫn đầu trong lĩnh vực
-                                bảo dưỡng và sửa chữa ô tô
-                                chuyên nghiệp
-                                <div class="hide"><b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng,
-                                    sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả,
-                                    và
-                                    đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>"TẬN TÂM – TẬN TỤY – TẬN
-                                        TÌNH"</b>,
-                                    XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.
-                                </div>
-                            </h1>
-                        </div>
-                        <div class="col-sm-12 slider-button-container">
-                            <a class="slider-button" href="#">Liên hệ</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            foreach ($sliders as $slider) {
+                echo '<div class="slider-background" style="background-image: url(' . $slider['image'] . ')">';
+                echo '    <div class="container slider-spacing">';
+                echo '        <div class="row slider-container">';
+                echo '            <div class="col-sm-8 slider-info">';
+                echo '                <div class="slider-paragragh">Hệ thống bảo dưỡng xe ô tô</div>';
+                echo '                <h1 class="slider-title">';
+                echo '                    <b class="logo-text-waving">XE2GO</b> ' . $slider['title'];
+                echo '                    <div class="hide">' . $slider['description'] . '</div>';
+                echo '                </h1>';
+                echo '            </div>';
+                echo '            <div class="col-sm-12 slider-button-container">';
+                echo '                <a class="slider-button" href="' . $slider['link'] . '">Liên hệ</a>';
+                echo '            </div>';
+                echo '        </div>';
+                echo '    </div>';
+                echo '</div>';
+            }
+            ?>
         </div>
     </section>
     <!-- section 6 hinh vuong-->
@@ -107,28 +91,28 @@ o	Tân tâm trong từng dịch vụ.
         <div class="container">
             <?php
             $galleryMap = [
-                'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_chu/hangxe_logo/ford',
-                'logo_hangxe/2BMW-removebg-preview.webp' => 'trang_chu/hangxe_logo/bmw',
-                'logo_hangxe/3Hyundai-removebg-preview.webp' => 'trang_chu/hangxe_logo/hyundai',
-                'logo_hangxe/4Audi-removebg-preview.webp' => 'trang_chu/hangxe_logo/audi',
-                'logo_hangxe/5Toyota-removebg-preview.webp' => 'trang_chu/hangxe_logo/toyota',
-                'logo_hangxe/6Mazda-removebg-preview.webp' => 'trang_chu/hangxe_logo/mazda',
-                'logo_hangxe/7Honda-removebg-preview.webp' => 'trang_chu/hangxe_logo/honda',
-                'logo_hangxe/8vinfast-removebg-preview.webp' => 'trang_chu/hangxe_logo/vinfast',
-                'logo_hangxe/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/hangxe_logo/mercedes',
+                'trang_chu/cars_thumb/1Ford-removebg-preview.webp' => 'trang_chu/cars_logo/ford',
+                'trang_chu/cars_thumb/2BMW-removebg-preview.webp' => 'trang_chu/cars_logo/bmw',
+                'trang_chu/cars_thumb/3Hyundai-removebg-preview.webp' => 'trang_chu/cars_logo/hyundai',
+                'trang_chu/cars_thumb/4Audi-removebg-preview.webp' => 'trang_chu/cars_logo/audi',
+                'trang_chu/cars_thumb/5Toyota-removebg-preview.webp' => 'trang_chu/cars_logo/toyota',
+                'trang_chu/cars_thumb/6Mazda-removebg-preview.webp' => 'trang_chu/cars_logo/mazda',
+                'trang_chu/cars_thumb/7Honda-removebg-preview.webp' => 'trang_chu/cars_logo/honda',
+                'trang_chu/cars_thumb/8vinfast-removebg-preview.webp' => 'trang_chu/cars_logo/vinfast',
+                'trang_chu/cars_thumb/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/cars_logo/mercedes',
                 // Thêm các cặp (thumbnail => folder) tại đây
             ];
             ?>
             <div class="desktop row justify-content-center">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery('desktop');
+                $gallery->renderMappedGalleryCarsLogo('desktop');
                 ?>
             </div>
-            <div class="mobile owl-carousel owl-theme logo-xe-slider row justify-content-center">
+            <div class="mobile row justify-content-center owl-carousel owl-theme logo-xe-slider">
                 <?php
                 $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGallery('mobile');
+                $gallery->renderMappedGalleryCarsLogo('mobile');
                 ?>
             </div>
         </div>
@@ -136,139 +120,24 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Sứ mệnh, tầm nhìn, giá trị cốt lõi-->
     <section id="aga">
         <div class="container">
-            <div class="hidden">
-                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_mission_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
-            </div>
-            <div class="hidden">
-                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_vision_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
-            </div>
-            <div class="hidden">
-                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/62/1600x1200">
-                    <img src="https://lipsum.app/id/62/120x80" />
-                </a>
-                <a data-fancybox="gallery_v_values_logo" href="https://lipsum.app/id/63/1600x1200">
-                    <img src="https://lipsum.app/id/63/120x80" />
-                </a>
-            </div>
-            <div class="mobile row owl-carousel owl-theme vision-mission-values-slider">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
-                            <span class="box-mark circle" id="mission">01</span>
-                            <h5 class="box-title">Sứ mệnh</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
-                                nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
-                            <span class="box-mark circle" id="vision">02</span>
-
-                            <h5 class="box-title">Tầm nhìn</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
-                            </p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
-                            <img class="box-image img-fluid" class="img-fluid"
-                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
-                            <span class="box-mark circle" id="values">03</span>
-                            <h5 class="box-title">Giá trị cốt lõi</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <ul class="box-text">
-                                <li>Chất lượng là ưu tiên hàng đầu.</li>
-                                <li>Trách nhiệm với khách hàng và cộng đồng.</li>
-                                <li>Tận tâm trong từng dịch vụ.</li>
-                            </ul>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            $galleryMap = [
+                'trang_chu/mvv_thumb/v_mission_logo.webp' => 'trang_chu/mvv_images/mission',
+                'trang_chu/mvv_thumb/v_vision_logo.webp' => 'trang_chu/mvv_images/vision',
+                'trang_chu/mvv_thumb/v_values_logo.webp' => 'trang_chu/mvv_images/values',
+            ];
+            ?>
             <div class="desktop row">
-                <!-- <div class="row"> -->
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_mission_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_mission_logo.webp" alt="">
-                            <span class="box-mark circle" id="mission">01</span>
-                            <h5 class="box-title">Sứ mệnh</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần
-                                nâng cao chất lượng cuộc sống.</p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_mission_bg.webp" alt="v_mission_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_vision_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_vision_logo.webp" alt="">
-                            <span class="box-mark circle" id="vision">02</span>
-
-                            <h5 class="box-title">Tầm nhìn</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <p class="box-text">Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
-                            </p>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_vision_bg.webp" alt="Tầm nhìn">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <div class="row box-item">
-                        <a class="col-sm-12 box-item-header" data-fancybox="gallery_v_values_logo">
-                            <img class="box-image" height="200" width="200"
-                                src="public/images/v_mission_value_vision/v_values_logo.webp" alt="Giá trị cốt lõi">
-                            <span class="box-mark circle" id="values">03</span>
-                            <h5 class="box-title">Giá trị cốt lõi</h5>
-                        </a>
-                        <div class="col-sm-12 background-fluid">
-                            <ul class="box-text">
-                                <li>Chất lượng là ưu tiên hàng đầu.</li>
-                                <li>Trách nhiệm với khách hàng và cộng đồng.</li>
-                                <li>Tận tâm trong từng dịch vụ.</li>
-                            </ul>
-                            <img class="img-fluid background-img" src="./public/images/v_mission_value_vision/v_values_bg.webp" alt="v_values_bg">
-                            <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryMVV('desktop');
+                ?>
+            </div>
+            <div class="mobile row">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryMVV('mobile');
+                ?>
             </div>
         </div>
     </section>
@@ -276,92 +145,23 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Lĩnh vực hoạt động dịch vụ -->
     <section id="vfo">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="./public/images/services/service_baoduongxe_bg.webp"
-                            alt="service_baoduongxe_bg.webp">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Bảo dưỡng xe ô tô định kỳ.</h5>
-                                <p class="box-text">Bảo dưỡng định kỳ giúp duy trì hiệu suất và tuổi thọ của xe. Các hạng mục bao gồm thay dầu động cơ, vệ sinh hệ thống làm mát, thay dầu phanh và kiểm tra các bộ phận quan trọng khác.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachuagamxe (2).webp" alt="">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Sửa chữa động cơ, hộp số, gầm xe.</h5>
-                                <p class="box-text"> Dịch vụ này bao gồm chẩn đoán và sửa chữa các vấn đề liên quan đến động cơ, hộp số và hệ thống gầm xe, đảm bảo xe hoạt động ổn định và an toàn.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_noithat_ngoaithat (2).webp" alt="">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Chăm sóc và làm đẹp xe (nội thất, ngoại thất).</h5>
-                                <p class="box-text">Dịch vụ chăm sóc xe toàn diện bao gồm vệ sinh, bảo dưỡng và làm đẹp cả nội thất và ngoại thất, giúp xe luôn mới mẻ và tăng giá trị sử dụng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_lamdongson_cuuhotainan.webp" alt="">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Làm đồng sơn và sửa chữa xe tai nạn.</h5>
-                                <p class="box-text">Dịch vụ đồng sơn ô tô giúp khôi phục hình dáng và màu sơn ban đầu của xe sau tai nạn, đảm bảo tính thẩm mỹ và an toàn khi sử dụng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_suachua_gamxe.webp" alt="">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Phục hồi thước lái.</h5>
-                                <p class="box-text">Phục hồi thước lái giúp khắc phục các vấn đề về hệ thống lái, đảm bảo xe vận hành chính xác và an toàn trên mọi hành trình.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="box-image img-fluid" src="public/images/services/s_nang-cap_linhkien_phutung.webp" alt="">
-                        <div class="box-overlay"></div>
-                        <div class="box-hide">
-                            <hr>
-                            <div class="box-text-hide">
-                                <h5 class="box-title">Nâng cấp và lắp ráp phụ tùng, linh kiện.</h5>
-                                <p class="box-text">Dịch vụ này cung cấp giải pháp thay thế hoặc nâng cấp các phụ tùng, linh kiện ô tô, đảm bảo xe luôn trong tình trạng tốt nhất và đáp ứng nhu cầu sử dụng của khách hàng.</p>
-                            </div>
-                            <button class="box-button"><i class="bi bi-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
+            <?php
+            $galleryMap = [
+                'trang_chu/services_thumb/s_baoduong.webp' => 'trang_chu/services_images/xebaoduong',
+                'trang_chu/services_thumb/s_suachua.webp' => 'trang_chu/services_images/xesuachua',
+                'trang_chu/services_thumb/s_chamsoc.webp' => 'trang_chu/services_images/xechamsoc',
+                'trang_chu/services_thumb/s_dongson.webp' => 'trang_chu/services_images/xedongson',
+                'trang_chu/services_thumb/s_phuchoi.webp' => 'trang_chu/services_images/xephuchoi',
+                'trang_chu/services_thumb/s_nangcap.webp' => 'trang_chu/services_images/xenangcap'
+            ];
+            ?>
+            <div class="desktop row">
+                <?php $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryServices('desktop'); ?>
+            </div>
+            <div class="mobile row">
+                <?php $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryServices('mobile'); ?>
             </div>
         </div>
     </section>
@@ -469,7 +269,40 @@ o	Tân tâm trong từng dịch vụ.
         // Áp dụng cho tất cả counter
         counters.forEach(counter => observer.observe(counter));
     </script>
-    <!-- Giấy chứng nhận thành lập công ty -->
+
+    <!-- Liên kết bảo hiểm -->
+    <section id="partner">
+        <div class="container">
+            <div class="container-title">
+                <div class="title">Liên kết bảo hiểm</div>
+            </div>
+            <?php
+            $galleryMap = [
+                'trang_chu/partners_thumbnails/tasco_insurance(1).webp' => 'trang_chu/partners_insurances/tasco',
+                'trang_chu/partners_thumbnails/pg_insurance.svg' => 'trang_chu/partners_insurances/pg',
+                'trang_chu/partners_thumbnails/pvi_insurance.png' => 'trang_chu/partners_insurances/pvi',
+                'trang_chu/partners_thumbnails/mic_insurance.png' => 'trang_chu/partners_insurances/mic',
+            ];
+            ?>
+            <div class="desktop row list">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryInsurance('desktop');
+                ?>
+
+            </div>
+            <div class="mobile">
+                <div class="row list">
+                    <?php
+                    $gallery = new FolderGallery($galleryMap);
+                    $gallery->renderMappedGalleryInsurance('mobile');
+                    ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giấy chứng nhận thành lập công ty , cơ sở pháp lý-->
     <section id="meet">
         <div class="container">
             <div class="row">
@@ -478,24 +311,24 @@ o	Tân tâm trong từng dịch vụ.
                         <h5 class="box-title">Cơ sở pháp lý</h5>
                         <hr>
                         <!-- nút xem chi tiết pháp lý -->
-                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
+                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
                             <span>Xem chi tiết</span>
                         </a>
                         <div class="hidden">
-                            <a data-fancybox="gallery-certificates" href="./public/images/certificates/s_thanhlapcongty.webp">
-                                <img class="img-fluid" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                            <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
+                                <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/certificates/s_thanhlapcongty.webp" alt="">
+                        <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                     </div>
                 </div>
                 <div class="col-sm-4 col-12">
                     <div class="box-item">
-                        <img class="img-fluid" src="./public/images/xe2go_logo.webp" alt="">
+                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="" loading="lazy">
                         <div class="box-image text-center ">
                             <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
                             <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
@@ -558,11 +391,10 @@ o	Tân tâm trong từng dịch vụ.
                         </div>
                     </div>
                 </div>
-
                 <div class="owl-carousel owl-theme box-slider">
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="">
+                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Kỹ thuật viên tay nghề cao</h5>
                                 <p class="author-description">XE2GO</p>
@@ -571,10 +403,9 @@ o	Tân tâm trong từng dịch vụ.
                         <p class="box-content">Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp.
                         </p>
                     </div>
-
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="">
+                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Công nghệ hỗ trợ hiện đại</h5>
                                 <p class="author-description">XE2GO
@@ -584,10 +415,9 @@ o	Tân tâm trong từng dịch vụ.
                         <p class="box-content">Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa.
                         </p>
                     </div>
-
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="">
+                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Quy trình chuyên nghiệp
                                 </h5>
@@ -599,7 +429,7 @@ o	Tân tâm trong từng dịch vụ.
                     </div>
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/baohanh.svg" alt="">
+                            <img class="author-image" src="./public/svg/baohanh.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Bảo hành lên tới 1 năm </h5>
                                 <p class="author-description">XE2GO</p>
@@ -611,22 +441,19 @@ o	Tân tâm trong từng dịch vụ.
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/phutung.svg" alt="">
+                            <img class="author-image" src="./public/svg/phutung.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Phụ tùng ô tô chính hãng</h5>
                                 <p class="author-description">XE2GO
                                 </p>
                             </div>
                         </div>
-                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe.
-
-
-                        </p>
+                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe. </p>
                     </div>
 
                     <div class="box-item">
                         <div class="box-author">
-                            <img class="author-image" src="./public/svg/giaca.svg" alt="">
+                            <img class="author-image" src="./public/svg/giaca.svg" alt="" loading="lazy">
                             <div class="author-info">
                                 <h5 class="author-name">Giá cả đúng chất lượng
                                 </h5>
@@ -641,8 +468,8 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <?php include("./public/templates/footer.php") ?>
-    <?php include("./public/templates/path-js.php") ?>
+    <?php include("./public/path-templates/path-footer.php") ?>
+    <?php include("./public/path-templates/path-js.php") ?>
 
 </body>
 

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../xe2go/public/templates/path-css.php");
+<?php include("../xe2go/public/path-templates/path-css.php");
 $countGal = 1;
 $count = 0;
 $letter = 65;
 ?>
 
 <body>
-    <?php include("../xe2go/public/templates/main-menu.php") ?>
+    <?php include("../xe2go/public/path-templates/path-menu.php") ?>
 
     <!-- content -->
     <section id="section-gallery" class="container">
@@ -34,7 +34,7 @@ $letter = 65;
                     // Check for sub folders
                     $galDirectory = $mainDirectory . '\\' . $galDirectory;
                     $filesAndDirs = scandir($galDirectory);
-                    $subDirectories = array_filter($filesAndDirs, callback: function ($item) use ($galDirectory) {
+                    $subDirectories = array_filter($filesAndDirs, function ($item) use ($galDirectory) {
                         return is_dir($galDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
                     });
                     // Create nav and filter for sub folders
@@ -77,7 +77,7 @@ $letter = 65;
                         ?>
                                     <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter <?php echo chr($letter) . $count; ?>">
                                         <a href="<?php echo $filePath; ?>" data-fancybox="gallery-<?php echo chr($letter) . $count; ?>">
-                                            <img src="<?php echo $filePath; ?>" class="img-fluid">
+                                            <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
                                         </a>
                                     </div>
                                 <?php
@@ -100,7 +100,7 @@ $letter = 65;
                                 ?>
                                 <div class="gallery_product col-sm-4 col-md-3 col-lg-4">
                                     <a href="<?php echo $filePath; ?>" data-fancybox="gallery-00">
-                                        <img src="<?php echo $filePath; ?>" class="img-fluid">
+                                        <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
                                     </a>
                                 </div>
                         <?php
@@ -119,8 +119,8 @@ $letter = 65;
 
 
     </section>
-    <?php include("../xe2go/public/templates/footer.php") ?>
-    <?php include("../xe2go/public/templates/path-js.php") ?>
+    <?php include("../xe2go/public/path-templates/path-footer.php") ?>
+    <?php include("../xe2go/public/path-templates/path-js.php") ?>
 </body>
 
 </html>
