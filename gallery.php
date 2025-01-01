@@ -12,6 +12,7 @@ $letter = 65;
 
     <!-- content -->
     <section id="section-gallery" class="container">
+        <?php echo Ultilities::generate_breadcrumb(); ?>
         <?php
         $mainDirectory = '.\public\images\trang_gallery';
 

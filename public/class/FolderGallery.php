@@ -259,6 +259,34 @@ class FolderGallery
     }
 }
 
+class Ultilities{
+    public static function generate_breadcrumb()
+    {
+        // Array to hold breadcrumb parts
+        $breadcrumb = array();
+
+        // Get current URL
+        $url = $_SERVER['REQUEST_URI'];
+
+        // Break URL into parts
+        $url_parts = explode("/", $url);
+
+        // Create breadcrumb trail
+        $breadcrumb[] = '<a href="/">Home</a>';
+        $path = '/';
+
+        foreach ($url_parts as $part) {
+            if ($part != "") {
+                $path .= $part . '/';
+                $breadcrumb[] = '<a href="' . $path . '">' . ucwords(str_replace("-", " ", $part)) . '</a>';
+            }
+        }
+
+        // Convert breadcrumb array to a string
+        return implode(" > ", $breadcrumb);
+    }
+}
+
 // Ví dụ sử dụng:
 // $galleryMap = [
 //     'logo_hangxe/1Ford-removebg-preview.webp' => 'trang_gallery/hangxe_logo/ford',
