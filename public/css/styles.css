@@ -543,64 +543,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
     }
 }
 
-/* Chế độ sáng */
-body.light-mode {
-    background-color: white;
-    color: black;
-}
-
-body.light-mode .slider-background {
-    color: black;
-}
-
-body.light-mode .logo-text-waving {
-    border-bottom: 0.1rem solid black;
-}
-
-body.light-mode .hide {
-    background: #f0f0f0;
-    color: #333;
-}
-
-body.light-mode .slider-button {
-    background-color: #f0f0f0;
-    color: black;
-}
-
-body.light-mode .slider-button:hover {
-    background-color: black;
-    color: white;
-}
-
-/* Chế độ tối */
-body.dark-mode {
-    background-color: #121212;
-    color: white;
-}
-
-body.dark-mode .slider-background {
-    color: white;
-}
-
-body.dark-mode .logo-text-waving {
-    border-bottom: 0.1rem solid white;
-}
-
-body.dark-mode .hide {
-    background: #333;
-    color: #ddd;
-}
-
-body.dark-mode .slider-button {
-    background-color: #333;
-    color: white;
-}
-
-body.dark-mode .slider-button:hover {
-    background-color: white;
-    color: black;
-}
-
 /* Đặt navbar ở trên đầu thiết bị */
 #main-menu {
     position: fixed;
@@ -1849,6 +1791,7 @@ section#vfo {
         max-width: 100%;
         margin: 8px 0;
         overflow: hidden;
+        border-radius: var(--bs-border-radius);
 
         .box-image {
             object-fit: cover;
@@ -1970,23 +1913,74 @@ Các mục có nền hình ảnh và bóng đổ. */
 
 /* General styling for section#ypss */
 section#ypss {
-    background-color: white;
-    padding: 80px 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: var(--text-secondary);
 
     @media screen and (max-width: 1400px) {
         padding: 54px 32px;
     }
 }
 
+/* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
+section#ypss .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: context-menu;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: -webkit-fill-available;
+    z-index: 1;
+
+    /* Tiêu đề nằm trên nội dung */
+    @media screen and (max-width: 1366px) {
+        top: 1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        top: -15rem;
+    }
+}
+
+/* thiết kế chữ mạnh mẽ và rõ ràng */
+section#ypss .container-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background: var(--menu-link);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-2);
+    text-transform: uppercase;
+    width: 50%;
+    border-radius: 2.5rem;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 500px) {
+        width: 80% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+section#ypss .container-title .title:hover {
+    color: var(--text-secondary);
+    background: var(--menu-link-reverse);
+    transition: all 0.3s ease-in-out;
+}
+
 /* General container styling */
 section#ypss .container {
-    margin-top: -170px;
-    background-image: url(../images/trang_chu/xe2go/counters_bg.webp);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 80px 100px;
+    padding: 4rem;
+    border-radius: var(--bs-border-radius);
+
+    border: 1px solid var(--menu-link);
+    background-color: #fff;
 
     /* // */
     /* chỉnh lại layout của container khi ở màn hình nhỏ*/
@@ -1996,6 +1990,7 @@ section#ypss .container {
         margin-top: -228px;
         padding: 80px 45px;
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+        background-position: 0 24px;
     }
 
     @media screen and (max-width: 1400px) {
@@ -2008,6 +2003,13 @@ section#ypss .container {
 /* // */
 section#ypss .container .mobile {
     display: none;
+}
+
+section#ypss .container .desktop {
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff80;
 }
 
 /* // */
@@ -2053,6 +2055,7 @@ section#ypss .box-item {
 
     section#ypss .owl-stage-outer {
         min-height: 200px;
+        padding-top: 4.5rem;
     }
 }
 
@@ -2122,14 +2125,45 @@ Các mục có đường kẻ, văn bản giới hạn dòng, và liên kết ki
 section#meet {
     padding-top: 120px;
     padding-bottom: 420px;
-    background-color: #fff;
+
+    .container>.row {
+        border: 1px solid var(--menu-link);
+        padding: 1rem;
+        border-radius: var(--bs-border-radius);
+        background: #fff;
+    }
+
+    .row>.col-12:nth-child(1) {
+        display: flex;
+        padding: 1rem;
+        border: 1px solid var(--menu-link);
+        background: var(--menu-link-bg);
+        border-radius: var(--bs-border-radius);
+        flex-direction: column;
+    }
+
+    @media screen and (max-width: 500px) {
+        .row>.col-12:nth-child(3) {
+            display: none;
+        }
+    }
+
 
     .box-item {
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            margin: 1rem;
+
+        }
 
         hr {
             margin: 20px 0;
             border: none;
-            border-top: 5px solid var(--primary-color);
+            border-top: 5px solid var(--background-4);
             width: 60px;
         }
 
@@ -2149,7 +2183,7 @@ section#meet {
             text-transform: capitalize;
             font-size: 2rem;
             font-weight: 700;
-            color: var(--color-4);
+            color: var(--color-2);
         }
 
 
@@ -2186,12 +2220,15 @@ section#meet {
             transform: translateX(150px);
             transition: all 0.5s ease-in-out;
             opacity: .5;
+            padding: 0.5em;
+            background: #ccc;
+            transition: all 0.5s ease-in-out;
+            transition-delay: 1s;
         }
 
         .box-image:nth-child(1).active {
             transform: translateX(0);
-            transition: all 0.5s ease-in-out;
-            transition-delay: 1s;
+            border: 1px solid #eee;
         }
 
         .box-image:nth-child(2) {
@@ -2201,6 +2238,12 @@ section#meet {
             @media screen and (max-width: 768px) {
                 transform: translateY(0);
                 margin-top: 20px;
+            }
+
+            @media screen and (max-width: 500px) {
+                margin: 1rem;
+                width: min-content;
+                height: 64px;
             }
         }
 
@@ -2232,11 +2275,12 @@ section#meet {
 /* section halini-slider */
 /* vì sao chọn chúng tôi? */
 section#halini-slider {
-    padding-bottom: 120px;
+    padding-bottom: 7rem;
 
     .container {
         margin-top: -270px;
         background: var(--menu-link-bg);
+        border-radius: var(--bs-border-radius);
     }
 
     .container-title {
@@ -2775,9 +2819,9 @@ section#partner .list {
     background: white;
     border: 1px solid var(--menu-link);
     z-index: 0;
-    border-radius: 40px;
+    border-radius: var(--bs-border-radius);
     padding: 4rem;
-
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
     @media screen and (max-width: 500px) {
         padding: 4rem 2rem;
