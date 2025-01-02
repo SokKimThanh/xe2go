@@ -1,5 +1,5 @@
  <section id="main-menu">
-     <div class="container">
+     <div class="container-fluid">
          <div class="row menu-intro">
              <div class="col-sm-2">
                  <ul class="social-list">
@@ -15,37 +15,34 @@
                  </div>
              </div>
          </div>
-         <section class="row menu-container-desktop">
-             <div class="col-sm-12 logo-link-image-container">
-                 <div class="row">
-                     <a class="col-sm-2 logo-link-image" href="/index.php">
+         <section class="container menu-container-desktop">
+             <div class="row">
+                 <div class="col-sm-2 logo-link-image-container">
+                     <a class="logo-link-image" href="/index.php">
                          <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                      </a>
-                     <!-- <button id="mode-toggle">Chế độ Sáng/Tối</button> -->
-                   
-                     <div class="col-sm-6 menu-list-container">
-                         <ul class="menu-list">
-                             <li class="menu-item">
-                                 <a class="menu-link" href="/index.php">Trang chủ</a>
-                             </li>
-                             <li class="menu-item">
-                                 <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
-                             </li>
-                             <li class="menu-item">
-                                 <a class="menu-link" href="/contactus.php">Liên hệ</a>
-                             </li>
-                         </ul>
-
-                         <div class="china-title">
-                             <p> 修理中心 - 保养汽车 </p>
-                         </div>
-                     </div>
                  </div>
-             </div>
-             <div class="menu-list-container-contact">
-                 <div class="button-list">
-                     <img class="img-fluid desktop" src="../../public/images/trang_chu/xe2go/bannerQuocLong (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
-                     <img class="img-fluid laptop" src="../../public/images/trang_chu/xe2go/bannerQuocLong1366 (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
+                 <div class="col-sm-2 china-container">
+                     <div class="china-title">
+                         <p> 修理中心 - 保养汽车 </p>
+                     </div>
+                     <!-- <div class="button-list">
+                         <img class="img-fluid desktop" src="../../public/images/trang_chu/xe2go/bannerQuocLong (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
+                         <img class="img-fluid laptop" src="../../public/images/trang_chu/xe2go/bannerQuocLong1366 (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
+                     </div> -->
+                 </div>
+                 <div class="col-sm-10 menu-list-container">
+                     <ul class="menu-list">
+                         <li class="menu-item">
+                             <a class="menu-link" href="/index.php">Trang chủ</a>
+                         </li>
+                         <li class="menu-item">
+                             <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
+                         </li>
+                         <li class="menu-item">
+                             <a class="menu-link" href="/contactus.php">Liên hệ</a>
+                         </li>
+                     </ul>
                  </div>
              </div>
          </section>

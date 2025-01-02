@@ -53,13 +53,13 @@ o	Tân tâm trong từng dịch vụ.
             $sliders = [
                 [
                     'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear.webp',
-                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'title' => ' Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
                     'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
                     'link' => '/contactus.php'
                 ],
                 [
                     'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear2.webp',
-                    'title' => 'XE2GO Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
+                    'title' => ' Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
                     'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
                     'link' => '/contactus.php'
                 ]
@@ -90,7 +90,7 @@ o	Tân tâm trong từng dịch vụ.
     <!-- vì sao chọn chúng tôi? -->
     <section id="halini-slider">
         <div class="container">
-            <div class="row">
+            <div class="row pt-4 pb-4">
                 <div class="container-title">
                     <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
                 </div>
@@ -381,7 +381,7 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <div id="toc">
+    <section id="toc">
         <?php
         $tocItems = [
             ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1],
@@ -394,29 +394,33 @@ o	Tân tâm trong từng dịch vụ.
             ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8],
         ];
         ?>
-        <ul class="desktop">
-            <?php
-            usort($tocItems, function ($a, $b) {
-                return $a['order'] <=> $b['order'];
-            });
+        <div class="container-toc desktop">
+            <ul>
+                <?php
+                usort($tocItems, function ($a, $b) {
+                    return $a['order'] <=> $b['order'];
+                });
 
-            foreach ($tocItems as $item) {
-                echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
-            }
-            ?>
-        </ul>
-        <ul class="mobile">
-            <?php
-            usort($tocItems, function ($a, $b) {
-                return $a['order'] <=> $b['order'];
-            });
+                foreach ($tocItems as $item) {
+                    echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+        <div class="container-toc mobile">
+            <ul>
+                <?php
+                usort($tocItems, function ($a, $b) {
+                    return $a['order'] <=> $b['order'];
+                });
 
-            foreach ($tocItems as $item) {
-                echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
-            }
-            ?>
-        </ul>
-    </div>
+                foreach ($tocItems as $item) {
+                    echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+    </section>
     <?php include("./public/path-templates/path-footer.php") ?>
     <?php include("./public/path-templates/path-js.php") ?>
 

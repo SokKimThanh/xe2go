@@ -243,18 +243,30 @@ if (section) {
         }, 0); // Delay để chờ hiệu ứng mở
     });
 }
-
+/* Mục lục */
 // Kiểm tra nếu biến 'observer' chưa được khai báo
 if (typeof observer1 === 'undefined') {
-    /* Thêm sự kiện click để toggle class active cho mục lục */
-    const tocLinks = document.querySelectorAll('#toc ul li a');
+    /* Thêm sự kiện click để toggle class active cho mục lục (desktop) */
+    const tocLinksDesktop = document.querySelectorAll('#toc .desktop ul li a');
     const sections = document.querySelectorAll('section[id]');
 
-    tocLinks.forEach(link => {
+    tocLinksDesktop.forEach(link => {
         link.addEventListener('click', function () {
-            // Xóa class active khỏi tất cả các mục lục
-            tocLinks.forEach(link => link.classList.remove('active'));
-            // Thêm class active vào mục lục được click
+            // Xóa class active khỏi tất cả các mục lục desktop
+            tocLinksDesktop.forEach(link => link.classList.remove('active'));
+            // Thêm class active vào mục lục được click (desktop)
+            this.classList.add('active');
+        });
+    });
+
+    /* Thêm sự kiện click để toggle class active cho mục lục (mobile) */
+    const tocLinksMobile = document.querySelectorAll('#toc .mobile ul li a');
+
+    tocLinksMobile.forEach(link => {
+        link.addEventListener('click', function () {
+            // Xóa class active khỏi tất cả các mục lục mobile
+            tocLinksMobile.forEach(link => link.classList.remove('active'));
+            // Thêm class active vào mục lục được click (mobile)
             this.classList.add('active');
         });
     });
@@ -268,21 +280,30 @@ if (typeof observer1 === 'undefined') {
 
     const observerCallback = (entries) => {
         entries.forEach(entry => {
-            const tocLink = document.querySelector(`#toc ul li a[href="#${entry.target.id}"]`);
+            const tocLinkDesktop = document.querySelector(`#toc .desktop ul li a[href="#${entry.target.id}"]`);
+            const tocLinkMobile = document.querySelector(`#toc .mobile ul li a[href="#${entry.target.id}"]`);
+
             if (entry.isIntersecting) {
-                if (tocLink !== null) { // Kiểm tra nếu tocLink không phải là null
-                    tocLinks.forEach(link => link.classList.remove('active'));
-                    tocLink.classList.add('active');
+                // Kiểm tra nếu các liên kết không phải là null
+                if (tocLinkDesktop !== null) {
+                    tocLinksDesktop.forEach(link => link.classList.remove('active'));
+                    tocLinkDesktop.classList.add('active');
+                }
+                if (tocLinkMobile !== null) {
+                    tocLinksMobile.forEach(link => link.classList.remove('active'));
+                    tocLinkMobile.classList.add('active');
                 }
             }
         });
     };
-    
 
     // Khai báo biến 'observer' nếu chưa được khai báo
     var observer1 = new IntersectionObserver(observerCallback, observerOptions);
 
     sections.forEach(section => observer1.observe(section));
+    // Gắn lớp 'active' vào mục lục đầu tiên khi tải trang 
+    if (tocLinksDesktop.length > 0) { tocLinksDesktop[0].classList.add('active'); }
+    if (tocLinksMobile.length > 0) { tocLinksMobile[0].classList.add('active'); }
 }
 
 
