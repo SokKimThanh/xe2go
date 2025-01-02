@@ -244,16 +244,45 @@ if (section) {
     });
 }
 
-/* Thêm sự kiện click để toggle class active cho mục lục */
-const tocLinks = document.querySelectorAll('#toc ul li a');
+// Kiểm tra nếu biến 'observer' chưa được khai báo
+if (typeof observer1 === 'undefined') {
+    /* Thêm sự kiện click để toggle class active cho mục lục */
+    const tocLinks = document.querySelectorAll('#toc ul li a');
+    const sections = document.querySelectorAll('section[id]');
 
-tocLinks.forEach(link => {
-    link.addEventListener('click', function() {
-        // Xóa class active khỏi tất cả các mục lục
-        tocLinks.forEach(link => link.classList.remove('active'));
-        // Thêm class active vào mục lục được click
-        this.classList.add('active');
+    tocLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            // Xóa class active khỏi tất cả các mục lục
+            tocLinks.forEach(link => link.classList.remove('active'));
+            // Thêm class active vào mục lục được click
+            this.classList.add('active');
+        });
     });
-});
+
+    // Highlight TOC item based on scroll position
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when 50% of the section is in view
+    };
+
+    const observerCallback = (entries) => {
+        entries.forEach(entry => {
+            const tocLink = document.querySelector(`#toc ul li a[href="#${entry.target.id}"]`);
+            if (entry.isIntersecting) {
+                if (tocLink !== null) { // Kiểm tra nếu tocLink không phải là null
+                    tocLinks.forEach(link => link.classList.remove('active'));
+                    tocLink.classList.add('active');
+                }
+            }
+        });
+    };
+    
+
+    // Khai báo biến 'observer' nếu chưa được khai báo
+    var observer1 = new IntersectionObserver(observerCallback, observerOptions);
+
+    sections.forEach(section => observer1.observe(section));
+}
 
 
