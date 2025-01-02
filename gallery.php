@@ -68,7 +68,7 @@ $files = array_filter($filesAndDirs, function ($item) {
         }
         ?>
 
-        <button id="toTopButton">Top</button>
+        <button id="toTopButton"><i class="fa-solid fa-arrow-up"></i></button>
 
     </section>
     <?php include("../xe2go/public/path-templates/path-footer.php") ?>
