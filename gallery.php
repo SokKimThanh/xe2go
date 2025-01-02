@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../xe2go/public/path-templates/path-css.php");
+<?php
+include './public/class/FolderGallery.php';
+include("../xe2go/public/path-templates/path-css.php");
 $countGal = 1;
 $count = 0;
 $letter = 65;
@@ -12,7 +14,9 @@ $letter = 65;
 
     <!-- content -->
     <section id="section-gallery" class="container">
-        <?php echo Ultilities::generate_breadcrumb(); ?>
+        <div class="row">
+            <p style="margin-top:50px;"><?php echo Ultilities::generate_breadcrumb();?></p>
+        </div>
         <?php
         $mainDirectory = '.\public\images\trang_gallery';
 
