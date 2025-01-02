@@ -385,14 +385,14 @@ o	Tân tâm trong từng dịch vụ.
         <ul>
             <?php
             $tocItems = [
-                ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => "🏠", "order" => 1],
+                ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1],
                 ["id" => "halini-slider", "title" => "Lý do", "icon" => "❓", "order" => 2],
                 ["id" => "aga", "title" => "Sứ mệnh", "icon" => "🎯", "order" => 3],
                 ["id" => "vfo", "title" => "Lĩnh vực", "icon" => "🔧", "order" => 4],
                 ["id" => "ypss", "title" => "Thành tựu", "icon" => "🏆", "order" => 5],
                 ["id" => "partner", "title" => "Liên kết", "icon" => "🤝", "order" => 6],
                 ["id" => "meet", "title" => "Pháp lý", "icon" => "📜", "order" => 7],
-                ["id" => "six-box", "title" => "Hãng xe", "icon" => "🚗", "order" => 8],
+                ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8],
             ];
 
             usort($tocItems, function ($a, $b) {

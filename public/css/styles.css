@@ -3348,13 +3348,15 @@ footer {
     border-radius: 10px;
     padding: 10px;
     z-index: 1000;
-    width: 40px; /* Initial width for icons */
+    width: 40px;
+    /* Initial width for icons */
     overflow: hidden;
     transition: width 0.3s ease-in-out;
 }
 
 #toc:hover {
-    width: 200px; /* Expanded width on hover */
+    width: 120px;
+    /* Expanded width on hover */
 }
 
 #toc ul {
@@ -3365,21 +3367,22 @@ footer {
 
 #toc ul li {
     margin-bottom: 10px;
+    text-align: center;
 }
 
 #toc ul li a {
     display: flex;
     align-items: center;
     color: var(--text-secondary);
-    border-radius: 50%;
     text-align: center;
     line-height: 30px;
     text-decoration: none;
-    padding: 1em;
     transition: all 0.3s ease-in-out;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
+    /* Prevent text wrapping */
     overflow: hidden;
-    text-overflow: ellipsis; /* Ellipsis for overflow text */
+    text-overflow: ellipsis;
+    /* Ellipsis for overflow text */
 }
 
 #toc ul li a .toc-title {
