@@ -386,12 +386,12 @@ o	Tân tâm trong từng dịch vụ.
             <?php
             $tocItems = [
                 ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1],
-                ["id" => "halini-slider", "title" => "Lý do", "icon" => "❓", "order" => 2],
-                ["id" => "aga", "title" => "Sứ mệnh", "icon" => "🎯", "order" => 3],
-                ["id" => "vfo", "title" => "Lĩnh vực", "icon" => "🔧", "order" => 4],
-                ["id" => "ypss", "title" => "Thành tựu", "icon" => "🏆", "order" => 5],
-                ["id" => "partner", "title" => "Liên kết", "icon" => "🤝", "order" => 6],
-                ["id" => "meet", "title" => "Pháp lý", "icon" => "📜", "order" => 7],
+                ["id" => "halini-slider", "title" => "Lý do", "icon" => '<i class="bi bi-question-circle"></i>', "order" => 2],
+                ["id" => "aga", "title" => "Sứ mệnh", "icon" => '<i class="bi bi-bullseye"></i>', "order" => 3],
+                ["id" => "vfo", "title" => "Lĩnh vực", "icon" => '<i class="bi bi-wrench"></i>', "order" => 4],
+                ["id" => "ypss", "title" => "Thành tựu", "icon" => '<i class="bi bi-award-fill"></i>', "order" => 5],
+                ["id" => "partner", "title" => "Liên kết", "icon" => '<i class="fa-solid fa-handshake"></i>', "order" => 6],
+                ["id" => "meet", "title" => "Pháp lý", "icon" => '<i class="bi bi-file-text"></i>', "order" => 7],
                 ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8],
             ];
 
