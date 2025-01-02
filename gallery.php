@@ -47,7 +47,7 @@ $files = array_filter($filesAndDirs, function ($item) {
         </section>
 
         <style>
-            .demo {
+            .gallery-content {
                 height: 512px;
                 width: 100%;
                 background-color: aqua;
@@ -61,7 +61,7 @@ $files = array_filter($filesAndDirs, function ($item) {
         <?php
         foreach ($sectionNames as $sectionName) {
         ?>
-            <section class="demo" id="<?php echo $sectionName; ?>">
+            <section class="gallery-content" id="<?php echo $sectionName; ?>">
                 <h1><?php echo $sectionName; ?></h1>
             </section>
         <?php

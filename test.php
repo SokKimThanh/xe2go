@@ -3,98 +3,76 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scroll to Section</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Image Slider</title>
+    <style>
+        /* Add some basic styling */
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #ddd;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            border: none;
+        }
+
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
-<style>
-    /* styles.css */
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        margin: 20px;
-        cursor: pointer;
-    }
-
-    .content {
-        height: 600px;
-        padding: 20px;
-        background-color: #f4f4f4;
-        margin-bottom: 20px;
-        border: 1px solid #ddd;
-    }
-
-    /* Styles for the "To Top" button */
-    #toTopButton {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-        background-color: #333;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        display: none;
-        /* Initially hidden */
-        transition: .3s;
-    }
-
-    #toTopButton.show {
-        display: block;
-        /* Show the button when needed */
-    }
-</style>
 
 <body>
-    <button class="scrollButton" data-target="home">Scroll to Home</button>
-    <button class="scrollButton" data-target="about">Scroll to About</button>
-    <button class="scrollButton" data-target="services">Scroll to Services</button>
-    <button class="scrollButton" data-target="contact">Scroll to Contact</button>
-
-    <div class="content" id="home">Home Content</div>
-    <div class="content" id="about">About Content</div>
-    <div class="content" id="services">Services Content</div>
-    <div class="content" id="contact">Contact Content</div>
-
-    <button id="toTopButton">To Top</button>
+    <div class="slider">
+        <div class="slides">
+            <img src="./public/images/testPic/1.png" alt="Slide 1">
+            <img src="./public/images/testPic/1.png" alt="Slide 2">
+            <img src="./public/images/testPic/1.png" alt="Slide 3">
+        </div>
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+    </div>
 
     <script>
-        // script.js
-        document.querySelectorAll('.scrollButton').forEach(button => {
-            button.addEventListener('click', function() {
-                const targetId = this.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const totalSlides = images.length;
+        let slideIndex = 0;
 
-        const toTopButton = document.getElementById('toTopButton');
+        function changeSlide() {
+            slideIndex = (slideIndex + 1) % totalSlides;
+            const offset = -slideIndex * 100;
+            slides.style.transform = `translateX(${offset}%)`;
+        }
 
-        // Show or hide the "To Top" button based on scroll position
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 300) { // Show button after scrolling down 300px
-                toTopButton.classList.add('show');
-            } else {
-                toTopButton.classList.remove('show');
-            }
-        });
-
-        // Scroll to top when the "To Top" button is clicked
-        toTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
+        setInterval(changeSlide, 2000); // Change image every 3 seconds
     </script>
 </body>
 
