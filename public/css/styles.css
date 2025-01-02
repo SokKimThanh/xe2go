@@ -2668,6 +2668,7 @@ section.gallery {
 
       .card:hover {
         transform: scale(1.05);
+        cursor: pointer;
       }
 
       .card img {
@@ -2689,6 +2690,28 @@ section.gallery {
       }
     }
   }
+
+  /* Styles for the "To Top" button */
+    #toTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        display: none;
+        /* Initially hidden */
+        transition: .3s;
+    }
+
+    #toTopButton.show {
+        display: block;
+        /* Show the button when needed */
+    }
 }
 
 section#contactus {

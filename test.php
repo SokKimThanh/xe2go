@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Gallery Slider</title>
+    <title>Scroll to Section</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
@@ -12,95 +12,87 @@
     body {
         margin: 0;
         font-family: Arial, sans-serif;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 20px;
+        cursor: pointer;
+    }
+
+    .content {
+        height: 600px;
+        padding: 20px;
         background-color: #f4f4f4;
-    }
-
-    .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
-    }
-
-    .card {
-        width: 100%;
-        max-width: 256px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: white;
+        margin-bottom: 20px;
         border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition: transform 0.2s;
     }
 
-    .card:hover {
-        transform: scale(1.05);
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-    }
-
-    .card-title {
-        padding: 10px;
-        text-align: center;
+    /* Styles for the "To Top" button */
+    #toTopButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
         background-color: #333;
         color: white;
-        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        display: none;
+        /* Initially hidden */
+        transition: .3s;
     }
 
-    /* Mobile styles */
-    @media (max-width: 768px) {
-        .gallery {
-            flex-direction: row;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .card {
-            min-width: 300px;
-            margin-right: 20px;
-        }
+    #toTopButton.show {
+        display: block;
+        /* Show the button when needed */
     }
 </style>
 
 <body>
-    <div class="gallery">
-        <div class="card">
-            <img src="./public/images/testPic/1.png" alt="Image 1">
-            <div class="card-title">Title 1</div>
-        </div>
-        <div class="card">
-            <img src="./public/images/testPic/1.png" alt="Image 2">
-            <div class="card-title">Title 2</div>
-        </div>
-        <div class="card">
-            <img src="./public/images/testPic/1.png" alt="Image 3">
-            <div class="card-title">Title 3</div>
-        </div>
-        <!-- Add more cards as needed -->
-    </div>
+    <button class="scrollButton" data-target="home">Scroll to Home</button>
+    <button class="scrollButton" data-target="about">Scroll to About</button>
+    <button class="scrollButton" data-target="services">Scroll to Services</button>
+    <button class="scrollButton" data-target="contact">Scroll to Contact</button>
+
+    <div class="content" id="home">Home Content</div>
+    <div class="content" id="about">About Content</div>
+    <div class="content" id="services">Services Content</div>
+    <div class="content" id="contact">Contact Content</div>
+
+    <button id="toTopButton">To Top</button>
 
     <script>
         // script.js
-        document.addEventListener('DOMContentLoaded', function() {
-            const gallery = document.querySelector('.gallery');
+        document.querySelectorAll('.scrollButton').forEach(button => {
+            button.addEventListener('click', function() {
+                const targetId = this.getAttribute('data-target');
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-            // Implement slider functionality for mobile
-            if (window.innerWidth <= 768) {
-                gallery.classList.add('slider');
+        const toTopButton = document.getElementById('toTopButton');
+
+        // Show or hide the "To Top" button based on scroll position
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) { // Show button after scrolling down 300px
+                toTopButton.classList.add('show');
+            } else {
+                toTopButton.classList.remove('show');
             }
+        });
 
-            window.addEventListener('resize', function() {
-                if (window.innerWidth <= 768) {
-                    gallery.classList.add('slider');
-                } else {
-                    gallery.classList.remove('slider');
-                }
+        // Scroll to top when the "To Top" button is clicked
+        toTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
     </script>
