@@ -1298,11 +1298,7 @@ Có hiệu ứng hover để thay đổi vị trí và màu nền của các m�
 
 section#six-box {
     padding: 15rem 0 0;
-
-    @media screen and (max-width:1400px) {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+    margin-bottom: 3rem;
 
     @media screen and (max-width:500px) {
         padding-top: 100px;
@@ -3138,8 +3134,7 @@ footer {
         color: white;
         font-size: 1.2rem;
         font-weight: 700;
-        margin-top: -205px;
-
+        margin-top: -183px;
         align-items: center;
         display: flex;
         width: 100%;
@@ -3451,15 +3446,15 @@ footer {
     }
 
     section#vfo .container-title {
-        top: 1rem;
+        top: -2rem;
     }
 
     section#ypss .container-title {
-        top: 1rem;
+        top: 12rem;
     }
 
     section#meet .container-title {
-        top: 1rem;
+        top: -3rem;
     }
 
     section#six-box .box-item {
