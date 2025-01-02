@@ -3306,42 +3306,91 @@ footer {
 }
 
 /* Hide TOC on desktop devices */
-#toc ul.mobile {
+#toc .container-toc.mobile {
     display: none;
 }
 
 /* Hide TOC on mobile devices */
 @media screen and (max-width: 500px) {
-    #toc ul.desktop {
+    #toc .container-toc.desktop {
         display: none;
     }
 
-    #toc ul.mobile {
+    #toc .container-toc.mobile {
         display: flex;
     }
 }
 
-
 /* Styles for floating TOC */
 #toc {
+    z-index: 1;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+}
+
+#toc .container-toc {
+    padding: 0.5em;
+}
+
+#toc .container-toc.desktop {
     position: fixed;
     top: 50%;
-    right: 0;
+    right: 16px;
     transform: translateY(-50%);
     background: var(--menu-link-reverse);
     border: 1px solid var(--text-secondary);
     border-radius: 10px;
-    z-index: 1000;
-    width: 40px;
-    /* Initial width for icons */
-    overflow: hidden;
-    transition: width 0.3s ease-in-out;
-    padding: 0.5em;
+    width: 60px;
 }
 
-#toc:hover {
+#toc .container-toc.desktop:hover {
     width: 110px;
-    /* Expanded width on hover */
+}
+
+#toc .container-toc.desktop ul {
+    flex-direction: column;
+}
+
+/* quay ngang mục lục nằm ở dưới cùng của thiết bị */
+#toc .container-toc.mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: var(--menu-link-reverse);
+    border-top: 1px solid var(--text-secondary);
+    border-radius: 10px 10px 0 0;
+    justify-content: space-around;
+    height: 6rem;
+
+
+    li {
+        height: 100%;
+
+        a {
+            flex-direction: column;
+            overflow: auto;
+            justify-content: space-between;
+            align-items: start;
+            height: 100%;
+
+            .toc-icon {
+                font-size: 2.5rem;
+            }
+
+            .toc-title {
+                display: block;
+            }
+        }
+    }
+
+}
+
+#toc .container-toc.mobile ul {
+    flex-direction: row;
+    width: 500px;
+    overflow: auto;
+    justify-content: space-around;
 }
 
 #toc ul {
@@ -3351,7 +3400,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+
 }
 
 #toc ul li {
@@ -3360,26 +3409,25 @@ footer {
 
 #toc ul li a {
     display: flex;
-    align-items: center;
+    justify-content: start;
+    align-items: start;
+    min-height: 30px;
     color: var(--text-secondary);
     text-align: center;
     line-height: 30px;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
     white-space: nowrap;
-    /* Prevent text wrapping */
     overflow: hidden;
     text-overflow: ellipsis;
-    /* Ellipsis for overflow text */
-    justify-content: start;
-    align-items: start;
     border-radius: 5px;
-    min-height: 30px;
+    /* Hiệu ứng tốc độc hiển thị */
+    transition: all 0.2s ease-in-out;
 }
 
 #toc ul li a .toc-title {
     display: none;
     padding: 0 10px;
+    font-size: 1.1rem;
 }
 
 #toc ul li a .toc-icon {
@@ -3387,15 +3435,14 @@ footer {
     align-items: center;
     justify-content: center;
     width: 100%;
+    font-size: 1.5rem;
 }
 
-#toc:hover ul li a .toc-icon {
+#toc .container-toc.desktop:hover ul li a .toc-icon {
     display: none;
-    padding: 0.5em;
-    text-align: center;
 }
 
-#toc:hover ul li a .toc-title {
+#toc .container-toc.desktop:hover ul li a .toc-title {
     display: inline;
 }
 
@@ -3407,15 +3454,10 @@ footer {
 #toc ul li a.active {
     background: var(--secondary-color);
     color: var(--color-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-/* Hide TOC on mobile devices */
-@media screen and (max-width: 500px) {
-    #toc {
-        display: none;
-    }
-}
-
 
 /* Desktop Styles */
 @media screen and (max-width: 1366px) {

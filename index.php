@@ -381,7 +381,7 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <div id="toc">
+    <section id="toc">
         <?php
         $tocItems = [
             ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1],
@@ -394,29 +394,33 @@ o	Tân tâm trong từng dịch vụ.
             ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8],
         ];
         ?>
-        <ul class="desktop">
-            <?php
-            usort($tocItems, function ($a, $b) {
-                return $a['order'] <=> $b['order'];
-            });
+        <div class="container-toc desktop">
+            <ul>
+                <?php
+                usort($tocItems, function ($a, $b) {
+                    return $a['order'] <=> $b['order'];
+                });
 
-            foreach ($tocItems as $item) {
-                echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
-            }
-            ?>
-        </ul>
-        <ul class="mobile">
-            <?php
-            usort($tocItems, function ($a, $b) {
-                return $a['order'] <=> $b['order'];
-            });
+                foreach ($tocItems as $item) {
+                    echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+        <div class="container-toc mobile">
+            <ul>
+                <?php
+                usort($tocItems, function ($a, $b) {
+                    return $a['order'] <=> $b['order'];
+                });
 
-            foreach ($tocItems as $item) {
-                echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
-            }
-            ?>
-        </ul>
-    </div>
+                foreach ($tocItems as $item) {
+                    echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+    </section>
     <?php include("./public/path-templates/path-footer.php") ?>
     <?php include("./public/path-templates/path-js.php") ?>
 
