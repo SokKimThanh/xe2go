@@ -588,11 +588,6 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 /* Đảm bảo tương thích với màn hình nhỏ hơn */
 @media screen and (max-width: 1024px) {
     #main-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
         background-color: var(--background-2);
         color: white;
     }
@@ -602,10 +597,10 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 section#main-menu {
     /* Thiết lập sự thay đổi ở màn hình desktop và mobile */
     z-index: 2;
-    width: 100%;
+
 
     /* Cài đặt màu nền, kích thước màn hình desktop và mobile */
-    .container {
+    .container-fluid {
         background: var(--menu-link-bg);
 
         @media screen and (max-width: 1024px) {
@@ -814,26 +809,30 @@ Active State: Màu sắc của các mục menu thay đổi khi mục đó ở tr
 */
 section.menu-container-desktop {
     .logo-link-image-container {
-        padding: 0.6em;
+        /* padding: 0.6em;
         background-color: var(--background-1);
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; */
         /* làm z-index để phần link nó trồi lên 
          * trên hình ảnh để click được
          */
-        z-index: 1;
+        /* z-index: 1; */
 
         .logo-link-image {
-            display: block;
+
+            /* display: block;
             padding-top: 0.6em;
-            margin-left: 0.6em;
+            margin-left: 0.6em; */
+            img {
+                height: 64px;
+            }
         }
     }
 
     .menu-list-container {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: center;
         position: relative;
         flex-direction: column;
@@ -846,6 +845,10 @@ section.menu-container-desktop {
         font-weight: 600;
         color: var(--text-secondary);
         cursor: context-menu;
+
+        p {
+            margin: auto;
+        }
 
         @media screen and (max-width: 1366px) {
             margin: 0.5em 0 0 0;
@@ -860,8 +863,6 @@ section.menu-container-desktop {
         align-items: center;
         margin: 0;
         padding: 0;
-        height: 100%;
-        width: 100%;
         font-size: 1.1rem;
         font-weight: 600;
         border-right-width: 1px;
