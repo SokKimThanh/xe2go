@@ -1783,6 +1783,59 @@ section#vfo .mobile {
     }
 }
 
+section#vfo .container {
+    position: relative;
+}
+
+/* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
+section#vfo .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: context-menu;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: -webkit-fill-available;
+    z-index: 1;
+
+    /* Tiêu đề nằm trên nội dung */
+    @media screen and (max-width: 1366px) {
+        top: 1rem;
+    }
+
+    @media screen and (max-width: 500px) {
+        top: -15rem;
+    }
+}
+
+/* thiết kế chữ mạnh mẽ và rõ ràng */
+section#vfo .container-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background: var(--menu-link);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-2);
+    text-transform: uppercase;
+    width: 50%;
+    border-radius: 2.5rem;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 500px) {
+        width: 80% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+section#vfo .container-title .title:hover {
+    color: var(--text-secondary);
+    background: var(--menu-link-reverse);
+    transition: all 0.3s ease-in-out;
+}
+
 section#vfo .box-item {
     padding: 0;
     position: relative;
@@ -1897,59 +1950,6 @@ section#vfo .box-item .box-hide .box-button:hover {
     background-color: white;
     color: var(--primary-color);
     transition: all 0.2s ease-in-out;
-}
-
-section#vfo .container {
-    position: relative;
-}
-
-/* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
-section#vfo .container-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: context-menu;
-    position: absolute;
-    left: 0;
-    top: -2rem;
-    width: -webkit-fill-available;
-    z-index: 1;
-
-    /* Tiêu đề nằm trên nội dung */
-    @media screen and (max-width: 1366px) {
-        top: 1rem;
-    }
-
-    @media screen and (max-width: 500px) {
-        top: -15rem;
-    }
-}
-
-/* thiết kế chữ mạnh mẽ và rõ ràng */
-section#vfo .container-title .title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 5rem;
-    background: var(--menu-link);
-    font-weight: 700;
-    font-size: 2rem;
-    color: var(--color-2);
-    text-transform: uppercase;
-    width: 50%;
-    border-radius: 2.5rem;
-    transition: all 0.3s ease-in-out;
-
-    @media screen and (max-width: 500px) {
-        width: 80% !important;
-        font-size: 1.5rem !important;
-    }
-}
-
-section#vfo .container-title .title:hover {
-    color: var(--text-secondary);
-    background: var(--menu-link-reverse);
-    transition: all 0.3s ease-in-out;
 }
 
 /*  */
@@ -2170,149 +2170,200 @@ section#ypss .box-item .box-title {
 /* Phần "meet":
 
 Các mục có đường kẻ, văn bản giới hạn dòng, và liên kết kiểu dáng. */
-section#meet {
-    padding-top: 120px;
-    padding-bottom: 420px;
 
-    .container>.row {
-        border: 1px solid var(--menu-link);
-        padding: 1rem;
-        border-radius: var(--bs-border-radius);
-        background: #fff;
-    }
+section#meet .container {
+    position: relative;
+}
 
-    .row>.col-12:nth-child(1) {
-        display: flex;
-        padding: 1rem;
-        border: 1px solid var(--menu-link);
-        background: var(--menu-link-bg);
-        border-radius: var(--bs-border-radius);
-        flex-direction: column;
+/* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
+section#meet .container-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: context-menu;
+    position: absolute;
+    left: 0;
+    top: -2rem;
+    width: -webkit-fill-available;
+    z-index: 1;
+
+    /* Tiêu đề nằm trên nội dung */
+    @media screen and (max-width: 1366px) {
+        top: 1rem;
     }
 
     @media screen and (max-width: 500px) {
-        .row>.col-12:nth-child(3) {
-            display: none;
-        }
+        top: -15rem;
+    }
+}
+
+/* thiết kế chữ mạnh mẽ và rõ ràng */
+section#meet .container-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5rem;
+    background: var(--menu-link);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--color-2);
+    text-transform: uppercase;
+    width: 50%;
+    border-radius: 2.5rem;
+    transition: all 0.3s ease-in-out;
+
+    @media screen and (max-width: 500px) {
+        width: 80% !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+section#meet .container-title .title:hover {
+    color: var(--text-secondary);
+    background: var(--menu-link-reverse);
+    transition: all 0.3s ease-in-out;
+}
+section#meet {
+    padding-top: 120px;
+    padding-bottom: 420px;
+}
+
+section#meet .container>.row {
+    border: 1px solid var(--menu-link);
+    padding: 1rem;
+    border-radius: var(--bs-border-radius);
+    background: #fff;
+}
+
+section#meet .row>.col-12:nth-child(1) {
+    display: flex;
+    padding: 1rem;
+    border: 1px solid var(--menu-link);
+    background: var(--menu-link-bg);
+    border-radius: var(--bs-border-radius);
+    flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+    section#meet .row>.col-12:nth-child(3) {
+        display: none;
+    }
+}
+
+section#meet .box-item {
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        margin: 1rem;
+    }
+}
+
+section#meet .box-item hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 5px solid var(--background-4);
+    width: 60px;
+}
+
+section#meet .box-item .box-text {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    /* Giới hạn 3 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+section#meet .box-item .box-title {
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-2);
+}
+
+section#meet .box-item .box-content {
+    font-size: 1.7rem;
+    line-height: 2rem;
+}
+
+/* nút xem chi tiết pháp lý */
+section#meet .box-item .box-link {
+    display: flex;
+    height: 50px;
+    width: 140px;
+    border-radius: 32px;
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: background-color .2s ease-in-out;
+}
+
+section#meet .box-item .box-link:hover {
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    transition: background-color .2s ease-in-out;
+}
+
+section#meet .box-item .box-image:nth-child(1) {
+    transform: translateX(150px);
+    transition: all 0.5s ease-in-out;
+    opacity: .5;
+    padding: 0.5em;
+    background: #ccc;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 1s;
+}
+
+section#meet .box-item .box-image:nth-child(1).active {
+    transform: translateX(0);
+    border: 1px solid #eee;
+}
+
+section#meet .box-item .box-image:nth-child(2) {
+    transform: translateY(-250px);
+    transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    section#meet .box-item .box-image:nth-child(2) {
+        transform: translateY(0);
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section#meet .box-item .box-image:nth-child(2) {
+        margin: 1rem;
+        width: min-content;
+        height: 64px;
+    }
+}
+
+section#meet .box-item .box-image:nth-child(2).active {
+    transform: translateY(0);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 1.4s;
+}
+
+/* lập trình ở đây cho nó tắt luôn css để nó không văng ra khoảng trắng */
+@media screen and (max-width: 1024px) {
+    section#meet .box-item .box-image:nth-child(1) {
+        transform: translateX(10px);
     }
 
-
-    .box-item {
-
-        @media screen and (max-width: 500px) {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            margin: 1rem;
-
-        }
-
-        hr {
-            margin: 20px 0;
-            border: none;
-            border-top: 5px solid var(--background-4);
-            width: 60px;
-        }
-
-        .box-text {
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1.5rem;
-            /* Giới hạn 3 dòng */
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            color: rgba(0, 0, 0, 0.7);
-        }
-
-        .box-title {
-            text-transform: capitalize;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--color-2);
-        }
-
-
-        .box-content {
-            font-size: 1.7rem;
-            line-height: 2rem;
-        }
-
-        /* nút xem chi tiết pháp lý */
-        .box-link {
-            display: flex;
-            height: 50px;
-            width: 140px;
-            border-radius: 32px;
-            background: transparent;
-            border: 1px solid var(--primary-color);
-            justify-content: center;
-            align-items: center;
-            text-decoration: none;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: background-color .2s ease-in-out;
-        }
-
-        .box-link:hover {
-            color: white;
-            background: var(--primary-color);
-            border: none;
-            transition: background-color .2s ease-in-out;
-        }
-
-        .box-image:nth-child(1) {
-            transform: translateX(150px);
-            transition: all 0.5s ease-in-out;
-            opacity: .5;
-            padding: 0.5em;
-            background: #ccc;
-            transition: all 0.5s ease-in-out;
-            transition-delay: 1s;
-        }
-
-        .box-image:nth-child(1).active {
-            transform: translateX(0);
-            border: 1px solid #eee;
-        }
-
-        .box-image:nth-child(2) {
-            transform: translateY(-250px);
-            transition: all 0.5s ease-in-out;
-
-            @media screen and (max-width: 768px) {
-                transform: translateY(0);
-                margin-top: 20px;
-            }
-
-            @media screen and (max-width: 500px) {
-                margin: 1rem;
-                width: min-content;
-                height: 64px;
-            }
-        }
-
-        .box-image:nth-child(2).active {
-            transform: translateY(0);
-            transition: all 0.5s ease-in-out;
-            transition-delay: 1.4s;
-        }
-
-
-        /* lập trình ở đây cho nó tắt luôn css để nó không văng ra khoảng trắng */
-        @media screen and (max-width: 1024px) {
-            .box-image:nth-child(1) {
-                transform: translateX(10px);
-            }
-
-            .box-image:nth-child(2) {
-                transform: translateY(-25px);
-            }
-
-        }
+    section#meet .box-item .box-image:nth-child(2) {
+        transform: translateY(-25px);
     }
 }
 

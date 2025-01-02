@@ -285,11 +285,23 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Giấy chứng nhận thành lập công ty , cơ sở pháp lý-->
     <section id="meet">
         <div class="container">
+            <div class="container-title">
+                <div class="title">Cơ sở pháp lý</div>
+            </div>
             <div class="row">
-                <div class="col-sm-4 col-12">
+                <div class="box-item"></div>
+                <div class="col-sm-6 col-12">
                     <div class="box-item">
-                        <h5 class="box-title">Cơ sở pháp lý</h5>
-                        <hr>
+                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_garrage.webp" alt="" loading="lazy">
+                        <div class="box-image text-center ">
+                            <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
+                            <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-12">
+                    <div class="box-item">
+                        <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                         <!-- nút xem chi tiết pháp lý -->
                         <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
                             <span>Xem chi tiết</span>
@@ -298,20 +310,6 @@ o	Tân tâm trong từng dịch vụ.
                             <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
                                 <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                             </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
-                    </div>
-                </div>
-                <div class="col-sm-4 col-12">
-                    <div class="box-item">
-                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="" loading="lazy">
-                        <div class="box-image text-center ">
-                            <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
-                            <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
                         </div>
                     </div>
                 </div>
