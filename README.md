@@ -17,3 +17,5 @@
 ![image](https://github.com/user-attachments/assets/6f121fc6-3cbc-4fd7-b58f-637ed7816b11)
 ![image](https://github.com/user-attachments/assets/72bab78c-43eb-4263-bb80-107928340cbb)
 
+## hướng dẫn xem commit công việc bằng lệnh theo tác giả, theo ngày
+![image](https://github.com/user-attachments/assets/07f73d16-77f4-4057-a971-3754ae2a06f9)
