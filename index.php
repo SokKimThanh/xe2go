@@ -90,7 +90,7 @@ o	Tân tâm trong từng dịch vụ.
     <!-- vì sao chọn chúng tôi? -->
     <section id="halini-slider">
         <div class="container">
-            <div class="row">
+            <div class="row pt-4 pb-4">
                 <div class="container-title">
                     <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
                 </div>

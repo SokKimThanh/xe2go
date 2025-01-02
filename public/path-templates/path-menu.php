@@ -22,7 +22,7 @@
                          <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                      </a>
                  </div>
-                 <div class="col-sm-4 menu-list-container">
+                 <div class="col-sm-2 china-container">
                      <div class="china-title">
                          <p> 修理中心 - 保养汽车 </p>
                      </div>
@@ -31,7 +31,7 @@
                          <img class="img-fluid laptop" src="../../public/images/trang_chu/xe2go/bannerQuocLong1366 (1).webp" alt="Quảng cáo banner Quốc Long" loading="lazy">
                      </div> -->
                  </div>
-                 <div class="col-sm-6 menu-list-container">
+                 <div class="col-sm-10 menu-list-container">
                      <ul class="menu-list">
                          <li class="menu-item">
                              <a class="menu-link" href="/index.php">Trang chủ</a>
