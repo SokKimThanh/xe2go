@@ -15,6 +15,13 @@
 ## hướng dẫn xem commit công việc bằng lệnh theo tác giả, theo ngày hôm qua và hôm nay
 ![image](https://github.com/user-attachments/assets/07f73d16-77f4-4057-a971-3754ae2a06f9)
 
+1. `git log`
+2. `git shortlog -snc`
+3. `git log --author="Tên Tác Giả"`
+4. `git log --since="midnight" > today_commits.txt`
+5. `git log --author="Tên Tác Giả" --since="yesterday 00:00" --until="yesterday 23:59" > yesterday_commits.txt`
+
+
 ## version 1: khuôn dự án ban đầu
 ![image](https://github.com/user-attachments/assets/74112b59-c887-4339-9433-8166ec4e9377)
 ![image](https://github.com/user-attachments/assets/bff5219c-be16-4e8f-b262-2edfaa34b007)
