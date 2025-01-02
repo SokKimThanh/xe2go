@@ -87,34 +87,67 @@ o	Tân tâm trong từng dịch vụ.
 
         </div>
     </section>
-    <!-- section 6 hinh vuong-->
-    <section id="six-box">
+    <!-- vì sao chọn chúng tôi? -->
+    <section id="halini-slider">
         <div class="container">
-            <?php
-            $galleryMap = [
-                'trang_chu/cars_thumb/1Ford-removebg-preview.webp' => 'trang_chu/cars_logo/ford',
-                'trang_chu/cars_thumb/2BMW-removebg-preview.webp' => 'trang_chu/cars_logo/bmw',
-                'trang_chu/cars_thumb/3Hyundai-removebg-preview.webp' => 'trang_chu/cars_logo/hyundai',
-                'trang_chu/cars_thumb/4Audi-removebg-preview.webp' => 'trang_chu/cars_logo/audi',
-                'trang_chu/cars_thumb/5Toyota-removebg-preview.webp' => 'trang_chu/cars_logo/toyota',
-                'trang_chu/cars_thumb/6Mazda-removebg-preview.webp' => 'trang_chu/cars_logo/mazda',
-                'trang_chu/cars_thumb/7Honda-removebg-preview.webp' => 'trang_chu/cars_logo/honda',
-                'trang_chu/cars_thumb/8vinfast-removebg-preview.webp' => 'trang_chu/cars_logo/vinfast',
-                'trang_chu/cars_thumb/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/cars_logo/mercedes',
-                // Thêm các cặp (thumbnail => folder) tại đây
-            ];
-            ?>
-            <div class="desktop row justify-content-center">
-                <?php
-                $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGalleryCarsLogo('desktop');
-                ?>
-            </div>
-            <div class="mobile row justify-content-center owl-carousel owl-theme logo-xe-slider">
-                <?php
-                $gallery = new FolderGallery($galleryMap);
-                $gallery->renderMappedGalleryCarsLogo('mobile');
-                ?>
+            <div class="row">
+                <div class="container-title">
+                    <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
+                </div>
+                <div class="container-answer-hiding">
+                    <div class="line-container row desktop">
+                        <?php
+                        $reasons = [
+                            "Quy trình chuyên nghiệp" => "gallery-visaochonchungtoi-quytrinh",
+                            "Dịch vụ trọn gói" => "gallery-visaochonchungtoi-dichvu",
+                            "Bảo hành chu đáo" => "gallery-visaochonchungtoi-baohanh",
+                            "Tiến độ nhanh chóng" => "gallery-visaochonchungtoi-tiendo"
+                        ];
+                        foreach ($reasons as $reason => $gallery) {
+                            echo '<div class="col-sm-3 circle">';
+                            echo '    <a class="gallery-link" data-fancybox="' . $gallery . '">';
+                            echo '        <p>' . $reason . '</p>';
+                            echo '    </a>';
+                            echo '</div>';
+                        }
+                        ?>
+                    </div>
+                    <div class="line-container row mobile owl-carousel owl-theme line-item-slider">
+                        <?php
+                        foreach ($reasons as $reason => $gallery) {
+                            echo '<div class="col-sm-3 circle">';
+                            echo '    <a class="gallery-link" data-fancybox="' . $gallery . '">';
+                            echo '        <p>' . $reason . '</p>';
+                            echo '    </a>';
+                            echo '</div>';
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="owl-carousel owl-theme box-slider">
+                    <?php
+                    $features = [
+                        ["image" => "./public/svg/kythuatvien.svg", "title" => "Kỹ thuật viên tay nghề cao", "description" => "Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp."],
+                        ["image" => "./public/svg/congnghehotro.svg", "title" => "Công nghệ hỗ trợ hiện đại", "description" => "Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa."],
+                        ["image" => "./public/svg/quytrinh.svg", "title" => "Quy trình chuyên nghiệp", "description" => "Quy trình tại XE2GO được thiết kế để đảm bảo sự hoàn thiện & chính xác trong từng bước của quá trình sửa chữa & bảo dưỡng. Từ việc đánh giá & chẩn đoán tình trạng xe đến thực hiện các công việc."],
+                        ["image" => "./public/svg/baohanh.svg", "title" => "Bảo hành lên tới 1 năm", "description" => "Chính sách Bảo hành của XE2GO đảm bảo cho quý khách sự hài lòng với dịch vụ của chúng tôi. Cam kết đảm bảo chất lượng & tính nghiệp vụ."],
+                        ["image" => "./public/svg/phutung.svg", "title" => "Phụ tùng ô tô chính hãng", "description" => "XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe."],
+                        ["image" => "./public/svg/giaca.svg", "title" => "Giá cả đúng chất lượng", "description" => "Giá cả của chúng tôi được xác định dựa trên chất lượng dịch vụ và phụ tùng chính hãng. Bạn có thể yên tâm về giá thành hợp lý và đúng với chất lượng dịch vụ."]
+                    ];
+                    foreach ($features as $feature) {
+                        echo '<div class="box-item">';
+                        echo '    <div class="box-author">';
+                        echo '        <img class="author-image" src="' . $feature['image'] . '" alt="" loading="lazy">';
+                        echo '        <div class="author-info">';
+                        echo '            <h5 class="author-name">' . $feature['title'] . '</h5>';
+                        echo '            <p class="author-description">XE2GO</p>';
+                        echo '        </div>';
+                        echo '    </div>';
+                        echo '    <p class="box-content">' . $feature['description'] . '</p>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
             </div>
         </div>
     </section>
@@ -316,136 +349,62 @@ o	Tân tâm trong từng dịch vụ.
             </div>
         </div>
     </section>
-    <!-- vì sao chọn chúng tôi? -->
-    <section id="halini-slider">
+
+    <!-- section 6 hinh vuong-->
+    <section id="six-box">
         <div class="container">
-            <div class="row">
-                <div class="container-title">
-                    <p>Vì sao chọn <span><b class="text-uppercase"> xe2go</b></span>?</p>
-                </div>
-                <div class="container-answer-hiding">
-                    <div class="line-container row desktop">
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-quytrinh">
-                                <p>Quy trình chuyên nghiệp</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-dichvu">
-                                <p>Dịch vụ trọn gói</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-baohanh">
-                                <p>Bảo hành chu đáo</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-tiendo">
-                                <p>Tiến độ nhanh chóng</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="line-container row mobile owl-carousel owl-theme line-item-slider">
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-quytrinh">
-                                <p>Quy trình chuyên nghiệp</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-dichvu">
-                                <p>Dịch vụ trọn gói</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-baohanh">
-                                <p>Bảo hành chu đáo</p>
-                            </a>
-                        </div>
-                        <div class="col-sm-3 circle">
-                            <a class="gallery-link" data-fancybox="gallery-visaochonchungtoi-tiendo">
-                                <p>Tiến độ nhanh chóng</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-carousel owl-theme box-slider">
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/kythuatvien.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Kỹ thuật viên tay nghề cao</h5>
-                                <p class="author-description">XE2GO</p>
-                            </div>
-                        </div>
-                        <p class="box-content">Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp.
-                        </p>
-                    </div>
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/congnghehotro.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Công nghệ hỗ trợ hiện đại</h5>
-                                <p class="author-description">XE2GO
-                                </p>
-                            </div>
-                        </div>
-                        <p class="box-content">Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa.
-                        </p>
-                    </div>
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/quytrinh.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Quy trình chuyên nghiệp
-                                </h5>
-                                <p class="author-description">XE2GO</p>
-                            </div>
-                        </div>
-                        <p class="box-content">Quy trình tại XE2GO được thiết kế để đảm bảo sự hoàn thiện & chính xác trong từng bước của quá trình sửa chữa & bảo dưỡng. Từ việc đánh giá & chẩn đoán tình trạng xe đến thực hiện các công việc.
-                        </p>
-                    </div>
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/baohanh.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Bảo hành lên tới 1 năm </h5>
-                                <p class="author-description">XE2GO</p>
-                            </div>
-                        </div>
-                        <p class="box-content">Chính sách Bảo hành của XE2GO đảm bảo cho quý khách sự hài lòng với dịch vụ của chúng tôi. Cam kết đảm bảo chất lượng & tính nghiệp vụ.
-                        </p>
-                    </div>
-
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/phutung.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Phụ tùng ô tô chính hãng</h5>
-                                <p class="author-description">XE2GO
-                                </p>
-                            </div>
-                        </div>
-                        <p class="box-content">XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe. </p>
-                    </div>
-
-                    <div class="box-item">
-                        <div class="box-author">
-                            <img class="author-image" src="./public/svg/giaca.svg" alt="" loading="lazy">
-                            <div class="author-info">
-                                <h5 class="author-name">Giá cả đúng chất lượng
-                                </h5>
-                                <p class="author-description">XE2GO
-                                </p>
-                            </div>
-                        </div>
-                        <p class="box-content">Giá cả của chúng tôi được xác định dựa trên chất lượng dịch vụ và phụ tùng chính hãng. Bạn có thể yên tâm về giá thành hợp lý và đúng với chất lượng dịch vụ.
-                        </p>
-                    </div>
-                </div>
+            <?php
+            $galleryMap = [
+                'trang_chu/cars_thumb/1Ford-removebg-preview.webp' => 'trang_chu/cars_logo/ford',
+                'trang_chu/cars_thumb/2BMW-removebg-preview.webp' => 'trang_chu/cars_logo/bmw',
+                'trang_chu/cars_thumb/3Hyundai-removebg-preview.webp' => 'trang_chu/cars_logo/hyundai',
+                'trang_chu/cars_thumb/4Audi-removebg-preview.webp' => 'trang_chu/cars_logo/audi',
+                'trang_chu/cars_thumb/5Toyota-removebg-preview.webp' => 'trang_chu/cars_logo/toyota',
+                'trang_chu/cars_thumb/6Mazda-removebg-preview.webp' => 'trang_chu/cars_logo/mazda',
+                'trang_chu/cars_thumb/7Honda-removebg-preview.webp' => 'trang_chu/cars_logo/honda',
+                'trang_chu/cars_thumb/8vinfast-removebg-preview.webp' => 'trang_chu/cars_logo/vinfast',
+                'trang_chu/cars_thumb/9Mercedes-Benz-removebg-preview.webp' => 'trang_chu/cars_logo/mercedes',
+                // Thêm các cặp (thumbnail => folder) tại đây
+            ];
+            ?>
+            <div class="desktop row justify-content-center">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryCarsLogo('desktop');
+                ?>
+            </div>
+            <div class="mobile row justify-content-center owl-carousel owl-theme logo-xe-slider">
+                <?php
+                $gallery = new FolderGallery($galleryMap);
+                $gallery->renderMappedGalleryCarsLogo('mobile');
+                ?>
             </div>
         </div>
     </section>
+    <div id="toc">
+        <ul>
+            <?php
+            $tocItems = [
+                ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => "🏠", "order" => 1],
+                ["id" => "halini-slider", "title" => "Lý do", "icon" => "❓", "order" => 2],
+                ["id" => "aga", "title" => "Sứ mệnh", "icon" => "🎯", "order" => 3],
+                ["id" => "vfo", "title" => "Lĩnh vực", "icon" => "🔧", "order" => 4],
+                ["id" => "ypss", "title" => "Thành tựu", "icon" => "🏆", "order" => 5],
+                ["id" => "partner", "title" => "Liên kết", "icon" => "🤝", "order" => 6],
+                ["id" => "meet", "title" => "Pháp lý", "icon" => "📜", "order" => 7],
+                ["id" => "six-box", "title" => "Hãng xe", "icon" => "🚗", "order" => 8],
+            ];
+
+            usort($tocItems, function ($a, $b) {
+                return $a['order'] <=> $b['order'];
+            });
+
+            foreach ($tocItems as $item) {
+                echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+            }
+            ?>
+        </ul>
+    </div>
     <?php include("./public/path-templates/path-footer.php") ?>
     <?php include("./public/path-templates/path-js.php") ?>
 

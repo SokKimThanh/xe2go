@@ -1,4 +1,3 @@
-
 /**
  * Tạo kiểu cho search-container (3 chỗ )
  */
@@ -243,7 +242,18 @@ if (section) {
             containerLine.classList.toggle('active');
         }, 0); // Delay để chờ hiệu ứng mở
     });
-
 }
- 
+
+/* Thêm sự kiện click để toggle class active cho mục lục */
+const tocLinks = document.querySelectorAll('#toc ul li a');
+
+tocLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Xóa class active khỏi tất cả các mục lục
+        tocLinks.forEach(link => link.classList.remove('active'));
+        // Thêm class active vào mục lục được click
+        this.classList.add('active');
+    });
+});
+
 
