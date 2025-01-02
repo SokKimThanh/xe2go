@@ -282,7 +282,7 @@ if (typeof observer1 === 'undefined') {
         entries.forEach(entry => {
             const tocLinkDesktop = document.querySelector(`#toc .desktop ul li a[href="#${entry.target.id}"]`);
             const tocLinkMobile = document.querySelector(`#toc .mobile ul li a[href="#${entry.target.id}"]`);
-            
+
             if (entry.isIntersecting) {
                 // Kiểm tra nếu các liên kết không phải là null
                 if (tocLinkDesktop !== null) {
@@ -301,6 +301,9 @@ if (typeof observer1 === 'undefined') {
     var observer1 = new IntersectionObserver(observerCallback, observerOptions);
 
     sections.forEach(section => observer1.observe(section));
+    // Gắn lớp 'active' vào mục lục đầu tiên khi tải trang 
+    if (tocLinksDesktop.length > 0) { tocLinksDesktop[0].classList.add('active'); }
+    if (tocLinksMobile.length > 0) { tocLinksMobile[0].classList.add('active'); }
 }
 
 
