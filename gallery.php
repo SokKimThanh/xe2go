@@ -7,125 +7,103 @@ include("../xe2go/public/path-templates/path-css.php");
 $countGal = 1;
 $count = 0;
 $letter = 65;
+
+$sectionNames = array();
+$cardFolder = './public/images/trang_gallery/Card';
+$filesAndDirs = scandir($cardFolder);
+$files = array_filter($filesAndDirs, function ($item) {
+    return $item != '.' && $item != '..';
+});
+
+
 ?>
 
 <body>
     <?php include("../xe2go/public/path-templates/path-menu.php") ?>
 
     <!-- content -->
-    <section id="section-gallery" class="container">
-        <div class="row">
-            <p style="margin-top:50px;"><?php echo Ultilities::generate_breadcrumb();?></p>
-        </div>
-        <?php
-        $mainDirectory = '.\public\images\trang_gallery';
-
-        // Get all files and directories in the specified directory
-        $filesAndDirs = scandir($mainDirectory);
-
-        // Filter out only directories
-        $galleryDirectories = array_filter($filesAndDirs, function ($item) use ($mainDirectory) {
-            return is_dir($mainDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
-        });
-
-        foreach ($galleryDirectories as $galDirectory) {
-            $flg = false;
-        ?>
-            <div class="row">
-                <div class="gallery-box" id="gallery<?php echo $countGal++; ?>">
-                    <!-- Box header -->
-                    <h1 class="gallery-title"><?php echo explode('_', $galDirectory)[1]; ?></h1>
-                    <?php
-                    // Check for sub folders
-                    $galDirectory = $mainDirectory . '\\' . $galDirectory;
-                    $filesAndDirs = scandir($galDirectory);
-                    $subDirectories = array_filter($filesAndDirs, function ($item) use ($galDirectory) {
-                        return is_dir($galDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
-                    });
-                    // Create nav and filter for sub folders
-                    if (count($subDirectories) > 0) {
-                        // Check true if sub folders existed
-                        $flg = true;
-                    ?>
-                        <div class="gallery-subtitle">
-                            <button class="btn btn-default filter-button" data-filter="all">Tất cả</button>
-                            <?php
-                            foreach ($subDirectories as $subDirectory) {
-                            ?>
-                                <button class="btn btn-default filter-button" data-filter="<?php echo chr($letter) . $count;
-                                                                                            $count++; ?>"><?php echo explode('_', $subDirectory)[1]; ?></button>
-                            <?php
-                            }
-                            $count = 0;
-                            ?>
-                        </div>
-                    <?php
-                    } else {
-                        $flg = false;
-                    }
-                    ?>
-                    <!-- Box content -->
-                    <div id="lightgallery" class="max-w-xl mx-auto p-10">
-                        <?php
-                        // If sub folder existed, crawl pictures in sub folders with filters
-                        if ($flg) {
-                            foreach ($subDirectories as $subDirectory) {
-                                $pictureFolderPath = $galDirectory . '\\' . $subDirectory;
-                                $filesAndDirs = scandir($pictureFolderPath);
-                                $files = array_filter($filesAndDirs, function ($item) {
-                                    return $item != '.' && $item != '..';
-                                });
-                                //echo $pictureFolderPath . "<br>";
-                                foreach ($files as $file) {
-                                    $filePath = $pictureFolderPath . "\\" . $file;
-                                    //echo $pictureFolderPath . "\\" . $file . "<br>";
-                        ?>
-                                    <div class="gallery_product col-sm-4 col-md-3 col-lg-4 filter <?php echo chr($letter) . $count; ?>">
-                                        <a href="<?php echo $filePath; ?>" data-fancybox="gallery-<?php echo chr($letter) . $count; ?>">
-                                            <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
-                                        </a>
-                                    </div>
-                                <?php
-                                }
-                                $count++;
-                            }
-                            $count = 0;
-                        }
-                        // If sub folders does not existed, crawl pictures from main gallery folders without filters
-                        else {
-                            $pictureFolderPath = $galDirectory;
-                            $filesAndDirs = scandir($pictureFolderPath);
-                            $files = array_filter($filesAndDirs, function ($item) {
-                                return $item != '.' && $item != '..';
-                            });
-                            //echo $pictureFolderPath;
-                            foreach ($files as $file) {
-                                $filePath = $pictureFolderPath . "\\" . $file;
-                                //echo $pictureFolderPath . "\\" . $file . "<br>";
-                                ?>
-                                <div class="gallery_product col-sm-4 col-md-3 col-lg-4">
-                                    <a href="<?php echo $filePath; ?>" data-fancybox="gallery-00">
-                                        <img src="<?php echo $filePath; ?>" class="img-fluid" loading="lazy">
-                                    </a>
-                                </div>
-                        <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                </div>
+    <section class="gallery">
+        <section class="gallery-card container">
+            <div class="gallery-card-title">
+                <h1>Danh sách sản phẩm</h1>
             </div>
+            <div class="gallery-card-content">
+                <?php
+                foreach ($files as $file) {
+                    $picPath = $cardFolder . '\\' . $file;
+                    $fileName = explode('.', $file)[0];
+                    array_push($sectionNames, $fileName);
+                ?>
+                    <div class="card">
+                        <img class="scrollButton" data-target="<?php echo $fileName; ?>" src="<?php echo $picPath; ?>" alt="<?php echo $fileName; ?>">
+                        <div class="card-title">
+                            <h4><?php echo $fileName; ?></h4>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
+            </div>
+        </section>
+
+        <style>
+            .demo {
+                height: 512px;
+                width: 100%;
+                background-color: aqua;
+                border-radius: 20px;
+                margin: 20px 10px 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+        </style>
         <?php
-            $letter++;
-            $count = 0;
+        foreach ($sectionNames as $sectionName) {
+        ?>
+            <section class="demo" id="<?php echo $sectionName; ?>">
+                <h1><?php echo $sectionName; ?></h1>
+            </section>
+        <?php
         }
-        $letter = 65;
         ?>
 
+        <button id="toTopButton"><i class="fa-solid fa-arrow-up"></i></button>
 
     </section>
     <?php include("../xe2go/public/path-templates/path-footer.php") ?>
     <?php include("../xe2go/public/path-templates/path-js.php") ?>
 </body>
+<script>
+    // script.js
+    document.querySelectorAll('.scrollButton').forEach(button => {
+        button.addEventListener('click', function() {
+            const targetId = this.getAttribute('data-target');
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    const toTopButton = document.getElementById('toTopButton');
+
+    // Show or hide the "To Top" button based on scroll position
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) { // Show button after scrolling down 300px
+            toTopButton.classList.add('show');
+        } else {
+            toTopButton.classList.remove('show');
+        }
+    });
+
+    // Scroll to top when the "To Top" button is clicked
+    toTopButton.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
 
 </html>
