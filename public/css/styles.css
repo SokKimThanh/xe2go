@@ -1455,19 +1455,7 @@ section#aga .mobile {
 }
 
 
-/* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
-@media screen and (max-width: 1366px) {
-    section#aga .desktop .box-item .box-image {
-        left: calc(50% - 200px);
-    }
-}
 
-@media screen and (max-width: 768px) {
-    section#aga .desktop .box-item .box-image {
-        bottom: calc(50% - 102px);
-        left: calc(50% - 372px);
-    }
-}
 
 /* Mobile Styles */
 section#aga .mobile .box-item .box-item-header {
@@ -1480,12 +1468,6 @@ section#aga .mobile .box-item .box-image {
     width: 200px;
 }
 
-@media screen and (max-width: 500px) {
-    section#aga .mobile .box-item .box-image {
-        bottom: calc(50% - 96px);
-        left: calc(50% - 226px);
-    }
-}
 
 section#aga .mobile .box-item .box-mark {
     top: 0;
@@ -1652,11 +1634,6 @@ section#aga .box-item-header .box-title {
     transition: color 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 1366px) {
-    section#aga .box-item-header .box-title {
-        font-size: 2rem;
-    }
-}
 
 section#aga .box-item-header hr {
     margin: 20px 0;
@@ -1881,11 +1858,6 @@ section#vfo .box-item .box-hide .box-text-hide .box-title {
     transition: transform 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 500px) {
-    section#vfo .box-item .box-hide .box-text-hide .box-title {
-        font-size: 1.5rem;
-    }
-}
 
 section#vfo .box-item .box-hide .box-text-hide .box-title.active {
     transform: translateY(0);
@@ -3333,6 +3305,23 @@ footer {
     }
 }
 
+/* Hide TOC on desktop devices */
+#toc ul.mobile {
+    display: none;
+}
+
+/* Hide TOC on mobile devices */
+@media screen and (max-width: 500px) {
+    #toc ul.desktop {
+        display: none;
+    }
+
+    #toc ul.mobile {
+        display: flex;
+    }
+}
+
+
 /* Styles for floating TOC */
 #toc {
     position: fixed;
@@ -3427,9 +3416,6 @@ footer {
     }
 }
 
-/* * {
-    border: 1px solid red;
-} */
 
 /* Desktop Styles */
 @media screen and (max-width: 1366px) {
@@ -3521,19 +3507,37 @@ footer {
     }
 }
 
+/* Desktop Styles */
+@media screen and (max-width: 1024px) {
+    section#aga .desktop .box-item .box-image {
+        left: calc(50% - 175px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section#aga .desktop .box-item .box-image {
+        bottom: calc(50% - 102px);
+        left: calc(50% - 372px);
+    }
+}
+
 /* Mobile Styles */
 @media screen and (max-width: 500px) {
     html {
         font-size: 14px;
     }
 
-    section#aga .mobile .box-item .box-image {
+    section#aga .desktop .box-item .box-image {
         bottom: calc(50% - 96px);
         left: calc(50% - 226px);
     }
 
     section#vfo .container-title {
         top: -15rem;
+    }
+
+    section#vfo .box-item .box-hide .box-text-hide .box-title {
+        font-size: 1.5rem;
     }
 
     section#ypss .container-title {
