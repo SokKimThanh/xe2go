@@ -573,20 +573,22 @@ CSS này thiết lập một slider toàn màn hình với các chuyển đổi 
 
 /* Đặt navbar ở trên đầu thiết bị */
 #main-menu {
-  position: fixed;
-  /* Giữ menu cố định khi cuộn trang */
-  top: 0;
-  /* Đặt menu ở trên cùng */
-  left: 0;
-  /* Bắt đầu từ mép trái */
-  width: 100%;
-  /* Chiều rộng 100% */
-  z-index: 1000;
-  /* Đặt z-index cao để menu hiển thị trên cùng */
-  background: transparent;
-  /* Giữ màu nền của menu */
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  /* Đổ bóng nhẹ cho menu */
+    position: fixed;
+    /* Giữ menu cố định khi cuộn trang */
+    top: 0;
+    /* Đặt menu ở trên cùng */
+    left: 0;
+    /* Bắt đầu từ mép trái */
+    width: 100%;
+    /* Chiều rộng 100% */
+    z-index: 1000;
+    /* Đặt z-index cao để menu hiển thị trên cùng */
+    background: transparent;
+    /* Giữ màu nền của menu */
+    box-shadow: 1px 6px 6px 4px rgba(87, 87, 87, 0.2);
+    -webkit-box-shadow: 1px 6px 6px 4px rgba(87, 87, 87, 0.2);
+    -moz-box-shadow: 1px 6px 6px 4px rgba(87, 87, 87, 0.2);
+    /* Đổ bóng nhẹ cho menu */
 }
 
 /* Đảm bảo tương thích với màn hình nhỏ hơn */
