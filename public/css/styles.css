@@ -1297,8 +1297,7 @@ Có hiệu ứng hover để thay đổi vị trí và màu nền của các m�
 /* // */
 
 section#six-box {
-    padding-top: 100px;
-    padding-bottom: 120px;
+    padding: 15rem 0 0;
 
     @media screen and (max-width:1400px) {
         padding-top: 0;
@@ -1443,7 +1442,7 @@ Các mục có tiêu đề lớn hơn và các hiệu ứng hover cho tiêu đ�
 Các mục có thể có dấu ấn lớn (.box-mark) phía sau tiêu đề.
 */
 section#aga {
-    margin: 25rem 0 0;
+    padding: 15rem 0 0;
 }
 
 /* Desktop Styles */
@@ -1454,6 +1453,11 @@ section#aga .desktop .box-item .box-image {
     bottom: calc(50% - 100px);
     left: calc(50% - 232px);
 }
+
+section#aga .mobile {
+    display: none;
+}
+
 
 /* Cập nhật vị trí icon tiêu đề ở các màn hình khác nhau */
 @media screen and (max-width: 1366px) {
@@ -1743,7 +1747,7 @@ Các mục có lớp phủ và hiệu ứng ẩn/hiện khi hoạt động.
 Tiêu đề, văn bản và đường kẻ (hr) có các hiệu ứng chuyển đổi.
 */
 section#vfo {
-    padding: 120px 0;
+    padding: 15rem 0 0;
 }
 
 section#vfo .mobile {
@@ -1948,10 +1952,7 @@ section#ypss {
     justify-content: center;
     position: relative;
     color: var(--text-secondary);
-
-    @media screen and (max-width: 1400px) {
-        padding: 54px 32px;
-    }
+    padding: 15rem 0 0;
 }
 
 /* Thiết kế khung của tiêu đề nó đậm và có quyền lực khi nhìn */
@@ -1962,7 +1963,7 @@ section#ypss .container-title {
     cursor: context-menu;
     position: absolute;
     left: 0;
-    top: -2rem;
+    top: 12rem;
     width: -webkit-fill-available;
     z-index: 1;
 
@@ -2153,6 +2154,9 @@ section#ypss .box-item .box-title {
 /* Phần "meet":
 
 Các mục có đường kẻ, văn bản giới hạn dòng, và liên kết kiểu dáng. */
+section#meet {
+    padding: 15rem 0 0;
+}
 
 section#meet .container {
     position: relative;
@@ -2207,9 +2211,6 @@ section#meet .container-title .title:hover {
     transition: all 0.3s ease-in-out;
 }
 
-section#meet {
-    padding: 0;
-}
 
 section#meet .container>.row {
     border: 1px solid var(--menu-link);
@@ -2357,7 +2358,7 @@ section#meet .box-item .box-image:nth-child(2).active {
 /* section halini-slider */
 /* vì sao chọn chúng tôi? */
 section#halini-slider {
-    margin: 37rem 0 7rem;
+    padding: 34rem 0 0;
 
     .container {
         margin-top: -270px;
@@ -2825,7 +2826,7 @@ section#contactus {
 
 /* Cài đặt responsive */
 section#partner {
-    padding: 120px 0;
+    padding: 15rem 0 0;
     background-color: var(--background-4);
     min-height: 500px;
 }
@@ -3355,7 +3356,7 @@ footer {
 }
 
 #toc:hover {
-    width: 120px;
+    width: 110px;
     /* Expanded width on hover */
 }
 
