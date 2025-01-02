@@ -111,6 +111,9 @@ trọng vào animation và trải nghiệm người dùng. Sự kết hợp củ
   --hover-color: #fff;
 }
 
+h4{
+    margin: 0;
+}
 /* CSS cho image gallery */
 .image-gallery {
   display: none;
@@ -2642,6 +2645,7 @@ section.gallery {
         font-size: 20px;
         font-weight: 400;
         font-style: italic;
+        
     }
     .gallery-card-content {
       display: flex;
@@ -2673,6 +2677,7 @@ section.gallery {
       }
 
       .card-title {
+        margin: 0;
         padding: 10px;
         text-align: center;
         max-height: fit-content;
