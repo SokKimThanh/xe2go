@@ -8,6 +8,7 @@ $countGal = 1;
 $count = 0;
 $letter = 65;
 
+// Lấy danh sách tên các section sẽ xuất hiện làm contents
 $sectionNames = array();
 $cardFolder = './public/images/trang_gallery/Card';
 $filesAndDirs = scandir($cardFolder);
@@ -16,13 +17,18 @@ $files = array_filter($filesAndDirs, function ($item) {
 });
 
 
+$mainDirectory = '.\public\images\trang_gallery';
+$filesAndDirs = scandir($mainDirectory);
+$galleryDirectories = array_filter($filesAndDirs, function ($item) {
+    return $item != '.' && $item != '..';
+});
 ?>
 
 <body>
     <?php include("../xe2go/public/path-templates/path-menu.php") ?>
 
-    <!-- content -->
     <section class="gallery">
+        <!-- Gallery Card -->
         <section class="gallery-card container">
             <div class="gallery-card-title">
                 <h1>Danh sách sản phẩm</h1>
@@ -46,36 +52,43 @@ $files = array_filter($filesAndDirs, function ($item) {
             </div>
         </section>
 
+        <!-- Gallery Contents -->
         <style>
-            .gallery-content {
-                height: 512px;
-                width: 100%;
-                background-color: aqua;
-                border-radius: 20px;
-                margin: 20px 10px 0;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
+
         </style>
         <?php
         foreach ($sectionNames as $sectionName) {
         ?>
-            <section class="gallery-content" id="<?php echo $sectionName; ?>">
+            <section class="gallery-content container" id="<?php echo $sectionName; ?>">
                 <h1><?php echo $sectionName; ?></h1>
+                <div class="slider">
+                    <div class="slides">
+                        <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
+                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 1"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 2"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 3"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 4"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 1"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 2"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 3"></div>
+                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 4"></div>
+                    </div>
+                </div>
             </section>
         <?php
         }
         ?>
 
+        <!-- To top button-->
         <button id="toTopButton"><i class="fa-solid fa-arrow-up"></i></button>
-
+        
     </section>
     <?php include("../xe2go/public/path-templates/path-footer.php") ?>
     <?php include("../xe2go/public/path-templates/path-js.php") ?>
 </body>
+
 <script>
-    // script.js
+    // Click event to scroll down
     document.querySelectorAll('.scrollButton').forEach(button => {
         button.addEventListener('click', function() {
             const targetId = this.getAttribute('data-target');
@@ -90,7 +103,7 @@ $files = array_filter($filesAndDirs, function ($item) {
 
     // Show or hide the "To Top" button based on scroll position
     window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) { // Show button after scrolling down 300px
+        if (window.scrollY > 150) { // Show button after scrolling down 300px
             toTopButton.classList.add('show');
         } else {
             toTopButton.classList.remove('show');

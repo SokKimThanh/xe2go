@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ddd;
+}
+
+.slides {
+    display: flex;
+    width: calc(100% ); /* Adjust based on the number of slides */
+    animation: slideAnimation 10s linear infinite;
+}
+
+.slide {
+    min-width: 25%; /* Show 6 slides at a time (100% / 6) */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border: none;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
