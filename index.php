@@ -146,6 +146,9 @@ o	Tân tâm trong từng dịch vụ.
     <!-- Lĩnh vực hoạt động dịch vụ -->
     <section id="vfo">
         <div class="container">
+            <div class="container-title">
+                <div class="title">Lĩnh vực hoạt động dịch vụ</div>
+            </div>
             <?php
             $galleryMap = [
                 'trang_chu/services_thumb/s_baoduong.webp' => 'trang_chu/services_images/xebaoduong',
@@ -167,73 +170,46 @@ o	Tân tâm trong từng dịch vụ.
         </div>
     </section>
     <!-- Thành tựu đạt được -->
+    <?php
+    $achievements = [
+        ["target" => "30", "title" => "Kỹ thuật viên chuyên nghiệp"],
+        ["target" => "15", "title" => "Xe sửa chữa mỗi ngày"],
+        ["target" => "98", "title" => "Dự án hoàn thành", "suffix" => "+"],
+        ["target" => "99", "title" => "Khách hàng hài lòng", "suffix" => "%"]
+    ];
+    ?>
     <section id="ypss">
         <div class="container">
             <div class="container-title">
                 <div class="title">Thành Tựu đạt được</div>
             </div>
             <div class="desktop row">
-                <div class="col-sm-3 col-md-3">
-                    <div class="box-item">
-                        <div class="box-number">
-                            <span data-target="30">0</span>
+                <?php foreach ($achievements as $achievement): ?>
+                    <div class="col-sm-3 col-md-3">
+                        <div class="box-item">
+                            <div class="box-number">
+                                <span data-target="<?= $achievement['target'] ?>">0</span>
+                                <?php if (isset($achievement['suffix'])): ?><span><?= $achievement['suffix'] ?></span><?php endif; ?>
+                            </div>
+                            <div class="box-title"><?= $achievement['title'] ?></div>
                         </div>
-                        <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
                     </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="box-item">
-                        <div class="box-number">
-                            <span data-target="15">0</span>
-                        </div>
-                        <div class="box-title">Xe sửa chữa mỗi ngày</div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="box-item">
-                        <div class="box-number">
-                            <span data-target="98">0</span><span>+</span>
-                        </div>
-                        <div class="box-title">Dự án hoàn thành</div>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="box-item">
-                        <div class="box-number">
-                            <span data-target="99">0</span><span>%</span>
-                        </div>
-                        <div class="box-title">Khách hàng hài lòng</div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="mobile owl-carousel owl-theme achivement-slider">
-                <div class="box-item">
-                    <div class="box-number">
-                        <span data-target="30">0</span>
+                <?php foreach ($achievements as $achievement): ?>
+                    <div class="box-item">
+                        <div class="box-number">
+                            <span data-target="<?= $achievement['target'] ?>">0</span>
+                            <?php if (isset($achievement['suffix'])): ?><span><?= $achievement['suffix'] ?></span><?php endif; ?>
+                        </div>
+                        <div class="box-title"><?= $achievement['title'] ?></div>
                     </div>
-                    <div class="box-title">Kỹ thuật viên chuyên nghiệp</div>
-                </div>
-                <div class="box-item">
-                    <div class="box-number">
-                        <span data-target="15">0</span>
-                    </div>
-                    <div class="box-title">Xe sửa chữa mỗi ngày</div>
-                </div>
-                <div class="box-item">
-                    <div class="box-number">
-                        <span data-target="98">0</span><span>+</span>
-                    </div>
-                    <div class="box-title">Dự án hoàn thành</div>
-                </div>
-                <div class="box-item">
-                    <div class="box-number">
-                        <span data-target="99">0</span><span>%</span>
-                    </div>
-                    <div class="box-title">Khách hàng hài lòng</div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>
+
     <script>
         /* Xử lý đếm số thành tựu */
         // Lấy tất cả các phần tử có class 'counter'
