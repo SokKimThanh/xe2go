@@ -6,7 +6,7 @@ include './public/class/FolderGallery.php';
 include("../xe2go/public/path-templates/path-css.php");
 $picIndex = 0;
 $picLimit = 4;
-$countGal = 1;
+$countGal = 0;
 $count = 0;
 $letter = 65;
 
@@ -29,9 +29,20 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 <body>
     <?php include("../xe2go/public/path-templates/path-menu.php") ?>
 
+    <section class="carousel">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <div class="slide-carousel">
+            <img src="./public/images/trang_gallery/Carousel/1.webp" alt="Image 1">
+        </div>
+        <div class="slide-carousel">
+            <img src="./public/images/trang_gallery/Carousel/2.webp" alt="Image 2">
+        </div>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
     <section class="gallery">
         <!-- Gallery Card -->
-        <section class="gallery-card container">
+        <section class="gallery-card container-fluid">
             <!-- #region Gallery card title -->
             <div class="gallery-card-title">
                 <h1>Danh sách sản phẩm</h1>
@@ -46,7 +57,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                     $fileName = explode('.', $file)[0];
                     array_push($sectionNames, $fileName);
                 ?>
-                    <div class="card">
+                    <div class="card rainbow-border">
                         <img class="scrollButton" data-target="<?php echo $fileName; ?>" src="<?php echo $picPath; ?>" alt="<?php echo $fileName; ?>">
                         <div class="card-title">
                             <h4><?php echo $fileName; ?></h4>
@@ -66,9 +77,9 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
         <?php
         foreach ($galleryDirectories as $galDirectory) {
             $flg = false;
-            if ($galDirectory != 'Card') {
+            if ($galDirectory != 'Card' && $galDirectory != 'Carousel') {
         ?>
-                <section class="gallery-content container" id="<?php echo $galDirectory; ?>">
+                <section class="gallery-content container" id="<?php echo $sectionNames[$countGal]; ?>">
 
                     <!-- #region Gallery content title-->
                     <h1 class="gallery-title"><?php echo explode('_', $galDirectory)[1]; ?></h1>
@@ -246,8 +257,11 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
         <?php
                 $letter++;
                 $count = 0;
+                $countGal++;
             }
         }
+
+        $countGal = 0;
         $letter = 65;
         ?>
 
@@ -260,6 +274,33 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 </body>
 
 <script>
+    //#region Carousel
+    let currentSlide = 0;
+    const slidesCarousel = document.querySelectorAll('.slide-carousel');
+    const totalSlidesCarousel = slidesCarousel.length;
+
+    function showSlide(index) {
+        slidesCarousel.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function changeSlide(direction) {
+        currentSlide = (currentSlide + direction + totalSlidesCarousel) % totalSlidesCarousel;
+        showSlide(currentSlide);
+    }
+
+    function autoSlide() {
+        changeSlide(1);
+    }
+
+    //setInterval(autoSlide, 3000); // Change slide every 3 seconds
+
+    // Initial display
+    showSlide(currentSlide);
+    //#endregion
+
+    //#region Gallery
     // Click event to scroll down
     document.querySelectorAll('.scrollButton').forEach(button => {
         button.addEventListener('click', function() {
@@ -289,6 +330,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
             behavior: 'smooth'
         });
     });
+    //#endregion
 </script>
 
 </html>
