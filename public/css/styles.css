@@ -2785,7 +2785,7 @@ section.gallery {
     display: flex;
     width: calc(100%);
     /* Adjust based on the number of slides */
-    animation: slideAnimation 5s linear infinite;
+    animation: slideAnimation 15s linear infinite;
 }
 .slide {
     min-width: 25%;
