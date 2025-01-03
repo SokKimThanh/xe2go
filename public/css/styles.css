@@ -2535,7 +2535,7 @@ section#halini-slider {
 
 /* #region Gallery settings */
 section.carousel {
-  margin-top: 125px;
+  margin-top: 4.5rem;
   margin-bottom: 20px;
   position: relative;
   width: 100%;
@@ -2724,6 +2724,11 @@ section.gallery {
   @media screen and (max-width: 1024px) {
     section.gallery-card {
       padding: 20px 10px;
+      .gallery-card-content{
+        .card{
+          max-width: calc((100% - 60px) / 2);
+        }
+      }
     }
 
     h4 {
@@ -2785,7 +2790,28 @@ section.gallery {
   100% {
     transform: translateX(-100%);
   }
+}@media screen and (max-width: 1366px) {}
+
+@media screen and (max-width: 1024px) {}
+
+@media screen and (max-width: 768px) {
+  .slide{
+    min-width: 50%;
+  }
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    50%{
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(-200%);
+    }
+  }
 }
+
+@media screen and (max-width: 500px) {}
 
 /* #endregion */
 

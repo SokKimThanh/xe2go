@@ -294,7 +294,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
         changeSlide(1);
     }
 
-    //setInterval(autoSlide, 3000); // Change slide every 3 seconds
+    setInterval(autoSlide, 3000); // Change slide every 3 seconds
 
     // Initial display
     showSlide(currentSlide);
