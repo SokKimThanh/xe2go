@@ -11,5 +11,4 @@
 * CÔNG TY TNHH QUỐC LONG BD
 * MST: 3703253225 TL: 11/10/2024
 * Đc: 559 Phạm Ngọc Thạch, P.Phú Mỹ, TP.TDM, Bình Dương
-
-![image](https://github.com/user-attachments/assets/d2a6a23c-9bd2-4779-961e-a395392641d6)
+![image](https://github.com/user-attachments/assets/cfefebc9-9947-4b71-add6-8aadda970c2b)
