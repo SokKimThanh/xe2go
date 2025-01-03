@@ -18,8 +18,8 @@
          <section class="container menu-container-desktop">
              <div class="row">
                  <div class="col-sm-2 logo-link-image-container">
-                     <a class="logo-link-image" href="/index.php">
-                         <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_logo.webp" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
+                     <a class="logo-link-image" href="<?= PathManager::combine(BASE_URL, 'pages/index.php') ?>">
+                         <img class="img-fluid" src="<?= PathManager::combine(BASE_URL, 'images/trang_chu/xe2go/xe2go_logo.webp') ?>" alt="Xe2Go logo - Bảo dưỡng và sửa chữa ô tô" loading="lazy">
                      </a>
                  </div>
                  <div class="col-sm-2 china-container">
@@ -34,13 +34,13 @@
                  <div class="col-sm-10 menu-list-container">
                      <ul class="menu-list">
                          <li class="menu-item">
-                             <a class="menu-link" href="/index.php">Trang chủ</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/index.php') ?>">Trang chủ</a>
                          </li>
                          <li class="menu-item">
-                             <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/gallery.php') ?>">Danh mục sản phẩm</a>
                          </li>
                          <li class="menu-item">
-                             <a class="menu-link" href="/contactus.php">Liên hệ</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/contactus.php') ?>">Liên hệ</a>
                          </li>
                      </ul>
                  </div>
@@ -67,13 +67,13 @@
                  <div class="menu-list-container">
                      <ul class="menu-list">
                          <li class="menu-item">
-                             <a class="menu-link" href="/index.php">Trang chủ</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/index.php') ?>">Trang chủ</a>
                          </li>
                          <li class="menu-item">
-                             <a class="menu-link" href="/gallery.php">Danh mục sản phẩm</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/gallery.php') ?>">Danh mục sản phẩm</a>
                          </li>
                          <li class="menu-item">
-                             <a class="menu-link" href="/contactus.php">Liên hệ</a>
+                             <a class="menu-link" href="<?= PathManager::combine(BASE_URL, 'pages/contactus.php') ?>">Liên hệ</a>
                          </li>
                      </ul>
                  </div>

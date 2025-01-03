@@ -1,8 +1,7 @@
 <?php
 // Nhúng file class
 include './public/class/FolderGallery.php';
-include './public/class/PathManager.php';
-require_once __DIR__ . './config.php';
+require_once __DIR__ . '../../config.php';
 
 ?>
 <!DOCTYPE html>
@@ -11,43 +10,7 @@ require_once __DIR__ . './config.php';
 <?php include("./public/path-templates/path-css.php") ?>
 
 <body>
-    <!-- Trang Landing Page Giới Thiệu Công Ty XE2GO
-1. Tiêu đề chính
-"Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp"
-2. Phần giới thiệu ngắn
-Công ty TNHH XE2GO là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm “TẬN TÂM – TẬN TỤY – TẬN TÌNH”, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.
-3. Tầm nhìn, Sứ mệnh, và giá trị cốt lõi
-•	Tầm nhìn: Trở thành trung tâm bảo dưỡng và sửa chữa xe hàng đầu tại Việt Nam.
-•	Sứ mệnh: Mang đến cho khách hàng những dịch vụ uy tín và chất lượng nhất, góp phần nâng cao chất lượng cuộc sống.
-•	Giá trị cốt lõi:
-o	Chất lượng là ưu tiên hàng đầu.
-o	Trách nhiệm với khách hàng và cộng đồng.
-o	Tân tâm trong từng dịch vụ.
-4. Lĩnh vực hoạt động
-•	Bảo dưỡng xe ô tô định kỳ.
-•	Sửa chữa động cơ, hộp số, gầm xe.
-•	Chăm sóc và làm đẹp xe (nội thất, ngoại thất).
-•	Làm đồng sơn và sửa chữa xe tai nạn.
-•	Phục hồi thước lái.
-•	Nâng cấp và lắp ráp phụ tùng, linh kiện.
-5. Lý do chọn XE2GO
-•	Kỹ thuật viên tay nghề cao, đào tạo chuyên nghiệp.
-•	Quy trình làm việc chuẩn xác và hiệu quả.
-•	Công nghệ hiện đại và đồng bộ.
-•	Bảo hành dịch vụ lên đến 1 năm.
-•	Phụ tùng chính hãng.
-•	Chi phí hợp lý với chất lượng tốt nhất.
-6. Thành tựu đã đạt
-•	Xử lý trung bình 15 xe/ngày.
-•	Hơn 98 dự án hoàn thành.
-•	99% khách hàng hài lòng.
-7. Thông tin liên hệ
-•	Địa chỉ: 559 Phạm Ngọc Thạch, Phường Phú Mỹ, Thành phố Thủ Dầu Một, Bình Dương.
-•	Hotline & Zalo: 0348.798.398
-•	Email: xe2govn@gmail.com
-•	Thời gian hoạt động: Thứ 2 - Chủ nhật | 08:00 - 17:30.
-•	Nhấn xem bản đồ
- -->
+
     <?php include("./public/path-templates/path-menu.php") ?>
     <!-- Slider Revolution Code Here -->
     <section id="slider-revolution">
