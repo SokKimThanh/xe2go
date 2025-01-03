@@ -322,28 +322,19 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="title">Cơ sở pháp lý</div>
             </div>
             <div class="row">
-                <div class="box-item"></div>
                 <div class="col-sm-6 col-12">
-                    <div class="box-item">
-                        <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_garrage.webp" alt="" loading="lazy">
-                        <div class="box-image text-center ">
-                            <h2 class="box-title text-secondary">CÔNG TY TNHH XE2GO</h2>
-                            <p class="box-content">Luôn đặt sự uy tín và tránh nhiệm lên hàng đầu</p>
-                        </div>
-                    </div>
+                    <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_garrage.webp" alt="" loading="lazy">
                 </div>
                 <div class="col-sm-6 col-12">
-                    <div class="box-item">
-                        <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
-                        <!-- nút xem chi tiết pháp lý -->
-                        <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
-                            <span>Xem chi tiết</span>
+                    <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
+                    <!-- nút xem chi tiết pháp lý -->
+                    <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
+                        <span>Xem chi tiết</span>
+                    </a>
+                    <div class="hidden">
+                        <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
+                            <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
                         </a>
-                        <div class="hidden">
-                            <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
-                                <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -384,14 +375,14 @@ o	Tân tâm trong từng dịch vụ.
     <section id="toc">
         <?php
         $tocItems = [
-            ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1],
-            ["id" => "halini-slider", "title" => "Lý do", "icon" => '<i class="bi bi-question-circle"></i>', "order" => 2],
-            ["id" => "aga", "title" => "Sứ mệnh", "icon" => '<i class="bi bi-bullseye"></i>', "order" => 3],
-            ["id" => "vfo", "title" => "Lĩnh vực", "icon" => '<i class="bi bi-wrench"></i>', "order" => 4],
-            ["id" => "ypss", "title" => "Thành tựu", "icon" => '<i class="bi bi-award-fill"></i>', "order" => 5],
-            ["id" => "partner", "title" => "Liên kết", "icon" => '<i class="fa-solid fa-handshake"></i>', "order" => 6],
-            ["id" => "meet", "title" => "Pháp lý", "icon" => '<i class="bi bi-file-text"></i>', "order" => 7],
-            ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8],
+            ["id" => "slider-revolution", "title" => "Giới thiệu", "icon" => '<i class="bi bi-house"></i>', "order" => 1, "display_mobile" => true],
+            ["id" => "halini-slider", "title" => "Lý do", "icon" => '<i class="bi bi-question-circle"></i>', "order" => 2, "display_mobile" => true],
+            ["id" => "aga", "title" => "Sứ mệnh", "icon" => '<i class="bi bi-bullseye"></i>', "order" => 3, "display_mobile" => true],
+            ["id" => "vfo", "title" => "Lĩnh vực", "icon" => '<i class="bi bi-wrench"></i>', "order" => 4, "display_mobile" => true],
+            ["id" => "ypss", "title" => "Thành tựu", "icon" => '<i class="bi bi-award-fill"></i>', "order" => 5, "display_mobile" => true],
+            ["id" => "partner", "title" => "Liên kết", "icon" => '<i class="fa-solid fa-handshake"></i>', "order" => 6, "display_mobile" => true],
+            ["id" => "meet", "title" => "Pháp lý", "icon" => '<i class="bi bi-file-text"></i>', "order" => 7, "display_mobile" => true],
+            ["id" => "six-box", "title" => "Hãng xe", "icon" => '<i class="bi bi-ev-front"></i>', "order" => 8, "display_mobile" => false],
         ];
         ?>
         <div class="container-toc desktop">
@@ -415,7 +406,9 @@ o	Tân tâm trong từng dịch vụ.
                 });
 
                 foreach ($tocItems as $item) {
-                    echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                    if ($item['display_mobile']) {
+                        echo '<li><a href="#' . $item['id'] . '"><span class="toc-icon">' . $item['icon'] . '</span><span class="toc-title">' . $item['title'] . '</span></a></li>';
+                    }
                 }
                 ?>
             </ul>

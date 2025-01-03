@@ -115,7 +115,7 @@ class FolderGallery
             echo '      <div class="col-sm-12 background-fluid">';
             echo '          <p class="box-text">' . $record['description'] . '</p>';
             echo '          <img class="img-fluid background-img" src="public/images/trang_chu/mvv_images/' . $record['bgImage'] . '" alt="">';
-            echo '          <a class="box-link">Nhấn tiêu đề xem thêm hình ảnh tiêu biểu</a>';
+            echo '          <a class="box-link data-fancybox="' . $fancyboxGroup . '">' . 'Xem thêm ảnh</a>';
             echo '      </div>';
             echo '  </div>';
             echo '</div>';
@@ -259,7 +259,8 @@ class FolderGallery
     }
 }
 
-class Ultilities{
+class Ultilities
+{
     public static function generate_breadcrumb()
     {
         // Array to hold breadcrumb parts
