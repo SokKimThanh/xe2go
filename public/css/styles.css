@@ -2639,7 +2639,7 @@ section#halini-slider {
   }
 }
 
-/** Gallery section */
+/* #region Gallery settings */
 section.gallery {
     margin-top: 150px;
     margin-bottom: 150px;
@@ -2661,6 +2661,7 @@ section.gallery {
 
         .card {
           width: 100%;
+          height: inherit;
           max-width: calc((100% - 60px) / 4);
           background-color: white;
           border: 1px solid #ddd;
@@ -2710,6 +2711,43 @@ section.gallery {
         height: 512px;
         border-radius: 20px;
       }
+
+      .card {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.2s;
+        display: flex;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      .card img {
+        width: 100%;
+        height: auto;
+        flex: 1;
+      }
+
+      .card-title {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        max-height: fit-content;
+        background-color: #f3f3f3;
+        color: var(--primary-color);
+        font-size: 18px;
+        font-weight: 500;
+        flex: 1;
+      }
+
     }
     /* Styles for the "To Top" button */
     #toTopButton {
@@ -2733,10 +2771,9 @@ section.gallery {
       /* Show the button when needed */
     }
 }
+/* #endregion */
 
-/* Infinite slider setting
-*  Can't bring inside other settings
-*/
+/* #region Infinite slider settings */
 .slider {
     position: relative;
     width: 100%;
@@ -2748,10 +2785,11 @@ section.gallery {
     display: flex;
     width: calc(100%);
     /* Adjust based on the number of slides */
-    animation: slideAnimation 20s linear infinite;
+    animation: slideAnimation 5s linear infinite;
 }
 .slide {
     min-width: 25%;
+    padding: 0 5px;
     /* Show 6 slides at a time (100% / 6) */
     transition: transform 0.5s ease-in-out;
 }
@@ -2768,8 +2806,9 @@ section.gallery {
         transform: translateX(-100%);
     }
 }
+/* #endregion */
 
-/* Contact Us section */
+/* #region ContactUs settings */
 section#contactus {
   padding: 15em 0;
 
@@ -2871,6 +2910,7 @@ section#contactus {
     margin: 10px 0;
   }
 }
+/* #endregion */
 
 /*  */
 /* Section partner */

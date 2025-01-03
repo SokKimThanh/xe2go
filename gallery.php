@@ -4,6 +4,8 @@
 <?php
 include './public/class/FolderGallery.php';
 include("../xe2go/public/path-templates/path-css.php");
+$picIndex = 0;
+$picLimit = 4;
 $countGal = 1;
 $count = 0;
 $letter = 65;
@@ -30,9 +32,13 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
     <section class="gallery">
         <!-- Gallery Card -->
         <section class="gallery-card container">
+            <!-- #region Gallery card title -->
             <div class="gallery-card-title">
                 <h1>Danh sách sản phẩm</h1>
             </div>
+            <!-- #endregion -->
+
+            <!-- #region Gallery card content -->
             <div class="gallery-card-content">
                 <?php
                 foreach ($files as $file) {
@@ -50,6 +56,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                 }
                 ?>
             </div>
+            <!-- #endregion -->
         </section>
 
         <!-- Gallery Contents -->
@@ -57,31 +64,196 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 
         </style>
         <?php
-        foreach ($sectionNames as $sectionName) {
+        foreach ($galleryDirectories as $galDirectory) {
+            $flg = false;
+            if ($galDirectory != 'Card') {
         ?>
-            <section class="gallery-content container" id="<?php echo $sectionName; ?>">
-                <h1><?php echo $sectionName; ?></h1>
-                <div class="slider">
-                    <div class="slides">
-                        <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
-                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 1"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 2"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 3"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 4"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 1"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 2"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/000000/ffffff.png" alt="Slide 3"></div>
-                        <div class="slide"><img src="http://dummyimage.com/600x400/eeeeee/cccccc.png" alt="Slide 4"></div>
+                <section class="gallery-content container" id="<?php echo $galDirectory; ?>">
+
+                    <!-- #region Gallery content title-->
+                    <h1 class="gallery-title"><?php echo explode('_', $galDirectory)[1]; ?></h1>
+                    <?php
+                    // Check for sub folders
+                    $galDirectoryName = $galDirectory;
+                    $galDirectory = $mainDirectory . '\\' . $galDirectory;
+                    $filesAndDirs = scandir($galDirectory);
+                    $subDirectories = array_filter($filesAndDirs, function ($item) use ($galDirectory) {
+                        return is_dir($galDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
+                    });
+                    // Create nav and filter for sub folders
+                    if (count($subDirectories) > 0) {
+                        // Check true if sub folders existed
+                        $flg = true;
+                    } else {
+                        $flg = false;
+                    }
+                    ?>
+                    <!-- #endregion -->
+
+                    <!-- #region Gallery content Sliders -->
+
+                    <div class="slider">
+                        <div class="slides">
+                            <?php
+                            // If sub folder existed, crawl pictures in sub folders with filters
+                            if ($flg) {
+                                // Number of subDirectories
+                                $length = count($subDirectories);
+
+                                // Number of image(s) per subDirectory
+                                $limitedPicIndex = floor($picLimit / $length);
+
+                                // Current subDirectoy index in array
+                                $currentPosition = 0;
+
+                                // Total shown images
+                                $shownImagesCount = 0;
+
+                                foreach ($subDirectories as $subDirectory) {
+                                    // Get all images in subDirectory
+                                    $pictureFolderPath = $galDirectory . '\\' . $subDirectory;
+                                    $filesAndDirs = scandir($pictureFolderPath);
+                                    $files = array_filter($filesAndDirs, function ($item) {
+                                        return $item != '.' && $item != '..';
+                                    }); //echo $pictureFolderPath . "<br>";
+
+                                    // Show image(s) on site
+                                    foreach ($files as $file) {
+                                        if ($picIndex == $limitedPicIndex && $currentPosition != $length - 1) {
+                                            break;
+                                        } else {
+                                            if ($shownImagesCount == $picLimit) {
+                                                break;
+                                            }
+                                        }
+                                        $filePath = $pictureFolderPath . "\\" . $file;
+                                        $fileName = explode('.', $file)[0];
+                                        $folderName = explode('_', $subDirectory)[1];
+                                        //echo $pictureFolderPath . "\\" . $file . "<br>";
+                            ?>
+                                        <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
+                                        <div class="slide filter <?php echo chr($letter) . $count; ?>">
+                                            <div class="card">
+                                                <img src="<?php echo $filePath; ?>" alt="<?php echo $fileName; ?>">
+                                                <div class="card-title">
+                                                    <h4><?php echo $folderName; ?></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                        $shownImagesCount++;
+                                        $picIndex++;
+                                    }
+                                    $picIndex = 0;
+                                    $count++;
+                                    $currentPosition++;
+                                }
+                                $currentPosition = 0;
+                                $shownImagesCount = 0;
+                                $count = 0;
+
+                                // Second print for infinite loop effect
+                                foreach ($subDirectories as $subDirectory) {
+                                    // Get all images in subDirectory
+                                    $pictureFolderPath = $galDirectory . '\\' . $subDirectory;
+                                    $filesAndDirs = scandir($pictureFolderPath);
+                                    $files = array_filter($filesAndDirs, function ($item) {
+                                        return $item != '.' && $item != '..';
+                                    }); //echo $pictureFolderPath . "<br>";
+
+                                    // Show image(s) on site
+                                    foreach ($files as $file) {
+                                        if ($picIndex == $limitedPicIndex && $currentPosition != $length - 1) {
+                                            break;
+                                        } else {
+                                            if ($shownImagesCount == $picLimit) {
+                                                break;
+                                            }
+                                        }
+                                        $filePath = $pictureFolderPath . "\\" . $file;
+                                        $fileName = explode('.', $file)[0];
+                                        $folderName = explode('_', $subDirectory)[1];
+                                        //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                    ?>
+                                        <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
+                                        <div class="slide filter <?php echo chr($letter) . $count; ?>">
+                                            <div class="card">
+                                                <img src="<?php echo $filePath; ?>" alt="<?php echo $fileName; ?>">
+                                                <div class="card-title">
+                                                    <h4><?php echo $folderName; ?></h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php
+                                        $shownImagesCount++;
+                                        $picIndex++;
+                                    }
+                                    $picIndex = 0;
+                                    $count++;
+                                    $currentPosition++;
+                                }
+                                $currentPosition = 0;
+                                $shownImagesCount = 0;
+                                $count = 0;
+                            } else {
+                                $pictureFolderPath = $galDirectory;
+                                $filesAndDirs = scandir($pictureFolderPath);
+                                $files = array_filter($filesAndDirs, function ($item) {
+                                    return $item != '.' && $item != '..';
+                                });
+                                //echo $pictureFolderPath;
+                                foreach ($files as $file) {
+                                    $filePath = $pictureFolderPath . "\\" . $file;
+                                    $fileName = explode('.', $file)[0];
+                                    $folderName = explode('_', $galDirectoryName)[1];
+                                    //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                    ?>
+                                    <div class="slide filter <?php echo chr($letter) . $count; ?>">
+                                        <div class="card">
+                                            <img src="<?php echo $filePath; ?>" alt="<?php echo $fileName; ?>">
+                                            <div class="card-title">
+                                                <h4><?php echo $folderName; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <?php
+                                }
+
+                                // Second print for infinite loop effect
+                                foreach ($files as $file) {
+                                    $filePath = $pictureFolderPath . "\\" . $file;
+                                    $fileName = explode('.', $file)[0];
+                                    //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                ?>
+                                    <div class="slide filter <?php echo chr($letter) . $count; ?>">
+                                        <div class="card">
+                                            <img src="<?php echo $filePath; ?>" alt="<?php echo $fileName; ?>">
+                                            <div class="card-title">
+                                                <h4><?php echo $folderName; ?></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                            <?php
+                                }
+                            }
+
+                            ?>
+                        </div>
                     </div>
-                </div>
-            </section>
+                    <!-- #endregion -->
+
+                </section>
         <?php
+                $letter++;
+                $count = 0;
+            }
         }
+        $letter = 65;
         ?>
 
         <!-- To top button-->
         <button id="toTopButton"><i class="fa-solid fa-arrow-up"></i></button>
-        
+
     </section>
     <?php include("../xe2go/public/path-templates/path-footer.php") ?>
     <?php include("../xe2go/public/path-templates/path-js.php") ?>
