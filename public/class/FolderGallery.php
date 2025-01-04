@@ -9,9 +9,10 @@ class FolderGallery
     private $galleryMap; // Mảng ánh xạ thumbnail và thư mục hình ảnh
     private $validExtensions = ['webp', 'jpg', 'jpeg', 'png', 'gif']; // Các định dạng hợp lệ cho thumbnail
 
+    // Khởi tạo với ánh xạ galleryMap
     public function __construct($galleryMap)
     {
-        $this->basePath = $this->findBasePath();
+        $this->basePath = PathManager::findBasePath('images'); // Sử dụng PathManager để tìm đường dẫn gốc
         $this->galleryMap = $this->normalizePaths($galleryMap);
     }
 
@@ -28,44 +29,49 @@ class FolderGallery
         return $currentPath . DIRECTORY_SEPARATOR . 'images';
     }
 
-    // Chuẩn hóa các đường dẫn trong galleryMap
+    // Chuẩn hóa đường dẫn trong galleryMap
     private function normalizePaths($galleryMap)
     {
         $normalizedMap = [];
         foreach ($galleryMap as $thumbnailPath => $folderPath) {
-            $normalizedThumbnail = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $thumbnailPath);
-            $normalizedFolder = str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $folderPath);
+            $thumbnail = PathManager::normalizePath($thumbnailPath);
+            $folder = PathManager::normalizePath($folderPath);
 
-            // Kiểm tra và sửa định dạng của thumbnail
-            $correctedThumbnail = $this->correctThumbnailExtension($normalizedThumbnail);
-            $normalizedMap[$correctedThumbnail] = $normalizedFolder;
+            // Kiểm tra và sửa phần mở rộng của thumbnail
+            $thumbnail = $this->correctThumbnailExtension($thumbnail);
+            $normalizedMap[$thumbnail] = $folder;
         }
         return $normalizedMap;
     }
 
-    // Kiểm tra và sửa định dạng của thumbnail
+    // Sửa định dạng tệp thumbnail nếu cần
     private function correctThumbnailExtension($thumbnailPath)
     {
         $pathInfo = pathinfo($thumbnailPath);
+
         if (!isset($pathInfo['extension']) || !in_array(strtolower($pathInfo['extension']), $this->validExtensions)) {
             foreach ($this->validExtensions as $ext) {
-                $correctedPath = $pathInfo['dirname'] . DIRECTORY_SEPARATOR . $pathInfo['filename'] . '.' . $ext;
-                if (file_exists($this->basePath . DIRECTORY_SEPARATOR . $correctedPath)) {
-                    return $correctedPath;
+                $candidate = PathManager::combine($this->basePath, $pathInfo['dirname'], $pathInfo['filename'] . ".$ext");
+                if (file_exists($candidate)) {
+                    return $candidate; // Trả về thumbnail hợp lệ đầu tiên tìm được
                 }
             }
         }
-        return $thumbnailPath;
+        return $thumbnailPath; // Trả về mặc định
     }
 
     // Lấy danh sách hình ảnh trong thư mục
     private function getImages($folder)
     {
-        $images = glob($this->basePath . DIRECTORY_SEPARATOR . $folder . DIRECTORY_SEPARATOR . '*.{jpg,jpeg,png,gif,webp}', GLOB_BRACE);
+        $folderPath = PathManager::combine($this->basePath, $folder);
+
+        // Sử dụng PathManager để lấy tệp tin hợp lệ
+        $images = PathManager::getFilesInDirectory($folderPath, $this->validExtensions);
         return array_filter($images, function ($image) {
-            return strpos(basename($image), 'thumb') === false; // Bỏ qua thumbnail
+            return strpos(basename($image), 'thumb') === false; // Loại bỏ thumbnail
         });
     }
+
     /* Sứ mệnh, tầm nhìn, giá trị cốt lõi */
     public function renderMappedGalleryMVV($viewMode = 'desktop')
     {
@@ -103,12 +109,12 @@ class FolderGallery
             $fancyboxGroup = $viewMode === 'desktop' ? 'gallery-desktop-' : 'gallery-mobile-';
             $fancyboxGroup .= htmlspecialchars(basename($folderPath));
 
-            $thumbnail_path = 'public/images/' . htmlspecialchars($thumbnail);
+            $thumbnailPath = PathManager::combine('public/images', $thumbnail);
 
             echo '<div class="col-sm-12 col-md-12 col-lg-4">';
             echo '  <div class="row box-item">';
             echo '      <a class="col-sm-12 box-item-header" data-fancybox="' . $fancyboxGroup . '">';
-            echo '          <img class="box-image img-fluid" src="' . $thumbnail_path . '" alt="" loading="lazy">';
+            echo '          <img class="box-image img-fluid" src="' . $thumbnailPath . '" alt="" loading="lazy">';
             echo '          <span class="box-mark circle" id="' . $record['id'] . '">' . $record['stt'] . '</span>';
             echo '          <h5 class="box-title">' . $record['title'] . '</h5>';
             echo '      </a>';
@@ -123,8 +129,8 @@ class FolderGallery
             // Render hidden gallery images 
             echo '<div class="hidden">';
             foreach ($images as $image) {
-                $relativeImagePath = 'public/images/' . htmlspecialchars($folder) . '/' . basename($image);
-                if ($relativeImagePath != $thumbnail_path) {
+                $relativeImagePath = PathManager::combine('public/images', $folder, basename($image));
+                if ($relativeImagePath != $thumbnailPath) {
                     // Kiểm tra trùng lặp với thumbnail 
                     echo '<a data-fancybox="' . $fancyboxGroup . '" href="' . htmlspecialchars($relativeImagePath) . '">';
                     echo ' <img loading="lazy" src="' . htmlspecialchars($relativeImagePath) . '" />';

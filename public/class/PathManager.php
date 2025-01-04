@@ -101,32 +101,61 @@ class FileManager
 
 class PathManager
 {
-    // Normalize path to handle directory separators
+    // Chuẩn hóa đường dẫn để xử lý dấu phân cách
     public static function normalizePath($path)
     {
         return rtrim(str_replace(['/', '\\'], DIRECTORY_SEPARATOR, $path), DIRECTORY_SEPARATOR);
     }
 
-    // Combine paths safely
+    // Kết hợp nhiều phần của đường dẫn và kiểm tra sự tồn tại
     public static function combine(...$paths)
     {
-        $normalizedPaths = array_map([self::class, 'normalizePath'], $paths);
-        return join(DIRECTORY_SEPARATOR, $normalizedPaths);
+        $combinedPath = join(DIRECTORY_SEPARATOR, array_map([self::class, 'normalizePath'], $paths));
+        return self::normalizePath($combinedPath);
     }
 
-    // Get parent directory
+    // Kết hợp và xác thực sự tồn tại của đường dẫn
+    public static function combineAndValidate(...$paths)
+    {
+        $combinedPath = self::combine(...$paths);
+        if (!self::pathExists($combinedPath)) {
+            throw new Exception("Đường dẫn không tồn tại hoặc không hợp lệ: $combinedPath");
+        }
+        return $combinedPath;
+    }
+
+    // Kiểm tra đường dẫn có tồn tại hay không
+    public static function pathExists($path)
+    {
+        return file_exists(self::normalizePath($path));
+    }
+
+    // Kiểm tra đường dẫn có phải thư mục hợp lệ hay không
+    public static function isValidDirectory($path)
+    {
+        return is_dir(self::normalizePath($path));
+    }
+
+    // Kiểm tra đường dẫn có phải tệp tin hợp lệ hay không
+    public static function isValidFile($path)
+    {
+        return is_file(self::normalizePath($path));
+    }
+
+    // Lấy thư mục cha từ đường dẫn
     public static function getParentDirectory($path)
     {
         return dirname(self::normalizePath($path));
     }
 
-    // Check if path is absolute
+    // Kiểm tra đường dẫn có tuyệt đối hay không
     public static function isAbsolute($path)
     {
-        return preg_match('/^(?:[a-z]:|\\|\/)/i', self::normalizePath($path));
+        $path = self::normalizePath($path);
+        return preg_match('/^(?:[a-z]:|\\\\|\/)/i', $path);
     }
 
-    // Get relative path
+    // Tính toán đường dẫn tương đối từ một đường dẫn đến đường dẫn khác
     public static function getRelativePath($from, $to)
     {
         $from = self::normalizePath($from);
@@ -142,7 +171,39 @@ class PathManager
 
         return str_repeat('..' . DIRECTORY_SEPARATOR, count($fromParts)) . join(DIRECTORY_SEPARATOR, $toParts);
     }
+
+    // Tìm đường dẫn gốc dựa vào thư mục cụ thể (vd: 'public/images')
+    public static function findBasePath($targetFolder)
+    {
+        $currentPath = __DIR__;
+        while (!is_dir($currentPath . DIRECTORY_SEPARATOR . $targetFolder)) {
+            $currentPath = dirname($currentPath);
+            if ($currentPath === '/' || is_null($currentPath)) {
+                throw new Exception("Không tìm thấy thư mục: $targetFolder");
+            }
+        }
+        return self::combine($currentPath, $targetFolder);
+    }
+
+    // Danh sách tệp tin trong thư mục (lọc theo đuôi tệp tin)
+    public static function getFilesInDirectory($folder, $extensions = [])
+    {
+        $folder = self::normalizePath($folder);
+
+        if (!self::isValidDirectory($folder)) {
+            throw new Exception("Thư mục không tồn tại: $folder");
+        }
+
+        $pattern = $folder . DIRECTORY_SEPARATOR . '*';
+        if (!empty($extensions)) {
+            $extPattern = '{' . implode(',', $extensions) . '}';
+            $pattern .= ".{$extPattern}";
+        }
+
+        return glob($pattern, GLOB_BRACE);
+    }
 }
+
 
 // // Example usage:
 // $fileManager = new FileManager(__DIR__ . '/public');
