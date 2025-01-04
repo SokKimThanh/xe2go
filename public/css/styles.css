@@ -2724,8 +2724,9 @@ section.gallery {
   @media screen and (max-width: 1024px) {
     section.gallery-card {
       padding: 20px 10px;
-      .gallery-card-content{
-        .card{
+
+      .gallery-card-content {
+        .card {
           max-width: calc((100% - 60px) / 2);
         }
       }
@@ -2790,21 +2791,26 @@ section.gallery {
   100% {
     transform: translateX(-100%);
   }
-}@media screen and (max-width: 1366px) {}
+}
+
+@media screen and (max-width: 1366px) {}
 
 @media screen and (max-width: 1024px) {}
 
 @media screen and (max-width: 768px) {
-  .slide{
+  .slide {
     min-width: 50%;
   }
+
   @keyframes slideAnimation {
     0% {
       transform: translateX(0%);
     }
-    50%{
+
+    50% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(-200%);
     }
@@ -2960,7 +2966,7 @@ section#partner .container {
 section#partner .container-title {
   text-align: center;
   display: flex;
-  ` align-items: center;
+  align-items: center;
   justify-content: center;
   cursor: context-menu;
   position: absolute;
@@ -3709,7 +3715,7 @@ footer {
   section#ypss .container-title {
     top: 19em;
   }
- 
+
   section#six-box {
     padding-top: 100px;
     padding-bottom: 100px;
