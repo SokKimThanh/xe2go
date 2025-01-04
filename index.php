@@ -58,13 +58,13 @@ o	Tân tâm trong từng dịch vụ.
                     'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear.webp',
                     'title' => ' Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
                     'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
-                    'link' => '/contactus.php'
+                    'link' => PathManager::combine(BASE_URL, 'pages/contactus.php')
                 ],
                 [
                     'image' => 'public/images/trang_chu/xe2go/xe2go_banner_newyear2.webp',
                     'title' => ' Dẫn đầu trong lĩnh vực bảo dưỡng và sửa chữa ô tô chuyên nghiệp',
                     'description' => '<b>Công ty TNHH XE2GO</b> là đơn vị hàng đầu trong lĩnh vực bảo dưỡng, sửa chữa và chăm sóc xe ô tô. Chúng tôi cam kết mang đến dịch vụ đồng bộ, hiệu quả, và đáng tin cậy nhất dành cho khách hàng. Với phương châm <b>“TẬN TÂM – TẬN TỤY – TẬN TÌNH”</b>, XE2GO không ngừng phấn đấu để khẳng định vị thế trong ngành.',
-                    'link' => '/contactus.php'
+                    'link' => PathManager::combine(BASE_URL, 'pages/contactus.php')
                 ]
             ];
 
@@ -130,12 +130,12 @@ o	Tân tâm trong từng dịch vụ.
                 <div class="owl-carousel owl-theme box-slider">
                     <?php
                     $features = [
-                        ["image" => "./public/svg/kythuatvien.svg", "title" => "Kỹ thuật viên tay nghề cao", "description" => "Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp."],
-                        ["image" => "./public/svg/congnghehotro.svg", "title" => "Công nghệ hỗ trợ hiện đại", "description" => "Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa."],
-                        ["image" => "./public/svg/quytrinh.svg", "title" => "Quy trình chuyên nghiệp", "description" => "Quy trình tại XE2GO được thiết kế để đảm bảo sự hoàn thiện & chính xác trong từng bước của quá trình sửa chữa & bảo dưỡng. Từ việc đánh giá & chẩn đoán tình trạng xe đến thực hiện các công việc."],
-                        ["image" => "./public/svg/baohanh.svg", "title" => "Bảo hành lên tới 1 năm", "description" => "Chính sách Bảo hành của XE2GO đảm bảo cho quý khách sự hài lòng với dịch vụ của chúng tôi. Cam kết đảm bảo chất lượng & tính nghiệp vụ."],
-                        ["image" => "./public/svg/phutung.svg", "title" => "Phụ tùng ô tô chính hãng", "description" => "XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe."],
-                        ["image" => "./public/svg/giaca.svg", "title" => "Giá cả đúng chất lượng", "description" => "Giá cả của chúng tôi được xác định dựa trên chất lượng dịch vụ và phụ tùng chính hãng. Bạn có thể yên tâm về giá thành hợp lý và đúng với chất lượng dịch vụ."]
+                        ["image" => PathManager::combine(BASE_URL, 'svg/kythuatvien.svg'), "title" => "Kỹ thuật viên tay nghề cao", "description" => "Đội ngũ kỹ thuật của XE2GO là những chuyên gia chuyên nghiệp với nhiều năm kinh nghiệm trong lĩnh vực bảo dưỡng & sửa chữa ô tô; cùng với thái độ tận tâm, nhiệt tình và chuyên nghiệp."],
+                        ["image" => PathManager::combine(BASE_URL, 'svg/congnghehotro.svg'), "title" => "Công nghệ hỗ trợ hiện đại", "description" => "Công nghệ tại XE2GO luôn được cập nhật và tối ưu hóa để đáp ứng yêu cầu của khách hàng về chất lượng dịch vụ & tốc độ sửa chữa."],
+                        ["image" => PathManager::combine(BASE_URL, 'svg/quytrinh.svg'), "title" => "Quy trình chuyên nghiệp", "description" => "Quy trình tại XE2GO được thiết kế để đảm bảo sự hoàn thiện & chính xác trong từng bước của quá trình sửa chữa & bảo dưỡng. Từ việc đánh giá & chẩn đoán tình trạng xe đến thực hiện các công việc."],
+                        ["image" => PathManager::combine(BASE_URL, 'svg/baohanh.svg'), "title" => "Bảo hành lên tới 1 năm", "description" => "Chính sách Bảo hành của XE2GO đảm bảo cho quý khách sự hài lòng với dịch vụ của chúng tôi. Cam kết đảm bảo chất lượng & tính nghiệp vụ."],
+                        ["image" => PathManager::combine(BASE_URL, 'svg/phutung.svg'), "title" => "Phụ tùng ô tô chính hãng", "description" => "XE2GO chỉ sử dụng phụ tùng chính hãng đảm bảo chất lượng tốt nhất cho xe của khách hàng. Chúng tôi tin tưởng vào các nhãn hiệu uy tín để đảm bảo sự an toàn và hiệu quả hoạt động của xe."],
+                        ["image" => PathManager::combine(BASE_URL, 'svg/giaca.svg'), "title" => "Giá cả đúng chất lượng", "description" => "Giá cả của chúng tôi được xác định dựa trên chất lượng dịch vụ và phụ tùng chính hãng. Bạn có thể yên tâm về giá thành hợp lý và đúng với chất lượng dịch vụ."]
                     ];
                     foreach ($features as $feature) {
                         echo '<div class="box-item">';
@@ -319,30 +319,45 @@ o	Tân tâm trong từng dịch vụ.
     </section>
 
     <!-- Giấy chứng nhận thành lập công ty , cơ sở pháp lý-->
-    <section id="meet">
-        <div class="container">
-            <div class="container-title">
-                <div class="title">Cơ sở pháp lý</div>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 col-12">
-                    <img class="img-fluid" src="./public/images/trang_chu/xe2go/xe2go_garrage.webp" alt="" loading="lazy">
-                </div>
-                <div class="col-sm-6 col-12">
-                    <img class="img-fluid box-image" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
-                    <!-- nút xem chi tiết pháp lý -->
-                    <a class="box-link" data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
-                        <span>Xem chi tiết</span>
-                    </a>
-                    <div class="hidden">
-                        <a data-fancybox="gallery-certificates" href="./public/images/trang_chu/certificates/s_thanhlapcongty.webp">
-                            <img class="img-fluid" src="./public/images/trang_chu/certificates/s_thanhlapcongty.webp" alt="" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php
+    $records = [
+        [
+            "title" => "Cơ sở pháp lý",
+            "images" => [
+                PathManager::combine(BASE_URL, 'images/trang_chu/xe2go/xe2go_garrage.webp'),
+                PathManager::combine(BASE_URL, 'images/trang_chu/certificates/s_thanhlapcongty.webp')
+            ]
+        ]
+    ];
+
+    foreach ($records as $record) {
+        echo '<section id="meet">';
+        echo '<div class="container">';
+        echo '<div class="container-title">';
+        echo '<div class="title">' . $record["title"] . '</div>';
+        echo '</div>';
+        echo '<div class="row">';
+        foreach ($record["images"] as $index => $image) {
+            echo '<div class="col-sm-6 col-12">';
+            echo '<img class="img-fluid" src="' . $image . '" alt="" loading="lazy">';
+            if ($index == 1) {
+                echo '<a class="box-link" data-fancybox="gallery-certificates" href="' . $image . '">';
+                echo '<span>Xem chi tiết</span>';
+                echo '</a>';
+                echo '<div class="hidden">';
+                echo '<a data-fancybox="gallery-certificates" href="' . $image . '">';
+                echo '<img class="img-fluid" src="' . $image . '" alt="" loading="lazy">';
+                echo '</a>';
+                echo '</div>';
+            }
+            echo '</div>';
+        }
+        echo '</div>';
+        echo '</div>';
+        echo '</section>';
+    }
+    ?>
+
 
     <!-- section 6 hinh vuong-->
     <section id="six-box">
