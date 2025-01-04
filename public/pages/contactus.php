@@ -5,16 +5,16 @@ Modified: 19:51 21/12/2024
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include("../xe2go/public/path-templates/path-css.php") ?>
+<?php include("../../public/path-templates/path-css.php") ?>
 
 <body>
-    <?php include("../xe2go/public/path-templates/path-menu.php") ?>
+    <?php include("../../public/path-templates/path-menu.php") ?>
 
 
     <!-- #region -->
     <section id="contactus">
         <div class="container">
-            <div class="rowc col-inner ">
+            <div class="row col-inner ">
                 <div class="col-sm-6 pe-4">
                     <h2 class="contactus-title">
                         Thông tin liên hệ
@@ -25,7 +25,7 @@ Modified: 19:51 21/12/2024
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                <img src="./public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
+                                <img src="../../public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
                             </div>
                         </div>
                         <div class="icon-box-text">
@@ -42,7 +42,7 @@ Modified: 19:51 21/12/2024
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                <img src="./public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
+                                <img src="../../public/svg/lienhe.svg" alt="Liên hệ" class="img-fluid">
                             </div>
                         </div>
                         <div class="icon-box-text">
@@ -59,7 +59,7 @@ Modified: 19:51 21/12/2024
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                <img src="./public/svg/email.svg" alt="Liên hệ" class="img-fluid">
+                                <img src="../../public/svg/email.svg" alt="Liên hệ" class="img-fluid">
                             </div>
                         </div>
                         <div class="icon-box-text">
@@ -72,7 +72,7 @@ Modified: 19:51 21/12/2024
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                <img src="./public/svg/diachi.svg" alt="Dịa chỉ" class="img-fluid">
+                                <img src="../../public/svg/diachi.svg" alt="Dịa chỉ" class="img-fluid">
                             </div>
                         </div>
                         <div class="icon-box-text">
@@ -85,7 +85,7 @@ Modified: 19:51 21/12/2024
                     <div class="icon-box">
                         <div class="icon-box-img" style="width:50px">
                             <div class="icon-inner" style="color:rgb(4, 37, 42);">
-                                <img src="./public/svg/giolamviec.svg" alt="Giờ làm việc" class="img-fluid">
+                                <img src="../../public/svg/giolamviec.svg" alt="Giờ làm việc" class="img-fluid">
                             </div>
                         </div>
                         <div class="icon-box-text">
@@ -101,8 +101,8 @@ Modified: 19:51 21/12/2024
         </div>
     </section>
     <!-- #endregion -->
-    <?php include("../xe2go/public/path-templates/path-footer.php") ?>
-    <?php include("../xe2go/public/path-templates/path-js.php") ?>
+    <?php include("../../public/path-templates/path-footer.php") ?>
+    <?php include("../../public/path-templates/path-js.php") ?>
 </body>
 
 </html>

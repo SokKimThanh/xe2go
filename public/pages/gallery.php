@@ -2,8 +2,8 @@
 <html lang="en">
 
 <?php
-include './public/class/FolderGallery.php';
-include("../xe2go/public/path-templates/path-css.php");
+require_once '../class/FolderGallery.php';
+require_once '../path-templates/path-css.php';
 $picIndex = 0;
 $picLimit = 4;
 $countGal = 0;
@@ -12,14 +12,14 @@ $letter = 65;
 
 // Lấy danh sách tên các section sẽ xuất hiện làm contents
 $sectionNames = array();
-$cardFolder = './public/images/trang_gallery/Card';
+$cardFolder = '../images/trang_gallery/Card';
 $filesAndDirs = scandir($cardFolder);
 $files = array_filter($filesAndDirs, function ($item) {
     return $item != '.' && $item != '..';
 });
 
 
-$mainDirectory = '.\public\images\trang_gallery';
+$mainDirectory = '../images/trang_gallery';
 $filesAndDirs = scandir($mainDirectory);
 $galleryDirectories = array_filter($filesAndDirs, function ($item) {
     return $item != '.' && $item != '..';
@@ -27,15 +27,14 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 ?>
 
 <body>
-    <?php include("../xe2go/public/path-templates/path-menu.php") ?>
-
+    <?php include("../path-templates/path-menu.php") ?>
     <section class="carousel">
         <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
         <div class="slide-carousel">
-            <img src="./public/images/trang_gallery/Carousel/1.webp" alt="Image 1">
+            <img src="<?php echo '../images/trang_gallery/Carousel/1.webp' ?>" alt="Image 1">
         </div>
         <div class="slide-carousel">
-            <img src="./public/images/trang_gallery/Carousel/2.webp" alt="Image 2">
+            <img src="<?php echo '../images/trang_gallery/Carousel/2.webp' ?>" alt="Image 2">
         </div>
         <button class="next" onclick="changeSlide(1)">&#10095;</button>
     </section>
@@ -53,7 +52,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
             <div class="gallery-card-content">
                 <?php
                 foreach ($files as $file) {
-                    $picPath = $cardFolder . '\\' . $file;
+                    $picPath = $cardFolder . '//' . $file;
                     $fileName = explode('.', $file)[0];
                     array_push($sectionNames, $fileName);
                 ?>
@@ -86,7 +85,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                     <?php
                     // Check for sub folders
                     $galDirectoryName = $galDirectory;
-                    $galDirectory = $mainDirectory . '\\' . $galDirectory;
+                    $galDirectory = $mainDirectory . '//' . $galDirectory;
                     $filesAndDirs = scandir($galDirectory);
                     $subDirectories = array_filter($filesAndDirs, function ($item) use ($galDirectory) {
                         return is_dir($galDirectory . DIRECTORY_SEPARATOR . $item) && !in_array($item, ['.', '..']);
@@ -122,7 +121,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 
                                 foreach ($subDirectories as $subDirectory) {
                                     // Get all images in subDirectory
-                                    $pictureFolderPath = $galDirectory . '\\' . $subDirectory;
+                                    $pictureFolderPath = $galDirectory . '//' . $subDirectory;
                                     $filesAndDirs = scandir($pictureFolderPath);
                                     $files = array_filter($filesAndDirs, function ($item) {
                                         return $item != '.' && $item != '..';
@@ -137,10 +136,10 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                                                 break;
                                             }
                                         }
-                                        $filePath = $pictureFolderPath . "\\" . $file;
+                                        $filePath = $pictureFolderPath . "//" . $file;
                                         $fileName = explode('.', $file)[0];
                                         $folderName = explode('_', $subDirectory)[1];
-                                        //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                        //echo $pictureFolderPath . "//" . $file . "<br>";
                             ?>
                                         <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
                                         <div class="slide filter <?php echo chr($letter) . $count; ?>">
@@ -166,7 +165,7 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                                 // Second print for infinite loop effect
                                 foreach ($subDirectories as $subDirectory) {
                                     // Get all images in subDirectory
-                                    $pictureFolderPath = $galDirectory . '\\' . $subDirectory;
+                                    $pictureFolderPath = $galDirectory . '//' . $subDirectory;
                                     $filesAndDirs = scandir($pictureFolderPath);
                                     $files = array_filter($filesAndDirs, function ($item) {
                                         return $item != '.' && $item != '..';
@@ -181,10 +180,10 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                                                 break;
                                             }
                                         }
-                                        $filePath = $pictureFolderPath . "\\" . $file;
+                                        $filePath = $pictureFolderPath . "//" . $file;
                                         $fileName = explode('.', $file)[0];
                                         $folderName = explode('_', $subDirectory)[1];
-                                        //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                        //echo $pictureFolderPath . "//" . $file . "<br>";
                                     ?>
                                         <!-- Ensure you have enough slides to cover the screen and create the loop effect -->
                                         <div class="slide filter <?php echo chr($letter) . $count; ?>">
@@ -214,10 +213,10 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
                                 });
                                 //echo $pictureFolderPath;
                                 foreach ($files as $file) {
-                                    $filePath = $pictureFolderPath . "\\" . $file;
+                                    $filePath = $pictureFolderPath . "//" . $file;
                                     $fileName = explode('.', $file)[0];
                                     $folderName = explode('_', $galDirectoryName)[1];
-                                    //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                    //echo $pictureFolderPath . "//" . $file . "<br>";
                                     ?>
                                     <div class="slide filter <?php echo chr($letter) . $count; ?>">
                                         <div class="card">
@@ -232,9 +231,9 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
 
                                 // Second print for infinite loop effect
                                 foreach ($files as $file) {
-                                    $filePath = $pictureFolderPath . "\\" . $file;
+                                    $filePath = $pictureFolderPath . "//" . $file;
                                     $fileName = explode('.', $file)[0];
-                                    //echo $pictureFolderPath . "\\" . $file . "<br>";
+                                    //echo $pictureFolderPath . "//" . $file . "<br>";
                                 ?>
                                     <div class="slide filter <?php echo chr($letter) . $count; ?>">
                                         <div class="card">
@@ -269,8 +268,8 @@ $galleryDirectories = array_filter($filesAndDirs, function ($item) {
         <button id="toTopButton"><i class="fa-solid fa-arrow-up"></i></button>
 
     </section>
-    <?php include("../xe2go/public/path-templates/path-footer.php") ?>
-    <?php include("../xe2go/public/path-templates/path-js.php") ?>
+    <?php include("../../public/path-templates/path-footer.php") ?>
+    <?php include("../../public/path-templates/path-js.php") ?>
 </body>
 
 <script>

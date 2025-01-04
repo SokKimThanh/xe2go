@@ -2,7 +2,7 @@
 // Nhúng file class
 include './public/class/FolderGallery.php';
 include './public/class/PathManager.php';
-require_once __DIR__ . './config.php';
+require_once __DIR__ . '/config.php';
 
 ?>
 <!DOCTYPE html>

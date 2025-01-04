@@ -2823,15 +2823,14 @@ section.gallery {
 
 /* #region ContactUs settings */
 section#contactus {
-  padding: 15em 0;
+  margin: 9em 0 7.5rem;
+  padding: 0;
 
   @media screen and (max-width: 500px) {
-    padding-top: 80px;
-    padding-bottom: 90px;
+    padding: 0;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 7em 0;
   }
 
   .container {
@@ -3792,11 +3791,6 @@ footer {
 
   section#section-gallery {
     margin-bottom: 0;
-  }
-
-  section#contactus {
-    padding-top: 80px;
-    padding-bottom: 90px;
   }
 
   section#contactus .col-inner {
