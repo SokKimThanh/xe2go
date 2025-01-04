@@ -3,9 +3,9 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./public/js/owl.carousel.min.js"></script>
-<script src="./public/js/section_menu.js"></script>
-<script src="./public/js/script.js"></script>
-<script src="./public/js/section_owl.carousel.slider.js"></script>
-<script src="./public/js/section_fancybox.js"></script>
-<script src="./public/js/section_DM_SanPham.js"></script>
+<script src="../../public/js/owl.carousel.min.js"></script>
+<script src="../../public/js/section_menu.js"></script>
+<script src="../../public/js/script.js"></script>
+<script src="../../public/js/section_owl.carousel.slider.js"></script>
+<script src="../../public/js/section_fancybox.js"></script>
+<script src="../../public/js/section_DM_SanPham.js"></script>

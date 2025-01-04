@@ -2817,15 +2817,14 @@ section.gallery {
 
 /* #region ContactUs settings */
 section#contactus {
-  padding: 15em 0;
+  margin: 9em 0 7.5rem;
+  padding: 0;
 
   @media screen and (max-width: 500px) {
-    padding-top: 80px;
-    padding-bottom: 90px;
+    padding: 0;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 7em 0;
   }
 
   .container {
@@ -2960,7 +2959,7 @@ section#partner .container {
 section#partner .container-title {
   text-align: center;
   display: flex;
-  ` align-items: center;
+  align-items: center;
   justify-content: center;
   cursor: context-menu;
   position: absolute;
@@ -3786,11 +3785,6 @@ footer {
 
   section#section-gallery {
     margin-bottom: 0;
-  }
-
-  section#contactus {
-    padding-top: 80px;
-    padding-bottom: 90px;
   }
 
   section#contactus .col-inner {
